@@ -43,21 +43,21 @@ cache:
 
 install:
   - npm install
-before_script:
-  - git clone --branch master https://${TOKEN}@${GIT_URI}.git public
 script:
   - npm run build
+after_script:
   - cd public
+  - git init
+  - git config user.name "TechQuery"
+  - git config user.email "shiy2008@gmail.com"
   - git add .
-  - git config user.name "yourID"
-  - git config user.email "your@email.com"
   - git commit -m ":memo:\ Update HTML by Travis CI"
-  - git push --quiet
+  - git push --force --quiet https://${TOKEN}@${GIT_URI}.git master:master
 ```
 新版个人网站初步落成！~
 
 ---
 
- 1. https://ssk7833.github.io/blog/2016/01/21/using-TravisCI-to-deploy-on-GitHub-pages/
+ 1. https://segmentfault.com/a/1190000013058880
 
- 2. https://segmentfault.com/a/1190000013058880
+ 2. https://ssk7833.github.io/blog/2016/01/21/using-TravisCI-to-deploy-on-GitHub-pages/

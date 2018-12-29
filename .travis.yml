@@ -15,13 +15,13 @@ cache:
 
 install:
   - npm install
-before_script:
-  - git clone --branch master https://${TOKEN}@${GIT_URI}.git public
 script:
   - npm run build
+after_script:
   - cd public
-  - git add .
+  - git init
   - git config user.name "TechQuery"
   - git config user.email "shiy2008@gmail.com"
+  - git add .
   - git commit -m ":memo:\ Update HTML by Travis CI"
-  - git push --quiet
+  - git push --force --quiet https://${TOKEN}@${GIT_URI}.git master:master

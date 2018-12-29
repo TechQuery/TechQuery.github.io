@@ -5,7 +5,6 @@ branches:
 env:
   global:
     - GIT_URI: github.com/TechQuery/TechQuery.github.io
-    - TOKEN: 39ff883676bf43c5723e92701487a020ad1abfb2
 
 language: node_js
 node_js: 

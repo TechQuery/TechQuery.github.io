@@ -2,6 +2,12 @@
 title: 编程入门之开发工具一键安装
 date: "2018-11-17 20:54:00"
 author: 南漂一卒
+categories:
+  - Technology
+tags:
+  - Chocolatey
+  - HomeBrew
+  - PowerShell
 ---
 
 

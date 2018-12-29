@@ -1,6 +1,11 @@
 ---
 title: Hello Hexo!
 author: 南漂一卒
+categories:
+  - Technology
+tags: 
+  - Hexo
+  - Travis
 ---
 
 [GitHub `static-site-generator` 主题下 Node.JS 架构](https://github.com/topics/static-site-generator?l=javascript&o=desc&s=stars) star 前三的项目中，[Hexo](https://hexo.io/) 生态最完善：

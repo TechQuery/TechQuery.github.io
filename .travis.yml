@@ -19,6 +19,7 @@ script:
   - npm run build
 after_script:
   - cd public
+  - echo tech-query.me > CNAME
   - git init
   - git config user.name "TechQuery"
   - git config user.email "shiy2008@gmail.com"

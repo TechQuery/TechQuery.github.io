@@ -17,11 +17,11 @@ cache:
 install:
   - npm install
 script:
-  - git config user.name "TechQuery"
-  - git config user.email "shiy2008@gmail.com"
   - git clone --branch gh-pages https://${TOKEN}@${GIT_URI}.git public
   - npm run build
   - cd public
   - git add .
+  - git config user.name "TechQuery"
+  - git config user.email "shiy2008@gmail.com"
   - git commit -m ":memo:\ Update HTML by TravisCI"
   - git push --quiet

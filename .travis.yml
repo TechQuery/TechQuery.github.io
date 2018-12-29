@@ -1,0 +1,27 @@
+branches:
+  only: 
+    - hexo
+
+env:
+  global:
+    - GIT_URI: github.com/TechQuery/TechQuery.github.io
+    - TOKEN: 39ff883676bf43c5723e92701487a020ad1abfb2
+
+language: node_js
+node_js: 
+  - lts/*
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install
+script:
+  - git config user.name "TechQuery"
+  - git config user.email "shiy2008@gmail.com"
+  - git clone --branch gh-pages https://${TOKEN}@${GIT_URI}.git public
+  - npm run build
+  - cd public
+  - git add .
+  - git commit -m ":memo:\ Update HTML by TravisCI"
+  - git push --quiet

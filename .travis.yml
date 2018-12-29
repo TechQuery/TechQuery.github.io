@@ -18,12 +18,10 @@ install:
 before_script:
   - git clone --branch master https://${TOKEN}@${GIT_URI}.git public
   - cd public
-  - git rm -rf .
 script:
   - npm run build
-  - cd public
   - git add .
   - git config user.name "TechQuery"
   - git config user.email "shiy2008@gmail.com"
-  - git commit -m ":memo:\ Update HTML by TravisCI"
+  - git commit -m ":memo:\ Update HTML by Travis CI"
   - git push --quiet

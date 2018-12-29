@@ -3,7 +3,8 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "build": "hexo generate"
+    "build": "hexo clean  &&  hexo generate",
+    "start": "hexo server"
   },
   "dependencies": {
     "hexo": "^3.8.0",

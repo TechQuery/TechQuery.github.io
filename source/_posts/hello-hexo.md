@@ -13,7 +13,7 @@ author: 南漂一卒
 
 官网一番学习之后，发现起步比较简单：
 
-```Shell
+```shell
 npm install hexo --global
 
 hexo init my_pages
@@ -25,7 +25,7 @@ git checkout --orphan hexo
 
 最后一顿 Google，入门了近几年开源界最流行的 [Travis CI](https://travis-ci.com/)：
 
-```YAML
+```yaml
 branches:
   only: 
     - hexo
@@ -45,9 +45,9 @@ install:
   - npm install
 before_script:
   - git clone --branch master https://${TOKEN}@${GIT_URI}.git public
-  - cd public
 script:
   - npm run build
+  - cd public
   - git add .
   - git config user.name "yourID"
   - git config user.email "your@email.com"
@@ -55,3 +55,9 @@ script:
   - git push --quiet
 ```
 新版个人网站初步落成！~
+
+---
+
+ 1. https://ssk7833.github.io/blog/2016/01/21/using-TravisCI-to-deploy-on-GitHub-pages/
+
+ 2. https://segmentfault.com/a/1190000013058880

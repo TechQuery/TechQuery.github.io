@@ -43,7 +43,7 @@ highlight:
 
 prism_plugin:
   mode: 'preprocess'    # realtime/preprocess
-  theme: 'tomorrow'
+  theme: 'atom-dark'
   line_number: true    # default false
   custom_css:
   

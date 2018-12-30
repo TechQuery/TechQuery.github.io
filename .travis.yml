@@ -2,10 +2,6 @@ branches:
   only: 
     - hexo
 
-env:
-  global:
-    - GIT_URI: github.com/TechQuery/TechQuery.github.io
-
 language: node_js
 node_js: 
   - lts/*
@@ -18,11 +14,11 @@ install:
 script:
   - npm run build
 after_script:
-  - cd public
+  - cd ${FOLDER}
   - echo tech-query.me > CNAME
   - git init
-  - git config user.name "TechQuery"
-  - git config user.email "shiy2008@gmail.com"
+  - git config user.name ${UID}
+  - git config user.email ${EMAIL}
   - git add .
-  - git commit -m ":memo:\ Update HTML by Travis CI"
-  - git push --force --quiet https://${TOKEN}@${GIT_URI}.git master:master
+  - git commit -m "${MESSAGE}"
+  - git push --force --quiet https://${TOKEN}@${GIT_URI}.git master:${BRANCH}

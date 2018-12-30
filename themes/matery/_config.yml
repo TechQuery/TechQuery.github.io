@@ -13,12 +13,12 @@ menu:
   Archives:
     url: /archives
     icon: fa-archive
+  Projects:
+    url: /projects
+    icon: fa-code-fork
   About:
     url: /about
     icon: fa-user-circle-o
-  Friends:
-    url: /friends
-    icon: fa-address-book
 
 # index page dream text,
 # 配置首页显示"梦想"的语句.
@@ -33,7 +33,7 @@ recommend:
 
 # Configure website favicon and LOGO
 # 配置网站favicon和网站LOGO
-favicon: /favicon.png
+favicon: /medias/WebCell-0.png
 logo: /medias/WebCell-0.png
 
 # The configuration of the second button in the home banner,
@@ -115,13 +115,13 @@ myProjects:
 mySkills:
   enable: true
   data:
-    HTML:
+    HTML / DOM:
       background: 'linear-gradient(to right, #2196F3 0%, #42A5F5 100%)'
       percent: 95%
-    CSS:
+    CSS / LESS:
       background: 'linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)'
       percent: 80%
-    JavaScript:
+    JavaScript / Babel:
       background: 'linear-gradient(to right, #9900FF 0%, #CC66FF 100%)'
       percent: 90%
     Python:

@@ -1,9 +1,156 @@
 [
     {
+        "avatar": "https://avatars3.githubusercontent.com/u/20026387?s=200&v=4",
+        "name": "Web 前端大会",
+        "introduction": "【主导】每年在成都办至少一次 Web 开发相关技术的大会",
+        "url": "https://web-conf.tk/",
+        "title": "参与筹办"
+    },
+    {
         "avatar": "https://tech-query.me/medias/WebCell-0.png",
         "name": "WebCell",
-        "introduction": "优雅、轻量的 Web 组件引擎",
+        "introduction": "【原创】优雅、轻量的 Web 组件引擎",
         "url": "https://web-cell.tk/",
-        "title": "前去学习"
+        "title": "参与开发"
+    },
+    {
+        "avatar": "https://avatars2.githubusercontent.com/u/1905708?s=200&v=4",
+        "name": "Web 组件标准",
+        "introduction": "【纠错】实现 Shadow DOM 补丁的 ParentNode、ChildNode",
+        "url": "https://github.com/webcomponents/shadydom/pull/294",
+        "title": "回顾"
+    },
+    {
+        "avatar": "https://avatars0.githubusercontent.com/u/70142?s=200&v=4",
+        "name": "jQuery",
+        "introduction": "【增强】让 .contents() 支持 HTMLTemplateElement",
+        "url": "https://github.com/jquery/jquery/pull/3462",
+        "title": "回顾"
+    },
+    {
+        "avatar": "https://avatars3.githubusercontent.com/u/19969570?s=460&v=4",
+        "name": "iQuery.js",
+        "introduction": "【原创】基于自研 W3C / ECMA polyfill 的 jQuery API",
+        "url": "https://tech-query.me/iQuery.js/",
+        "title": "参与开发"
+    },
+    {
+        "avatar": "https://avatars0.githubusercontent.com/u/9271229?s=200&v=4",
+        "name": "JSDOM",
+        "introduction": "【纠错】实现 XMLSerializer 缺失的 CDATASection 节点序列化",
+        "url": "https://github.com/jsdom/w3c-xmlserializer/pull/3",
+        "title": "回顾"
+    },
+    {
+        "avatar": "https://avatars3.githubusercontent.com/u/1288753?s=200&v=4",
+        "name": "CodeceptJS",
+        "introduction": "【翻译】BDD 风格 API 标识符 简繁中文版",
+        "url": "https://github.com/Codeception/CodeceptJS/pull/1020",
+        "title": "回顾"
+    },
+    {
+        "avatar": "https://raw.githubusercontent.com/github/explore/266f57d012e714b60c666356beeb7e58541218b4/topics/firefox/firefox.png",
+        "name": "puppeteer-fx",
+        "introduction": "【主导】Puppeteer API 的 Firefox 实现",
+        "url": "https://github.com/autonome/puppeteer-fx",
+        "title": "参与开发"
+    },
+    {
+        "avatar": "https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png",
+        "name": "Puppeteer IE",
+        "introduction": "【原创】Puppeteer API 的 IE 实现",
+        "url": "https://tech-query.me/Puppeteer-IE/",
+        "title": "参与开发"
+    },
+    {
+        "avatar": "https://avatars3.githubusercontent.com/u/1778935?s=200&v=4",
+        "name": "Chromy",
+        "introduction": "【增强】Chrome 无界面第三方库 .evaluate() 传参能力",
+        "url": "https://github.com/OnetapInc/chromy/pull/86",
+        "title": "回顾"
+    },
+    {
+        "avatar": "https://avatars1.githubusercontent.com/u/1725583?s=200&v=4",
+        "name": "Decorator 提案",
+        "introduction": "【纠错】值成员 initializer 回调示例文档",
+        "url": "https://github.com/tc39/proposal-decorators/pull/154",
+        "title": "回顾"
+    },
+    {
+        "avatar": "https://avatars0.githubusercontent.com/u/9637642?s=200&v=4",
+        "name": "Babel upgrade",
+        "introduction": "【增强】Babel 7 升级工具 命令行选项解析",
+        "url": "https://github.com/babel/babel-upgrade/pull/92",
+        "title": "回顾"
+    },
+    {
+        "avatar": "https://avatars3.githubusercontent.com/u/19969570?s=460&v=4",
+        "name": "AMD bundle",
+        "introduction": "【原创】AMD、CommonJS、ES module 轻量打包器",
+        "url": "https://tech-query.me/AMD_bundle.js/",
+        "title": "参与开发"
+    },
+    {
+        "avatar": "https://avatars3.githubusercontent.com/u/19969570?s=460&v=4",
+        "name": "test-example",
+        "introduction": "【原创】JSDoc @example 单元测试生成插件",
+        "url": "https://tech-query.me/test-example/",
+        "title": "参与开发"
+    },
+    {
+        "avatar": "https://avatars3.githubusercontent.com/u/19969570?s=460&v=4",
+        "name": "FS match",
+        "introduction": "【原创】基于 ES 2018 异步生成器的文件查找器",
+        "url": "https://tech-query.me/fs-match/",
+        "title": "参与开发"
+    },
+    {
+        "avatar": "https://avatars1.githubusercontent.com/u/47359?s=200&v=4",
+        "name": "KoApache",
+        "introduction": "【原创】基于 Koa、Node.JS worker 的 Web 服务器",
+        "url": "https://tech-query.me/KoApache/",
+        "title": "参与开发"
+    },
+    {
+        "avatar": "https://avatars1.githubusercontent.com/u/9919?s=200&v=4",
+        "name": "Express GitHub",
+        "introduction": "【原创】GitHub RESTful API 的 Express 封装中间件",
+        "url": "https://tech-query.me/Express-GitHub/",
+        "title": "参与开发"
+    },
+    {
+        "avatar": "https://avatars1.githubusercontent.com/u/9919?s=200&v=4",
+        "name": "GitHub widget",
+        "introduction": "【重构】基于 WebCell 的 GitHub Web 组件库",
+        "url": "https://tech-query.me/GitHub-Web-Widget/",
+        "title": "参与开发"
+    },
+    {
+        "avatar": "https://avatars2.githubusercontent.com/u/1334729?s=200&v=4",
+        "name": "Crafty JS",
+        "introduction": "【增强】让 JS 游戏引擎支持加载 Data URI 类型的外置资源",
+        "url": "https://github.com/craftyjs/Crafty/pull/1189",
+        "title": "回顾"
+    },
+    {
+        "avatar": "https://avatars3.githubusercontent.com/u/19969570?s=460&v=4",
+        "name": "Gomoku.js",
+        "introduction": "【原创】基于二进制位操作的 N 子棋算法",
+        "url": "https://npm.runkit.com/gomoku-js",
+        "title": "参与开发"
+    },
+    {
+        "avatar": "https://avatars3.githubusercontent.com/u/19969570?s=460&v=4",
+        "name": "Func Bowling",
+        "introduction": "【原创】基于 TDD、函数式编程的 保龄球计分算法",
+        "url": "https://github.com/TechQuery/Functional-Bowling",
+        "title": "参与开发"
+    },
+    {
+        "avatar": "https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/markdown/markdown.png",
+        "name": "HyperDown",
+        "introduction": "【优化】让 MarkDown 解析器兼容 PHP 5.3 语法",
+        "url": "https://github.com/SegmentFault/HyperDown/pull/24",
+        "title": "回顾"
     }
 ]

@@ -4,6 +4,7 @@ date: "2018-11-17 20:54:00"
 author: 南漂一卒
 categories:
   - Technology
+  - Programming
 tags:
   - Chocolatey
   - HomeBrew

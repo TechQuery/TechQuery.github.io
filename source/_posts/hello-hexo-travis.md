@@ -1,8 +1,10 @@
 ---
 title: Hello Hexo & Travis !
+date: 2018‎-12‎-30 ‏‎19:42:16
 author: 南漂一卒
 categories:
   - Technology
+  - Programming
 tags: 
   - Hexo
   - Travis
@@ -34,7 +36,7 @@ git checkout --orphan hexo
 
 ## 持续集成、持续部署
 
-最后一顿 Google，入门了近几年开源界最流行的 [Travis CI](https://travis-ci.com/)：
+最后一顿 Google，入门了近几年开源界最流行的 [Travis CI](https://travis-ci.com/)，它的配置文件 `.travis.yml` 看起来像 `Dockerfile`，但更自然：
 
 ```yaml
 branches:
@@ -52,7 +54,6 @@ install:
   - npm install
 script:
   - npm run build
-after_script:
   - cd ${FOLDER}
   - git init
   - git config user.name ${UID}
@@ -63,15 +64,15 @@ after_script:
 ```
 上述命令行脚本中的**环境变量**可在 Travis CI 项目配置页设置，示例如下：
 
-| 变量名  | 示例值                              | 释义                  |
-|:-------:|:----------------------------------:|:--------------------:|
-| FOLDER  | public                             | 网页生成器的输出目录   |
-| UID     | yourID                             | Git 用户名            |
-| EMAIL   | yourID@email.com                   | Git 电邮地址          |
-| TOKEN   |                                    | GitHub 个人访问令牌   |
-| GIT_URI | github.com/yourID/yourID.github.io | Git 仓库标识符        |
-| BRANCH  | master                             | GitHub Pages 目标分支 |
-| MESSAGE | :memo: Update HTML by Travis CI    | Git 提交注记          |
+| 变量名  | 示例值                              | 释义                  |                                       |
+|:-------:|:----------------------------------:|:--------------------:|:--------------------------------------:|
+| FOLDER  | public                             | 网页生成器的输出目录   |                                        |
+| UID     | yourID                             | Git 用户名            | Travis 自动设置                        |
+| EMAIL   | yourID@email.com                   | Git 电邮地址          |                                        |
+| TOKEN   |                                    | GitHub 个人访问令牌   | https://github.com/settings/tokens/new |
+| GIT_URI | github.com/yourID/yourID.github.io | Git 仓库标识符        |                                        |
+| BRANCH  | master                             | GitHub Pages 目标分支 |                                        |
+| MESSAGE | :memo: Update HTML by Travis CI    | Git 提交注记          |                                        |
 
 新版个人网站初步落成！~
 

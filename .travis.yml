@@ -13,7 +13,6 @@ install:
   - npm install
 script:
   - npm run build
-after_script:
   - cd ${FOLDER}
   - echo tech-query.me > CNAME
   - git init

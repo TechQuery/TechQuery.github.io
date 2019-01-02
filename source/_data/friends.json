@@ -152,5 +152,40 @@
         "introduction": "【优化】让 MarkDown 解析器兼容 PHP 5.3 语法",
         "url": "https://github.com/SegmentFault/HyperDown/pull/24",
         "title": "回顾"
+    },
+    {
+        "avatar": "https://raw.githubusercontent.com/github/explore/ccc16358ac4530c6a69b1b80c7223cd2744dea83/topics/php/php.png",
+        "name": "EasyLibs.php",
+        "introduction": "【原创】轻量、易用、优雅的 PHP 类库",
+        "url": "https://github.com/TechQuery/EasyLibs.php",
+        "title": "参与开发"
+    },
+    {
+        "avatar": "https://avatars0.githubusercontent.com/u/3717923?s=200&v=4",
+        "name": "江苏“朋友圈”",
+        "introduction": "【开发】基于 EasyWebApp v4、ECharts v3 多屏适配的 HTML 5 宣传页",
+        "url": "http://hudong.jstv.com/datanews/friendship/",
+        "title": "回顾"
+    },
+    {
+        "avatar": "https://avatars3.githubusercontent.com/u/19969570?s=460&v=4",
+        "name": "东方天呈官网",
+        "introduction": "【开发】基于 EasyWebApp v4、BootEWA v1 开发 前台展示、后台管理",
+        "url": "http://tincere.cn/",
+        "title": "回顾"
+    },
+    {
+        "avatar": "https://avatars3.githubusercontent.com/u/19969570?s=460&v=4",
+        "name": "《i飞扬》杂志",
+        "introduction": "【原创】HTML 5 原型版 前端基于 jQuery，后端基于 PHP",
+        "url": "https://mag.fyscu.com/",
+        "title": "回顾"
+    },
+    {
+        "avatar": "https://avatars3.githubusercontent.com/u/10056491?s=200&v=4",
+        "name": "川大百科",
+        "introduction": "【发起】基于 MediaWiki，用 jQuery 开发多个实用扩展，用 PHP 开发数据迁移工具",
+        "url": "https://wiki.fyscu.com/",
+        "title": "回顾"
     }
 ]

@@ -26,8 +26,8 @@ Talk is cheap, show me the code!
 
 ```powershell
 function getChoco() {
-    
-    Set-ExecutionPolicy Bypass -Scope Process -Force; 
+
+    Set-ExecutionPolicy Bypass -Scope Process -Force;
 
     Invoke-Expression (
         (New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')
@@ -49,6 +49,8 @@ foreach ($name in $software) {
     choco install $name -y
 }
 
+Import-Module Boxstarter.Chocolatey
+
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions
 
 Install-WindowsUpdate -AcceptEula
@@ -59,7 +61,7 @@ Install-WindowsUpdate -AcceptEula
 
 ## 软件管家？
 
-上述脚本只装了普通中国大陆人最通用的几个软件，但针对大学不同专业的学生、社会上不同职业的员工，他们常用的专业**软件集合**又各不相同，即便计算机、软件专业，不同技术架构的程序员也需要[不同的开发环境](/2018/11/17/coder-start-kit/#%E6%96%B0%E7%94%B5%E8%84%91%E7%9A%84%E5%88%9B%E4%B8%96%E7%BA%AA)…… 
+上述脚本只装了普通中国大陆人最通用的几个软件，但针对大学不同专业的学生、社会上不同职业的员工，他们常用的专业**软件集合**又各不相同，即便计算机、软件专业，不同技术架构的程序员也需要[不同的开发环境](/2018/11/17/coder-start-kit/#%E6%96%B0%E7%94%B5%E8%84%91%E7%9A%84%E5%88%9B%E4%B8%96%E7%BA%AA)……
 
 大神说：“要有个[软件管家](http://soft.360.cn/)！”
 
@@ -80,7 +82,7 @@ Chocolatey 官方团队早给各位“伸手党”准备好了，但他们设计
 
  - [一键安装](https://boxstarter.org/package/China-mainland-suite/)
 
-依 GitHub 社群的 awesome（真香）传统，我来填补一下 Chocolatey 的 awesome 空白 ——
+依 **GitHub 社群的 awesome（真香）传统**，我来填补一下 Chocolatey 的 awesome 空白 ——
 
 > https://github.com/TechQuery/Chocolatey-awesome
 
@@ -88,5 +90,5 @@ Chocolatey 官方团队早给各位“伸手党”准备好了，但他们设计
 ## 参考资料
 
  1. https://www.pstips.net/powershell-online-tutorials
-   
+
  2. https://blog.csdn.net/kk185800961/article/details/49026637

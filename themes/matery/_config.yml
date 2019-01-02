@@ -16,6 +16,9 @@ menu:
   Projects:
     url: /projects
     icon: fa-code-fork
+  Lecture:
+    url: https://ppt.baomitu.com/lecturer/10109/
+    icon: fa-slideshare
   About:
     url: /about
     icon: fa-user-circle-o
@@ -91,23 +94,34 @@ profile:
 # If you don't want to display this `My Projects` content, you can deactivate or delete this configuration.
 # 在“关于”页面配置"我的项目"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
 myProjects:
-  enable: false
+  enable: true
   data:
-    hexo-theme-matery:
-      icon: fa-meetup
-      iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
-      url: http://github.com/blinkfox/hexo-theme-matery
-      desc: This is a Hexo blog theme with 'Material Design' and responsive design.
-    zealt:
-        icon: fa-database
+    freeCodeCamp:
+        icon: fa-free-code-camp
         iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
-        url: https://github.com/blinkfox/zealot
-        desc: 一个轻量级的SQL和参数动态生成工具库
-    typora-vue-theme:
-        icon: fa-file-text-o
+        url: https://www.freecodecamp.one/volunteer
+        desc: 2016 年 11 月至今，一直是 FCC 成都社区核心成员，参与组织几十次大小技术活动，并兼职 FCC 中国社区开源布道师，在全国其它技术活动上为 FCC 代言。
+    微软 MVP:
+        icon: fa-address-card-o
+        iconBackground: 'linear-gradient(to bottom right, #2196F3 0%, #42A5F5 100%)'
+        url: https://mvp.microsoft.com/zh-cn/PublicProfile/5003197
+        desc: 2018~19 年度 微软最有价值专家 (Developer Technologies)
+    开源社:
+        icon: fa-code-fork
         iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
-        url: https://github.com/blinkfox/typora-vue-theme
-        desc: This is a typora theme inspired by Vue document style.
+        url: http://www.kaiyuanshe.cn/
+        desc: 从 2018 年中国开源年会志愿者外场组组长、基础设施组 2019 新版官网开发者开始，成为开源社 2019 年度个人正式成员。
+    Girls Coding Day:
+      icon: fa-female
+      iconBackground: 'linear-gradient(to bottom right, #00BCD4 0%, #80DEEA 100%)'
+      url: https://girlscodingday.org/
+      desc: 2018 年成都社会分会场教练
+    四川大学·飞扬俱乐部:
+      icon: fa-wrench
+      iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
+      url: https://lab.fyscu.com/#team
+      desc: 2008~10 年骨干技术员、最受欢迎维修师傅，研发部创始团队成员、《川大百科》创始人、《i飞扬》电子杂志 HTML 5 框架作者。
+
 
 # config my skills informations in about page.
 # If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
@@ -221,7 +235,7 @@ googleAnalytics:
 
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
-featureImages: 
+featureImages:
 - /medias/featureimages/0.jpg
 - /medias/featureimages/1.jpg
 - /medias/featureimages/2.jpg

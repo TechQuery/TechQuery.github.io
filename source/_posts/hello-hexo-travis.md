@@ -1,13 +1,15 @@
 ---
 title: Hello Hexo & Travis !
-date: 2018‎-12‎-30 ‏‎19:42:16
+date: 2018‎-12‎-29 ‏‎19:30:00
 author: 南漂一卒
 categories:
   - Technology
   - Programming
-tags: 
+tags:
   - Hexo
   - Travis
+  - Azure
+  - DevOps
 ---
 
 
@@ -40,11 +42,11 @@ git checkout --orphan hexo
 
 ```yaml
 branches:
-  only: 
+  only:
     - hexo
 
 language: node_js
-node_js: 
+node_js:
   - lts/*
 cache:
   directories:
@@ -82,10 +84,40 @@ script:
 既然 Travis CI 配置脚本可以用环境变量变得灵活，那基于 JSDoc、ESDoc 之类的开源项目生成 **API 文档站**也可照搬以上方法了：
 
  -  再也不用在本地 Git `precommit` 钩子上执行**文档生成脚本**了，加快提交速度
-  
+
  -  把生成的文档放在独立的 `gh-pages` 分支，让 `master` 分支只放源码，**提交记录**更清爽
 
  -  用 `git push --force` 也让**文档站分支**不保留不必要的提交记录，**仓库体积**最小化
+
+但是，Travis 的 Windows 环境尚处测试阶段，我实测时出现“失败但无报错详情”的 bug，只好让 [Puppeteer-IE](https://tech-query.me/Puppeteer-IE/) 改用 [Azure Pipeline](https://azure.microsoft.com/zh-cn/services/devops/pipelines/)：
+
+```yaml
+trigger:
+- master
+
+pool:
+  vmImage: 'vs2017-win2016'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '8.x'
+  displayName: 'Install Node.js'
+
+- bash: |
+    npm install
+    npm run build
+    cd ${DOC_FOLDER}
+    git init
+    git config user.name ${GIT_USER}
+    git config user.email ${GIT_EMAIL}
+    git add .
+    git commit -m "${GIT_MESSAGE}"
+    git push --force --quiet https://${GIT_TOKEN}@${GIT_URI}.git master:${GIT_BRANCH}
+  displayName: 'npm install & build Document'
+```
+
+再次领略 微软文档的一大特点 —— 要么一笔带过、不知所云，要么又臭又长、不明重点…… 好歹有个**项目配置模板**，连蒙带猜改一改，竟然能用…… 也算是不枉费我[秋天跑一趟上海](https://www.microsoft.com/china/techsummit/2018/)~
 
 
 ## 参考资料
@@ -93,3 +125,5 @@ script:
  1. https://segmentfault.com/a/1190000013058880
 
  2. https://ssk7833.github.io/blog/2016/01/21/using-TravisCI-to-deploy-on-GitHub-pages/
+
+ 3. https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=vsts&tabs=example#bash

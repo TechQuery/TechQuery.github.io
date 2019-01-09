@@ -7,7 +7,7 @@ categories:
   - Programming
 tags:
   - JavaScript
-  - one-key
+  - one-word
 ---
 
 

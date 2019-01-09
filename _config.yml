@@ -9,13 +9,13 @@ description: TechQuery, a Web & JavaScript full-stack developer
 keywords: TechQuery website Web JavaScript full-stack developer development coder programmer
 author: TechQuery
 language: zh-CN
-timezone:
+timezone: Asia/Chongqing
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://tech-query.me
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :category/:title/
 permalink_defaults:
 
 # Directory
@@ -46,7 +46,7 @@ prism_plugin:
   theme: 'atom-dark'
   line_number: false    # default false
   custom_css:
-  
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -55,7 +55,7 @@ index_generator:
   path: ''
   per_page: 6
   order_by: -date
-  
+
 # Category & Tag
 default_category: uncategorized
 category_map:

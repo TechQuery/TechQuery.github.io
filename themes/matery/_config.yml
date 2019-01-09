@@ -1,9 +1,6 @@
 # main menu navigation url and icon
 # 配置菜单导航的名称、路径和图标icon.
 menu:
-  Index:
-    url: /
-    icon: fa-home
   Tags:
     url: /tags
     icon: fa-tags
@@ -19,6 +16,9 @@ menu:
   Lecture:
     url: https://ppt.baomitu.com/lecturer/10109/
     icon: fa-slideshare
+  Q & A:
+    url: https://www.zhihu.com/people/Tech_Query/answers/by_votes
+    icon: fa-quora
   About:
     url: /about
     icon: fa-user-circle-o
@@ -99,7 +99,7 @@ myProjects:
     freeCodeCamp:
         icon: fa-free-code-camp
         iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
-        url: https://www.freecodecamp.one/volunteer
+        url: https://china.freecodecamp.one/?city=chengdu
         desc: 2016 年 11 月至今，一直是 FCC 成都社区核心成员，参与组织几十次大小技术活动，并兼职 FCC 中国社区开源布道师，在全国其它技术活动上为 FCC 代言。
     微软 MVP:
         icon: fa-address-card-o
@@ -147,6 +147,9 @@ mySkills:
     Windows:
       background: 'linear-gradient(to right, #FFEB3B 0%, #FFF176 100%)'
       percent: 80%
+    Linux:
+      background: 'linear-gradient(to right, #2196F3 0%, #42A5F5 100%)'
+      percent: 60%
 
 # config gallery of my photos in about page.
 # If you don't want to display this `Gallery` content, you can deactivate or delete this configuration.

@@ -9,6 +9,7 @@ tags:
   - Chocolatey
   - HomeBrew
   - PowerShell
+  - one-key
 ---
 
 

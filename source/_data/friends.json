@@ -147,6 +147,13 @@
         "title": "参与开发"
     },
     {
+        "avatar": "https://avatars3.githubusercontent.com/u/19969570?s=460&v=4",
+        "name": "iBookmarkLet",
+        "introduction": "【原创】浏览器收藏栏一键工具集",
+        "url": "https://gitee.com/Tech_Query/iBookmarkLet",
+        "title": "参与开发"
+    },
+    {
         "avatar": "https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/markdown/markdown.png",
         "name": "HyperDown",
         "introduction": "【优化】让 MarkDown 解析器兼容 PHP 5.3 语法",

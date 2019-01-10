@@ -16,6 +16,9 @@ menu:
   Lecture:
     url: https://ppt.baomitu.com/lecturer/10109/
     icon: fa-slideshare
+  Snippet:
+    url: https://codepen.io/tech_query/
+    icon: fa-code
   Q & A:
     url: https://www.zhihu.com/people/Tech_Query/answers/by_votes
     icon: fa-quora
@@ -43,10 +46,10 @@ logo: /medias/WebCell-0.png
 # including the display name of the button, the font awesome icon, and the hyperlink to the button.
 # 首页 banner 中的第二个按钮的配置，包括按钮的显示名称、font awesome图标和按钮的超链接.
 indexbtn:
-  enable: false
-  name: Github
-  icon: fa-github-alt
-  url: https://github.com/blinkfox/hexo-theme-matery
+  enable: true
+  name: 我在用什么
+  icon: fa-check-square-o
+  url: https://www.awesomes.cn/mem/2920
 
 # Whether to activate the Post TOC, and Configure which title types are supported by TOC support.
 # 是否激活文章 TOC 功能，并配置TOC支持选中哪些标题类型.
@@ -113,14 +116,19 @@ myProjects:
         desc: 从 2018 年中国开源年会志愿者外场组组长、基础设施组 2019 新版官网开发者开始，成为开源社 2019 年度个人正式成员。
     Girls Coding Day:
       icon: fa-female
-      iconBackground: 'linear-gradient(to bottom right, #00BCD4 0%, #80DEEA 100%)'
+      iconBackground: 'linear-gradient(to bottom right, #9900FF 0%, #CC66FF 100%)'
       url: https://girlscodingday.org/
       desc: 2018 年成都社会分会场教练
     四川大学·飞扬俱乐部:
       icon: fa-wrench
-      iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
+      iconBackground: 'linear-gradient(to bottom right, #FF0066 0%, #FF00CC 100%)'
       url: https://lab.fyscu.com/#team
       desc: 2008~10 年骨干技术员、最受欢迎维修师傅，研发部创始团队成员、《川大百科》创始人、《i飞扬》电子杂志 HTML 5 框架作者。
+    开源中国社区:
+      icon: fa-copyright
+      iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
+      url: https://www.oschina.net/question/2686220_2267083
+      desc: 2009 年开始活跃于 OSChina，2017 年在【源创会（成都站）放码过来】分享个人开源项目 EasyWebApp.js
 
 
 # config my skills informations in about page.

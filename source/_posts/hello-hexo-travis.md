@@ -66,13 +66,13 @@ script:
 ```
 上述命令行脚本中的**环境变量**可在 Travis CI 项目配置页设置，示例如下：
 
-| 变量名  | 示例值                              | 释义                  |                                       |
+| 变量名  | 示例值                              | 释义                  | 备注                                   |
 |:-------:|:----------------------------------:|:--------------------:|:--------------------------------------:|
 | FOLDER  | public                             | 网页生成器的输出目录   |                                        |
 | UID     | yourID                             | Git 用户名            | Travis 自动设置                        |
 | EMAIL   | yourID@email.com                   | Git 电邮地址          |                                        |
-| TOKEN   |                                    | GitHub 个人访问令牌   | https://github.com/settings/tokens/new |
-| GIT_URI | github.com/yourID/yourID.github.io | Git 仓库标识符        |                                        |
+| TOKEN   |                                    | Git 平台个人访问令牌   | https://github.com/settings/tokens/new |
+| GIT_URI | github.com/yourID/yourID.github.io | Git 仓库标识符        | 嫌 GitHub 访问慢也可用 Coding.net、码云  |
 | BRANCH  | master                             | GitHub Pages 目标分支 |                                        |
 | MESSAGE | :memo: Update HTML by Travis CI    | Git 提交注记          |                                        |
 

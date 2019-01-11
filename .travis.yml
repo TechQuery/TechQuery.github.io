@@ -12,7 +12,12 @@ cache:
 install:
   - npm install
 script:
-  - git config --global user.name ${UID}
-  - git config --global user.email ${EMAIL}
-  - git config --global credential.username ${TOKEN}
-  - npm run deploy
+  - npm run build
+  - cd ${FOLDER}
+  - echo tech-query.me > CNAME
+  - git init
+  - git config user.name ${UID}
+  - git config user.email ${EMAIL}
+  - git add .
+  - git commit -m "${MESSAGE}"
+  - git push --force --quiet https://${TOKEN}@${GIT_URI}.git master:${BRANCH}

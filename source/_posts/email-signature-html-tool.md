@@ -117,4 +117,4 @@ Outlook、Foxmail 等 **Windows 邮件客户端** 渲染 HTML 应该直接调用
 
   [1]: http://static.oschina.net/uploads/space/2014/1201/154333_73Tz_1171658.png
   [2]: http://static.oschina.net/uploads/space/2014/1201/154419_B5gz_1171658.png
-  [3]: http://git.oschina.net/Tech_Query/iBookmarkLet
+  [3]: http://gitee.com/Tech_Query/iBookmarkLet

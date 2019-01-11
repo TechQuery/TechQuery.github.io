@@ -187,18 +187,13 @@ gitalk:
 # the Gitment config，default disabled
 # Gitment 评论模块的配置，默认为不激活
 gitment:
-  enable: true
-  owner: TechQuery
-  repo: TechQuery.github.io
-  oauth:
-    clientId: 32de1fbb719b80e4b42d
-    clientSecret: 334d58fb3d15e68f3b078a4c01c681b8e4a8c0f5
+  enable: false
 
 # disqus config, default disabled
 # Disqus评论模块的配置，默认为不激活
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: tech-query
 
 # Livere comment configuration, the default is not activated
 # Livere 来必力评论模块的配置，默认为不激活

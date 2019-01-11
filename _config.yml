@@ -99,4 +99,12 @@ feed:
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/TechQuery/TechQuery.github.io
+  branch: master
+
+# hexo-admin authentification
+admin:
+  username: TechQuery
+  password_hash: $2a$10$K.v0h91jNtQXTgYt2qPnpOhnp79FjUSiWIv.DqO0r.rtNFbSU9m8W
+  secret: aHR0cHM6Ly90ZWNoLXF1ZXJ5Lm1lLw==

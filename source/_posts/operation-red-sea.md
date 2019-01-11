@@ -2,7 +2,7 @@
 title: 《红海行动》红动我心
 date: 2018-03-09
 author: 南漂一卒
-img: https://pic3.zhimg.com/v2-6e17e84b32e68599d269c761ac1e475a_1200x500.jpg
+img: /image/operation-red-sea.jpg
 categories:
   - Movie
   - Action

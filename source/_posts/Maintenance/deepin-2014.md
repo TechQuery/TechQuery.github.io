@@ -10,6 +10,7 @@ tags:
   - Deepin
   - system
   - software
+  - bug
 ---
 
 

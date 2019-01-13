@@ -25,6 +25,8 @@ categories:
 
  - **谷粉**：2001 年从用 Google 开始知道“搜索引擎”，09 年后用过腾讯搜搜、搜狗、必应，而后曲线救国终回谷歌怀抱
 
+ - **米粉**：没有比 MIUI 更适合天朝的移动端操作系统
+
  - **李纳丝儿**：2005 年从申请邮寄 10 CD 的 Ubuntu 首版 4.10 开始接触开源软件，历经 Fedora、共创、CentOS、Debian、Linux Mint、Slax、Puppy、雨林木风，最终在 Deepin 转战 Linux 社区时上船
 
  - **大不了三丝儿**：HTML/DOM、CSS、JS 原生标准支持者，致力于 **Web 应用开发**

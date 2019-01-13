@@ -2,7 +2,6 @@
 title: 装机必备软件一键安装
 date: 2018-12-31 21:53:09
 categories:
-  - Technology
   - Maintenance
 tags:
   - software

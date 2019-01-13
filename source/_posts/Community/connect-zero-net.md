@@ -3,7 +3,6 @@ title: 【入门】ZeroNet —— 更接近 互联网的本质
 date: 2017-05-24 18:05
 author: 南漂一卒
 categories:
-  - Technology
   - Community
 tags:
   - Internet

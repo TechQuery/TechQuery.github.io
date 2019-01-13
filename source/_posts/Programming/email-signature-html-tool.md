@@ -3,7 +3,6 @@ title: 电子邮件签名档 HTML 手写时的折腾（附 原创工具）
 date: 2014-12-01 15:47
 author: 南漂一卒
 categories:
-  - Technology
   - Programming
 tags:
   - HTML

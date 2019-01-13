@@ -3,7 +3,6 @@ title: 云计算时代的免费建站
 date: 2019-01-09 01:40:00
 author: 南漂一卒
 categories:
-  - Technology
   - Development
 tags:
   - Web

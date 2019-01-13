@@ -3,7 +3,6 @@ title: 【原创】Docker LAMP 入门
 date: 2015-11-17 03:54:00
 author: 南漂一卒
 categories:
-  - Technology
   - Development
 tags:
   - Docker

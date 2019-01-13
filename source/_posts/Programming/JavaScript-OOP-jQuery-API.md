@@ -3,7 +3,6 @@ title: 【JavaScript 进阶】面向对象编程与 jQuery 式 API 的实现
 date: 2014-09-26 20:24:00
 author: 南漂一卒
 categories:
-  - Technology
   - Programming
 tags:
   - JavaScript

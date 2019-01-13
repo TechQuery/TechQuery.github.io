@@ -3,7 +3,6 @@ title: JavaScript 一句话总结
 date: ‎2019‎-01-02 ‏‎23:00:00
 author: 南漂一卒
 categories:
-  - Technology
   - Programming
 tags:
   - JavaScript

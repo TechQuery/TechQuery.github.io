@@ -5,7 +5,6 @@ author: 南漂一卒
 img: /image/operation-red-sea.jpg
 categories:
   - Movie
-  - Action
 tags:
   - military
 ---

@@ -3,7 +3,6 @@ title: Deepin 15.5 使用体验
 date: 2018-04-02 22:28
 author: 南漂一卒
 categories:
-  - Technology
   - Maintenance
 tags:
   - Linux

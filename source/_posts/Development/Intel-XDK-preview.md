@@ -3,7 +3,6 @@ title: Intel XDK 跨平台 App 开发初体验
 date: 2016-06-21 16:32
 author: 南漂一卒
 categories:
-  - Technology
   - Development
 tags:
   - Intel

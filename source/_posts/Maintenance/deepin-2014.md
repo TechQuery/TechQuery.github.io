@@ -3,7 +3,6 @@ title: 【爱之深】Linux Deepin 2014 试用札记
 date: 2015-02-28 15:26
 author: 南漂一卒
 categories:
-  - Technology
   - Maintenance
 tags:
   - Linux

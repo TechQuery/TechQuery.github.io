@@ -3,7 +3,6 @@ title: 22 行 JS 写个图片格式转换器
 date: 2018-03-07 00:17
 author: 南漂一卒
 categories:
-  - Technology
   - Programming
 tags:
   - image

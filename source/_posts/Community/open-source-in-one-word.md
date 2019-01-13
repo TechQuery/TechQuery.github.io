@@ -3,7 +3,6 @@ title: “开源运动”一句话说清
 date: ‎2019‎-01-09 ‏‎23:12:00
 author: 南漂一卒
 categories:
-  - Technology
   - Community
 tags:
   - open-source

@@ -3,8 +3,7 @@ title: Hello Hexo & Travis !
 date: 2018‎-12‎-29 ‏‎19:30:00
 author: 南漂一卒
 categories:
-  - Technology
-  - Programming
+  - Development
 tags:
   - Hexo
   - Travis

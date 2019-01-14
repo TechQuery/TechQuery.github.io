@@ -125,4 +125,6 @@ steps:
 
  2. https://ssk7833.github.io/blog/2016/01/21/using-TravisCI-to-deploy-on-GitHub-pages/
 
- 3. https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=vsts&tabs=example#bash
+ 3. https://easyhexo.github.io/Easy-Hexo/
+
+ 4. https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=vsts&tabs=example#bash

@@ -58,13 +58,6 @@ tags:
  6. 官方封装的**数据存储**、**手机短信**、**即时通讯**、**消息推送**、**游戏客户端引擎**等云服务也有方便的 API、SDK，为今后更多需求的开发提供保障
 
 
-## 文件存储
-
-若有更多功能需求，**图床**、**文件上传**自然少不了，LeanCloud CEO 推荐的[七牛云](https://www.qiniu.com/)给**每个账户无限上传流量、每月 100 万次访问的 10 GB 存储空间**！
-
-唯一不便的是，存储空间要绑定域名必须备案，否则就要自己开发**后端中间件**[代理请求七牛云](https://github.com/FreeCodeCamp-Chengdu/GDN/blob/master/server/File/QiNiu.js)。（后面抽时间写个独立的**七牛云代理中间件**）
-
-
 ---
 
 【整套方案的样板项目】https://github.com/FreeCodeCamp-Chengdu/WFE-Conf

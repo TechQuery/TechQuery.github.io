@@ -33,10 +33,3 @@ top: true
  - **大不了三丝儿**：HTML/DOM、CSS、JS 原生标准支持者，致力于 **Web 应用开发**
 
  - **NG 欧巴**：高中建过社团，大学建过社团部门，现打杂于多个**公益技术社区**
-
-
-## 工作简历
-
- - [领英](https://www.linkedin.com/in/techquery/)
-
- - [拉勾](https://www.lagou.com/)

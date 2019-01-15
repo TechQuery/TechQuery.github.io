@@ -24,7 +24,7 @@ tags:
 
 ## 静态网页
 
-静态网页托管认准 [GitHub Pages](https://pages.github.com/)，需要 **MarkDown 转 HTML** 的推荐 [Hexo](/technology/programming/hello-hexo-travis/)。
+静态网页托管认准 [GitHub Pages](https://pages.github.com/)，需要 **MarkDown 转 HTML** 的推荐 [Hexo](/development/hello-hexo-travis/)。
 
 
 ## 顶级域名

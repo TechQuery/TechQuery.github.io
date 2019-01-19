@@ -58,6 +58,13 @@ tags:
  6. 官方封装的**数据存储**、**手机短信**、**即时通讯**、**消息推送**、**游戏客户端引擎**等云服务也有方便的 API、SDK，为今后更多需求的开发提供保障
 
 
+## 文件存储
+
+虽说很多人推荐七牛云的免费 10 GB 对象存储，但它必须备案域名才能下载，随机测试域名只能用 30 天……
+
+心灰意冷之际却搜到来抢市场的**腾讯云** —— [免费 50 GB](https://cloud.tencent.com/document/product/436/6240) **对象存储**，支持不限期[固定子域名](https://cloud.tencent.com/document/product/436/6224)！
+
+
 ---
 
 【整套方案的样板项目】https://github.com/FreeCodeCamp-Chengdu/WFE-Conf

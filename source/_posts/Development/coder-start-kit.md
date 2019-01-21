@@ -12,6 +12,7 @@ tags:
 ---
 
 
+
 ## 编程开头难
 
 ***难倒编程小白的第一件事*** 恐怕是“安装开发工具”，即便是很多 ***程序猿老司机***，也最怕“换电脑、配环境”……
@@ -19,6 +20,7 @@ tags:
 这时可能有人会喷：“肯定用的 Windows！Mac、Linux 这些类 UNIX 系统各种开发工具都自带，装其它的也很方便~”
 
 作为开源老司机的我，Linux 的**开发者友好性**自不必说，但 Mac 除了移植了整套 UNIX 工具链，**接口兼容性**、**系统扩展性**、**企业级支持**等等还真不如浸淫企业级市场二三十年的 Windows。现在连开发者友好性也不知不觉地落后了，且看我下文分解……
+
 
 
 ## 程序猿的“应用商店”
@@ -33,7 +35,9 @@ tags:
 不要看到“敲命令”就眉头紧锁，如果要敲一大堆，怎能叫“一键安装”呢？废话不多，且看代码……
 
 
+
 ## 大神说：要有“包管理器”！
+
 
 ### Windows 的“巧克力”
 
@@ -81,6 +85,11 @@ Google Chrome 用户第二次访问可以 ***地址栏一把梭*** ——
 
 ![](https://oscimg.oschina.net/oscnet/3bc98c8d151517a955f88174d1d61210934.jpg)
 
+传统**命令行终端**按 `Tab` 键**提示可用命令**、**补全文件路径**司空见惯，你见过能**提示命令行参数**、直接**搜索软件包**的吗？
+
+![choco install](https://raw.githubusercontent.com/wiki/chocolatey/choco/images/gifs/choco_install.gif)
+
+
 ### Mac 的“私酿”
 
 令人费解的总是 ***乔帮主的套路***，一直吹嘘类 UNIX 体系“性能、安全”的 Mac，却不学同门师兄 Linux 的“为自己带包”，包管理器全是第三方开发的，而且还没 Windows 的好用……（果然是“私酿”？呵呵~）
@@ -105,46 +114,26 @@ brew cask install google-chrome
 再看看它的[软件包网页目录](https://formulae.brew.sh/formula/ "Homebrew 软件包官方目录")，只能【Command + F】整页查找，还没收录 cask 子命令的软件……
 
 
+
 ## 新电脑的创世纪
 
 每当我们拿到一台新电脑，在装好包管理器后，开发环境配置就能一把梭了。
+
 
 ### Web 前端 / JavaScript 全栈工程师
 
 #### Windows
 
 ```shell
-choco install git
-
-choco install tortoisegit
-
-choco install vscode
-
-choco install googlechrome
-
-choco install firefox
-
-choco install nodejs-lts
-
-choco install nvm.portable
+choco install -y googlechrome firefox git tortoisegit vscode nodejs-lts nvm.portable
 ```
 
 #### Mac
 
 ```shell
-brew install git
+brew install git node nvm cask
 
-brew cask install sourcetree
-
-brew cask install visual-studio-code
-
-brew cask install google-chrome
-
-brew cask install firefox
-
-brew install node
-
-brew install nvm
+brew cask install google-chrome firefox sourcetree visual-studio-code
 ```
 
 ### Python 黑客
@@ -152,13 +141,7 @@ brew install nvm
 #### Windows
 
 ```shell
-choco install git
-
-choco install tortoisegit
-
-choco install vscode
-
-choco install python
+choco install -y git tortoisegit vscode python
 
 refreshenv
 
@@ -173,13 +156,9 @@ pip install pipenv
 #### Mac
 
 ```shell
-brew install git
+brew install git python cask
 
-brew cask install sourcetree
-
-brew cask install visual-studio-code
-
-brew install python
+brew cask install sourcetree visual-studio-code
 
 python -m pip install --upgrade pip
 

@@ -39,14 +39,10 @@ choco -v
 if (! $?) {  getChoco  }
 
 
-$software =
-    'boxstarter.winconfig', 'ChocolateyGUI',
-    'everything', 'notepad3', '7zip', '360ts',
-    'firefox', 'tim', 'wps-office-free'
-
-foreach ($name in $software) {
-    choco install $name -y
-}
+choco install -y \
+    boxstarter.winconfig ChocolateyGUI \
+    everything notepad3 7zip 360ts \
+    firefox tim wps-office-free
 
 Import-Module Boxstarter.Chocolatey
 

@@ -102,3 +102,44 @@ deploy:
   type: git
   repo: https://github.com/TechQuery/TechQuery.github.io
   branch: master
+
+# PWA plugin
+pwa:
+  manifest:
+    path: /manifest.json
+    body:
+      name: TechQuery
+      short_name: TechQuery
+      start_url: https://tech-query.me/
+      description: Personal Web site of TechQuery focused on Web & JavaScript full-stack development
+      scope: /
+      display: standalone
+      orientation: any
+      lang: zh-CN
+      dir: ltr
+      theme_color: rgba(0,0,0,0.5)
+      background_color: transparent
+      icons:
+        - src: /image/WebCell-0.png
+          type: image/png
+          sizes: 300x300
+  serviceWorker:
+    path: /sw.js
+    preload:
+      urls:
+        - /
+      posts: 5
+    opts:
+      networkTimeoutSeconds: 5
+    routes:
+      - pattern: !!js/regexp /\//
+        strategy: networkFirst
+      - pattern: !!js/regexp /.*\.(css|js|jpg|jpeg|png|gif|webp)$/
+        strategy: cacheFirst
+      - pattern: !!js/regexp /google.*\.com/
+        strategy: networkOnly
+      - pattern: !!js/regexp /disqus.*\.com/
+        strategy: networkOnly
+      - pattern: !!js/regexp /cnzz\.com/
+        strategy: networkOnly
+  priority: 5

@@ -42,9 +42,9 @@ highlight:
   enable: false
 
 prism_plugin:
-  mode: 'preprocess'    # realtime/preprocess
-  theme: 'atom-dark'
-  line_number: false    # default false
+  mode: preprocess # realtime/preprocess
+  theme: atom-dark
+  line_number: false # default false
   custom_css:
 
 # Home page setting
@@ -84,7 +84,6 @@ search:
 
 permalink_pinyin:
   enable: true
-  separator: '-' # default: '-'
 
 feed:
   type: atom
@@ -102,6 +101,9 @@ deploy:
   type: git
   repo: https://github.com/TechQuery/TechQuery.github.io
   branch: master
+
+auto_category:
+  enable: true
 
 # PWA plugin
 pwa:

@@ -3,7 +3,6 @@
   "version": "2.1.0",
   "description": "Personal Web site of TechQuery focused on Web & JavaScript full-stack development",
   "author": "shiy2008@gmail.com",
-  "license": "AGPL-3.0",
   "private": true,
   "homepage": "https://tech-query.me/",
   "repository": {
@@ -14,13 +13,19 @@
     "url": "https://github.com/TechQuery/TechQuery.github.io/issues"
   },
   "scripts": {
-    "build": "hexo clean  &&  hexo generate",
-    "deploy": "hexo clean  &&  hexo deploy",
+    "format": "prettier --write \"{,!(node_modules|.git|scaffolds|themes|public)/**/}*.{html,md,css,less,js,json,yml,yaml}\"",
+    "build": "npm run format  &&  hexo clean  &&  hexo generate",
+    "deploy": "npm run format  &&  hexo clean  &&  hexo deploy",
     "start": "hexo clean  &&  hexo server"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build"
+    }
   },
   "dependencies": {
     "hexo": "^3.8.0",
-    "hexo-cli": "1.1.0",
+    "hexo-auto-category": "^0.2.0",
     "hexo-deployer-git": "^1.0.0",
     "hexo-generator-archive": "^0.1.5",
     "hexo-generator-category": "^0.1.3",
@@ -36,7 +41,15 @@
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.3.3"
   },
+  "devDependencies": {
+    "husky": "^1.3.1",
+    "prettier": "^1.16.4"
+  },
   "hexo": {
     "version": "3.8.0"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "singleQuote": true
   }
 }

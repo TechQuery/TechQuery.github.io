@@ -2,14 +2,14 @@
 title: 田窗里面开道场
 date: 2019-01-21 20:31:18
 author: 南漂一卒
-category: Development
+categories:
+  - Development
 tags:
   - Docker
   - Windows
   - one-key
   - Chocolatey
 ---
-
 
 每次大家一谈起 Docker，Windows 总能成为“黑点”，也不知道那些“果珍”哪来的自信……
 
@@ -23,6 +23,6 @@ choco install docker-desktop docker-kitematic
 
 ```powershell
 choco install docker-toolbox -ia \
-    /COMPONENTS="kitematic,virtualbox,dockercompose"
+    /COMPONENTS="kitematic,virtualbox,dockercompose" \
     /TASKS="desktopicon,modifypath,upgradevm"
 ```

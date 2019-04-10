@@ -1,6 +1,6 @@
 ---
 title: 22 行 JS 写个图片格式转换器
-date: 2018-03-07 00:17
+date: 2018-03-07 00:17:00
 author: 南漂一卒
 categories:
   - Programming
@@ -10,9 +10,7 @@ tags:
   - converter
 ---
 
-
 【原文链接】https://my.oschina.net/TechQuery/blog/1630721
-
 
 虽然国内大厂（豆瓣、微信公众平台 等）已支持 Google 推出的 **WebP 图片格式**来进一步优化性能，但其它多数软件平台还是只支持 BMP、GIF、JPEG、PNG 等经典格式，有时临时找个支持 WebP 的**图片格式转换器**也挺麻烦的，不如抄起键盘就是一把梭~
 
@@ -21,27 +19,24 @@ tags:
 ## 通用源码
 
 ```javascript
-(function () {
+(function() {
+  var canvas = document.createElement('canvas');
 
-    var canvas = document.createElement('canvas');
+  var context2D = canvas.getContext('2d');
 
-    var context2D = canvas.getContext('2d');
+  self.convertImage = function(image, format) {
+    context2D.clearRect(0, 0, canvas.width, canvas.height);
 
-    self.convertImage = function (image, format) {
+    canvas.width = image.naturalWidth;
 
-        context2D.clearRect(0, 0, canvas.width, canvas.height);
+    canvas.height = image.naturalHeight;
 
-        canvas.width = image.naturalWidth;
+    image.crossOrigin = 'Anonymous';
 
-        canvas.height = image.naturalHeight;
+    context2D.drawImage(image, 0, 0);
 
-        image.crossOrigin = "Anonymous";
-
-        context2D.drawImage(image, 0, 0);
-
-        return  canvas.toDataURL('image/' + (format || 'png'),  1);
-    };
-
+    return canvas.toDataURL('image/' + (format || 'png'), 1);
+  };
 })();
 ```
 
@@ -58,4 +53,5 @@ tags:
 ```javascript
 my_img.src = convertImage(my_img, 'jpeg');
 ```
+
 上述代码运行完毕后，网页右键菜单中的**图片另存为**功能保存的就是 JPEG 格式的图片。

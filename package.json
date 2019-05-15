@@ -32,6 +32,7 @@
     "hexo-generator-feed": "^1.2.2",
     "hexo-generator-index": "^0.2.1",
     "hexo-generator-search": "^2.4.0",
+    "hexo-generator-slidehtml": "0.0.62",
     "hexo-generator-tag": "^0.2.0",
     "hexo-permalink-pinyin": "^1.0.0",
     "hexo-prism-plugin": "^2.3.0",

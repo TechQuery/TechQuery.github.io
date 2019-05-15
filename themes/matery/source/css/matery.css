@@ -896,7 +896,9 @@ article .article-tags .chip {
 
 #articleContent img {
     max-width: 100%;
-    height: auto;
+    max-height: 90vh;
+    display: block;
+    margin: auto;
     cursor: pointer;
 }
 

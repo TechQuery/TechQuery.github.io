@@ -263,6 +263,9 @@ const bigInt = BigInt(Number.MAX_SAFE_INTEGER) + 1n; // 9007199254740992n
 [[1, 2], [3, 4]].flat(); // [1, 2, 3, 4]
 
 Object.fromEntries([['a', 1], ['b', 2]]); // {a: 1, b: 2}
+
+console.log(...'FCC成都社区,FCC中文社区'.matchAll(/FCC[^,]+/));
+//  ['FCC成都社区', 'FCC中文社区']
 ```
 
 ---
@@ -287,7 +290,9 @@ const globalThis = (() => {
 
 ---
 
-### 国际化 API - 相对时间
+### 国际化 API
+
+#### 相对时间
 
 ```javascript
 const formatter = new Intl.RelativeTimeFormat('zh-CN');
@@ -312,6 +317,74 @@ console.log(formatter.formatToParts(-1, 'day'));
 
 - Stage-3
 - Chrome 71、Firefox 65
+
+---
+
+#### 短语列表
+
+```javascript
+const and = new Intl.ListFormat('zh-CN', { type: 'conjunction' }),
+  or = new Intl.ListFormat('zh-CN', { type: 'disjunction' });
+
+const list = ['GDG', 'FCC', 'ThoughtWorks'];
+
+console.log(
+  and.format(list), // 'GDG、FCC和ThoughtWorks'
+  or.format(list) // 'GDG、FCC或ThoughtWorks'
+);
+```
+
+- Stage-3
+- Chrome 72、Opera 60
+
+---
+
+### Promise
+
+#### .allSettled()
+
+```javascript
+await Promise.allSettled([
+  fetch('https://fcc-cd.tk/'),
+  fetch('https://google.com/') // 没有科学上网
+]);
+
+console.log('所有请求已响应，部分可能失败');
+```
+
+#### .any()
+
+```javascript
+const fastest = await Promise.any([
+  fetch('https://cdn.jsdelivr.net/npm/web-cell/dist/web-cell.min.js'),
+  fetch('https://unpkg.com/web-cell/dist/web-cell.min.js')
+]);
+
+console.log(fastest.url);
+```
+
+---
+
+### 类实例成员
+
+```javascript
+class Example {
+  publicField = 1;
+  #privateField = 2;
+
+  publicMethod = () =>
+    console.log(
+      this.publicField, // 1
+      this.#privateField // 2
+    );
+}
+```
+
+- Stage-3
+- Babel 7
+- Node 12
+- Chrome 72 / V8 7.2（公开成员）
+- Chrome 74 / V8 7.4（私有成员）
 
 ---
 
@@ -453,3 +526,23 @@ cleaner.register(image, URI);
 ### Material Design 夜间模式
 
 [![](https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1Eb0bcqf3yyrabY8JLOrfC9zq_nN8wCu9%2Fdarktheme-overview.png)](https://material.io/design/color/dark-theme.html)
+
+---
+
+## 性感谷歌，在线教学
+
+https://web.dev/
+
+https://developers.google.cn/web/
+
+https://events.google.com/io/codelabs/
+
+https://codelabs.developers.google.com/?cat=Web
+
+---
+
+## 关注 freeCodeCamp 成都社区
+
+https://fcc-cd.tk/
+
+![](/image/FCC-CDC-QRC.png)

@@ -139,7 +139,7 @@ document.querySelector('button.share').addEventListener('click', async () => {
 ```javascript
 const textDetector = new TextDetector();
 
-  const texts = await textDetector.detect(image);
+const texts = await textDetector.detect(image);
 
 texts.forEach(text => console.log(text));
 ```
@@ -239,7 +239,118 @@ Set-Cookie: c=3; SameSite=None
 
 ---
 
-### WeakRef
+### V8 提速、降费
+
+![](https://oscimg.oschina.net/oscnet/20823b97896a3ff102da2e47223b4659e7a.jpg)
+
+---
+
+![](https://oscimg.oschina.net/oscnet/935cbd4dc8bff380d632898aef0d2e22068.jpg)
+
+---
+
+![](https://oscimg.oschina.net/oscnet/1d86e81a249205922d7881a8356a04f0a1f.jpg)
+
+---
+
+### 原生类型增强
+
+```JavaScript
+const integer = 14_0000_0000;  // 1400000000
+
+const bigInt = BigInt(Number.MAX_SAFE_INTEGER) + 1n; // 9007199254740992n
+
+[[1, 2], [3, 4]].flat(); // [1, 2, 3, 4]
+
+Object.fromEntries([['a', 1], ['b', 2]]); // {a: 1, b: 2}
+```
+
+---
+
+### 统一全局对象
+
+```javascript
+const globalThis = (() => {
+  // 浏览器主线程
+  if (typeof window !== 'undefined') return window;
+  // Web worker 线程
+  if (typeof self !== 'undefined') return self;
+  // Node.JS
+  if (typeof global !== 'undefined') return global;
+  // 其它运行时的非严格模式
+  if (typeof this !== 'undefined') return this;
+})();
+```
+
+- Stage-3
+- Chrome 71、Firefox 65、Safari 12.1
+
+---
+
+### 国际化 API - 相对时间
+
+```javascript
+const formatter = new Intl.RelativeTimeFormat('zh-CN');
+
+console.log(formatter.format(-1, 'day')); // 1天前
+
+console.log(formatter.formatToParts(-1, 'day'));
+/*
+[
+    {
+        "type": "integer",
+        "value": "1",
+        "unit": "day"
+    },
+    {
+        "type": "literal",
+        "value": "天前"
+    }
+]
+*/
+```
+
+- Stage-3
+- Chrome 71、Firefox 65
+
+---
+
+### 垃圾回收 API
+
+#### 提案来源
+
+- Python 2.1+ 标准库 weakref 模块
+  - https://www.atjiang.com/Python2Lib-ds-weakref/
+  - https://learnku.com/docs/pymotw/weakref-a-weak-reference-to-an-object/3372
+- [JS Rhino 引擎可借用 Java WeakReference 类](https://blogs.oracle.com/sundararajan/weak-references-in-javascript)
+- [动态检测工具 Frida 的 JS API](https://zhuanlan.kanxue.com/article-4277.htm)
+
+---
+
+#### WeakMap
+
+```javascript
+const URI = 'path/to/file';
+
+const file = await (await fetch(URI)).blob();
+
+const ref = new WeakRef(file),
+  cache = {};
+
+cache[URI] = ref;
+
+console.log(ref.deref()); // Blob {}
+```
+
+#### FinalizationGroup
+
+```javascript
+const cleaner = new FinalizationGroup(iterator => {
+  for (const URI of iterator) delete cache[URI];
+});
+
+cleaner.register(image, URI);
+```
 
 ---
 
@@ -248,6 +359,94 @@ Set-Cookie: c=3; SameSite=None
 ---
 
 ### Search How to
+
+![](https://developers.google.com/search/docs/data-types/images/howto-example2.png)
+
+---
+
+```json
+{
+  "@context": "http://schema.org",
+  "@type": "HowTo",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://example.com/1x1/photo.jpg"
+  },
+  "name": "How to tie a tie",
+  "description": "...",
+  "totalTime": "PT2M",
+  "video": {
+    "@type": "VideoObject",
+    "name": "Tie a Tie",
+    "description": "...",
+    "thumbnailUrl": "https://example.com/photos/photo.jpg",
+    "contentUrl": "http://www.example.com/videos/123_600x400.mp4",
+    "embedUrl": "http://www.example.com/videoplayer?id=123",
+    "uploadDate": "2019-01-05T08:00:00+08:00",
+    "duration": "P1MT10S"
+  },
+  "supply": [
+    {
+      "@type": "HowToSupply",
+      "name": "A tie"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "A collared shirt"
+    }
+  ],
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "A mirror"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Preparations",
+      "text": "...",
+      "image": "https://example.com/1x1/step1.jpg",
+      "url": "https://example.com/tie#step1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Crossing once",
+      "text": "...",
+      "image": "https://example.com/1x1/step2.jpg",
+      "url": "https://example.com/tie#step2"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Second crossing",
+      "text": "...",
+      "image": "https://example.com/1x1/step3.jpg",
+      "url": "https://example.com/tie#step3"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Loop in",
+      "text": "...",
+      "image": "https://example.com/1x1/step4.jpg",
+      "url": "https://example.com/tie#step4"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Pull and tighten",
+      "text": "...",
+      "image": "https://example.com/1x1/step5.jpg",
+      "url": "https://example.com/tie#step5"
+    }
+  ]
+}
+```
+
+---
+
+#### 结构化元数据
+
+- [Schema.org](https://schema.org/)
+- [Google 搜索优化应用](https://developers.google.com/search/docs/guides/search-gallery)
 
 ---
 

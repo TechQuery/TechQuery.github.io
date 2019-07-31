@@ -13,18 +13,24 @@
     "url": "https://github.com/TechQuery/TechQuery.github.io/issues"
   },
   "scripts": {
-    "format": "prettier --write \"{,!(node_modules|.git|scaffolds|themes|public)/**/}*.{html,md,css,less,js,json,yml,yaml}\"",
-    "build": "npm run format  &&  hexo clean  &&  hexo generate",
-    "deploy": "npm run format  &&  hexo clean  &&  hexo deploy",
+    "build": "hexo clean  &&  hexo generate",
+    "deploy": "hexo clean  &&  hexo deploy",
     "start": "hexo clean  &&  hexo server"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run build"
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run build"
     }
   },
+  "lint-staged": {
+    "*.{html,md,css,less,js,json,yml,yaml}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
   "dependencies": {
-    "hexo": "^3.8.0",
+    "hexo": "^3.9.0",
     "hexo-auto-category": "^0.2.0",
     "hexo-deployer-git": "^1.0.0",
     "hexo-generator-archive": "^0.1.5",
@@ -34,20 +40,21 @@
     "hexo-generator-search": "^2.4.0",
     "hexo-generator-slidehtml": "0.0.62",
     "hexo-generator-tag": "^0.2.0",
-    "hexo-permalink-pinyin": "^1.0.0",
+    "hexo-permalink-pinyin": "^1.1.0",
     "hexo-prism-plugin": "^2.3.0",
     "hexo-pwa": "^0.1.3",
     "hexo-renderer-ejs": "^0.3.1",
-    "hexo-renderer-marked": "^0.3.2",
+    "hexo-renderer-marked": "^1.0.1",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.3.3"
   },
   "devDependencies": {
-    "husky": "^2.3.0",
-    "prettier": "^1.17.1"
+    "husky": "^3.0.2",
+    "lint-staged": "^9.2.1",
+    "prettier": "^1.18.2"
   },
   "hexo": {
-    "version": "3.8.0"
+    "version": "3.9.0"
   },
   "prettier": {
     "tabWidth": 2,

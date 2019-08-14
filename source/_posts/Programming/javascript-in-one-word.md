@@ -39,7 +39,7 @@ tags:
 > —— 继承自 LISP 语言
 
 ```javascript
-var closure = function() {
+function factory() {
   const privateData = {};
 
   return {
@@ -50,7 +50,9 @@ var closure = function() {
       return privateData[key];
     }
   };
-};
+}
+
+var closure = factory();
 
 closure.set('A', 1);
 

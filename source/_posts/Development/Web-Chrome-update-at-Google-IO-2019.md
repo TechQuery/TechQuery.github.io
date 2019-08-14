@@ -1,6 +1,7 @@
 ---
 title: Web 与 Chrome 最新进展 @Google I/O 2019
 date: 2019-05-15 10:24:04
+updated: 2019-5-25 17:57:09
 categories:
   - Development
 tags:
@@ -210,8 +211,13 @@ faces.forEach(face => console.log(face));
 ### 同站 Cookie
 
 ```
+# 站内跳转带 cookie
 Set-Cookie: a=1; SameSite=Strict
+
+# 跳转到本站带 cookie
 Set-Cookie: b=2; SameSite=Lax
+
+# 不限制 cookie
 Set-Cookie: c=3; SameSite=None
 ```
 
@@ -264,8 +270,8 @@ const bigInt = BigInt(Number.MAX_SAFE_INTEGER) + 1n; // 9007199254740992n
 
 Object.fromEntries([['a', 1], ['b', 2]]); // {a: 1, b: 2}
 
-console.log(...'FCC成都社区,FCC中文社区'.matchAll(/FCC[^,]+/));
-//  ['FCC成都社区', 'FCC中文社区']
+console.log(...'FCC成都社区,FCC中文社区'.matchAll(/\w+([^,]+)/g));
+//  ['FCC成都社区', '成都社区']  ['FCC中文社区', '中文社区']
 ```
 
 ---
@@ -400,7 +406,7 @@ class Example {
 
 ---
 
-#### WeakMap
+#### WeakRef
 
 ```javascript
 const URI = 'path/to/file';

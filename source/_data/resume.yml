@@ -1,0 +1,200 @@
+basics:
+  name: Yao Shi
+  label: Programmer
+  picture: https://tech-query.me/community/fcc-devtalk-techquery/TechQuery-WebCell-cap.jpg
+  email: shiy2008@gmail.com
+  phone: (86) 19949484787
+  website: https://tech-query.me/
+  summary: Web/JavaScript full-stack developer, Open-source author & contributor, Technical community leader.
+  location:
+    city: ChengDu
+    countryCode: CN
+    region: SiChuan
+  profiles:
+    - network: GitHub
+      username: TechQuery
+      url: https://github.com/TechQuery
+work:
+  - company: ThoughtWorks
+    position: UI developer (Senior consultant)
+    website: https://thoughtworks.com
+    startDate: 2019-04-12
+    endDate: 2019-08-07
+    summary: Senior Web front-end developer
+    highlights:
+      - Make a quick speech about Web Components in ThoughtWorks JavaScript community
+      - Make a quick speech about Puppeteer & Codecept in ThoughtWorks JavaScript community
+      - Use React + TypeScript in Logistics Web platform of Shell China
+      - Use MpVue in Logistics WeChat mini-program of Shell China
+      - Use Vue in DORA (a data platform in ThoughtWorks)
+  - company: tap4fun
+    position: Senior Web front-end engineer
+    website: https://tap4fun.com
+    startDate: 2018-03-27
+    endDate: 2018-12-07
+    summary: Front-end Leader of Web Development department
+    highlights:
+      - Write a Web Front-end Engineering Specification, and implement it as an Automated Tool-chain
+      - Write a Web Front-end Recruitment Test, and be responsible for the first round of Front-end interviews across the company
+      - Build a GitLab + JIRA R & D workflow, and be responsible for its Full Staff Training
+      - Responsible for the Code Review of Web front-end codes of each R & D project, and make the final check before the Code Merge
+      - Provide targeted Technical Guidance & Training to Web front-end team, based on technical problems arising in daily R & D work
+      - Replacing the new architecture of React + Ant Design based on the personal open-source project WebCell (Lightweight Web Component Engine)
+      - Try to migrate Selenium to a lighter Puppeteer test architecture with the Test leader
+  - company: Tincere
+    position: Senior Web front-end engineer
+    website: http://tincere.cn/
+    startDate: 2015-11-09
+    endDate: 2018-03-20
+    summary: Technology leader of Web front-end group
+    highlights:
+      - Refactor multiple PC and mobile projects based on personal open-source projects EasyWebApp.js and EasyLibs.php
+volunteer:
+  - organization: freeCodeCamp.org
+    position: Core organizer
+    website: https://freecodecamp.org/
+    startDate: 2016-11-06
+    summary: The world's largest open-source programming learning community
+    highlights:
+      - Create and practice Half-monthly Tech-salons in China community
+      - Make many Lectures at community salons & conferences
+      - Work as a Coach at many community workshops
+      - Work as an Organizer at many community salons, workshops & conferences
+      - Develop new Web-site of ChengDu community based on Hexo and Original open-source utilities
+      - Create a new Community Operating model based on
+  - organization: KaiYuanShe
+    position: Executive Committee member
+    website: https://kaiyuanshe.cn/
+    startDate: 2018-10-20
+    summary: Largest open-source NGO in China
+    highlights:
+      - Develop new Web-site of KaiYuanShe based on Hexo and Original open-source utilities
+      - Outfield volunteer leader of COSCon 2018
+  - organization: Girls Coding day
+    position: Coach
+    website: https://girlscodingday.org/
+    startDate: 2018-11-11
+    endDate: 2018-11-24
+    summary: 2018 ChengDu workshop
+    highlights:
+      - Write a Python install tutorial based on choco, brew & pipenv to make download and install faster
+      - Make a quick speech about Puppeteer & Codecept
+  - organization: SCU FeiYang Club
+    position: Personal computer certified technician
+    website: https://fyscu.com/
+    startDate: 2008-10-08
+    endDate: 2013-06-30
+    summary: Top 10 Student society of SiChuan university
+    highlights:
+      - Designer of "Digital Equipment Repair Order"
+      - Product Manager of Digital Equipment Repair System
+      - Drafter of "Maintenance Technician Training Program"
+      - Chief Reviewer of "Maintenance Technician Training Course"
+      - Founding Team member of R & D Department
+      - Founding Team member of Internet Media Department
+      - Founder of SCU Wiki
+      - Developer of "iFeiYang" electronic magazine (HTML 5) framework
+education:
+  - institution: SiChuan University
+    area: Electronic Information Science & Technology
+    studyType: Bachelor
+    startDate: 2008-09-01
+    endDate: 2012-06-30
+awards:
+  - title: Most Valuable Professional
+    date: 2019-07-01
+    awarder: Microsoft
+    summary: Developer Technologies
+  - title: Most Valuable Professional
+    date: 2018-08-02
+    awarder: Microsoft
+    summary: Developer Technologies
+  - title: Top contributor
+    date: 2018-06-18
+    awarder: freeCodeCamp.org
+    summary: Annual Award for City Community organizers
+publications:
+  - name: WebCell
+    publisher: freeCodeCamp ChengDu community
+    releaseDate: 2018-11-10
+    website: https://web-cell.dev/
+    summary: Light-weight Web Components engine based on ECMAScript 2018 & Decorator proposal
+  - name: Node.JS & Headless browser
+    publisher: freeCodeCamp ChongQing community
+    releaseDate: 2018-08-18
+    website: https://ppt.baomitu.com/d/aba3b7a3
+    summary: Open-source solution of Web automated testing
+  - name: EasyWebApp v4
+    publisher: freeCodeCamp ChengDu community
+    releaseDate: 2017-11-19
+    website: https://ppt.baomitu.com/d/34699c9a
+    summary: Declarative MVVM engine based on ECMAScript 5 & jQuery (predecessor of WebCell)
+skills:
+  - name: Web front-end
+    level: Master
+    keywords:
+      - HTML 5+
+      - CSS 3+
+      - ECMAScript 6+
+      - TypeScript
+      - Web Components
+      - React
+      - Vue
+  - name: Node.JS command-line
+    level: Senior
+    keywords:
+      - Module bundler
+      - Project generator
+      - Headless browser
+  - name: Open-source management
+    level: Senior
+    keywords:
+      - GitHub
+      - GitLab
+      - Travis CI
+      - Wikipedia
+  - name: Node.JS back-end
+    level: Medium
+    keywords:
+      - Koa 2
+      - LeanCloud (BaaS)
+  - name: System maintenance
+    level: Medium
+    keywords:
+      - Windows PowerShell
+      - Ubuntu Linux
+languages:
+  - language: Chinese
+    fluency: Native speaker
+  - language: English
+    fluency: Daily conversation
+interests:
+  - name: Movie
+    keywords:
+      - history
+      - society
+      - action
+      - love
+  - name: Music
+    keywords:
+      - ideal
+      - folk
+      - love
+      - classic
+  - name: Sport
+    keywords:
+      - skiing
+      - badminton
+      - swimming
+      - KongFu
+  - name: HanFu
+references:
+  - name: YuZhen Jiang
+    reference: |
+      很给力～很可靠～
+      FCC成都社区技术担当
+      幽默～万事通
+  - name: NingChuan Li
+    reference: |
+      技術方面還沒見過比他更牛的。（在我工作十多年外加面試過上千位技術的經歷裡）
+      有追求、有想法、不妥協，對代碼追求完美，不會放過任何一個技術上的細節。動手能力超強。值得信任的技術擔當

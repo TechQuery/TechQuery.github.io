@@ -85,7 +85,7 @@ resume serve
 npm set puppeteer_download_host https://storage.googleapis.com.cnpmjs.org
 ```
 
-2. 用非默认主题导出时，要先把**主题模板包**安装在 `resume-cli` 的对应位置（全局 或 项目）
+2. 用非默认主题导出时，要先把[主题模板包][7]安装在 `resume-cli` 的对应位置（全局 或 项目）
 
 [1]: https://jsonresume.org/
 [2]: https://jsonresume.org/themes/
@@ -93,3 +93,4 @@ npm set puppeteer_download_host https://storage.googleapis.com.cnpmjs.org
 [4]: https://jsonresume.org/schema/
 [5]: https://github.com/jsonresume/resume-cli/issues/20
 [6]: https://www.npmjs.com/package/yamljs
+[7]: https://www.npmjs.com/search?q=jsonresume-theme-*

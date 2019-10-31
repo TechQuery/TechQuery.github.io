@@ -139,8 +139,8 @@ tags:
 [12]: https://www.deepin.org/
 [13]: https://github.com/jquery/jquery/commit/74faa95835a917028a5063786833cb6a4ec83b02
 [14]: https://web-cell.tk/
-[15]: https://web-conf.tk/
-[16]: https://web-conf.tk/2018/#Bazaar
+[15]: https://web-conf.dev/
+[16]: https://web-conf.dev/#2018/
 [17]: https://git-dev.tk/
 [18]: https://hexo.io/
 [19]: https://fcc-cd.tk/profile/guide/slide.html

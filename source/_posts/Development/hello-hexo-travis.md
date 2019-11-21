@@ -1,6 +1,7 @@
 ---
 title: Hello Hexo & Travis !
 date: 2018-12-29 19:30:00
+updated: 2019-11-22 02:16:52
 author: 南漂一卒
 categories:
   - Development
@@ -55,28 +56,28 @@ before_install:
 install:
   - npm install
 script:
-  - npm run build
-  - cd ${FOLDER}
-  - git init
-  - git config user.name ${UID}
-  - git config user.email ${EMAIL}
-  - git add .
-  - git commit -m "${MESSAGE}"
-  - git push --force --quiet https://${TOKEN}@${GIT_URI}.git master:${BRANCH}
+  - npm run ${SCRIPT}
+deploy:
+  provider: pages
+  on:
+    branch: hexo
+  skip_cleanup: true
+  local_dir: ${FOLDER}
+  fqdn: ${DOMAIN}
+  github_token: ${TOKEN}
+  target_branch: ${BRANCH}
 ```
 
 上述命令行脚本中的**环境变量**可在 Travis CI 项目配置页设置，示例如下：
 
-|  变量名   |               示例值               |         释义          |                  备注                   |
-| :-------: | :--------------------------------: | :-------------------: | :-------------------------------------: |
-| TIME_ZONE |           Asia/Chongqing           |       系统时区        |                                         |
-|  FOLDER   |               public               | 网页生成器的输出目录  |                                         |
-|    UID    |               yourID               |      Git 用户名       |             Travis 自动设置             |
-|   EMAIL   |          yourID@email.com          |     Git 电邮地址      |                                         |
-|   TOKEN   |                                    | Git 平台个人访问令牌  | https://github.com/settings/tokens/new  |
-|  GIT_URI  | github.com/yourID/yourID.github.io |    Git 仓库标识符     | 嫌 GitHub 访问慢也可用 Coding.net、码云 |
-|  BRANCH   |               master               | GitHub Pages 目标分支 |                                         |
-|  MESSAGE  |  :memo: Update HTML by Travis CI   |     Git 提交注记      |                                         |
+|  变量名   |     示例值     |         释义          |                  备注                  |
+| :-------: | :------------: | :-------------------: | :------------------------------------: |
+| TIME_ZONE | Asia/Chongqing |       系统时区        |                                        |
+|  SCRIPT   |     build      |      构建脚本名       |                                        |
+|  FOLDER   |     public     | 网页生成器的输出目录  |                                        |
+|  DOMAIN   |  example.com   |      自定义域名       |                                        |
+|   TOKEN   |                | Git 平台个人访问令牌  | https://github.com/settings/tokens/new |
+|  BRANCH   |     master     | GitHub Pages 目标分支 |                                        |
 
 新版个人网站初步落成！~
 

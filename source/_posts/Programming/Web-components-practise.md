@@ -1,6 +1,7 @@
 ---
 title: Web 组件标准实践
 date: 2019-08-14 22:33:23
+updated: 2019-11-22 00:34:00
 categories:
   - Programming
 tags:
@@ -251,220 +252,126 @@ IE 11 +
 
 ---
 
-### 极简模板
-
-<iframe
-    height="600" style="width: 100%"
-    frameborder="no" scrolling="no" allowtransparency="true" allowfullscreen="true"
-    src="https://codepen.io/tech_query/embed/WNewpYG/?height=600&theme-id=31315&default-tab=html,result"
->
-</iframe>
-
----
-
-### 一键打包
-
-```javascript
-import template from './index.html'; // String
-
-import style from './index.css'; // String
-
-import data from './index.json'; // Object
-
-import icon from './icon.svg'; // Data URI
-```
-
-```shell
-web-cell pack
-```
-
----
-
 ### 声明式组件
 
-```javascript
-@component({ template, style, data })
-export default class MyComponent extends HTMLElement {
-  constructor() {
-    super().construct();
-  }
-
-  @blobURI
-  static get icon() {
-    return icon;
-  }
-
-  @on('input', ':host input')
-  @debounce()
-  countLength(event, target) {}
-
-  @at(':host *')
-  onAny(event, target) {}
-}
-```
+<iframe
+    src="https://codesandbox.io/embed/webcell-scaffold-9gyll?autoresize=1&fontsize=14&hidenavigation=1&module=%2Fsrc%2FClock.tsx&moduleview=1&theme=dark"
+    style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+    title="WebCell scaffold"
+></iframe>
 
 ---
 
-### 扩展生命周期
+### 官方适配 MobX
 
 ```javascript
-@component()
-export default class MyComponent extends HTMLElement {
-  @mapProperty
-  static get observedAttributes() {
-    return ['value', 'name'];
-  }
+import { createCell } from 'web-cell';
+import { observer } from 'mobx-web-cell';
 
-  @mapData
-  attributeChangedCallback() {}
+import { app } from '../model';
 
-  slotChangedCallback(assigned, slot, name) {}
-
-  viewUpdateCallback(newData, oldData, view) {}
-
-  viewChangedCallback(data, view) {}
-}
-```
-
----
-
-### 路由即组件
-
-```html
-<body>
-  <a href="/index">Index</a>
-  <a href="/secret">Secret</a>
-
-  <app-router></app-router>
-</body>
+export default observer(function PageIndex() {
+  return <div onClick={app.increase}>count: {app.count}</div>;
+});
 ```
 
 ---
 
 ```javascript
-import App from '../scheme/App';
+import { createCell, component, mixin } from 'web-cell';
+import { observer } from 'mobx-web-cell';
 
-@component({ store: App })
-export default class AppRouter extends HTMLRouter {
-  @load('/index')
-  indexPage() {
-    return '<page-index />';
-  }
+import { app } from '../model';
 
-  @load('/secret/:id')
-  secretPage(id) {
-    return `<h1>Secret ${id}</h1>`;
-  }
-
-  @back('/secret')
-  keepSecret() {
-    return !!this.store.user;
+@observer
+@component({
+  tagName: 'page-index'
+})
+export default class PageIndex extends mixin() {
+  render() {
+    return <div onClick={app.increase}>count: {app.count}</div>;
   }
 }
 ```
 
 ---
 
-### 独立数据模型
+### 极简路由 —— Cell Router
+
+> 路径即状态，容器即组件
+
+---
 
 ```javascript
-import Model, { mapGetter, is } from 'data-scheme';
+import { createCell, component } from 'web-cell';
+import { observer } from 'mobx-web-cell';
+import { HTMLRouter } from 'cell-router/source';
 
-import User from './User';
+import { history } from '../model';
 
-@mapGetter
-export default class App extends Model {
-  @is(User)
-  set user(value) {
-    this.set('user', value);
-  }
+const Page = ({ path }) => <span>{path}</span>;
+
+@observer
+@component({
+    tagName: 'page-router',
+    renderTarget: 'children'
+})
+export default class PageRouter extends HTMLRouter {
+    protected history = history;
+
+    render() {
+        return (
+            <main>
+                <nav>
+                    <a href="test">Test</a>
+                    <a href="example">Example</a>
+                </nav>
+                {matchRoutes(
+                    [
+                        { paths: ['test'], component: Page },
+                        { paths: ['example'], component: Page }
+                    ],
+                    history.path
+                )}
+            </main>
+        );
+    }
 }
 ```
 
 ---
 
-```javascript
-@mapGetter
-export default class User extends Model {
-  @is(/^[\w-]{3,20}$/, '')
-  set name(value) {
-    this.set('name', value);
-  }
+### 开箱即用
 
-  @is(Email, '')
-  set email(value) {
-    this.set('email', value);
-  }
+```bash
+npm init -y
 
-  @is(Phone)
-  set phone(value) {
-    this.set('phone', value);
-  }
+npm install \
+    web-cell@next \
+    mobx \
+    mobx-web-cell \
+    cell-router@next \
+    boot-cell
 
-  @is([0, 1, 2], 2)
-  set gender(value) {
-    this.set('gender', value);
-  }
-
-  @is(Range(1900))
-  set birthYear(value) {
-    this.set('birthYear', value);
-  }
-
-  @is(URL, 'http://example.com/test.jpg')
-  set avatar(value) {
-    this.set('avatar', value);
-  }
-
-  @is(URL)
-  set URL(value) {
-    this.set('URL', value);
-  }
-
-  @is(String)
-  set description(value) {
-    this.set('description', value);
-  }
-}
+npm install parcel-bundler -D
 ```
 
 ---
 
-### 立即体验
+### 官方组件库 —— BootCell
 
-```shell
-npm init web-cell ~/Desktop/web-cell-demo
-```
-
----
-
-### 官方组件库
-
-- [Cell Common](https://web-cell.dev/cell-common/)
-
-- [GitHub Web widget](https://tech-query.me/GitHub-Web-Widget/)
-
-- [Material Cell](https://github.com/EasyWebApp/material-cell)
-
----
-
-### 未来计划
-
-- 从 ECMAScript 6+ 迁移至 TypeScript 3+
-
-- 开发 MobX 适配器
-
-- 支持**嵌套路由**
-
-- 基于 Rollup、Parcel 2 重构工具链
-
-- 在线体验环境
+<iframe
+    src="https://web-conf.dev/#2019/"
+    style="width: 23.5rem; height: 35rem"
+></iframe>
 
 ---
 
 ### 竞争对手
 
 Google Polymer
+
+Ionic Stencil
 
 Tencent Omi
 

@@ -14,12 +14,13 @@ before_install:
 install:
   - npm install
 script:
-  - npm run build
-  - cd ${FOLDER}
-  - echo tech-query.me > CNAME
-  - git init
-  - git config user.name ${UID}
-  - git config user.email ${EMAIL}
-  - git add .
-  - git commit -m "${MESSAGE}"
-  - git push --force --quiet https://${TOKEN}@${GIT_URI}.git master:${BRANCH}
+  - npm run ${SCRIPT}
+deploy:
+  provider: pages
+  on:
+    branch: hexo
+  skip_cleanup: true
+  local_dir: ${FOLDER}
+  fqdn: ${DOMAIN}
+  github_token: ${TOKEN}
+  target_branch: ${BRANCH}

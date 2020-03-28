@@ -54,11 +54,11 @@ function MyComponent(options) {
 }
 
 $.extend(MyComponent.prototype, {
-  method: function() {}
+  method: function () {}
 });
 
-$.fn.myComponent = function(options) {
-  this.each(function() {
+$.fn.myComponent = function (options) {
+  this.each(function () {
     $.data(this, 'instance', new MyComponent(options));
   });
 };
@@ -255,7 +255,7 @@ IE 11 +
 ### 声明式组件
 
 <iframe
-    src="https://codesandbox.io/embed/webcell-scaffold-9gyll?autoresize=1&fontsize=14&hidenavigation=1&module=%2Fsrc%2FClock.tsx&moduleview=1&theme=dark"
+    src="https://codesandbox.io/embed/webcell-demo-9gyll?autoresize=1&fontsize=14&hidenavigation=1&module=%2Fsrc%2FClock.tsx&theme=dark"
     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
     title="WebCell scaffold"
 ></iframe>
@@ -318,6 +318,10 @@ const Page = ({ path }) => <span>{path}</span>;
 })
 export default class PageRouter extends HTMLRouter {
     protected history = history;
+    protected routes = [
+        { paths: ['test'], component: Page },
+        { paths: ['example'], component: Page }
+    ];
 
     render() {
         return (
@@ -326,13 +330,7 @@ export default class PageRouter extends HTMLRouter {
                     <a href="test">Test</a>
                     <a href="example">Example</a>
                 </nav>
-                {matchRoutes(
-                    [
-                        { paths: ['test'], component: Page },
-                        { paths: ['example'], component: Page }
-                    ],
-                    history.path
-                )}
+                {super.render()}
             </main>
         );
     }
@@ -346,12 +344,7 @@ export default class PageRouter extends HTMLRouter {
 ```bash
 npm init -y
 
-npm install \
-    web-cell@next \
-    mobx \
-    mobx-web-cell \
-    cell-router@next \
-    boot-cell
+npm install web-cell mobx mobx-web-cell cell-router web-utility boot-cell
 
 npm install parcel-bundler -D
 ```
@@ -361,8 +354,8 @@ npm install parcel-bundler -D
 ### 官方组件库 —— BootCell
 
 <iframe
-    src="https://web-conf.dev/#2019/"
-    style="width: 23.5rem; height: 35rem"
+    src="https://bootstrap.web-cell.dev/"
+    style="width: 100%; height: 35rem"
 ></iframe>
 
 ---

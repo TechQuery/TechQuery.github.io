@@ -35,7 +35,13 @@ tags:
   "dir": "ltr",
   "theme_color": "rgba(0,0,0,0.5)",
   "background_color": "transparent",
-  "icons": [{ "src": "logo.png", "type": "image/png", "sizes": "144x144" }]
+  "icons": [
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    }
+  ]
 }
 ```
 
@@ -80,7 +86,7 @@ workbox generateSW
   <link rel="manifest" href="index.webmanifest" />
   <script>
     if ('serviceWorker' in navigator)
-      window.addEventListener('load', function() {
+      window.addEventListener('load', function () {
         navigator.serviceWorker.register('sw.js');
       });
   </script>
@@ -98,8 +104,10 @@ workbox generateSW
 ```json
 {
   "scripts": {
-    "build-sw": "rm -f dist/sw.js.map  &&  workbox generateSW",
-    "build": "parcel build source/index.html --public-url .  &&  npm run build-sw"
+    "start": "workbox generateSW  &&  parcel source/index.html --open",
+    "pack-dist": "parcel build source/index.html --public-url .",
+    "pack-sw": "rm -f dist/sw.js.map  &&  workbox generateSW",
+    "build": "rm -rf dist/  &&  npm run pack-dist  &&  npm run pack-sw"
   }
 }
 ```

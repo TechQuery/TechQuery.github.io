@@ -101,6 +101,10 @@ education:
     startDate: 2008-09-01
     endDate: 2012-06-30
 awards:
+  - title: Top contributor
+    date: 2019-12-26
+    awarder: freeCodeCamp.org
+    summary: Annual Award for Online Volunteers & City Community Organizers
   - title: Most Valuable Professional
     date: 2019-07-01
     awarder: Microsoft
@@ -112,13 +116,18 @@ awards:
   - title: Top contributor
     date: 2018-06-18
     awarder: freeCodeCamp.org
-    summary: Annual Award for City Community organizers
+    summary: Annual Award for Online Volunteers & City Community Organizers
 publications:
+  - name: BootCell
+    publisher:
+    releaseDate:
+    website: https://bootstrap.web-cell.dev/
+    summary: Web Components UI library based on WebCell v2 & BootStrap v4
   - name: WebCell
     publisher: freeCodeCamp ChengDu community
     releaseDate: 2018-11-10
     website: https://web-cell.dev/
-    summary: Light-weight Web Components engine based on ECMAScript 2018 & Decorator proposal
+    summary: Web Components engine based on JSX & TypeScript
   - name: Node.JS & Headless browser
     publisher: freeCodeCamp ChongQing community
     releaseDate: 2018-08-18
@@ -140,6 +149,7 @@ skills:
       - Web Components
       - React
       - Vue
+      - PWA
   - name: Node.JS command-line
     level: Senior
     keywords:

@@ -351,7 +351,7 @@ console.log(
 
 ```javascript
 await Promise.allSettled([
-  fetch('https://fcc-cd.tk/'),
+  fetch('https://fcc-cd.dev/'),
   fetch('https://google.com/') // 没有科学上网
 ]);
 
@@ -549,6 +549,6 @@ https://codelabs.developers.google.com/?cat=Web
 
 ## 关注 freeCodeCamp 成都社区
 
-https://fcc-cd.tk/
+https://fcc-cd.dev/
 
 ![](/image/FCC-CDC-QRC.png)

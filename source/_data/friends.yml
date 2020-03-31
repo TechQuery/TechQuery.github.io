@@ -6,7 +6,7 @@
 - avatar: 'https://tech-query.me/image/WebCell-0.png'
   name: WebCell
   introduction: '【原创】优雅、轻量的 Web 组件引擎'
-  url: 'https://web-cell.tk/'
+  url: 'https://web-cell.dev/'
   title: 参与开发
 - avatar: 'https://avatars2.githubusercontent.com/u/1905708?s=200&v=4'
   name: 'Web 组件标准'
@@ -86,7 +86,7 @@
 - avatar: 'https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/es6/es6.png'
   name: 'ES pack'
   introduction: '【原创】基于 Babel 7 的 ECMAScript 标准项目生成器'
-  url: 'https://web-cell.tk/create-es-pack/'
+  url: 'https://web-cell.dev/create-es-pack/'
   title: 参与开发
 - avatar: 'https://avatars2.githubusercontent.com/u/6375567?s=200&v=4'
   name: 'Hexo Wiki'
@@ -141,7 +141,7 @@
 - avatar: 'https://avatars3.githubusercontent.com/u/20026387?s=200&v=4'
   name: 'FCC 成都官网'
   introduction: '【开发】基于 Hexo、GitHub Pages、Travis CI 二次开发的社区系统'
-  url: 'https://fcc-cd.tk/'
+  url: 'https://fcc-cd.dev/'
   title: 回顾
 - avatar: 'https://avatars0.githubusercontent.com/u/3717923?s=200&v=4'
   name: 江苏“朋友圈”

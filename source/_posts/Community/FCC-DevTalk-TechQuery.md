@@ -126,7 +126,7 @@ tags:
 其实即使我是“真文艺”也难以回答，不同类型片的镜头语言相差很大，就像各地美食一样，各有各的美味，还是看[水歌版【豆瓣年度电影榜单】][20]吧，哈哈~
 
 [1]: https://www.freecodecamp.one/
-[2]: https://fcc-cd.tk/
+[2]: https://fcc-cd.dev/
 [3]: http://www.kaiyuanshe.cn/
 [4]: https://www.thoughtworks.com/cn/
 [5]: https://mvp.microsoft.com/
@@ -138,10 +138,10 @@ tags:
 [11]: https://tech-query.me/iQuery.js/
 [12]: https://www.deepin.org/
 [13]: https://github.com/jquery/jquery/commit/74faa95835a917028a5063786833cb6a4ec83b02
-[14]: https://web-cell.tk/
+[14]: https://web-cell.dev/
 [15]: https://web-conf.dev/
 [16]: https://web-conf.dev/#2018/
 [17]: https://git-dev.tk/
 [18]: https://hexo.io/
-[19]: https://fcc-cd.tk/profile/guide/slide.html
+[19]: https://fcc-cd.dev/profile/guide/slide.html
 [20]: https://movie.douban.com/people/TechQuery/

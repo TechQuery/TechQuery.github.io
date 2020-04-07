@@ -53,8 +53,8 @@ tags:
 
 > 早知道有今天，我管他批评不批评，**『老子』到处说！**
 
-[1]: https://www.wikiwand.com/zh/2019%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92%E7%97%85
-[2]: https://www.wikiwand.com/zh/%E8%89%BE%E8%8A%AC
+[1]: https://zh.wikipedia.org/wiki/2019%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92%E7%97%85
+[2]: https://zh.wikipedia.org/wiki/%E8%89%BE%E8%8A%AC
 [3]: http://archive.is/OLdHs
 [4]: https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API
 [5]: https://developer.mozilla.org/zh-CN/docs/Web/API/SpeechSynthesis

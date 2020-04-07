@@ -119,8 +119,8 @@ awards:
     summary: Annual Award for Online Volunteers & City Community Organizers
 publications:
   - name: BootCell
-    publisher:
-    releaseDate:
+    publisher: Google Developer Group of ChengDu
+    releaseDate: 2019-11-23
     website: https://bootstrap.web-cell.dev/
     summary: Web Components UI library based on WebCell v2 & BootStrap v4
   - name: WebCell

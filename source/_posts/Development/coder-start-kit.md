@@ -35,7 +35,7 @@ tags:
 
 ### Windows 的“巧克力”
 
-Windows 自打有 .Net Framework 后，也推出了 NuGet 包管理器，不过因为最早源自 Visual Studio 扩展，在 VS 之外并不太好用。但开发者社区基于它推出了更强大的包管理器，其中最方便的莫过 [Chocolatey](https://chocolatey.org/ 'Chocolatey 官网')，一键安装、开箱即用!
+Windows 自打有 .Net Framework 后，也推出了 NuGet 包管理器，不过因为最早源自 Visual Studio 扩展，在 VS 之外并不太好用。但开发者社区基于它推出了更强大的包管理器，其中最方便的莫过 [Chocolatey][1]，一键安装、开箱即用!
 
 #### 安装包管理器
 
@@ -89,7 +89,7 @@ Google Chrome 用户第二次访问可以 **_地址栏一把梭_** ——
 
 令人费解的总是 **_乔帮主的套路_**，一直吹嘘类 UNIX 体系“性能、安全”的 Mac，却不学同门师兄 Linux 的“为自己带包”，包管理器全是第三方开发的，而且还没 Windows 的好用……（果然是“私酿”？呵呵~）
 
-以目前最常用的 [Homebrew](https://brew.sh/ 'Homebrew 官网') 为例，安装两个命令行工具才顶 Chocolatey 一个命令的功能 ——
+以目前最常用的 [Homebrew][2] 为例，安装两个命令行工具才顶 Chocolatey 一个命令的功能 ——
 
 ```shell
 # 主命令只能安装“命令行工具”
@@ -107,7 +107,7 @@ brew cask install google-chrome
 
 （以上命令若提示“无权限”，须加 `sudo` 前缀）
 
-再看看它的[软件包网页目录](https://formulae.brew.sh/formula/ 'Homebrew 软件包官方目录')，只能【Command + F】整页查找，还没收录 cask 子命令的软件……
+再看看它的[软件包网页目录][3]，只能【Command + F】整页查找，还没收录 cask 子命令的软件……
 
 ## 新电脑的创世纪
 
@@ -160,3 +160,7 @@ python -m pip install --upgrade pip
 
 brew install pipenv
 ```
+
+[1]: https://chocolatey.org/ 'Chocolatey 官网'
+[2]: https://brew.sh/ 'Homebrew 官网'
+[3]: https://formulae.brew.sh/formula/ 'Homebrew 软件包官方目录'

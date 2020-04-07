@@ -35,4 +35,6 @@ tags:
 
 Web 前端、JavaScript 全栈开发现在都依赖 NodeJS，它不像 Python 被大多数 Linux 软件包依赖，基本只用在 Web 应用开发，而且又因社区活跃而迭代很快，在不少 Linux 软件源中的版本都比较旧，只能手动安装新版。
 
-可谁承想，[官方安装脚本](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)却把 Deepin 的系统信息识别为 `unstable` 版本…… 只能又求助于 NVM —— https://github.com/creationix/nvm#install-script ，终于装上了……
+可谁承想，[官方安装脚本][1]却把 Deepin 的系统信息识别为 `unstable` 版本…… 只能又求助于 NVM —— https://github.com/creationix/nvm#install-script ，终于装上了……
+
+[1]: https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions

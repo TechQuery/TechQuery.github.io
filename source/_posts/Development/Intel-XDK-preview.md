@@ -15,28 +15,30 @@ tags:
   - Software
 ---
 
-用 **HTML/CSS/JavaScript** 进行**移动端 App 跨平台开发**的开源旗手非 [**Adobe PhoneGap**](http://phonegap.com/) 莫属，它的开源核心 **[Apache Cordova](http://cordova.apache.org/)**  就像 Apple Safari、Google Chrome 的 Webkit 内核一样，驱动着国内外不少同类解决方案（如 [**Intel XDK**](https://software.intel.com/zh-cn/intel-xdk)、[WeX5](http://www.wex5.com)）。
+用 **HTML/CSS/JavaScript** 进行**移动端 App 跨平台开发**的开源旗手非 [**Adobe PhoneGap**][1] 莫属，它的开源核心 [**Apache Cordova**][2] 就像 Apple Safari、Google Chrome 的 Webkit 内核一样，驱动着国内外不少同类解决方案（如 [**Intel XDK**][3]、[WeX5][4]）。
 
 但 PhoneGap 在开发时也有一些问题 ——
 
 1.  Adobe 官方支持 PhoneGap  的 IDE 是 Dreamweaver（开源人肯定优先选开源产品）
-2.  [Android 开发者真机预览 App](https://play.google.com/store/apps/details?id=com.adobe.phonegap.app)  没有官方下载链接（天朝将会上线的“谷歌市场”估计也不会同步 Google Play 所有的 App）
-3.  Adobe 官方提供的 [PhoneGap 构建服务](https://build.phonegap.com/) *私有 App 免费服务配额* 很有限
-4.  Android 开发时用 **[CrossWalk](https://crosswalk-project.org/)**（Intel 开源的 Chromium 核心）替换 **WebView** 要自己折腾
-5.  群众反映的[某些问题](https://github.com/phonegap/phonegap-app-developer/issues/287#issuecomment-210536817) 似乎解决缓慢
+2.  [Android 开发者真机预览 App][5]  没有官方下载链接（天朝将会上线的“谷歌市场”估计也不会同步 Google Play 所有的 App）
+3.  Adobe 官方提供的 [PhoneGap 构建服务][6] *私有 App 免费服务配额* 很有限
+4.  Android 开发时用 [**CrossWalk**][7]（Intel 开源的 Chromium 核心）替换 **WebView** 要自己折腾
+5.  群众反映的[某些问题][8] 似乎解决缓慢
 
 上述这些问题正好被“牛逼”已久的 **Intel XDK** 解决了~
 
-<iframe src="http://player.youku.com/embed/XNzU1Njk1MDU2" frameborder="0" allowfullscreen
-    style="width: 100%; height: 80vh"></iframe>
+<iframe
+    style="width: 100%; height: 80vh" frameborder="0" allowfullscreen
+    src="http://player.youku.com/embed/XNzU1Njk1MDU2"
+></iframe>
 
 [（在新网页中观看视频）](http://v.youku.com/v_show/id_XNzU1Njk1MDU2.html)
 
 Intel XDK 整个上手过程还是比较顺利 ——
 
-1.  官网下载*安装包*（[中文版](https://software.intel.com/zh-cn/intel-xdk-early-access)还不是稳定版）
+1.  官网下载*安装包*（[中文版][9]还不是稳定版）
 2.  安装、启动后注册 **Intel 开发者账号**
-3.  从 *Template  或 Samples and Demos *中选一项创建应用（建议勾选“use **App Designer**”，有些模板有[“所见即所得”的**拖拽 UI 控件模式**](https://software.intel.com/en-us/xdk/docs/app-designer-overview)）
+3.  从 *Template  或 Samples and Demos *中选一项创建应用（建议勾选“use **App Designer**”，有些模板有[“所见即所得”的**拖拽 UI 控件模式**][10]）
     ![App 设计器](http://static.oschina.net/uploads/img/201606/22103244_0LsM.png)
 4.  写好自己的程序后即可到 *Build  选项卡*中选择 **App 打包目标平台
     ![构建前提示添加数字证书](http://static.oschina.net/uploads/img/201606/22095531_mjsf.png)**
@@ -55,8 +57,8 @@ Intel XDK 整个上手过程还是比较顺利 ——
 
 Android App 安装、运行亲测结果 ——
 
-1.  **ARM 架构版**：在 **[MIUI](http://www.miui.com/)** v7 上需开启“安装未知来源的应用”，运行正常！~
-2.  **x86 架构版**：[BlueStacks](http://www.bluestacks.com/) 虚拟机安装成功，运行黑屏……
+1.  **ARM 架构版**：在 [**MIUI**][11] v7 上需开启“安装未知来源的应用”，运行正常！~
+2.  **x86 架构版**：[BlueStacks][12] 虚拟机安装成功，运行黑屏……
 
 【参考文档】
 
@@ -69,3 +71,16 @@ Android App 安装、运行亲测结果 ——
 7.  [Intel CrossWalk 运行时的选择](https://software.intel.com/en-us/xdk/docs/choosing-crosswalk-build-options-shared-or-embedded)
 8.  [通过 Cordova 插件添加 iOS WKWebView 支持](https://software.intel.com/en-us/xdk/docs/building-cordova-ios-app-with-wkwebview)
 9.  [Intel XDK AJAX 域名白名单](https://software.intel.com/en-us/articles/cordova-whitelisting-with-intel-xdk-for-ajax-and-launching-external-apps)
+
+[1]: http://phonegap.com/
+[2]: http://cordova.apache.org/
+[3]: https://software.intel.com/zh-cn/intel-xdk
+[4]: http://www.wex5.com
+[5]: https://play.google.com/store/apps/details?id=com.adobe.phonegap.app
+[6]: https://build.phonegap.com/
+[7]: https://crosswalk-project.org/
+[8]: https://github.com/phonegap/phonegap-app-developer/issues/287#issuecomment-210536817
+[9]: https://software.intel.com/zh-cn/intel-xdk-early-access
+[10]: https://software.intel.com/en-us/xdk/docs/app-designer-overview
+[11]: http://www.miui.com/
+[12]: http://www.bluestacks.com/

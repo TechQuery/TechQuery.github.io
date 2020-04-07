@@ -54,7 +54,7 @@ tags:
 
 - 记住南京大屠杀、侵华战争的伤痛本质源于祖国曾经[“东亚病夫”][9]的羸弱！
 - 记住汶川大地震的主要伤亡来自[豆腐渣工程][10]！
-- 记住武汉肺炎大量死亡、全球蔓延的根本原因，是[天朝衙门持续一个多月的隐瞒][11]！
+- 记住武汉肺炎大量死亡、全球蔓延的根本原因，是[天朝衙门近一个月的隐瞒][11]！
 
 否则，过不了几年，国人一定会像[《一九四二》][12]原著作者刘震云的外婆那样 ——
 
@@ -107,19 +107,19 @@ tags:
 
 [1]: https://fcc-cd.dev/
 [2]: /development/web-text-speech/
-[3]: https://www.wikiwand.com/zh/2019%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92%E7%97%85%E7%96%AB%E6%83%85
-[4]: https://www.wikiwand.com/zh/%E9%9D%9E%E6%B4%B2%E8%B1%AC%E7%98%9F%E7%97%85%E6%AF%92%E7%A7%91#/%E6%B5%81%E8%A1%8C%E7%97%85%E5%AD%B8
-[5]: https://www.wikiwand.com/zh/%E9%98%BF%E8%8C%B2%E6%B5%B7%E9%BB%98%E7%97%87#/%E6%AD%B7%E5%8F%B2
-[6]: https://www.wikiwand.com/zh/%E6%B1%B6%E5%B7%9D%E5%A4%A7%E5%9C%B0%E9%9C%87
-[7]: https://www.wikiwand.com/zh/%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%B1%A0%E6%AE%BA
-[8]: https://www.wikiwand.com/zh/%E7%99%BD%E5%B7%A6
-[9]: https://www.wikiwand.com/zh/%E4%B8%9C%E4%BA%9A%E7%97%85%E5%A4%AB
-[10]: https://www.wikiwand.com/zh/%E8%B1%86%E8%85%90%E6%B8%A3%E5%B7%A5%E7%A8%8B
-[11]: https://www.wikiwand.com/zh/2019%E5%86%A0%E7%8B%80%E7%97%85%E6%AF%92%E7%97%85%E4%B8%AD%E5%9C%8B%E5%A4%A7%E9%99%B8%E5%8F%8D%E6%87%89%E8%88%87%E5%BD%B1%E9%9F%BF
+[3]: https://zh.wikipedia.org/wiki/2019%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92%E7%97%85%E7%96%AB%E6%83%85
+[4]: https://zh.wikipedia.org/wiki/%E9%9D%9E%E6%B4%B2%E8%B1%AC%E7%98%9F%E7%97%85%E6%AF%92%E7%A7%91#/%E6%B5%81%E8%A1%8C%E7%97%85%E5%AD%B8
+[5]: https://zh.wikipedia.org/wiki/%E9%98%BF%E8%8C%B2%E6%B5%B7%E9%BB%98%E7%97%87#/%E6%AD%B7%E5%8F%B2
+[6]: https://zh.wikipedia.org/wiki/%E6%B1%B6%E5%B7%9D%E5%A4%A7%E5%9C%B0%E9%9C%87
+[7]: https://zh.wikipedia.org/wiki/%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%B1%A0%E6%AE%BA
+[8]: https://zh.wikipedia.org/wiki/%E7%99%BD%E5%B7%A6
+[9]: https://zh.wikipedia.org/wiki/%E4%B8%9C%E4%BA%9A%E7%97%85%E5%A4%AB
+[10]: https://zh.wikipedia.org/wiki/%E8%B1%86%E8%85%90%E6%B8%A3%E5%B7%A5%E7%A8%8B
+[11]: https://zh.wikipedia.org/wiki/2019%E5%86%A0%E7%8B%80%E7%97%85%E6%AF%92%E7%97%85%E4%B8%AD%E5%9C%8B%E5%A4%A7%E9%99%B8%E5%8F%8D%E6%87%89%E8%88%87%E5%BD%B1%E9%9F%BF
 [12]: https://movie.douban.com/subject/6011805/
 [13]: https://www.wikiwand.com/zh-cn/%E6%96%87%E5%8C%96%E5%A4%A7%E9%9D%A9%E5%91%BD
 [14]: https://www.wikiwand.com/zh-cn/%E7%BA%A2%E5%8D%AB%E5%85%B5
-[15]: https://www.wikiwand.com/zh/%E6%89%B9%E9%AC%A5
-[16]: https://www.wikiwand.com/zh/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E5%BF%97%E6%84%BF%E5%86%9B
-[17]: https://www.wikiwand.com/zh/%E8%B6%85%E8%8B%B1%E8%B6%95%E7%BE%8E
-[18]: https://www.wikiwand.com/zh/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E4%BD%93%E8%82%B2#/%E7%AE%A1%E7%90%86%E4%BD%93%E5%88%B6
+[15]: https://zh.wikipedia.org/wiki/%E6%89%B9%E9%AC%A5
+[16]: https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E5%BF%97%E6%84%BF%E5%86%9B
+[17]: https://zh.wikipedia.org/wiki/%E8%B6%85%E8%8B%B1%E8%B6%95%E7%BE%8E
+[18]: https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E4%BD%93%E8%82%B2#/%E7%AE%A1%E7%90%86%E4%BD%93%E5%88%B6

@@ -13,9 +13,12 @@
     "url": "https://github.com/TechQuery/TechQuery.github.io/issues"
   },
   "scripts": {
-    "build": "hexo clean  &&  hexo generate",
-    "deploy": "hexo clean  &&  hexo deploy",
-    "start": "hexo clean  &&  hexo server",
+    "resume-json": "cd source/_data/  &&  yaml2json resume.yml -p | sed -r s/T[0-9]+:[0-9]+:[0-9]+\\.[0-9]+Z//g > resume.json",
+    "resume-html": "cd source/_data/  &&  resume export ../../public/resume.html --theme kendall",
+    "pack-resume": "npm run resume-json  &&  npm run resume-html",
+    "build": "hexo clean  &&  npm run pack-resume  &&  hexo generate",
+    "deploy": "hexo clean  &&  npm run pack-resume  &&  hexo deploy",
+    "start": "hexo clean  &&  npm run pack-resume  &&  hexo server",
     "test": "lint-staged"
   },
   "husky": {
@@ -49,8 +52,11 @@
   },
   "devDependencies": {
     "husky": "^4.2.3",
+    "jsonresume-theme-kendall": "^0.1.19",
     "lint-staged": "^10.1.1",
-    "prettier": "^2.0.2"
+    "prettier": "^2.0.2",
+    "resume-cli": "^1.2.7",
+    "yamljs": "^0.3.0"
   },
   "hexo": {
     "version": "4.2.0"

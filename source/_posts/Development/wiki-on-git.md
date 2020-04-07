@@ -12,7 +12,7 @@ tags:
 
 ## NPM 一把梭
 
-经过[《Hello Hexo & Travis !》](/development/hello-hexo-travis/)的折腾，觉得 Hexo + GitHub Pages + Travis 整下来还是不够[一键化](/tags/one-key/)，于是基于 [WebCell 项目生成器](https://www.npmjs.com/package/create-web-cell)的成功经验又开发了一个 **Hexo Wiki 网站生成器** ——
+经过[《Hello Hexo & Travis !》][1]的折腾，觉得 Hexo + GitHub Pages + Travis 整下来还是不够[一键化][2]，于是基于 [WebCell 项目生成器][3]的成功经验又开发了一个 **Hexo Wiki 网站生成器** ——
 
 > https://tech-query.me/create-hexo-wiki/
 
@@ -39,7 +39,7 @@ Hexo 作为通用的**内容型网站**生成器，可广泛用于博客、新�
 | 个人博客 | Web 2.0 | 个人心得、情绪，知识性弱 | 他发，你看，评论相对自由 |
 | 维基百科 | Web 3.0 | 公共知识、历史，链接丰富 | 民写，民读，评论完全自由 |
 
-时代越发展，Web 就越接近 [Tim Lee 大神](https://www.wikiwand.com/zh/%E8%92%82%E5%A7%86%C2%B7%E4%BC%AF%E7%BA%B3%E6%96%AF-%E6%9D%8E)发明 [WWW（万维网）](https://www.wikiwand.com/zh/%E4%B8%87%E7%BB%B4%E7%BD%91)的初衷 ——
+时代越发展，Web 就越接近 [Tim Lee 大神][5]发明 [WWW（万维网）][6]的初衷 ——
 
 > 数据**互联**，人人**平等**
 
@@ -59,11 +59,11 @@ Hexo 作为通用的**内容型网站**生成器，可广泛用于博客、新�
 
 ## Git 助力 Wiki
 
-我与 Wiki 结缘也快十年了，不但把维基百科作为获取知识的得力助手，还带头创建过[【川大百科】](https://web.archive.org/web/20150307081711/http://wiki.fyscu.com:80/Wiki/%E9%A6%96%E9%A1%B5)。
+我与 Wiki 结缘也快十年了，不但把维基百科作为获取知识的得力助手，还带头创建过[【川大百科】][7]。
 
 但私以为，目前各种百科系统有一些普遍的问题 ——
 
-1.  虽有专用的 **Wiki 代码**，但没有**统一规范**，以 [MediaWiki](https://www.mediawiki.org/) 为首各自实现上手有难度的**扩展插件**
+1.  虽有专用的 **Wiki 代码**，但没有**统一规范**，以 [MediaWiki][8] 为首各自实现上手有难度的**扩展插件**
 
 2.  大多数系统都采用 PHP/JSP + SQL 数据库一类的**传统网站架构**，集存储、渲染、版本控制、数据 API 等功能于一身，复杂度高、性能较弱、扩展性差
 
@@ -80,3 +80,11 @@ Hexo 作为通用的**内容型网站**生成器，可广泛用于博客、新�
 |  LeanCloud   | 后端云服务 | 基于容器的多语言服务器环境，并集成用户、搜索、消息等子系统，易学易用 |
 
 每一层都各司其职、相互配合，也可以用同类技术替换，搭建、迁移都比较容易。
+
+[1]: https://git-pager.leanapp.cn/development/hello-hexo-travis/
+[2]: https://git-pager.leanapp.cn/tags/one-key/
+[3]: https://www.npmjs.com/package/create-web-cell
+[4]: https://zh.wikipedia.org/wiki/%E8%92%82%E5%A7%86%C2%B7%E4%BC%AF%E7%BA%B3%E6%96%AF-%E6%9D%8E
+[5]: https://zh.wikipedia.org/wiki/%E4%B8%87%E7%BB%B4%E7%BD%91
+[6]: https://web.archive.org/web/20150307081711/http://wiki.fyscu.com:80/Wiki/%E9%A6%96%E9%A1%B5
+[7]: https://www.mediawiki.org/

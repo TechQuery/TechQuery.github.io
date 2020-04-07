@@ -11,7 +11,7 @@ tags:
   - loader
 ---
 
-我之前开源了[【JavaScript 文件响应式异步加载器】v0.6](/programming/Web-JS-file-loader/)，用于在 Web 前端统一管理单页开发中的 JS 模块加载，方便、优雅、可靠。
+我之前开源了[【JavaScript 文件响应式异步加载器】v0.6][1]，用于在 Web 前端统一管理单页开发中的 JS 模块加载，方便、优雅、可靠。
 
 但若要用框架页的模式来开发较为复杂的 Web 应用，统一管理父子页面的 JS、CSS 又是一件麻烦的事……
 
@@ -35,7 +35,7 @@ tags:
 //              (C)2013-2014    SCU FYclub-RDD
 //
 
-(function(BOM, DOM) {
+(function (BOM, DOM) {
   // ----------- Private Attribute ----------- //
   var UA = navigator.userAgent,
     RootPath,
@@ -58,7 +58,7 @@ tags:
   function DOM_Loaded_Event(DOM_E, CB_Func) {
     if (!old_IE) DOM_E.addEventListener('load', CB_Func, false);
     else
-      DOM_E.attachEvent('onreadystatechange', function() {
+      DOM_E.attachEvent('onreadystatechange', function () {
         if (DOM_E.readyState.match(/loaded|complete/)) CB_Func.call(DOM_E);
       });
   }
@@ -66,7 +66,7 @@ tags:
     if (!old_IE) DOM.addEventListener('DOMContentLoaded', _CB, false);
     else if (self !== top) DOM_Loaded_Event(DOM, _CB);
     else
-      (function() {
+      (function () {
         try {
           DOM.documentElement.doScroll('left');
           _CB.call(DOM);
@@ -105,7 +105,7 @@ tags:
       NameSpace = [
         { jQuery: true },
         {
-          $: function() {
+          $: function () {
             return this.jQuery(
               arguments[0],
               arguments.length > 1 ? arguments[1] : this.document
@@ -124,8 +124,8 @@ tags:
             var _NS_ = parent[__NS];
             self[__NS] = _NS_;
           } else if (typeof _NS_Shell == 'function')
-            self[__NS] = (function(_NS_S) {
-              return function() {
+            self[__NS] = (function (_NS_S) {
+              return function () {
                 return _NS_S.apply(self, arguments);
               };
             })(_NS_Shell);
@@ -139,7 +139,7 @@ tags:
         if (IE_Ver < 8) JS_URL = PagePath_IE(parent) + JS_URL;
         _NS.push(JS_URL);
       }
-      BOM.onbeforeunload = function() {
+      BOM.onbeforeunload = function () {
         var SE = $_TN(DOM, 'script');
         for (var i = 0; i < SE.length; i++) SE[i].parentNode.removeChild(SE[i]);
         SE = null;
@@ -254,7 +254,7 @@ tags:
     if (Item[0].CallBack) {
       var AJSQ = EIJS.AsyncJS;
       var AJS_NO = AJSQ.push(0) - 1;
-      var AJS_CB = function() {
+      var AJS_CB = function () {
         if (++AJSQ[AJS_NO] == Item.length) Item[0].CallBack();
       };
     }
@@ -268,13 +268,13 @@ tags:
     for (var k = JS_RC.length - 2, l = 0; k > -2; k--, l++) {
       if (!l) {
         if (Final_CB) {
-          JS_RC[k + 1][0]['CallBack'] = function(iEvent) {
+          JS_RC[k + 1][0]['CallBack'] = function (iEvent) {
             if (++DRQ[DRQ_NO] == 2) Final_CB.apply(self);
           };
           DOM_Ready_Event(JS_RC[k + 1][0].CallBack);
         } else if (k > -1) {
           var Last_Script = JS_RC[k + 1][0].URL;
-          JS_RC[k][0]['CallBack'] = function(iEvent) {
+          JS_RC[k][0]['CallBack'] = function (iEvent) {
             if (++DRQ[DRQ_NO] == 2) xImport(Last_Script);
           };
           DOM_Ready_Event(JS_RC[k][0].CallBack);
@@ -286,7 +286,7 @@ tags:
   }
 
   // ----------- Open API ----------- //
-  BOM.ImportJS = function() {
+  BOM.ImportJS = function () {
     var Func_Args = Array.prototype.slice.call(arguments, 0);
 
     if (typeof Func_Args[0] == 'string') RootPath = Func_Args.shift();
@@ -314,8 +314,10 @@ tags:
     Pad: !!is_Pad,
     Phone: !!is_Phone
   };
-  BOM.ImportJS.NS = function() {
+  BOM.ImportJS.NS = function () {
     return NameSpace;
   };
 })(self, self.document);
 ```
+
+[1]: /programming/Web-JS-file-loader/

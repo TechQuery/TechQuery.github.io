@@ -14,7 +14,7 @@ tags:
 
 ## 静态网站生成器
 
-[GitHub `static-site-generator` 主题下 Node.JS 架构](https://github.com/topics/static-site-generator?l=javascript&o=desc&s=stars) star 前三的项目中，[Hexo](https://hexo.io/) 生态最完善：
+[GitHub `static-site-generator` 主题下 Node.JS 架构][1] star 前三的项目中，[Hexo][2] 生态最完善：
 
 1.  包括**中文**在内的**多语言官网**
 
@@ -33,11 +33,11 @@ git init
 git checkout --orphan hexo
 ```
 
-随后又在官网搜了一个简洁、美观、强大、易用的主题模板 [Matery](https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md)。
+随后又在官网搜了一个简洁、美观、强大、易用的主题模板 [Matery][3]。
 
 ## 持续集成、持续部署
 
-最后一顿 Google，入门了近几年开源界最流行的 [Travis CI](https://travis-ci.com/)，它的配置文件 `.travis.yml` 看起来像 `Dockerfile`，但更自然：
+最后一顿 Google，入门了近几年开源界最流行的 [Travis CI][4]，它的配置文件 `.travis.yml` 看起来像 `Dockerfile`，但更自然：
 
 ```yaml
 branches:
@@ -64,7 +64,7 @@ deploy:
   skip_cleanup: true
   local_dir: ${FOLDER}
   fqdn: ${DOMAIN}
-  github_token: ${TOKEN}
+  token: ${TOKEN}
   target_branch: ${BRANCH}
 ```
 
@@ -91,7 +91,7 @@ deploy:
 
 - 用 `git push --force` 也让**文档站分支**不保留不必要的提交记录，**仓库体积**最小化
 
-但是，Travis 的 Windows 环境尚处测试阶段，我实测时出现“失败但无报错详情”的 bug，只好让 [Puppeteer-IE](https://tech-query.me/Puppeteer-IE/) 改用 [Azure Pipeline](https://azure.microsoft.com/zh-cn/services/devops/pipelines/)：
+但是，Travis 的 Windows 环境尚处测试阶段，我实测时出现“失败但无报错详情”的 bug，只好让 [Puppeteer-IE][5] 改用 [Azure Pipeline][6]：
 
 ```yaml
 trigger:
@@ -119,7 +119,7 @@ steps:
     displayName: 'npm install & build Document'
 ```
 
-再次领略 微软文档的一大特点 —— 要么一笔带过、不知所云，要么又臭又长、不明重点…… 好歹有个**项目配置模板**，连蒙带猜改一改，竟然能用…… 也算是不枉费我[秋天跑一趟上海](https://www.microsoft.com/china/techsummit/2018/)~
+再次领略 微软文档的一大特点 —— 要么一笔带过、不知所云，要么又臭又长、不明重点…… 好歹有个**项目配置模板**，连蒙带猜改一改，竟然能用…… 也算是不枉费我[秋天跑一趟上海][7]~
 
 ## 参考资料
 
@@ -130,3 +130,11 @@ steps:
 3.  https://easyhexo.github.io/Easy-Hexo/
 
 4.  https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=vsts&tabs=example#bash
+
+[1]: https://github.com/topics/static-site-generator?l=javascript&o=desc&s=stars
+[2]: https://hexo.io/
+[3]: https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md
+[4]: https://travis-ci.com/
+[5]: https://tech-query.me/Puppeteer-IE/
+[6]: https://azure.microsoft.com/zh-cn/services/devops/pipelines/
+[7]: https://www.microsoft.com/china/techsummit/2018/

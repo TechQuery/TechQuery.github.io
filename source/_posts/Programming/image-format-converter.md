@@ -19,12 +19,12 @@ tags:
 ## 通用源码
 
 ```javascript
-(function() {
+(function () {
   var canvas = document.createElement('canvas');
 
   var context2D = canvas.getContext('2d');
 
-  self.convertImage = function(image, format) {
+  self.convertImage = function (image, format) {
     context2D.clearRect(0, 0, canvas.width, canvas.height);
 
     canvas.width = image.naturalWidth;
@@ -42,11 +42,11 @@ tags:
 
 ## 基本用法
 
-直接用 [Google Chrome™](https://www.google.cn/chrome/) 调试器的 Source Snippets（源码片段）功能运行 ——
+直接用 [Google Chrome™][1] 调试器的 Source Snippets（源码片段）功能运行 ——
 
 ![代码用法](https://static.oschina.net/uploads/img/201803/07210728_7XZk.png)
 
-若有[跨域相关报错](https://segmentfault.com/q/1010000002459456)，可自行访问该图片的服务器首页，用自创的 `<img src="path/to/image" />` 加载待转换图片 ——
+若有[跨域相关报错][2]，可自行访问该图片的服务器首页，用自创的 `<img src="path/to/image" />` 加载待转换图片 ——
 
 ![跨域技巧](https://static.oschina.net/uploads/img/201803/07004925_icAE.png)
 
@@ -55,3 +55,6 @@ my_img.src = convertImage(my_img, 'jpeg');
 ```
 
 上述代码运行完毕后，网页右键菜单中的**图片另存为**功能保存的就是 JPEG 格式的图片。
+
+[1]: https://www.google.cn/chrome/
+[2]: https://segmentfault.com/q/1010000002459456

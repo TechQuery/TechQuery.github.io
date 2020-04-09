@@ -261,14 +261,20 @@ Set-Cookie: c=3; SameSite=None
 
 ### 原生类型增强
 
-```JavaScript
-const integer = 14_0000_0000;  // 1400000000
+```javascript
+const integer = 14_0000_0000; // 1400000000
 
 const bigInt = BigInt(Number.MAX_SAFE_INTEGER) + 1n; // 9007199254740992n
 
-[[1, 2], [3, 4]].flat(); // [1, 2, 3, 4]
+[
+  [1, 2],
+  [3, 4]
+].flat(); // [1, 2, 3, 4]
 
-Object.fromEntries([['a', 1], ['b', 2]]); // {a: 1, b: 2}
+Object.fromEntries([
+  ['a', 1],
+  ['b', 2]
+]); // {a: 1, b: 2}
 
 console.log(...'FCC成都社区,FCC中文社区'.matchAll(/\w+([^,]+)/g));
 //  ['FCC成都社区', '成都社区']  ['FCC中文社区', '中文社区']

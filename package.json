@@ -33,7 +33,7 @@
     ]
   },
   "dependencies": {
-    "hexo": "^4.2.0",
+    "hexo": "^4.2.1",
     "hexo-auto-category": "^0.2.0",
     "hexo-deployer-git": "^2.1.0",
     "hexo-generator-archive": "^1.0.0",
@@ -51,10 +51,10 @@
     "hexo-server": "^1.0.0"
   },
   "devDependencies": {
-    "husky": "^4.2.4",
+    "husky": "^4.2.5",
     "jsonresume-theme-kendall": "^0.1.19",
-    "lint-staged": "^10.1.3",
-    "prettier": "^2.0.4",
+    "lint-staged": "^10.2.6",
+    "prettier": "^2.0.5",
     "resume-cli": "^1.2.7",
     "yamljs": "^0.3.0"
   },

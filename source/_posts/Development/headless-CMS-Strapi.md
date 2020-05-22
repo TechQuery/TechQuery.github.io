@@ -81,10 +81,12 @@ pip install docker-compose
 ```shell
 # 生成 SSH Key
 ssh-keygen -t rsa -b 4096 -C "my_email@example.com"
+
+cd ~/.ssh
 # 添加 SSH Key 私钥
-ssh-add ~/.ssh/id_rsa
-# 显示 SSH Key 公钥
-cat ~/.ssh/id_rsa.pub
+ssh-add id_rsa
+# 信任 SSH Key 公钥
+cat id_rsa.pub > authorized_keys
 ```
 
 并将上述公钥添加到 `https://github.com/my-id/my-project/settings/keys` 页面。
@@ -132,7 +134,7 @@ on:
     branches:
       - master
 jobs:
-  RSync:
+  SSH:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -145,6 +147,8 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd /var/www
+            git fetch --all
+            git reset --hard
             git pull
             docker-compose down
             docker-compose up -d
@@ -160,6 +164,8 @@ jobs:
 ## 总结
 
 经过前面的一顿折腾，**开发者**只需在本机浏览器中点点鼠标、轻敲键盘，就能实现**网站数据结构**的设计；推送代码到 GitHub，就能实现网站后台的更新。而**运营专员**访问的线上后台锁定了数据结构，他们只能在现有数据表中添加具体数据。这样一来，面对单纯的数据存取，**后端 API** 和**后台 UI** 都不用开发了~
+
+[【后台操作视频】](https://strapi.io/blog/release-beta-18-dynamic-zones)
 
 ## 参考文档
 

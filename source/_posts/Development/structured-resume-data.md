@@ -1,6 +1,7 @@
 ---
 title: 结构化简历数据
 date: 2019-08-14 18:14:58
+updated: 2020-7-30 19:20:31
 categories:
   - Development
 tags:
@@ -8,6 +9,8 @@ tags:
   - model
   - document
   - schema
+  - SaaS
+  - API
 ---
 
 参加工作久了，经历公司多了，每次**换工作写简历**都烦得要死 ——
@@ -87,6 +90,18 @@ npm set puppeteer_download_host https://storage.googleapis.com.cnpmjs.org
 
 2. 用非默认主题导出时，要先把[主题模板包][7]安装在 `resume-cli` 的对应位置（全局 或 项目）
 
+## 推荐的云服务
+
+JSON Resume 官网上推荐了几个支持其数据结构规范的 **SaaS 云服务**，其中免费、易用的当属 [GitConnected][8]。用 GitHub 账号登录后，它会读取你的 GitHub 个人资料、代码库等数据，自动填入简历。
+
+<figure>
+{% asset_img GitConnected.png %}
+</figure>
+
+除了**用户友好**，它还提供形如 `https://gitconnected.com/v1/portfolio/{github_id}` 的 **RESTful API**，比起形形色色的商业平台，也是**代码友好**的。
+
+最终，以后你只需记住形如 `https://gitconnected.com/{github_id}/` 的网址，立马即可把简历发给用人方，打印简历也不需要 U 盘拷、微信传了~
+
 [1]: https://jsonresume.org/
 [2]: https://jsonresume.org/themes/
 [3]: https://jsonresume.org/getting-started/
@@ -94,3 +109,4 @@ npm set puppeteer_download_host https://storage.googleapis.com.cnpmjs.org
 [5]: https://github.com/jsonresume/resume-cli/issues/20
 [6]: https://www.npmjs.com/package/yamljs
 [7]: https://www.npmjs.com/search?q=jsonresume-theme-*
+[8]: https://gitconnected.com/

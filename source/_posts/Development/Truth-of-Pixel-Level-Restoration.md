@@ -1,5 +1,5 @@
 ---
-title: 「像素级还原」的误解
+title: Web 前端“像素级还原”的真相
 date: 2020-05-22 15:13:46
 categories:
   - Development
@@ -124,11 +124,11 @@ PS、AI 等作图工具用**绝对定位**排布**图层**
 
 #### 码农好比土木工程师
 
-要的就是**高效**、**可靠**
+要的就是**可靠**、**高效**
 
 ---
 
-复用市场**现有规格的构件**
+**复用**市场**现有规格的构件**
 
 在**施工安全**的前提下
 
@@ -213,7 +213,7 @@ PS、AI 等作图工具用**绝对定位**排布**图层**
     style="width: 100%; height:90vh"
     lazyLoad="1"
     loading="lazy"
-    src="https://getbootstrap.com/docs/4.5/utilities/colors/#color"
+    src="https://getbootstrap.com/docs/4.5/utilities/colors/#background-color"
 ></iframe>
 
 ---

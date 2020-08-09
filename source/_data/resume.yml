@@ -101,10 +101,18 @@ education:
     startDate: 2008-09-01
     endDate: 2012-06-30
 awards:
+  - title: Most Valuable Professional
+    date: 2020-07-01
+    awarder: Microsoft
+    summary: Developer Technologies
   - title: Top contributor
     date: 2019-12-26
     awarder: freeCodeCamp.org
     summary: Annual Award for Online Volunteers & City Community Organizers
+  - title: Open Source Star
+    date: 2019-11-02
+    awarder: KaiYuanShe.cn
+    summary: Annual Award for KaiYuanShe Members
   - title: Most Valuable Professional
     date: 2019-07-01
     awarder: Microsoft
@@ -118,6 +126,21 @@ awards:
     awarder: freeCodeCamp.org
     summary: Annual Award for Online Volunteers & City Community Organizers
 publications:
+  - name: Array Unique proposal
+    publisher: ECMA TC39
+    releaseDate: 2020-08-01
+    website: https://github.com/tc39/array-unique-proposal
+    summary: ECMAScript proposal for Deduplicating method of Array
+  - name: ProfessorTian PWA
+    publisher: ProfessorTian.net
+    releaseDate: 2020-07-24
+    website: https://professortian.net/
+    summary: Application assistant for Chinese colleges
+  - name: Wuhan2020 PWA
+    publisher: KaiYuanShe.cn
+    releaseDate: 2020-02-09
+    website: https://kaiyuanshe.cn/project/wuhan2020-pwa/
+    summary: Wuhan New Coronavirus Epidemic Prevention information platform
   - name: BootCell
     publisher: Google Developer Group of ChengDu
     releaseDate: 2019-11-23
@@ -147,9 +170,9 @@ skills:
       - ECMAScript 6+
       - TypeScript
       - Web Components
+      - PWA
       - React
       - Vue
-      - PWA
   - name: Node.JS command-line
     level: Senior
     keywords:

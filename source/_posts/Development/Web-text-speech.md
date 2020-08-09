@@ -1,5 +1,5 @@
 ---
-title: Web 文本朗读 25 行代码实现
+title: Web 文本朗读 60 行代码实现
 date: 2020-03-28 15:59:59
 categories:
   - Development
@@ -30,7 +30,7 @@ tags:
 
 上述代码所用的[语音合成 API][5] [现代浏览器支持][6]很好，能用它的都支持 ES 6，所以我们只需[压缩代码][7]不需转译，再包上 `javascript: (() => { /* code */ })()` 即可直接存在**浏览器收藏栏**，当个扩展按钮使用了 ——
 
-> javascript:!(function(e){const n=speechSynthesis.getVoices().find(({lang:e})=>e===navigator.language);document.addEventListener("selectionchange",()=>{const e=(function(e){const n=self.getSelection().getRangeAt(0);if(n&&(!e||e.contains(n.commonAncestorContainer)))return(n+"").trim()})();e&&!speechSynthesis.speaking?(function(e){const t=new SpeechSynthesisUtterance(e);t.voice=n,speechSynthesis.speak(t)})(e):speechSynthesis.cancel()}),self.alert("Selected Text will be speak out automatically")})("undefined"==typeof TTS?TTS={}:TTS);
+> javascript:!((e)=>{const voice=speechSynthesis.getVoices().find(({lang:e})=>e===navigator.language);function speak(e){const t=new SpeechSynthesisUtterance(e);t.voice=voice,speechSynthesis.speak(t)}function\*walkRange(e){const t=document.createNodeIterator(e.commonAncestorContainer);for(var n;(n=t.nextNode())&&(e.intersectsNode(n)&&(yield n),n!==e.endContainer););}function getSelectedText(e){const t=self.getSelection().getRangeAt(0);if(t&&t+""&&(!e||e.contains(t.commonAncestorContainer)))return[...walkRange(t)].filter(({nodeType:e,parentNode:t})=>{if(3!==e)return;const{width:n,height:o}=t.getBoundingClientRect();return n&&o}).map(({nodeValue:e},n,{length:o})=>e.slice(0===n?t.startOffset:0,n===o-1?t.endOffset:1/0)).filter(e=>e.trim()).join("").trim()}document.addEventListener("selectionchange",()=>{const e=getSelectedText();e&&!speechSynthesis.speaking?speak(e):speechSynthesis.cancel()}),self.alert("Selected Text will be speak out automatically");})();
 
 <picture>
     <source type="image/webp" srcset="https://caniuse.bitsofco.de/image/speech-synthesis.webp">
@@ -44,6 +44,7 @@ tags:
 
 1. [Selection Range](https://developer.mozilla.org/zh-CN/docs/Web/API/Range)
 2. [Selection change 事件](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/selectionchange_event)
+3. [NodeIterator](https://developer.mozilla.org/zh-CN/docs/Web/API/NodeIterator)
 
 {% asset_img Web-TTS.png 操作图示 %}
 

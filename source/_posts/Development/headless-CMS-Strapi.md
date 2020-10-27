@@ -94,7 +94,7 @@ cat id_rsa.pub > authorized_keys
 如此，便可无需用户名、密码，直接克隆代码库：
 
 ```shell
-git clone git@github.com:my-id/my-project.git /var/www
+git clone git@github.com:my-id/my-project.git ~/www
 ```
 
 ### 部署配置文件
@@ -114,7 +114,7 @@ services:
     volumes:
       - ./:/srv/app
     ports:
-      - '80:1337'
+      - '1337:1337'
     environment:
       - NODE_ENV=production
 ```
@@ -146,7 +146,7 @@ jobs:
           username: root
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd /var/www
+            cd ~/www
             git fetch --all
             git reset --hard
             git pull
@@ -161,6 +161,39 @@ jobs:
 |  `HOST`   |                    服务器 **IP 地址**                     |
 | `SSH_KEY` | `ssh-keygen` 命令生成的**私钥**，通常存在 `~/.ssh/id_rsa` |
 
+### HTTPS 一键搞定
+
+网站上线时，**服务器配置 HTTPS** 一直是非常难搞的事 ——
+
+- [CloudFlare][10] 域名服务虽自带**免费 HTTPS 证书**，但*墙内速度*一直堪忧
+- Nginx 虽有 [Docker 打包的反向代理方案][11]，但配置还是容易出错
+
+幸得网友推荐一神器 —— [Caddy][12]，老子又可以**一把梭**了！
+
+#### 安装 Caddy
+
+```shell
+echo "deb [trusted=yes] https://apt.fury.io/caddy/ /" \
+    | sudo tee -a /etc/apt/sources.list.d/caddy-fury.list
+sudo apt update
+sudo apt install caddy
+```
+
+#### 启用 Caddy
+
+只要映射好**域名 A 记录**，官网上的一条示例命令就能**自动申请证书并配置好**，`80`、`443` 端口即刻可用：
+
+```shell
+caddy reverse-proxy --from example.com --to localhost:1337
+```
+
+当然，日常使用肯定得扔后台了：
+
+```shell
+sudo -i
+nohup caddy reverse-proxy --from example.com --to localhost:1337 > /tmp/caddy.log 2>&1 &
+```
+
 ## 总结
 
 经过前面的一顿折腾，**开发者**只需在本机浏览器中点点鼠标、轻敲键盘，就能实现**网站数据结构**的设计；推送代码到 GitHub，就能实现网站后台的更新。而**运营专员**访问的线上后台锁定了数据结构，他们只能在现有数据表中添加具体数据。这样一来，面对单纯的数据存取，**后端 API** 和**后台 UI** 都不用开发了~
@@ -172,7 +205,8 @@ jobs:
 1. https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 2. https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script
 3. https://yq.aliyun.com/articles/514624
-4. https://strapi.io/documentation/3.0.0-beta.x/installation/docker.html
+4. https://strapi.io/documentation/v3.x/installation/docker.html
+5. https://cgo.gitbook.io/my-it-blog/linux-1/caddy-de-xia-zai-an-zhuang-pei-zhi-qi-dong
 
 [1]: https://wordpress.org/
 [2]: https://ghost.org/
@@ -183,3 +217,6 @@ jobs:
 [7]: https://www.djangoproject.com/
 [8]: https://github.com/new
 [9]: https://www.sqlite.org/
+[10]: https://www.cloudflare.com/
+[11]: https://github.com/nginx-proxy/nginx-proxy
+[12]: https://caddyserver.com/

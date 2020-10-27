@@ -196,6 +196,8 @@ serviceWorker?.addEventListener('controllerchange', () =>
 1. [WebCell 项目脚手架](https://github.com/EasyWebApp/scaffold)
 2. [WebCell 框架官网](https://web-cell.dev/)
 3. [成都 Web 开发者大会官网](https://web-conf.dev/)
+4. [新冠战疫信息平台](https://wuhan2020.kaiyuanshe.cn/)
+5. [JavaScript 中文兴趣组](https://jscig.github.io/)
 
 ## 参考文档
 

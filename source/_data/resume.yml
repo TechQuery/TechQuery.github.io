@@ -129,7 +129,7 @@ publications:
   - name: Array Unique proposal
     publisher: ECMA TC39
     releaseDate: 2020-08-01
-    website: https://github.com/tc39/array-unique-proposal
+    website: https://github.com/tc39/proposal-array-unique
     summary: ECMAScript proposal for Deduplicating method of Array
   - name: ProfessorTian PWA
     publisher: ProfessorTian.net

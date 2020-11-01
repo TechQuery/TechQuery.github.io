@@ -194,6 +194,17 @@ sudo -i
 nohup caddy reverse-proxy --from example.com --to localhost:1337 > /tmp/caddy.log 2>&1 &
 ```
 
+## 扩展插件
+
+推荐一些日常项目中常用的**扩展设置**、**外部插件**，让 Strapi 用起来更爽：
+
+- [OAuth 登录](https://strapi.io/documentation/v3.x/plugins/users-permissions.html#providers)
+- 文件上传
+  - [微软 Azure Storage](https://github.com/jakeFeldman/strapi-provider-upload-azure-storage)
+  - [阿里云 OSS](https://github.com/hezzze/strapi-provider-upload-oss)
+- [富文本编辑器](https://strapi.io/blog/how-to-change-the-wysiwyg-in-strapi)
+- [API 文档生成](https://www.npmjs.com/package/strapi-plugin-documentation)
+
 ## 总结
 
 经过前面的一顿折腾，**开发者**只需在本机浏览器中点点鼠标、轻敲键盘，就能实现**网站数据结构**的设计；推送代码到 GitHub，就能实现网站后台的更新。而**运营专员**访问的线上后台锁定了数据结构，他们只能在现有数据表中添加具体数据。这样一来，面对单纯的数据存取，**后端 API** 和**后台 UI** 都不用开发了~

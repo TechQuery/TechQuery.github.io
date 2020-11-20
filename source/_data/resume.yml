@@ -1,10 +1,10 @@
 basics:
   name: Yao Shi
   label: Programmer
-  picture: https://tech-query.me/community/fcc-devtalk-techquery/TechQuery-WebCell-cap.jpg
+  image: https://tech-query.me/community/fcc-devtalk-techquery/TechQuery-WebCell-cap.jpg
   email: shiy2008@gmail.com
   phone: (86) 19949484787
-  website: https://tech-query.me/
+  url: https://tech-query.me/
   summary: Web/JavaScript full-stack developer, Open-source author & contributor, Technical community leader.
   location:
     city: ChengDu
@@ -15,9 +15,14 @@ basics:
       username: TechQuery
       url: https://github.com/TechQuery
 work:
-  - company: ThoughtWorks
+  - name: ChengDu 1024 Technology Partnership
+    position: General Partner
+    startDate: 2020-10-24
+    highlights:
+      - Do many Presentations to promote JavaScript full-stack
+  - name: ThoughtWorks
     position: UI developer (Senior consultant)
-    website: https://thoughtworks.com
+    url: https://thoughtworks.com
     startDate: 2019-04-12
     endDate: 2019-08-07
     summary: Senior Web front-end developer
@@ -27,9 +32,9 @@ work:
       - Use React + TypeScript in Logistics Web platform of Shell China
       - Use MpVue in Logistics WeChat mini-program of Shell China
       - Use Vue in DORA (a data platform in ThoughtWorks)
-  - company: tap4fun
+  - name: tap4fun
     position: Senior Web front-end engineer
-    website: https://tap4fun.com
+    url: https://tap4fun.com
     startDate: 2018-03-27
     endDate: 2018-12-07
     summary: Front-end Leader of Web Development department
@@ -41,9 +46,9 @@ work:
       - Provide targeted Technical Guidance & Training to Web front-end team, based on technical problems arising in daily R & D work
       - Replacing the new architecture of React + Ant Design based on the personal open-source project WebCell (Lightweight Web Component Engine)
       - Try to migrate Selenium to a lighter Puppeteer test architecture with the Test leader
-  - company: Tincere
+  - name: Tincere
     position: Senior Web front-end engineer
-    website: http://tincere.cn/
+    url: http://tincere.cn/
     startDate: 2015-11-09
     endDate: 2018-03-20
     summary: Technology leader of Web front-end group
@@ -52,7 +57,7 @@ work:
 volunteer:
   - organization: freeCodeCamp.org
     position: Core organizer
-    website: https://freecodecamp.org/
+    url: https://freecodecamp.org/
     startDate: 2016-11-06
     summary: The world's largest open-source programming learning community
     highlights:
@@ -64,15 +69,23 @@ volunteer:
       - Create a new Community Operating model based on
   - organization: KaiYuanShe
     position: Executive Committee member
-    website: https://kaiyuanshe.cn/
+    url: https://kaiyuanshe.cn/
     startDate: 2018-10-20
     summary: Largest open-source NGO in China
     highlights:
       - Develop new Web-site of KaiYuanShe based on Hexo and Original open-source utilities
       - Outfield volunteer leader of COSCon 2018
+  - organization: WuHan 2020
+    position: Core Developer
+    url: https://community.wuhan2020.org.cn/
+    startDate: 2020-01-25
+    summary: A Open-source Community focused on COVID-19 Rescue
+    highlights:
+      - Design a set of Data Structure
+      - Lead the development of a full-stack Web application
   - organization: Girls Coding day
     position: Coach
-    website: https://girlscodingday.org/
+    url: https://girlscodingday.org/
     startDate: 2018-11-11
     endDate: 2018-11-24
     summary: 2018 ChengDu workshop
@@ -81,7 +94,7 @@ volunteer:
       - Make a quick speech about Puppeteer & Codecept
   - organization: SCU FeiYang Club
     position: Personal computer certified technician
-    website: https://fyscu.com/
+    url: https://fyscu.com/
     startDate: 2008-10-08
     endDate: 2013-06-30
     summary: Top 10 Student society of SiChuan university
@@ -96,11 +109,16 @@ volunteer:
       - Developer of "iFeiYang" electronic magazine (HTML 5) framework
 education:
   - institution: SiChuan University
+    url: http://www.scu.edu.cn/
     area: Electronic Information Science & Technology
     studyType: Bachelor
     startDate: 2008-09-01
     endDate: 2012-06-30
 awards:
+  - title: Most Valuable Professional
+    date: 2020-10
+    awarder: Aliyun
+    summary: Basic Application
   - title: Most Valuable Professional
     date: 2020-07-01
     awarder: Microsoft
@@ -129,37 +147,37 @@ publications:
   - name: Array Unique proposal
     publisher: ECMA TC39
     releaseDate: 2020-08-01
-    website: https://github.com/tc39/proposal-array-unique
+    url: https://github.com/tc39/proposal-array-unique
     summary: ECMAScript proposal for Deduplicating method of Array
   - name: ProfessorTian PWA
     publisher: ProfessorTian.net
     releaseDate: 2020-07-24
-    website: https://professortian.net/
+    url: https://professortian.net/
     summary: Application assistant for Chinese colleges
   - name: Wuhan2020 PWA
     publisher: KaiYuanShe.cn
     releaseDate: 2020-02-09
-    website: https://kaiyuanshe.cn/project/wuhan2020-pwa/
+    url: https://kaiyuanshe.cn/project/wuhan2020-pwa/
     summary: Wuhan New Coronavirus Epidemic Prevention information platform
   - name: BootCell
     publisher: Google Developer Group of ChengDu
     releaseDate: 2019-11-23
-    website: https://bootstrap.web-cell.dev/
+    url: https://bootstrap.web-cell.dev/
     summary: Web Components UI library based on WebCell v2 & BootStrap v4
   - name: WebCell
     publisher: freeCodeCamp ChengDu community
     releaseDate: 2018-11-10
-    website: https://web-cell.dev/
+    url: https://web-cell.dev/
     summary: Web Components engine based on JSX & TypeScript
   - name: Node.JS & Headless browser
     publisher: freeCodeCamp ChongQing community
     releaseDate: 2018-08-18
-    website: https://ppt.baomitu.com/d/aba3b7a3
+    url: https://ppt.baomitu.com/d/aba3b7a3
     summary: Open-source solution of Web automated testing
   - name: EasyWebApp v4
     publisher: freeCodeCamp ChengDu community
     releaseDate: 2017-11-19
-    website: https://ppt.baomitu.com/d/34699c9a
+    url: https://ppt.baomitu.com/d/34699c9a
     summary: Declarative MVVM engine based on ECMAScript 5 & jQuery (predecessor of WebCell)
 skills:
   - name: Web front-end
@@ -191,15 +209,18 @@ skills:
     keywords:
       - Koa 2
       - LeanCloud (BaaS)
+      - Strapi
   - name: System maintenance
     level: Medium
     keywords:
       - Windows PowerShell
       - Ubuntu Linux
 languages:
-  - language: Chinese
+  - name: zh-CN
+    language: Chinese
     fluency: Native speaker
-  - language: English
+  - name: en
+    language: English
     fluency: Daily conversation
 interests:
   - name: Movie
@@ -223,11 +244,13 @@ interests:
   - name: HanFu
 references:
   - name: YuZhen Jiang
+    url: https://github.com/jiangyuzhen
     reference: |
       很给力～很可靠～
       FCC成都社区技术担当
       幽默～万事通
   - name: NingChuan Li
+    url: https://github.com/Akagilnc
     reference: |
       技術方面還沒見過比他更牛的。（在我工作十多年外加面試過上千位技術的經歷裡）
       有追求、有想法、不妥協，對代碼追求完美，不會放過任何一個技術上的細節。動手能力超強。值得信任的技術擔當

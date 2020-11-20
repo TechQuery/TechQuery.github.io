@@ -124,7 +124,7 @@ choco install -y googlechrome firefox git tortoisegit vscode nodejs-lts nvm.port
 #### Mac
 
 ```shell
-brew install git node nvm cask
+brew install git nodejs nvm cask
 
 brew cask install google-chrome firefox sourcetree visual-studio-code
 ```

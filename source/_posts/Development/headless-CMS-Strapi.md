@@ -1,6 +1,7 @@
 ---
 title: 内容型网站后端一把梭
 date: 2020-04-09 20:05:18
+updated: 2020-11-17 20:11:30
 categories:
   - Development
 tags:
@@ -61,15 +62,17 @@ git push
 
 ## 服务器部署
 
-下面以 Linux (Ubuntu 18.04) 为例，简介线上部署。
+下面以 Linux (Ubuntu 20.04) 为例，简介线上部署。
 
 ### 安装容器环境
 
 ```shell
+# 更新包管理器数据库
+apt update
+# 安装 Git、Python PIP
+apt install git python-pip
 # 安装 Docker
 curl -fsSL https://get.docker.com | sh
-# 安装 Python pip
-apt install python-pip
 # 安装 Docker Compose
 pip install docker-compose
 ```
@@ -81,6 +84,8 @@ pip install docker-compose
 ```shell
 # 生成 SSH Key
 ssh-keygen -t rsa -b 4096 -C "my_email@example.com"
+# 启动 SSH 后台服务
+eval `ssh-agent -s`
 
 cd ~/.ssh
 # 添加 SSH Key 私钥
@@ -202,14 +207,18 @@ nohup caddy reverse-proxy --from example.com --to localhost:1337 > /tmp/caddy.lo
 - 文件上传
   - [微软 Azure Storage](https://github.com/jakeFeldman/strapi-provider-upload-azure-storage)
   - [阿里云 OSS](https://github.com/hezzze/strapi-provider-upload-oss)
-- [富文本编辑器](https://strapi.io/blog/how-to-change-the-wysiwyg-in-strapi)
+- [富文本编辑器](https://github.com/TechQuery/strapi-plugin-ckeditor)
 - [API 文档生成](https://www.npmjs.com/package/strapi-plugin-documentation)
 
 ## 总结
 
 经过前面的一顿折腾，**开发者**只需在本机浏览器中点点鼠标、轻敲键盘，就能实现**网站数据结构**的设计；推送代码到 GitHub，就能实现网站后台的更新。而**运营专员**访问的线上后台锁定了数据结构，他们只能在现有数据表中添加具体数据。这样一来，面对单纯的数据存取，**后端 API** 和**后台 UI** 都不用开发了~
 
-[【后台操作视频】](https://strapi.io/blog/release-beta-18-dynamic-zones)
+最后，推荐一些后续学习资料：
+
+- [Strapi 后台操作视频](https://strapi.io/blog/release-beta-18-dynamic-zones)
+- [「组织管理系统」项目脚手架](https://github.com/kaiyuanshe/OrgServer)
+- [Strapi 的 MobX SDK](https://github.com/EasyWebApp/MobX-Strapi)
 
 ## 参考文档
 

@@ -85,7 +85,12 @@ npm install parcel-bundler -D
 
 ## 总结：TS，真香！
 
-我的 JavaScript 生涯从 ES 3 入门，后来用 ES 5 结合 JSDoc 开发小框架，再到 ES 6+ 配合 ESDoc 开发 [WebCell v1][7]，最终用 TS + TSDoc 重写出 [WebCell v2][8]。在充分利用 [JavaScript 这门“无所不能”的语言][9]强大灵活性的同时，**更简洁的 ECMAScript 新语法**和**更规范的 TypeScript 类型系统**，为开源库和日常项目开发带来突飞猛进的效率提升 —— TS，真香！
+我的 JavaScript 生涯从 ES 3 入门，后来用 ES 5 结合 JSDoc 开发小框架，再到 ES 6+ 配合 ESDoc 开发 [WebCell v1][7]，最终用 TS + TSDoc 重写出 [WebCell v2][8]。在充分利用 [JavaScript 这门“无所不能”的语言][9]强大灵活性的同时，**更简洁的 ECMAScript 新语法**和**更规范的 TypeScript 类型系统**，为开源库和日常项目开发带来突飞猛进的**效率提升** —— TS，真香！
+
+而对于没有我这样**渐进式平滑学习曲线**的同学，我也有一个形象的比喻来打消你的顾虑 ——
+
+> 没有类型推导的动态语言写起来好比*关灯开夜车*，老司机也怕掉沟里，何况新手？
+> TypeScript 这双*氙气大灯*，你确定不装？
 
 ## 彩蛋
 

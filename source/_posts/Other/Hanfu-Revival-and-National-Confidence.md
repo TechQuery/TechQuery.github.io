@@ -5,6 +5,7 @@ categories:
   - Other
 tags:
   - HanFu
+  - dress
   - China
   - culture
 
@@ -98,10 +99,7 @@ slidehtml: true
 
 ### 清代服装：旗袍、马褂
 
-<img
-    style="height: 90vh"
-    src="http://www.chinpair.com/upload/1470286507200759.jpg"
-/>
+<img style="height: 90vh" src="./QiPao.jpg" />
 
 ---
 

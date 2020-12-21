@@ -54,7 +54,7 @@ indexbtn:
 # Whether to activate the Post TOC, and Configure which title types are supported by TOC support.
 # 是否激活文章 TOC 功能，并配置TOC支持选中哪些标题类型.
 toc:
-  enable: false
+  enable: true
   heading: h2, h3, h4
 
 # 是否激活文章末尾的打赏功能，默认激活（你替换为的你自己的微信、支付宝二维码图片、或者使用网络图片也可以）.
@@ -100,20 +100,20 @@ myProjects:
   enable: true
   data:
     freeCodeCamp:
-        icon: fa-free-code-camp
-        iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
-        url: https://china.freecodecamp.one/?city=chengdu
-        desc: 2016 年 11 月至今，一直是 FCC 成都社区核心成员，参与组织几十次大小技术活动，并兼职 FCC 中国社区开源布道师，在全国其它技术活动上为 FCC 代言。
+      icon: fa-free-code-camp
+      iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
+      url: https://china.freecodecamp.one/?city=chengdu
+      desc: 2016 年 11 月至今，一直是 FCC 成都社区核心成员，参与组织几十次大小技术活动，并兼职 FCC 中国社区开源布道师，在全国其它技术活动上为 FCC 代言。
     微软 MVP:
-        icon: fa-address-card-o
-        iconBackground: 'linear-gradient(to bottom right, #2196F3 0%, #42A5F5 100%)'
-        url: https://mvp.microsoft.com/zh-cn/PublicProfile/5003197
-        desc: 2018~19 年度 微软最有价值专家 (Developer Technologies)
+      icon: fa-address-card-o
+      iconBackground: 'linear-gradient(to bottom right, #2196F3 0%, #42A5F5 100%)'
+      url: https://mvp.microsoft.com/zh-cn/PublicProfile/5003197
+      desc: 2018~19 年度 微软最有价值专家 (Developer Technologies)
     开源社:
-        icon: fa-code-fork
-        iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
-        url: http://www.kaiyuanshe.cn/
-        desc: 从 2018 年中国开源年会志愿者外场组组长、基础设施组 2019 新版官网开发者开始，成为开源社 2019 年度个人正式成员。
+      icon: fa-code-fork
+      iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
+      url: http://www.kaiyuanshe.cn/
+      desc: 从 2018 年中国开源年会志愿者外场组组长、基础设施组 2019 新版官网开发者开始，成为开源社 2019 年度个人正式成员。
     Girls Coding Day:
       icon: fa-female
       iconBackground: 'linear-gradient(to bottom right, #9900FF 0%, #CC66FF 100%)'
@@ -129,7 +129,6 @@ myProjects:
       iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
       url: https://www.oschina.net/question/2686220_2267083
       desc: 2009 年开始活跃于 OSChina，2017 年在【源创会（成都站）放码过来】分享个人开源项目 EasyWebApp.js
-
 
 # config my skills informations in about page.
 # If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
@@ -242,27 +241,27 @@ googleAnalytics:
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
 featureImages:
-- /medias/featureimages/0.jpg
-- /medias/featureimages/1.jpg
-- /medias/featureimages/2.jpg
-- /medias/featureimages/3.jpg
-- /medias/featureimages/4.jpg
-- /medias/featureimages/5.jpg
-- /medias/featureimages/6.jpg
-- /medias/featureimages/7.jpg
-- /medias/featureimages/8.jpg
-- /medias/featureimages/9.jpg
-- /medias/featureimages/10.jpg
-- /medias/featureimages/11.jpg
-- /medias/featureimages/12.jpg
-- /medias/featureimages/13.jpg
-- /medias/featureimages/14.jpg
-- /medias/featureimages/15.jpg
-- /medias/featureimages/16.jpg
-- /medias/featureimages/17.jpg
-- /medias/featureimages/18.jpg
-- /medias/featureimages/19.jpg
-- /medias/featureimages/20.jpg
-- /medias/featureimages/21.jpg
-- /medias/featureimages/22.jpg
-- /medias/featureimages/23.jpg
+  - /medias/featureimages/0.jpg
+  - /medias/featureimages/1.jpg
+  - /medias/featureimages/2.jpg
+  - /medias/featureimages/3.jpg
+  - /medias/featureimages/4.jpg
+  - /medias/featureimages/5.jpg
+  - /medias/featureimages/6.jpg
+  - /medias/featureimages/7.jpg
+  - /medias/featureimages/8.jpg
+  - /medias/featureimages/9.jpg
+  - /medias/featureimages/10.jpg
+  - /medias/featureimages/11.jpg
+  - /medias/featureimages/12.jpg
+  - /medias/featureimages/13.jpg
+  - /medias/featureimages/14.jpg
+  - /medias/featureimages/15.jpg
+  - /medias/featureimages/16.jpg
+  - /medias/featureimages/17.jpg
+  - /medias/featureimages/18.jpg
+  - /medias/featureimages/19.jpg
+  - /medias/featureimages/20.jpg
+  - /medias/featureimages/21.jpg
+  - /medias/featureimages/22.jpg
+  - /medias/featureimages/23.jpg

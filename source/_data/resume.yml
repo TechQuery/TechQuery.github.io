@@ -115,6 +115,14 @@ education:
     startDate: 2008-09-01
     endDate: 2012-06-30
 awards:
+  - title: Top contributor
+    date: 2020-12-31
+    awarder: freeCodeCamp.org
+    summary: Annual Award for Online Volunteers & City Community Organizers
+  - title: China Open Source Pioneer
+    date: 2020-12-23
+    awarder: KaiYuanShe.cn
+    summary: one of 33 honorees
   - title: Most Valuable Professional
     date: 2020-10
     awarder: Aliyun

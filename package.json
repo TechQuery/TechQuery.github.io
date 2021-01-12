@@ -51,11 +51,11 @@
     "object-assign": "^4.1.1"
   },
   "devDependencies": {
-    "husky": "^4.3.6",
+    "husky": "^4.3.7",
     "jsonresume-theme-kendall": "^0.2.0",
     "lint-staged": "^10.5.3",
     "prettier": "^2.2.1",
-    "resume-cli": "3.0.0",
+    "resume-cli": "^3.0.4",
     "yamljs": "^0.3.0"
   },
   "hexo": {

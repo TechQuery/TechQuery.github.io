@@ -31,7 +31,7 @@ img: https://webdev.imgix.net/more-capable-form-controls/hero.jpg?auto=format&fi
 
 两个 Web 新特性让构建自定义表单控件更简单，解决了现有自定义控件的限制：
 
-- `formdata` 时间让一个任意的 JavaScript 对象参与到表单提交中，所以你可以无需一个隐藏的 `<input>` 就能添加表单数据
+- `formdata` 事件让一个任意的 JavaScript 对象参与到表单提交中，所以你可以无需一个隐藏的 `<input>` 就能添加表单数据
 - **Form-associated Custom Elements API** 让自定义元素表现得更像内置表单控件
 
 这两个特性可用于创建效果更好的新型控件。

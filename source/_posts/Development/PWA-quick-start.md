@@ -1,7 +1,7 @@
 ---
 title: PWA 即刻上手
 date: 2019-10-31 22:41:33
-updated: 2020-08-10 14:58:09
+updated: 2020-12-31 03:37:18
 categories:
   - Development
 tags:
@@ -29,7 +29,7 @@ tags:
 <head>
   <link rel="manifest" href="index.webmanifest" />
   <!-- 老浏览器私有 meta 标签兼容 -->
-  <script src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.15/pwacompat.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.17/pwacompat.min.js"></script>
 </head>
 ```
 
@@ -39,7 +39,7 @@ tags:
 {
   "name": "应用全名（启动页）",
   "short_name": "应用短名（桌面图标）",
-  "start_url": "https://example.dev/",
+  "start_url": ".",
   "description": "应用简介",
   "scope": "/",
   "display": "standalone",
@@ -76,14 +76,12 @@ workbox wizard
 
 ```javascript
 module.exports = {
-  globDirectory: 'dist/',
-  globPatterns: ['**/*.{html,css,js,json,ico,gif,jpg,jpeg,png,webp}'],
+  globDirectory: 'dist/', // webpack 无需此行
+  globPatterns: ['**/*.{html,css,js,json,ico,gif,jpg,jpeg,png,webp}'], // webpack 无需此行
   swDest: 'dist/sw.js',
-  // 禁用 Google Cloud CDN
-  importWorkboxFrom: 'disabled',
   // 启用 第三方 CDN
   importScripts: [
-    'https://cdn.jsdelivr.net/npm/workbox-sw@4.3.1/build/workbox-sw.min.js'
+    'https://cdn.jsdelivr.net/npm/workbox-sw@6.0.2/build/workbox-sw.min.js'
   ],
   // 首次打开页面后尽快接管网络请求
   clientsClaim: true,
@@ -103,7 +101,7 @@ workbox generateSW
 <head>
   <link rel="manifest" href="index.webmanifest" />
   <!-- 老浏览器私有 meta 标签兼容 -->
-  <script src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.15/pwacompat.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.17/pwacompat.min.js"></script>
   <script>
     navigator.serviceWorker?.register('sw.js');
   </script>
@@ -119,7 +117,7 @@ workbox generateSW
 ```json
 {
   "scripts": {
-    "start": "workbox generateSW  &&  parcel source/index.html --open",
+    "start": "parcel source/index.html --open",
     "pack": "parcel build source/index.html --public-url .",
     "build": "rm -rf dist/  &&  npm run pack-dist  &&  workbox generateSW"
   }
@@ -171,14 +169,15 @@ import { serviceWorkerUpdate } from 'web-utility';
 
 const { serviceWorker } = window.navigator;
 
-serviceWorker
-  ?.register('sw.js')
-  .then(serviceWorkerUpdate)
-  .then(worker => {
-    if (window.confirm('检测到新版本，是否立即启用？'))
-      // 触发 Workbox CLI 生成的 Service Worker 中监听的消息回调
-      worker.postMessage({ type: 'SKIP_WAITING' });
-  });
+if (process.env.NODE_ENV !== 'development')
+  serviceWorker
+    ?.register('sw.js')
+    .then(serviceWorkerUpdate)
+    .then(worker => {
+      if (window.confirm('检测到新版本，是否立即启用？'))
+        // 触发 Workbox CLI 生成的 Service Worker 中监听的消息回调
+        worker.postMessage({ type: 'SKIP_WAITING' });
+    });
 
 serviceWorker?.addEventListener('controllerchange', () =>
   window.location.reload()

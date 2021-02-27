@@ -1,6 +1,7 @@
 ---
 title: 汉服复兴与民族自信
 date: 2020-11-18 20:13:18
+updated: 2021-02-21 14:38:29
 categories:
   - Other
 tags:
@@ -47,8 +48,15 @@ slidehtml: true
 
 <iframe
     style="width: 100%; height: 90vh"
-    src="https://www.youtube.com/embed/JD856-RsOwQ"
+    src="https://www.youtube.com/embed/J8IHCGLKFV8"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+></iframe>
+
+---
+
+<iframe
+    style="width: 100%; height: 90vh"
+    src="//player.bilibili.com/player.html?aid=373047685&bvid=BV1gZ4y1g7sp&cid=264477950&page=1" frameborder="no" framespacing="0" scrolling="no" allowfullscreen
 ></iframe>
 
 ---
@@ -92,6 +100,14 @@ slidehtml: true
 <iframe
     style="width: 100%; height: 90vh"
     src="https://www.youtube.com/embed/Wd6Z2ZOzbOY"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+></iframe>
+
+---
+
+<iframe
+    style="width: 100%; height: 90vh"
+    src="https://www.youtube.com/embed/VdimXc9eX7o"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
 ></iframe>
 

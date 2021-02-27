@@ -69,8 +69,8 @@ git push
 ```shell
 # 更新包管理器数据库
 apt update
-# 安装 Git、Python PIP
-apt install git python-pip
+# 安装 Python PIP
+apt install python-pip
 # 安装 Docker
 curl -fsSL https://get.docker.com | sh
 # 安装 Docker Compose
@@ -92,14 +92,6 @@ cd ~/.ssh
 ssh-add id_rsa
 # 信任 SSH Key 公钥
 cat id_rsa.pub > authorized_keys
-```
-
-并将上述公钥添加到 `https://github.com/my-id/my-project/settings/keys` 页面。
-
-如此，便可无需用户名、密码，直接克隆代码库：
-
-```shell
-git clone git@github.com:my-id/my-project.git ~/www
 ```
 
 ### 部署配置文件
@@ -144,27 +136,36 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
+      - name: Transport
+        uses: garygrossgarten/github-action-scp@release
+        with:
+          local: ./
+          remote: ${{ secrets.PATH }}
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          privateKey: ${{ secrets.SSH_KEY }}
       - name: Deploy
-        uses: appleboy/ssh-action@master
+        uses: garygrossgarten/github-action-ssh@release
         with:
           host: ${{ secrets.HOST }}
-          username: root
-          key: ${{ secrets.SSH_KEY }}
-          script: |
-            cd ~/www
-            git fetch --all
-            git reset --hard
-            git pull
+          username: ${{ secrets.USER }}
+          privateKey: ${{ secrets.SSH_KEY }}
+          command: |
+            cd ${{ secrets.PATH }}
+            echo BASE_URL=${{ secrets.BASE_URL }} > .env
             docker-compose down
             docker-compose up -d
 ```
 
 【注意】在推送代码前，务必去 `https://github.com/my-id/my-project/settings/secrets` 页面创建好上述配置中的变量：
 
-|   名称    |                           内容                            |
-| :-------: | :-------------------------------------------------------: |
-|  `HOST`   |                    服务器 **IP 地址**                     |
-| `SSH_KEY` | `ssh-keygen` 命令生成的**私钥**，通常存在 `~/.ssh/id_rsa` |
+|    名称    |                           内容                            |
+| :--------: | :-------------------------------------------------------: |
+|   `PATH`   |                    服务器**代码目录**                     |
+|   `HOST`   |               服务器 **IP 地址**或**域名**                |
+|   `USER`   |                     服务器**用户名**                      |
+| `SSH_KEY`  | `ssh-keygen` 命令生成的**私钥**，通常存在 `~/.ssh/id_rsa` |
+| `BASE_URL` |                  服务器 HTTP 访问根地址                   |
 
 ### HTTPS 一键搞定
 

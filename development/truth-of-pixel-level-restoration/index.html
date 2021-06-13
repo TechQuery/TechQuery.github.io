@@ -1,0 +1,955 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Web 前端“像素级还原”的真相, TechQuery website Web JavaScript full-stack developer development coder programmer">
+    <meta name="description" content="
+freeCodeCamp 中文社区
+首次直播分享会
+
+
+互联网公司“金句”
+
+这个很简单，技术我不懂，明天我就要！
+—— 产品经理
+
+
+
+前端应该“像素级还原”设计图！
+—— UI 设计师
+
+
+Web 前端开发的真相
+几乎不用“像素”这个">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Web 前端“像素级还原”的真相 | TechQuery</title>
+    <link rel="icon" type="image/png" href="/image/WebCell-2.png">
+
+    <link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css">
+    <link rel="stylesheet" href="/css/matery.css">
+    <link rel="stylesheet" href="/css/my.css">
+
+    <script src="https://lib.baomitu.com/jquery/2.2.4/jquery.min.js"></script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2017157453269189",
+        enable_page_level_ads: true
+    });
+    </script>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="TechQuery" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css"></head>
+
+</head>
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="container">
+            <div class="nav-wrapper">
+                <div class="brand-logo">
+                    <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/image/WebCell-0.png" class="logo-img hide-on-small-only">
+                        
+                        <span class="logo-span">TechQuery</span>
+                    </a>
+                </div>
+                <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>Tags</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>Categories</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>Archives</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/projects" class="waves-effect waves-light">
+            
+            <i class="fa fa-code-fork"></i>
+            
+            <span>Projects</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-slideshare"></i>
+            
+            <span>Lecture</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-code"></i>
+            
+            <span>Snippet</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-quora"></i>
+            
+            <span>Q & A</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>About</span>
+        </a>
+    </li>
+    
+    <li>
+        <a id="toggleSearch" class="waves-effect waves-light">
+            <i id="searchIcon" class="mdi-action-search"></i>
+        </a>
+    </li>
+
+</ul>
+
+<div class="side-nav" id="mobile-nav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/image/WebCell-0.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">TechQuery</div>
+        <div class="logo-desc">
+            
+            TechQuery, a Web &amp; JavaScript full-stack developer
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                Tags
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                Categories
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                Archives
+            </a>
+        </li>
+        
+        <li>
+            <a href="/projects" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code-fork"></i>
+                
+                Projects
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-slideshare"></i>
+                
+                Lecture
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code"></i>
+                
+                Snippet
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-quora"></i>
+                
+                Q &amp; A
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                About
+            </a>
+        </li>
+        
+        
+    </ul>
+
+    <div class="social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+</div>
+
+            </div>
+        </div>
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        Web 前端“像素级还原”的真相
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1,
+    #articleContent h2,
+    #articleContent h3,
+    #articleContent h4,
+    #articleContent h5,
+    #articleContent h6 {
+        padding-top: 76px;
+        margin-top: -76px;
+    }
+
+    #articleContent h1 {
+        line-height: 3.5rem;
+    }
+
+    #articleContent h2 {
+        line-height: 3.2rem;
+    }
+
+    #articleContent h3 {
+        line-height: 2.8rem;
+    }
+
+    #articleContent h4 {
+        line-height: 2.5rem;
+    }
+
+    #articleContent h5 {
+        line-height: 2.2rem;
+    }
+
+    #articleContent h6 {
+        line-height: 1.9rem;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            
+            <div class="article-tag">
+                
+                <a href="/tags/Web/" target="_blank">
+                    <span class="chip bg-color">Web</span>
+                </a>
+                
+                <a href="/tags/GUI/" target="_blank">
+                    <span class="chip bg-color">GUI</span>
+                </a>
+                
+                <a href="/tags/design/" target="_blank">
+                    <span class="chip bg-color">design</span>
+                </a>
+                
+                <a href="/tags/front-end/" target="_blank">
+                    <span class="chip bg-color">front-end</span>
+                </a>
+                
+                <a href="/tags/CSS/" target="_blank">
+                    <span class="chip bg-color">CSS</span>
+                </a>
+                
+                <a href="/tags/layout/" target="_blank">
+                    <span class="chip bg-color">layout</span>
+                </a>
+                
+            </div>
+            
+            <div class="post-info">
+                
+                <span class="post-cate">
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/Development/" class="post-category" target="_blank">
+                        Development
+                    </a>
+                    
+                </span>
+                
+
+                <span class="post-date">
+                    <i class="fa fa-clock-o fa-fw"></i>2020-05-22
+                </span>
+            </div>
+        </div>
+        <hr>
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <blockquote>
+<p>freeCodeCamp 中文社区</p>
+<p>首次直播分享会</p>
+</blockquote>
+<hr>
+<h2 id="互联网公司“金句”"><a href="#互联网公司“金句”" class="headerlink" title="互联网公司“金句”"></a>互联网公司“金句”</h2><hr>
+<blockquote>
+<p>这个很简单，技术我不懂，明天我就要！</p>
+<p>—— 产品经理</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>前端应该“像素级还原”设计图！</p>
+<p>—— UI 设计师</p>
+</blockquote>
+<hr>
+<h2 id="Web-前端开发的真相"><a href="#Web-前端开发的真相" class="headerlink" title="Web 前端开发的真相"></a>Web 前端开发的真相</h2><hr>
+<h3 id="几乎不用“像素”这个单位"><a href="#几乎不用“像素”这个单位" class="headerlink" title="几乎不用“像素”这个单位"></a>几乎不用“像素”这个单位</h3><hr>
+<table>
+<thead>
+<tr>
+<th align="center">设计图<br>数据</th>
+<th align="center"></th>
+<th align="center">浏览器<br>默认字号</th>
+<th align="center"></th>
+<th align="center">代码中的数值<br>（两位精度）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>X</code>px</td>
+<td align="center">÷</td>
+<td align="center"><code>16</code>px</td>
+<td align="center">=</td>
+<td align="center"><code>Y</code>rem</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>边框粗细</strong>、<strong>圆角半径</strong>、<strong>阴影范围</strong>、动画中 JS 计算出的<strong>位移量</strong>等除外</p>
+<hr>
+<h3 id="与设计完全不同的布局方式"><a href="#与设计完全不同的布局方式" class="headerlink" title="与设计完全不同的布局方式"></a>与设计完全不同的布局方式</h3><hr>
+<h4 id="设计师的天马行空"><a href="#设计师的天马行空" class="headerlink" title="设计师的天马行空"></a>设计师的天马行空</h4><hr>
+<p>PS、AI 等作图工具用<strong>绝对定位</strong>排布<strong>图层</strong></p>
+<p>类似用 CSS 给 <code>&lt;div /&gt;</code> 设置 <code>position: absolute</code></p>
+<hr>
+<h4 id="工程师的条条框框"><a href="#工程师的条条框框" class="headerlink" title="工程师的条条框框"></a>工程师的条条框框</h4><hr>
+<p>把设计图<strong>从全局到局部</strong></p>
+<p>切成一个个<strong>嵌套的行列框</strong></p>
+<hr>
+<p><img src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/91bde744-f286-4f89-b3f7-63d26551a958/mrh-css-grid-fig-03-large-opt.png"></p>
+<hr>
+<h3 id="图是死的，页是活的"><a href="#图是死的，页是活的" class="headerlink" title="图是死的，页是活的"></a>图是死的，页是活的</h3><hr>
+<h4 id="设计效果图"><a href="#设计效果图" class="headerlink" title="设计效果图"></a>设计效果图</h4><p>一般最多两套 —— <strong>桌面端</strong>、<strong>手机端</strong></p>
+<p>桌面端分辨率往往是设计师 iMac 的 1920+</p>
+<hr>
+<h4 id="屏幕适配"><a href="#屏幕适配" class="headerlink" title="屏幕适配"></a>屏幕适配</h4><ul>
+<li><p>设备：手机、平板、笔记本、大屏台式机</p>
+</li>
+<li><p>操作：电脑窗口缩放、移动设备横竖屏</p>
+</li>
+</ul>
+<hr>
+<p>行列框会在多个范围间<strong>自适应缩放</strong></p>
+<iframe
+    style="width: 100%; height:90vh"
+    lazyLoad="1"
+    loading="lazy"
+    src="https://getbootstrap.com/docs/4.5/layout/grid/"
+></iframe>
+
+<hr>
+<h3 id="思维方式的本质差异"><a href="#思维方式的本质差异" class="headerlink" title="思维方式的本质差异"></a>思维方式的本质差异</h3><hr>
+<h4 id="美工好比建筑设计师"><a href="#美工好比建筑设计师" class="headerlink" title="美工好比建筑设计师"></a>美工好比建筑设计师</h4><p>要的就是<strong>惊艳</strong></p>
+<hr>
+<h4 id="码农好比土木工程师"><a href="#码农好比土木工程师" class="headerlink" title="码农好比土木工程师"></a>码农好比土木工程师</h4><p>要的就是<strong>可靠</strong>、<strong>高效</strong></p>
+<hr>
+<p><strong>复用</strong>市场<strong>现有规格的构件</strong></p>
+<p>在<strong>施工安全</strong>的前提下</p>
+<p>尽力贴近<strong>设计效果图</strong></p>
+<hr>
+<h5 id="从零开始开发项目定制组件"><a href="#从零开始开发项目定制组件" class="headerlink" title="从零开始开发项目定制组件"></a>从零开始开发项目定制组件</h5><p><strong>开发工程量</strong>非常大</p>
+<hr>
+<h5 id="魔改现成组件"><a href="#魔改现成组件" class="headerlink" title="魔改现成组件"></a>魔改现成组件</h5><ul>
+<li>自适应、响应式样式</li>
+<li>用户交互逻辑</li>
+</ul>
+<p>小心翼翼不破坏它们，但往往事与愿违……</p>
+<hr>
+<h3 id="行百里者半九十"><a href="#行百里者半九十" class="headerlink" title="行百里者半九十"></a>行百里者半九十</h3><hr>
+<p>开发工时 ≤ “抠细节”工时</p>
+<hr>
+<p>开发往往集中进行，并能复用现有<strong>组件库</strong></p>
+<hr>
+<p>抠 UI 细节往往……</p>
+<hr>
+<ul>
+<li>再深/浅点……</li>
+<li>再大/小点……</li>
+<li>再往这/那来点……</li>
+</ul>
+<hr>
+<p>请先定义“一点”……</p>
+<hr>
+<h2 id="设计规范，了解一下？"><a href="#设计规范，了解一下？" class="headerlink" title="设计规范，了解一下？"></a>设计规范，了解一下？</h2><hr>
+<h3 id="Twitter-BootStrap-组件库"><a href="#Twitter-BootStrap-组件库" class="headerlink" title="Twitter BootStrap 组件库"></a>Twitter BootStrap 组件库</h3><hr>
+<h4 id="字号等级"><a href="#字号等级" class="headerlink" title="字号等级"></a>字号等级</h4><iframe
+    style="width: 100%; height:90vh"
+    lazyLoad="1"
+    loading="lazy"
+    src="https://getbootstrap.com/docs/4.5/content/typography/#headings"
+></iframe>
+
+<hr>
+<h4 id="间距等级"><a href="#间距等级" class="headerlink" title="间距等级"></a>间距等级</h4><iframe
+    style="width: 100%; height:90vh"
+    lazyLoad="1"
+    loading="lazy"
+    src="https://getbootstrap.com/docs/4.5/utilities/spacing/#notation"
+></iframe>
+
+<hr>
+<h4 id="配色主题"><a href="#配色主题" class="headerlink" title="配色主题"></a>配色主题</h4><iframe
+    style="width: 100%; height:90vh"
+    lazyLoad="1"
+    loading="lazy"
+    src="https://getbootstrap.com/docs/4.5/utilities/colors/#background-color"
+></iframe>
+
+<hr>
+<h4 id="最大内容宽度"><a href="#最大内容宽度" class="headerlink" title="最大内容宽度"></a>最大内容宽度</h4><iframe
+    style="width: 100%; height:90vh"
+    lazyLoad="1"
+    loading="lazy"
+    src="https://getbootstrap.com/docs/4.5/layout/overview/#containers"
+></iframe>
+
+<hr>
+<h4 id="一致的样式、交互"><a href="#一致的样式、交互" class="headerlink" title="一致的样式、交互"></a>一致的样式、交互</h4><iframe
+    style="width: 100%; height:90vh"
+    lazyLoad="1"
+    loading="lazy"
+    src="https://bootstrap.web-cell.dev/"
+></iframe>
+
+<hr>
+<h3 id="Google-Material-Design"><a href="#Google-Material-Design" class="headerlink" title="Google Material Design"></a>Google Material Design</h3><iframe
+    style="width: 100%; height:90vh"
+    lazyLoad="1"
+    loading="lazy"
+    src="https://material.io/"
+></iframe>
+
+<hr>
+<h3 id="Microsoft-Fluent-Design"><a href="#Microsoft-Fluent-Design" class="headerlink" title="Microsoft Fluent Design"></a>Microsoft Fluent Design</h3><iframe
+    style="width: 100%; height:90vh"
+    lazyLoad="1"
+    loading="lazy"
+    src="https://www.microsoft.com/design/fluent/#/"
+></iframe>
+
+<hr>
+<h3 id="蚂蚁金服-Ant-Design"><a href="#蚂蚁金服-Ant-Design" class="headerlink" title="蚂蚁金服 Ant Design"></a>蚂蚁金服 Ant Design</h3><iframe
+    style="width: 100%; height:90vh"
+    lazyLoad="1"
+    loading="lazy"
+    src="https://ant.design/"
+></iframe>
+
+<hr>
+<h3 id="饿了么-Element-UI"><a href="#饿了么-Element-UI" class="headerlink" title="饿了么 Element UI"></a>饿了么 Element UI</h3><iframe
+    style="width: 100%; height:90vh"
+    lazyLoad="1"
+    loading="lazy"
+    src="https://element.eleme.cn/"
+></iframe>
+
+<hr>
+<h2 id="学习收获"><a href="#学习收获" class="headerlink" title="学习收获"></a>学习收获</h2><hr>
+<blockquote>
+<p>你按设计图标注来就行~</p>
+<p>—— UI 设计师</p>
+</blockquote>
+<hr>
+<p>行个 🔨！</p>
+<hr>
+<h2 id="讲师带货"><a href="#讲师带货" class="headerlink" title="讲师带货"></a>讲师带货</h2><iframe
+    style="width: 100%; height:90vh"
+    lazyLoad="1"
+    loading="lazy"
+    src="https://web-cell.dev/"
+></iframe>
+
+<hr>
+<iframe
+    style="width: 100%; height:90vh"
+    lazyLoad="1"
+    loading="lazy"
+    src="https://fcc-cd.dev/"
+></iframe>
+
+            </div>
+            <hr/>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">转载请注明: </span>
+                    <a href="https://tech-query.me" class="b-link-green">TechQuery</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/development/truth-of-pixel-level-restoration/" class="b-link-green">Web 前端“像素级还原”的真相</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+    
+        <div class="disqus-card card" data-aos="fade-up">
+    <div id="disqus_thread" class="card-content">
+        <noscript>Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
+        </noscript>
+    </div>
+</div>
+
+<script type="text/javascript">
+    disqus_config = function () {
+        this.page.url = 'https://tech-query.me/development/truth-of-pixel-level-restoration/';
+        this.page.identifier = '/development/truth-of-pixel-level-restoration/';
+        this.page.title = 'Web 前端“像素级还原”的真相';
+    };
+    let disqus_shortname = 'tech-query';
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+        let d = document, s = d.createElement('script');
+        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="card">
+                <a href="/programming/javascript-prototype-inheritance/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="讲烂了的 JavaScript 原型继承">
+                        
+                        <span class="card-title">讲烂了的 JavaScript 原型继承</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">创建普通对象对象字面量var object = {
+  public_property: 1,
+  public_method: function () {
+    return this.public_property;
+  }
+};
+
+</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-10
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Programming/" class="post-category" target="_blank">
+                                    Programming
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ECMAScript/" target="_blank">
+                        <span class="chip bg-color">ECMAScript</span>
+                    </a>
+                    
+                    <a href="/tags/JavaScript/" target="_blank">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                    <a href="/tags/OOP/" target="_blank">
+                        <span class="chip bg-color">OOP</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="card">
+                <a href="/development/headless-cms-strapi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="内容型网站后端一把梭">
+                        
+                        <span class="card-title">内容型网站后端一把梭</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">Web 全栈工程师经常遇到一些内容型网站的开发需求，比如个人博客、机构官网、新闻门户。这些虽是 Web 1.0、2.0 时代就烂大街的典型 Web-site，但面对不同的甲方，看似雷同的需求往往又有各种细节的定制化。
+虽然 WordPres</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-04-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Development/" class="post-category" target="_blank">
+                                    Development
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/CMS/" target="_blank">
+                        <span class="chip bg-color">CMS</span>
+                    </a>
+                    
+                    <a href="/tags/API/" target="_blank">
+                        <span class="chip bg-color">API</span>
+                    </a>
+                    
+                    <a href="/tags/Node-js/" target="_blank">
+                        <span class="chip bg-color">Node.js</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title">目录</div>
+            <div id="toc-content">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由 &copy;<a href="https://tech-query.me/" target="_blank">TechQuery</a>
+            基于 <a href="https://hexo.io/" target="_blank">Hexo</a> 
+            采用<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">
+                hexo-theme-matery
+            </a>的主题搭建.
+        </div>
+        <div class="col s12 m4 l4 social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title">搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input" autofocus="">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="https://lib.baomitu.com/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="https://lib.baomitu.com/masonry/4.2.2/masonry.pkgd.min.js"></script>
+<script src="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.js"></script>
+<script src="https://lib.baomitu.com/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+<script src="https://lib.baomitu.com/lightgallery/1.6.11/js/lightgallery-all.min.js"></script>
+
+<script src="/libs/others/clicklove.js"></script>
+
+<script src="/js/matery.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132866291-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-132866291-1');
+</script>
+
+
+<span id="cnzz_stat_icon_1275855156" hidden></span>
+<script src="//s23.cnzz.com/z_stat.php?id=1275855156&amp;online=1&amp;show=line"></script>
+</body>
+</html>

@@ -1,0 +1,843 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="【网页重构】CSS 规则清理（浏览器 BookMarkLet、FireBug 插件）, TechQuery website Web JavaScript full-stack developer development coder programmer">
+    <meta name="description" content="很多程序猿认为 —— 最蛋疼的工作不在于重写或创新，而是“修改前任程序猿留下的代码”……
+对前端工程师来说，若不进行彻底的网页重构，而只是修补现有网页的代码（多是之前由 后端工程师 乃至 只会点儿 DreamWeaver 的运维网管 写的）">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>【网页重构】CSS 规则清理（浏览器 BookMarkLet、FireBug 插件） | TechQuery</title>
+    <link rel="icon" type="image/png" href="/image/WebCell-2.png">
+
+    <link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css">
+    <link rel="stylesheet" href="/css/matery.css">
+    <link rel="stylesheet" href="/css/my.css">
+
+    <script src="https://lib.baomitu.com/jquery/2.2.4/jquery.min.js"></script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2017157453269189",
+        enable_page_level_ads: true
+    });
+    </script>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="TechQuery" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css"></head>
+
+</head>
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="container">
+            <div class="nav-wrapper">
+                <div class="brand-logo">
+                    <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/image/WebCell-0.png" class="logo-img hide-on-small-only">
+                        
+                        <span class="logo-span">TechQuery</span>
+                    </a>
+                </div>
+                <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>Tags</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>Categories</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>Archives</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/projects" class="waves-effect waves-light">
+            
+            <i class="fa fa-code-fork"></i>
+            
+            <span>Projects</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-slideshare"></i>
+            
+            <span>Lecture</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-code"></i>
+            
+            <span>Snippet</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-quora"></i>
+            
+            <span>Q & A</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>About</span>
+        </a>
+    </li>
+    
+    <li>
+        <a id="toggleSearch" class="waves-effect waves-light">
+            <i id="searchIcon" class="mdi-action-search"></i>
+        </a>
+    </li>
+
+</ul>
+
+<div class="side-nav" id="mobile-nav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/image/WebCell-0.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">TechQuery</div>
+        <div class="logo-desc">
+            
+            TechQuery, a Web &amp; JavaScript full-stack developer
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                Tags
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                Categories
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                Archives
+            </a>
+        </li>
+        
+        <li>
+            <a href="/projects" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code-fork"></i>
+                
+                Projects
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-slideshare"></i>
+                
+                Lecture
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code"></i>
+                
+                Snippet
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-quora"></i>
+                
+                Q &amp; A
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                About
+            </a>
+        </li>
+        
+        
+    </ul>
+
+    <div class="social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+</div>
+
+            </div>
+        </div>
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        【网页重构】CSS 规则清理（浏览器 BookMarkLet、FireBug 插件）
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1,
+    #articleContent h2,
+    #articleContent h3,
+    #articleContent h4,
+    #articleContent h5,
+    #articleContent h6 {
+        padding-top: 76px;
+        margin-top: -76px;
+    }
+
+    #articleContent h1 {
+        line-height: 3.5rem;
+    }
+
+    #articleContent h2 {
+        line-height: 3.2rem;
+    }
+
+    #articleContent h3 {
+        line-height: 2.8rem;
+    }
+
+    #articleContent h4 {
+        line-height: 2.5rem;
+    }
+
+    #articleContent h5 {
+        line-height: 2.2rem;
+    }
+
+    #articleContent h6 {
+        line-height: 1.9rem;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            
+            <div class="article-tag">
+                
+                <a href="/tags/Web/" target="_blank">
+                    <span class="chip bg-color">Web</span>
+                </a>
+                
+                <a href="/tags/CSS/" target="_blank">
+                    <span class="chip bg-color">CSS</span>
+                </a>
+                
+                <a href="/tags/browser/" target="_blank">
+                    <span class="chip bg-color">browser</span>
+                </a>
+                
+                <a href="/tags/bookmark/" target="_blank">
+                    <span class="chip bg-color">bookmark</span>
+                </a>
+                
+                <a href="/tags/toolkit/" target="_blank">
+                    <span class="chip bg-color">toolkit</span>
+                </a>
+                
+            </div>
+            
+            <div class="post-info">
+                
+                <span class="post-cate">
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/Programming/" class="post-category" target="_blank">
+                        Programming
+                    </a>
+                    
+                </span>
+                
+
+                <span class="post-date">
+                    <i class="fa fa-clock-o fa-fw"></i>2014-09-30
+                </span>
+            </div>
+        </div>
+        <hr>
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>很多程序猿认为 —— <strong>最蛋疼的工作不在于重写或创新，而是“修改前任程序猿留下的代码”……</strong></p>
+<p>对<strong>前端工程师</strong>来说，若不进行彻底的<strong>网页重构</strong>，而只是修补现有网页的代码（多是之前由 <strong>后端工程师</strong> 乃至 <strong>只会点儿 DreamWeaver 的运维网管</strong> 写的），再加上浏览器兼容性的工作特性（特别是 **IE 8-**），简直是“英年早逝”的节奏……</p>
+<p>你能想象一个 HTML 文件中全是大量<em>乱七八糟、东拼西凑</em>的 标签结构 和 CSS 规则 吗？不仅如此，<code>&lt;link rel=&quot;stylesheet&quot; /&gt;</code>、<code>&lt;style /&gt;</code>、<code>&lt;script /&gt;</code> 也是随时随地出现；很多 HTML 元素都由不止一个 CSS 文件中的多个毫无逻辑联系的规则 叠加影响；文件命名、目录结构也超乱…… <strong>“大海捞针”、“牵一发而动全身”</strong>便是再贴切不过的形容了……</p>
+<p>若能用工具清理一遍 CSS，那我们的工作就搞定一半了～</p>
+<h2 id="原创小工具"><a href="#原创小工具" class="headerlink" title="原创小工具"></a>原创小工具</h2><p>这里先分享一下我原创的一个 <strong>BookMarkLet</strong> 形式的 <a href="http://gitee.com/Tech_Query/iBookmarkLet" target="_blank" rel="noopener"><strong>网页 CSS 规则使用率检测工具</strong></a> ——</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>BOM<span class="token punctuation">,</span> DOM<span class="token punctuation">,</span> $<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> CSS_File <span class="token operator">=</span> DOM<span class="token punctuation">.</span>styleSheets<span class="token punctuation">,</span>
+    CopyRight <span class="token operator">=</span> <span class="token string">'(C)2014-2015  test_32@fyscu.com'</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>$<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    BOM<span class="token punctuation">.</span><span class="token function">alert</span><span class="token punctuation">(</span>
+      <span class="token string">'Please run This Tool in IE 8+ (Standard Mode) or a Modern Web Browser.'</span> <span class="token operator">+</span>
+        <span class="token string">'\n\n'</span> <span class="token operator">+</span>
+        CopyRight
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>console<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    BOM<span class="token punctuation">.</span><span class="token function">alert</span><span class="token punctuation">(</span>
+      <span class="token string">'Please run This Tool with JavaScript Console opened.'</span> <span class="token operator">+</span>
+        <span class="token string">'\n\n'</span> <span class="token operator">+</span>
+        CopyRight
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">function</span> <span class="token function">URL_Path</span><span class="token punctuation">(</span>URL<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>URL<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token regex">/^\w+:\/\//</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      URL <span class="token operator">=</span> URL<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      URL<span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      URL <span class="token operator">=</span> URL<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> URL<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">function</span> <span class="token function">SelectorCheck</span><span class="token punctuation">(</span>Selector<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Selector <span class="token operator">=</span> Selector<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">','</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> _NU_ <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> k <span class="token operator">&lt;</span> Selector<span class="token punctuation">.</span>length<span class="token punctuation">;</span> k<span class="token operator">++</span><span class="token punctuation">)</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">$</span><span class="token punctuation">(</span>Selector<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">':'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token punctuation">)</span> _NU_<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>Selector<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> _NU_<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">function</span> <span class="token function">CSS_Rule_Each</span><span class="token punctuation">(</span>CSS_Rule_Group<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> CSS_Rule <span class="token operator">=</span> CSS_Rule_Group<span class="token punctuation">.</span>cssRules <span class="token operator">||</span> CSS_Rule_Group<span class="token punctuation">.</span>rules<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Err</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token keyword">var</span> Selector <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">,</span>
+      NoUsage <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      Test_Result <span class="token operator">=</span> <span class="token punctuation">{</span>
+        media<span class="token punctuation">:</span> CSS_Rule_Group<span class="token punctuation">.</span>media<span class="token punctuation">.</span>mediaText<span class="token punctuation">,</span>
+        mediaRules<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        fontsRules<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>CSS_Rule<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> _Rule_<span class="token punctuation">;</span> j <span class="token operator">&lt;</span> CSS_Rule<span class="token punctuation">.</span>length<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        _Rule_ <span class="token operator">=</span> CSS_Rule<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">switch</span> <span class="token punctuation">(</span>_Rule_<span class="token punctuation">.</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>
+            <span class="token punctuation">{</span>
+              <span class="token comment" spellcheck="true">//  CSSStyleRule</span>
+              _Rule_ <span class="token operator">=</span> <span class="token function">SelectorCheck</span><span class="token punctuation">(</span>_Rule_<span class="token punctuation">.</span>selectorText<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span>_Rule_<span class="token punctuation">.</span>length<span class="token punctuation">)</span> NoUsage<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>_Rule_<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+          <span class="token keyword">case</span> <span class="token number">4</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true">//  CSSMediaRule</span>
+            Test_Result<span class="token punctuation">.</span>mediaRules<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>arguments<span class="token punctuation">.</span><span class="token function">callee</span><span class="token punctuation">(</span>_Rule_<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+          <span class="token keyword">case</span> <span class="token number">5</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true">//  CSSFontFaceRule</span>
+            Test_Result<span class="token punctuation">.</span>fontsRules<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+              fontFamily<span class="token punctuation">:</span> _Rule_<span class="token punctuation">.</span>style<span class="token punctuation">.</span>fontFamily<span class="token punctuation">,</span>
+              src<span class="token punctuation">:</span> _Rule_<span class="token punctuation">.</span>style<span class="token punctuation">.</span>src
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+      Test_Result<span class="token punctuation">.</span>WasteRate <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>NoUsage<span class="token punctuation">.</span>length <span class="token operator">/</span> j<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'%'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>Test_Result<span class="token punctuation">,</span> NoUsage<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> _File_<span class="token punctuation">,</span> _Result_ <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> CSS_File<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    _Result_<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">CSS_Rule_Each</span><span class="token punctuation">(</span>CSS_File<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> _File_ <span class="token operator">=</span> _Result_<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    _File_<span class="token punctuation">.</span>href <span class="token operator">=</span> CSS_File<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>href<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>_File_<span class="token punctuation">.</span>WasteRate <span class="token operator">&amp;&amp;</span> _File_<span class="token punctuation">.</span>href<span class="token punctuation">)</span> _File_<span class="token punctuation">.</span>href <span class="token operator">=</span> <span class="token function">URL_Path</span><span class="token punctuation">(</span>_File_<span class="token punctuation">.</span>href<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _File_<span class="token punctuation">.</span>element <span class="token operator">=</span> CSS_File<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>ownerNode<span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>_File_<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>_Result_<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> self<span class="token punctuation">.</span>document<span class="token punctuation">,</span> self<span class="token punctuation">.</span>document<span class="token punctuation">.</span>querySelectorAll<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="安装版代码"><a href="#安装版代码" class="headerlink" title="安装版代码"></a>安装版代码</h3><!-- prettier-ignore-start -->
+<pre class=" language-javascript"><code class="language-javascript">javascript<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">return</span> a<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token regex">/^\w+:\/\//</span><span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>a<span class="token operator">=</span>a<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span>a<span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">)</span><span class="token punctuation">,</span>a<span class="token operator">=</span>a<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>a<span class="token punctuation">}</span><span class="token keyword">function</span> <span class="token function">g</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> b<span class="token punctuation">,</span>d<span class="token punctuation">;</span><span class="token keyword">for</span><span class="token punctuation">(</span>a<span class="token operator">=</span>a<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">,</span>b<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>d<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>d<span class="token operator">&lt;</span>a<span class="token punctuation">.</span>length<span class="token punctuation">;</span>d<span class="token operator">++</span><span class="token punctuation">)</span><span class="token function">c</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>d<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token operator">||</span>b<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>d<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">return</span> b<span class="token punctuation">}</span><span class="token keyword">function</span> <span class="token function">h</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> b<span class="token punctuation">,</span>e<span class="token punctuation">,</span>f<span class="token punctuation">,</span>i<span class="token punctuation">,</span>h<span class="token punctuation">;</span><span class="token keyword">try</span><span class="token punctuation">{</span>b<span class="token operator">=</span>a<span class="token punctuation">.</span>cssRules<span class="token operator">||</span>a<span class="token punctuation">.</span>rules<span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token keyword">if</span><span class="token punctuation">(</span>e<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>f<span class="token operator">=</span><span class="token punctuation">{</span>media<span class="token punctuation">:</span>a<span class="token punctuation">.</span>media<span class="token punctuation">.</span>mediaText<span class="token punctuation">,</span>mediaRules<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>fontsRules<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">for</span><span class="token punctuation">(</span>h<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>h<span class="token operator">&lt;</span>b<span class="token punctuation">.</span>length<span class="token punctuation">;</span>h<span class="token operator">++</span><span class="token punctuation">)</span><span class="token keyword">switch</span><span class="token punctuation">(</span>i<span class="token operator">=</span>b<span class="token punctuation">[</span>h<span class="token punctuation">]</span><span class="token punctuation">,</span>i<span class="token punctuation">.</span>type<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>i<span class="token operator">=</span><span class="token function">g</span><span class="token punctuation">(</span>i<span class="token punctuation">.</span>selectorText<span class="token punctuation">)</span><span class="token punctuation">,</span>i<span class="token punctuation">.</span>length<span class="token operator">&amp;&amp;</span>e<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">break</span><span class="token punctuation">;</span><span class="token keyword">case</span> <span class="token number">4</span><span class="token punctuation">:</span>f<span class="token punctuation">.</span>mediaRules<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>arguments<span class="token punctuation">.</span><span class="token function">callee</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">break</span><span class="token punctuation">;</span><span class="token keyword">case</span> <span class="token number">5</span><span class="token punctuation">:</span>f<span class="token punctuation">.</span>fontsRules<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>fontFamily<span class="token punctuation">:</span>i<span class="token punctuation">.</span>style<span class="token punctuation">.</span>fontFamily<span class="token punctuation">,</span>src<span class="token punctuation">:</span>i<span class="token punctuation">.</span>style<span class="token punctuation">.</span>src<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>f<span class="token punctuation">.</span>WasteRate<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token operator">*</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>length<span class="token operator">/</span>h<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">"%"</span><span class="token punctuation">}</span><span class="token keyword">return</span><span class="token punctuation">[</span>f<span class="token punctuation">,</span>e<span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token keyword">var</span> j<span class="token punctuation">,</span>i<span class="token punctuation">,</span>k<span class="token punctuation">,</span>d<span class="token operator">=</span>b<span class="token punctuation">.</span>styleSheets<span class="token punctuation">,</span>e<span class="token operator">=</span><span class="token string">"(C)2014-2015  test_32@fyscu.com"</span><span class="token punctuation">;</span><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>c<span class="token punctuation">)</span><span class="token keyword">return</span> a<span class="token punctuation">.</span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Please run This Tool in IE 8+ (Standard Mode) or a Modern Web Browser.\n\n"</span><span class="token operator">+</span>e<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token operator">!</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>console<span class="token punctuation">)</span><span class="token keyword">return</span> a<span class="token punctuation">.</span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Please run This Tool with JavaScript Console opened.\n\n"</span><span class="token operator">+</span>e<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token operator">!</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>k<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>d<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>k<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">h</span><span class="token punctuation">(</span>d<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>j<span class="token operator">=</span>k<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>j<span class="token punctuation">.</span>href<span class="token operator">=</span>d<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>href<span class="token punctuation">,</span>j<span class="token punctuation">.</span>WasteRate<span class="token operator">&amp;&amp;</span>j<span class="token punctuation">.</span>href<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>j<span class="token punctuation">.</span>href<span class="token operator">=</span><span class="token function">f</span><span class="token punctuation">(</span>j<span class="token punctuation">.</span>href<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>j<span class="token punctuation">.</span>element<span class="token operator">=</span>d<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>ownerNode<span class="token punctuation">,</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token punctuation">;</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>self<span class="token punctuation">.</span>document<span class="token punctuation">,</span>self<span class="token punctuation">.</span>document<span class="token punctuation">.</span>querySelectorAll<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<!-- prettier-ignore-end -->
+
+<h3 id="工具特性"><a href="#工具特性" class="headerlink" title="工具特性"></a>工具特性</h3><ol>
+<li> <strong>扫描当前网页中所有内置/外置的 CSS，在控制台显示各 CSS 标签/文件中哪些规则对本页无用、共占比多少</strong></li>
+<li> 外置 CSS 会显示<strong>文件相对路径</strong></li>
+<li> 内置 CSS 会显示其对应的 HTML 元素，便于<strong>在调试器显示的 DOM 树上定位</strong></li>
+<li> <strong>CSS 媒体查询、字体</strong>的规则会在显示的对象中有独立分支</li>
+<li> 暂不支持 CSS 选择符中间有 <strong>伪类、伪元素</strong>的情况，只支持它们出现在 选择符链的最后端（这是与下文提及的专业工具之<strong>有效比计算</strong>有误差的主要原因）</li>
+<li> <strong>跨域的 CSS 文件</strong>无法扫描（它们一般都是 <strong>CDN 通用库</strong> 或 部署环境中的<strong>静态文件服务器</strong>托管的压缩版，本来就不是用于调试的）</li>
+</ol>
+<h2 id="FireBug-插件-——-CSS-Usage"><a href="#FireBug-插件-——-CSS-Usage" class="headerlink" title="FireBug 插件 —— CSS Usage"></a>FireBug 插件 —— CSS Usage</h2><p>现在比较成熟的 <strong>CSS 有效性检查工具</strong> 当属 <code>CSS Usage</code> 了，它不仅能用彩色的富文本显示每个 CSS 标签/文件中<strong>每条规则在当前网页中的使用率</strong>，还能<strong>生成过滤后的 CSS 文本</strong>，可以直接复制粘贴到代码编辑器中保存、使用～</p>
+<p>至于它的安装，和 FireBug 一样，在 <strong>FireFox</strong> 的<strong>附加组件</strong>管理界面中搜索、下载、安装、重启，在 FireBug 主界面上端的选项卡最后就能看到它了～</p>
+
+            </div>
+            <hr/>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">转载请注明: </span>
+                    <a href="https://tech-query.me" class="b-link-green">TechQuery</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/programming/css-rule-cleaner/" class="b-link-green">【网页重构】CSS 规则清理（浏览器 BookMarkLet、FireBug 插件）</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+    
+        <div class="disqus-card card" data-aos="fade-up">
+    <div id="disqus_thread" class="card-content">
+        <noscript>Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
+        </noscript>
+    </div>
+</div>
+
+<script type="text/javascript">
+    disqus_config = function () {
+        this.page.url = 'https://tech-query.me/programming/css-rule-cleaner/';
+        this.page.identifier = '/programming/css-rule-cleaner/';
+        this.page.title = '【网页重构】CSS 规则清理（浏览器 BookMarkLet、FireBug 插件）';
+    };
+    let disqus_shortname = 'tech-query';
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+        let d = document, s = d.createElement('script');
+        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="card">
+                <a href="/programming/web-js-file-loader/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="【原创】JavaScript 文件响应式异步加载器（单页稳定版）">
+                        
+                        <span class="card-title">【原创】JavaScript 文件响应式异步加载器（单页稳定版）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">我在做《i 飞扬》电子杂志 HTML5 在线版的过程中，为了在不改变 Web 前端程序猿的编程思维习惯的前提下，保证整个 WebApp 的好用、可靠，自己开发了一个【JavaScript 文件响应式异步加载器】—— EasyImport.j</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2014-10-09
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Programming/" class="post-category" target="_blank">
+                                    Programming
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Web/" target="_blank">
+                        <span class="chip bg-color">Web</span>
+                    </a>
+                    
+                    <a href="/tags/JavaScript/" target="_blank">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                    <a href="/tags/module/" target="_blank">
+                        <span class="chip bg-color">module</span>
+                    </a>
+                    
+                    <a href="/tags/loader/" target="_blank">
+                        <span class="chip bg-color">loader</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="card">
+                <a href="/programming/javascript-oop-jquery-api/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="【JavaScript 进阶】面向对象编程与 jQuery 式 API 的实现">
+                        
+                        <span class="card-title">【JavaScript 进阶】面向对象编程与 jQuery 式 API 的实现</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">JavaScript 简洁、灵活，jQuery 优雅、强大 —— 它们共同开拓了新的思维方式，影响了一代程序员和他们的 Web 前端开源项目，这是毋庸置疑的~
+要想让它们的简洁、灵活、优雅、强大为我所用，内化为编程上的精神法宝，亲手“临摹”</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2014-09-26
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Programming/" class="post-category" target="_blank">
+                                    Programming
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaScript/" target="_blank">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                    <a href="/tags/OOP/" target="_blank">
+                        <span class="chip bg-color">OOP</span>
+                    </a>
+                    
+                    <a href="/tags/jQuery/" target="_blank">
+                        <span class="chip bg-color">jQuery</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title">目录</div>
+            <div id="toc-content">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由 &copy;<a href="https://tech-query.me/" target="_blank">TechQuery</a>
+            基于 <a href="https://hexo.io/" target="_blank">Hexo</a> 
+            采用<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">
+                hexo-theme-matery
+            </a>的主题搭建.
+        </div>
+        <div class="col s12 m4 l4 social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title">搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input" autofocus="">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="https://lib.baomitu.com/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="https://lib.baomitu.com/masonry/4.2.2/masonry.pkgd.min.js"></script>
+<script src="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.js"></script>
+<script src="https://lib.baomitu.com/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+<script src="https://lib.baomitu.com/lightgallery/1.6.11/js/lightgallery-all.min.js"></script>
+
+<script src="/libs/others/clicklove.js"></script>
+
+<script src="/js/matery.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132866291-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-132866291-1');
+</script>
+
+
+<span id="cnzz_stat_icon_1275855156" hidden></span>
+<script src="//s23.cnzz.com/z_stat.php?id=1275855156&amp;online=1&amp;show=line"></script>
+</body>
+</html>

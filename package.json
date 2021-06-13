@@ -13,6 +13,7 @@
     "url": "https://github.com/TechQuery/TechQuery.github.io/issues"
   },
   "scripts": {
+    "prepare": "husky install",
     "resume-json": "cd source/_data/  &&  yaml2json resume.yml -p | sed -r s/T[0-9]+:[0-9]+:[0-9]+\\.[0-9]+Z//g > resume.json",
     "resume-html": "mkdir public  &&  cd source/_data/  &&  resume export ../../public/resume.html --theme kendall",
     "pack-resume": "npm run resume-json  &&  npm run resume-html",
@@ -21,40 +22,34 @@
     "start": "hexo clean  &&  npm run pack-resume  &&  hexo server",
     "test": "lint-staged"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test",
-      "pre-push": "npm run build"
-    }
-  },
   "lint-staged": {
     "*.{html,md,css,less,js,json,yml,yaml}": "prettier --write"
   },
   "dependencies": {
     "hexo": "^4.2.1",
-    "hexo-auto-category": "^0.2.0",
+    "hexo-auto-category": "^0.2.1",
     "hexo-deployer-git": "^2.1.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-feed": "^2.2.0",
     "hexo-generator-index": "^1.0.0",
-    "hexo-generator-search": "^2.4.1",
+    "hexo-generator-search": "^2.4.3",
     "hexo-generator-slidehtml": "0.0.62",
     "hexo-generator-tag": "^1.0.0",
-    "hexo-migrator-web": "^1.0.3",
+    "hexo-migrator-web": "^1.0.4",
     "hexo-permalink-pinyin": "^1.1.0",
     "hexo-prism-plugin": "^2.3.0",
     "hexo-renderer-ejs": "^1.0.0",
-    "hexo-renderer-marked": "^2.0.0",
+    "hexo-renderer-marked": "3.0.0",
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^1.0.0",
     "object-assign": "^4.1.1"
   },
   "devDependencies": {
-    "husky": "^4.3.7",
+    "husky": "^6.0.0",
     "jsonresume-theme-kendall": "^0.2.0",
-    "lint-staged": "^10.5.3",
-    "prettier": "^2.2.1",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.1",
     "resume-cli": "^3.0.4",
     "yamljs": "^0.3.0"
   },

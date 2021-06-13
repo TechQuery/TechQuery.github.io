@@ -1,7 +1,7 @@
 ---
 title: Web 组件标准实践
 date: 2019-08-14 22:33:23
-updated: 2019-11-22 00:34:00
+updated: 2021-06-13 19:13:50
 categories:
   - Programming
 tags:
@@ -303,38 +303,64 @@ export default class PageIndex extends mixin() {
 ---
 
 ```javascript
-import { createCell, component } from 'web-cell';
-import { observer } from 'mobx-web-cell';
-import { HTMLRouter } from 'cell-router/source';
+import { documentReady, render, createCell, Fragment } from 'web-cell';
+import { History, PageProps, CellRouter } from 'cell-router/source';
 
-import { history } from '../model';
+const history = new History();
 
-const Page = ({ path }) => <span>{path}</span>;
-
-@observer
-@component({
-    tagName: 'page-router',
-    renderTarget: 'children'
-})
-export default class PageRouter extends HTMLRouter {
-    protected history = history;
-    protected routes = [
-        { paths: ['test'], component: Page },
-        { paths: ['example'], component: Page }
-    ];
-
-    render() {
-        return (
-            <main>
-                <nav>
-                    <a href="test">Test</a>
-                    <a href="example">Example</a>
-                </nav>
-                {super.render()}
-            </main>
-        );
-    }
+function TestPage({ path, history, defaultSlot, ...data }: PageProps) {
+  return (
+    <ul>
+      <li>Path: {path}</li>
+      <li>Data: {JSON.stringify(data)}</li>
+    </ul>
+  );
 }
+
+documentReady.then(() =>
+  render(
+    <>
+      <nav>
+        <a href="test?a=1">Test</a>
+        <a href="example?b=2">Example</a>
+      </nav>
+      <CellRouter
+        className="router"
+        history={history}
+        routes={[{ paths: ['test', /^example/], component: TestPage }]}
+      />
+    </>
+  )
+);
+```
+
+---
+
+#### 异步加载页面
+
+`tsconfig.json`
+
+```json
+{
+  "compilerOptions": {
+    "module": "ESNext"
+  }
+}
+```
+
+`source/page/index.ts`
+
+```javascript
+export default [
+  {
+    paths: ['', 'home'],
+    component: async () => (await import('./Home.tsx')).default
+  },
+  {
+    paths: ['list'],
+    component: async () => (await import('./List.tsx')).default
+  }
+];
 ```
 
 ---
@@ -355,6 +381,15 @@ npm install parcel-bundler -D
 
 <iframe
     src="https://bootstrap.web-cell.dev/"
+    style="width: 100%; height: 35rem"
+></iframe>
+
+---
+
+### 官方组件库 —— Material Cell
+
+<iframe
+    src="https://material.web-cell.dev/"
     style="width: 100%; height: 35rem"
 ></iframe>
 

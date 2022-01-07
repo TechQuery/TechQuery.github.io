@@ -1,8 +1,12 @@
 ---
 title: 开源给中国的精神启示
-slidehtml: true
+date: 2021-10-25 21:00:00
 categories:
   - Community
+tags:
+  - open-source
+  - China
+slidehtml: true
 ---
 
 COSCon 2021

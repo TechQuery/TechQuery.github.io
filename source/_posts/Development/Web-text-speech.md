@@ -8,11 +8,15 @@ tags:
   - TTS
 ---
 
+## 国难当头
+
 在[武汉肺炎][1]在中国大陆肆虐的两个月，在后方的大家都在家闷得难受。一开始还在网上时刻关注各种疫情新闻，久而久之头昏眼花，十分疲惫。
 
 当[发哨人艾芬医生][2]的[采访稿][3]被封杀后，**墙国网民**再次群情激奋地力挺，把原文用各种文字、编码、平台记录下来，妥妥的“留取丹青照汗青”！
 
 其中有个网友用一款 Google Chrome **文本朗读** (TTS) 扩展把原文读出来，并把朗读过程录成视频分享出来，让大家闭目养神中就能了解**疫情真相**~
+
+## 自力更生
 
 作为一个 Google 重度用户，针对一个事情可以搜出太多网页可读，眼睛会非常累，一直想找个方便的文本朗读工具。但作为一个 Web 全栈工程师，**跨平台兼容性**又是深入骨髓的自觉，于是翻出前一阵扫过一眼的 [Web Speech API][4]，抄起键盘就是一把梭 ——
 
@@ -32,6 +36,12 @@ tags:
 
 > javascript:!((e)=>{const voice=speechSynthesis.getVoices().find(({lang:e})=>e===navigator.language);function speak(e){const t=new SpeechSynthesisUtterance(e);t.voice=voice,speechSynthesis.speak(t)}function\*walkRange(e){const t=document.createNodeIterator(e.commonAncestorContainer);for(var n;(n=t.nextNode())&&(e.intersectsNode(n)&&(yield n),n!==e.endContainer););}function getSelectedText(e){const t=self.getSelection().getRangeAt(0);if(t&&t+""&&(!e||e.contains(t.commonAncestorContainer)))return[...walkRange(t)].filter(({nodeType:e,parentNode:t})=>{if(3!==e)return;const{width:n,height:o}=t.getBoundingClientRect();return n&&o}).map(({nodeValue:e},n,{length:o})=>e.slice(0===n?t.startOffset:0,n===o-1?t.endOffset:1/0)).filter(e=>e.trim()).join("").trim()}document.addEventListener("selectionchange",()=>{const e=getSelectedText();e&&!speechSynthesis.speaking?speak(e):speechSynthesis.cancel()}),self.alert("Selected Text will be speak out automatically");})();
 
+## 技术背景
+
+若想基于这个新 API 开发应用产品的同学，兼容性大可放心，实在没辙还有 polyfill 顶着：
+
+> https://github.com/compulim/web-speech-cognitive-services
+
 <picture>
     <source type="image/webp" srcset="https://caniuse.bitsofco.de/image/speech-synthesis.webp">
     <img
@@ -45,6 +55,8 @@ tags:
 1. [Selection Range](https://developer.mozilla.org/zh-CN/docs/Web/API/Range)
 2. [Selection change 事件](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/selectionchange_event)
 3. [NodeIterator](https://developer.mozilla.org/zh-CN/docs/Web/API/NodeIterator)
+
+## 与君共勉
 
 {% asset_img Web-TTS.png 操作图示 %}
 

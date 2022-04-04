@@ -289,7 +289,8 @@ form?.addEventListener('formdata', ({ formData }) => {
 });
 ```
 
-> [标准提案作者博文译文](/programming/more-capable-form-controls/)
+> 1. [标准提案作者博文译文](/programming/more-capable-form-controls/)
+> 2. [polyfill 开发进展](https://github.com/webcomponents/polyfills/issues/172)
 
 ---
 

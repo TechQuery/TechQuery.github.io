@@ -15,8 +15,16 @@ basics:
       username: TechQuery
       url: https://github.com/TechQuery
 work:
+  - name: idea2app
+    position: CEO
+    url: https://ideapp.dev/
+    startDate: 2020-08-13
+    summary: Team founder & Web/JavaScript full-stack engineer
+    highlights:
+      -
   - name: ChengDu 1024 Technology Partnership
     position: General Partner
+    url: https://github.com/Creator-1024
     startDate: 2020-10-24
     highlights:
       - Do many Presentations to promote JavaScript full-stack
@@ -55,6 +63,13 @@ work:
     highlights:
       - Refactor multiple PC and mobile projects based on personal open-source projects EasyWebApp.js and EasyLibs.php
 volunteer:
+  - organization: Open Source Bazaar
+    position: Founder & Co-creator
+    url: https://open-source-bazaar.github.io/
+    startDate: 2020-10-28
+    summary: A local Decentralized Open Collaboration Community in Chengdu
+    highlights:
+      -
   - organization: freeCodeCamp.org
     position: Core organizer
     url: https://freecodecamp.org/
@@ -75,6 +90,20 @@ volunteer:
     highlights:
       - Develop new Web-site of KaiYuanShe based on Hexo and Original open-source utilities
       - Outfield volunteer leader of COSCon 2018
+  - organization: JavaScript Chinese Interest Group
+    position: Member & Web/JavaScript full-stack engineer
+    url: https://jscig.github.io/
+    startDate: 2020-09-30
+    summary: Committed to providing a platform to strengthen the participation of Chinese JavaScript community in the work on the JavaScript language standard (ECMAScript)
+    highlights:
+      -
+  - organization: HanMeng Culture community
+    position: Core Member & Web/JavaScript full-stack engineer
+    url: https://github.com/hanmengwenhua
+    startDate: 2020-09-11
+    summary: An open community focusing on traditional Chinese culture such as Hanfu and folk music
+    highlights:
+      -
   - organization: WuHan 2020
     position: Core Developer
     url: https://community.wuhan2020.org.cn/
@@ -116,6 +145,14 @@ education:
     endDate: 2012-06-30
 awards:
   - title: Top contributor
+    date: 2021-12-30
+    awarder: freeCodeCamp.org
+    summary: Annual Award for Online Volunteers & City Community Organizers
+  - title: Most Valuable Professional
+    date: 2021-07-01
+    awarder: Microsoft
+    summary: Developer Technologies
+  - title: Top contributor
     date: 2020-12-31
     awarder: freeCodeCamp.org
     summary: Annual Award for Online Volunteers & City Community Organizers
@@ -124,7 +161,7 @@ awards:
     awarder: KaiYuanShe.cn
     summary: one of 33 honorees
   - title: Most Valuable Professional
-    date: 2020-10
+    date: 2020-10-01
     awarder: Aliyun
     summary: Basic Application
   - title: Most Valuable Professional
@@ -152,6 +189,26 @@ awards:
     awarder: freeCodeCamp.org
     summary: Annual Award for Online Volunteers & City Community Organizers
 publications:
+  - name: Web polyfill
+    publisher: idea2app & KaiYuanShe
+    releaseDate: 2022-03-16
+    url: https://polyfill.web-cell.dev/
+    summary: An automatic CDN service for Web polyfills, which is based on TypeScript, Node.js & JSDelivr.
+  - name: Event Submitter polyfill
+    publisher: idea2app
+    releaseDate: 2021-08-01
+    url: https://github.com/idea2app/event-submitter-polyfill
+    summary: A polyfill for submitter property of <form /> Submit Event, which is written in TypeScript.
+  - name: Edkit
+    publisher: idea2app
+    releaseDate: 2021-04-07
+    url: https://github.com/idea2app/Edkit
+    summary: Lightweight Rich Text Editor toolkit based on TypeScript
+  - name: JSCIG official Web-site
+    publisher: JSCIG
+    releaseDate: 2020-09-30
+    url: https://jscig.github.io/
+    summary: ECMAScript proposal database
   - name: Array Unique proposal
     publisher: ECMA TC39
     releaseDate: 2020-08-01
@@ -250,6 +307,9 @@ interests:
       - swimming
       - KongFu
   - name: HanFu
+    keywords:
+      - Ming
+      - Song
 references:
   - name: YuZhen Jiang
     url: https://github.com/jiangyuzhen

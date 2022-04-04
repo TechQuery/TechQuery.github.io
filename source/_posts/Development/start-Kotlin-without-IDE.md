@@ -6,6 +6,7 @@ categories:
 tags:
   - Java
   - Kotlin
+img: https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2021/09/Kotlin-Vs-Java-Featured-Image.jpeg?q=50&fit=contain&w=750&h=375&dpr=1.5
 ---
 
 Java、PHP 作为中国软件外包行业的扛把子，自然是码农最多、甲方最爱的后端技术栈，我自主创业以来也有不少甲方要求 Java + Spring 的架构。

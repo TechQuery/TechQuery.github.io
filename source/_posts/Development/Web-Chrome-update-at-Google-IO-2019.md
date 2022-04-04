@@ -41,7 +41,6 @@ slidehtml: true
 
 - `loading` 属性是早期提案 `lazyload` 属性的代替
 - 将在 Chrome 76 发布
-- [补丁库](https://github.com/noahbuscher/img-lazy-loading-poly)
 
 ---
 
@@ -105,6 +104,7 @@ document.querySelector('button.share').addEventListener('click', async () => {
 - 网页由 HTTPS 打开
 - Android Chrome 61+
 - 分享调用在**用户操作回调栈**中发起
+- [polyfill](https://github.com/on2-dev/share-api-polyfill)
 
 ---
 
@@ -236,7 +236,7 @@ Set-Cookie: c=3; SameSite=None
 ---
 
 <div style="background: white">
-![](https://developers.google.com/web/updates/images/2018/11/signed-exchanges.svg)
+  <img src="https://developers.google.com/web/updates/images/2018/11/signed-exchanges.svg">
 </div>
 
 ---

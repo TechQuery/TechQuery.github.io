@@ -136,6 +136,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
+      - name: Clean
+        run: |
+          rm -rf .git/ .gitignore .github/ .editorconfig .eslint*
       - name: Transport
         uses: garygrossgarten/github-action-scp@release
         with:

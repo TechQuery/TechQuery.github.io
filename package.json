@@ -48,9 +48,9 @@
   "devDependencies": {
     "husky": "^7.0.4",
     "jsonresume-theme-kendall": "^0.2.0",
-    "lint-staged": "^12.1.5",
-    "prettier": "^2.5.1",
-    "resume-cli": "^3.0.5",
+    "lint-staged": "^12.3.7",
+    "prettier": "^2.6.0",
+    "resume-cli": "^3.0.6",
     "yamljs": "^0.3.0"
   },
   "hexo": {

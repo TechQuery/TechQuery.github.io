@@ -40,7 +40,7 @@
     "hexo-permalink-pinyin": "^1.1.0",
     "hexo-prism-plugin": "^2.3.0",
     "hexo-renderer-ejs": "^1.0.0",
-    "hexo-renderer-marked": "3.0.0",
+    "hexo-renderer-marked": "^3.3.0",
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^1.0.0",
     "object-assign": "^4.1.1"
@@ -48,8 +48,8 @@
   "devDependencies": {
     "husky": "^7.0.4",
     "jsonresume-theme-kendall": "^0.2.0",
-    "lint-staged": "^12.3.7",
-    "prettier": "^2.6.0",
+    "lint-staged": "^12.4.1",
+    "prettier": "^2.6.2",
     "resume-cli": "^3.0.6",
     "yamljs": "^0.3.0"
   },

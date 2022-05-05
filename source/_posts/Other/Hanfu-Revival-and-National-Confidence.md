@@ -1,7 +1,7 @@
 ---
 title: 汉服复兴与民族自信
 date: 2020-11-18 20:13:18
-updated: 2021-02-21 14:38:29
+updated: 2022-05-06 03:42:19
 categories:
   - Other
 tags:
@@ -21,28 +21,29 @@ slidehtml: true
 
 ## 汉服复兴 —— 近年的现象级文化
 
-<img
-    style="height: 90vh"
-    src="https://n.sinaimg.cn/sinacn20118/160/w1024h1536/20190606/2504-hxyuapi0881218.jpg"
-/>
+---
+
+<img style="height: 90vh" src="./TongPao.gif" />
 
 ---
 
 ### 成都 —— 汉服之都
 
-<img
-    style="height: 90vh"
-    src="http://p1.pstatp.com/large/pgc-image/553be4e64f364b63ac81d5896d944f4c"
-/>
+---
+
+<img style="height: 90vh" src="./rank-city.jpg" />
+
+---
+
+<img style="height: 90vh" src="./rank-brand.jpg" />
 
 ---
 
 #### 曾经的汉服“殇城”
 
-<img
-    style="height: 90vh"
-    src="https://zhenxiang.files.wordpress.com/2010/10/28112.jpg"
-/>
+---
+
+<img style="height: 90vh" src="./burn.jpg" />
 
 ---
 
@@ -50,13 +51,6 @@ slidehtml: true
     style="width: 100%; height: 90vh"
     src="https://www.youtube.com/embed/J8IHCGLKFV8"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-></iframe>
-
----
-
-<iframe
-    style="width: 100%; height: 90vh"
-    src="//player.bilibili.com/player.html?aid=373047685&bvid=BV1gZ4y1g7sp&cid=264477950&page=1" frameborder="no" framespacing="0" scrolling="no" allowfullscreen
 ></iframe>
 
 ---
@@ -75,10 +69,7 @@ slidehtml: true
 
 ### 汉代曲裾 vs 日本和服
 
-<img
-    style="height: 90vh"
-    src="https://n.sinaimg.cn/translate/400/w1280h720/20190327/d_j1-hutwezh2296382.jpg"
-/>
+<img style="height: 90vh" src="./Han-He.jpg" />
 
 ---
 
@@ -90,10 +81,7 @@ slidehtml: true
 
 ### 明代官服 vs 朝鲜男装
 
-<img
-    style="height: 90vh"
-    src="https://imagepphcloud.thepaper.cn/pph/image/97/540/40.jpg"
-/>
+<img style="height: 90vh" src="./Han-Han.jpg" />
 
 ---
 
@@ -137,11 +125,10 @@ slidehtml: true
 
 ## 正装·日常
 
+---
+
 <a target="_blank" href="https://baike.baidu.com/item/%E7%8E%8B%E4%B9%90%E5%A4%A9/6116738">
-    <img
-        style="height: 90vh"
-        src="https://img.lanjinger.com/lanjingapp/data/localize/20191217/1048085df841e843ab7.png@!thumb800"
-    />
+    <img style="height: 90vh" src="./reappear.png" />
 </a>
 
 ---
@@ -161,3 +148,45 @@ slidehtml: true
 ---
 
 汉服，美，就完了~
+
+---
+
+### 博物馆奇妙日
+
+---
+
+<video
+    style="width: 100%; height: 90vh"
+    controls
+    src="https://f.video.weibocdn.com/o0/aw7EGxPzlx07TgaVtrOE01041200CQtd0E010.mp4?label=mp4_hd&template=852x480.25.0&trans_finger=62b30a3f061b162e421008955c73f536&ori=0&ps=1BThihd3VLAY5R&Expires=1651780298&ssig=zc5FP3e147&KID=unistore,video">
+</video>
+
+---
+
+<img style="height: 90vh" src="./exhibition-0.jpg" />
+
+---
+
+<img style="height: 90vh" src="./exhibition-1.jpg" />
+
+---
+
+<img style="height: 90vh" src="./exhibition-2.jpg" />
+
+---
+
+<img style="height: 90vh" src="./exhibition-3.jpg" />
+
+---
+
+**青年人**在日常做一些**有趣**、**有意义**的小事，
+
+就能营造自己生活的**小确幸**，
+
+和民族、社会的**大复兴**~
+
+---
+
+[![](https://github.com/Open-Source-Bazaar.png)](https://open-source-bazaar.github.io/)
+
+开源市集

@@ -2,11 +2,10 @@
 title: 美国王牌
 date: 2021-01-12 19:39:38
 categories:
-  - Other
+  - Democracy
 tags:
   - USA
   - Trump
-  - democracy
   - election
 ---
 

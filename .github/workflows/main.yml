@@ -7,16 +7,16 @@ jobs:
   Build-and-Deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Use Node.js
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
         with:
-          node-version: 14
-          cache: yarn
-      - name: Install & build
-        run: yarn  &&  yarn build
-      - name: Deploy
+          node-version: 16
+          cache: npm
+      - name: Install & Build
+        run: npm i  &&  npm run build
+
+      - name: Deploy Web-site
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: ./public

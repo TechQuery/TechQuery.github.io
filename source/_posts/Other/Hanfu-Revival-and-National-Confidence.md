@@ -1,7 +1,7 @@
 ---
 title: 汉服复兴与民族自信
 date: 2020-11-18 20:13:18
-updated: 2022-05-06 03:42:19
+updated: 2022-05-06 04:05:16
 categories:
   - Other
 tags:
@@ -176,6 +176,16 @@ slidehtml: true
 ---
 
 <img style="height: 90vh" src="./exhibition-3.jpg" />
+
+---
+
+## 岂曰无衣，与子同袍
+
+---
+
+**汉服复兴**是一场完全由**华人青年**自发掀起的**社会运动**，
+
+愉快、阳光又热血。
 
 ---
 

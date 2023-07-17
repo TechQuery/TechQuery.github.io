@@ -1,0 +1,881 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Hello Hexo &amp; Travis !, TechQuery website Web JavaScript full-stack developer development coder programmer">
+    <meta name="description" content="静态网站生成器GitHub static-site-generator 主题下 Node.JS 架构 star 前三的项目中，Hexo 生态最完善：
+
+ 包括中文在内的多语言官网
+
+ 使用文档不但每页开篇有视频讲解，简体中文视频直接托管在 ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Hello Hexo &amp; Travis ! | TechQuery</title>
+    <link rel="icon" type="image/png" href="/image/WebCell-2.png">
+
+    <link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css">
+    <link rel="stylesheet" href="/css/matery.css">
+    <link rel="stylesheet" href="/css/my.css">
+
+    <script src="https://lib.baomitu.com/jquery/2.2.4/jquery.min.js"></script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2017157453269189",
+        enable_page_level_ads: true
+    });
+    </script>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="TechQuery" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css"></head>
+
+</head>
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="container">
+            <div class="nav-wrapper">
+                <div class="brand-logo">
+                    <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/image/WebCell-0.png" class="logo-img hide-on-small-only">
+                        
+                        <span class="logo-span">TechQuery</span>
+                    </a>
+                </div>
+                <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>Tags</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>Categories</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>Archives</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/projects" class="waves-effect waves-light">
+            
+            <i class="fa fa-code-fork"></i>
+            
+            <span>Projects</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-slideshare"></i>
+            
+            <span>Lecture</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-code"></i>
+            
+            <span>Snippet</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-quora"></i>
+            
+            <span>Q & A</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>About</span>
+        </a>
+    </li>
+    
+    <li>
+        <a id="toggleSearch" class="waves-effect waves-light">
+            <i id="searchIcon" class="mdi-action-search"></i>
+        </a>
+    </li>
+
+</ul>
+
+<div class="side-nav" id="mobile-nav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/image/WebCell-0.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">TechQuery</div>
+        <div class="logo-desc">
+            
+            TechQuery, a Web &amp; JavaScript full-stack developer
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                Tags
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                Categories
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                Archives
+            </a>
+        </li>
+        
+        <li>
+            <a href="/projects" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code-fork"></i>
+                
+                Projects
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-slideshare"></i>
+                
+                Lecture
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code"></i>
+                
+                Snippet
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-quora"></i>
+                
+                Q &amp; A
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                About
+            </a>
+        </li>
+        
+        
+    </ul>
+
+    <div class="social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+</div>
+
+            </div>
+        </div>
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        Hello Hexo &amp; Travis !
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1,
+    #articleContent h2,
+    #articleContent h3,
+    #articleContent h4,
+    #articleContent h5,
+    #articleContent h6 {
+        padding-top: 76px;
+        margin-top: -76px;
+    }
+
+    #articleContent h1 {
+        line-height: 3.5rem;
+    }
+
+    #articleContent h2 {
+        line-height: 3.2rem;
+    }
+
+    #articleContent h3 {
+        line-height: 2.8rem;
+    }
+
+    #articleContent h4 {
+        line-height: 2.5rem;
+    }
+
+    #articleContent h5 {
+        line-height: 2.2rem;
+    }
+
+    #articleContent h6 {
+        line-height: 1.9rem;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            
+            <div class="article-tag">
+                
+                <a href="/tags/Hexo/" target="_blank">
+                    <span class="chip bg-color">Hexo</span>
+                </a>
+                
+                <a href="/tags/Travis/" target="_blank">
+                    <span class="chip bg-color">Travis</span>
+                </a>
+                
+                <a href="/tags/Azure/" target="_blank">
+                    <span class="chip bg-color">Azure</span>
+                </a>
+                
+                <a href="/tags/DevOps/" target="_blank">
+                    <span class="chip bg-color">DevOps</span>
+                </a>
+                
+            </div>
+            
+            <div class="post-info">
+                
+                <span class="post-cate">
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/Development/" class="post-category" target="_blank">
+                        Development
+                    </a>
+                    
+                </span>
+                
+
+                <span class="post-date">
+                    <i class="fa fa-clock-o fa-fw"></i>2018-12-29
+                </span>
+            </div>
+        </div>
+        <hr>
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="静态网站生成器"><a href="#静态网站生成器" class="headerlink" title="静态网站生成器"></a>静态网站生成器</h2><p><a href="https://github.com/topics/static-site-generator?l=javascript&o=desc&s=stars" target="_blank" rel="noopener">GitHub <code>static-site-generator</code> 主题下 Node.JS 架构</a> star 前三的项目中，<a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 生态最完善：</p>
+<ol>
+<li><p> 包括<strong>中文</strong>在内的<strong>多语言官网</strong></p>
+</li>
+<li><p> 使用文档不但每页开篇有<strong>视频讲解</strong>，简体中文视频直接托管在 Bilibili</p>
+</li>
+<li><p> 插件、主题的<strong>搜索引擎</strong>更是方便，接地气的<strong>国人作品</strong>也很多</p>
+</li>
+</ol>
+<p>官网一番学习之后，发现起步比较简单：</p>
+<pre class=" language-shell"><code class="language-shell">npm install hexo --global
+
+hexo init my_pages
+
+git init
+git checkout --orphan hexo
+</code></pre>
+<p>随后又在官网搜了一个简洁、美观、强大、易用的主题模板 <a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md" target="_blank" rel="noopener">Matery</a>。</p>
+<h2 id="持续集成、持续部署"><a href="#持续集成、持续部署" class="headerlink" title="持续集成、持续部署"></a>持续集成、持续部署</h2><p>最后一顿 Google，入门了近几年开源界最流行的 <a href="https://travis-ci.com/" target="_blank" rel="noopener">Travis CI</a>，它的配置文件 <code>.travis.yml</code> 看起来像 <code>Dockerfile</code>，但更自然：</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">branches</span><span class="token punctuation">:</span>
+  <span class="token key atrule">only</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> hexo
+
+<span class="token key atrule">language</span><span class="token punctuation">:</span> node_js
+<span class="token key atrule">node_js</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> lts/*
+<span class="token key atrule">cache</span><span class="token punctuation">:</span>
+  <span class="token key atrule">directories</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> node_modules
+
+<span class="token key atrule">before_install</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> export TZ=$<span class="token punctuation">{</span>TIME_ZONE<span class="token punctuation">}</span>
+<span class="token key atrule">install</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> npm install
+<span class="token key atrule">script</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> npm run $<span class="token punctuation">{</span>SCRIPT<span class="token punctuation">}</span>
+<span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+  <span class="token key atrule">provider</span><span class="token punctuation">:</span> pages
+  <span class="token key atrule">on</span><span class="token punctuation">:</span>
+    <span class="token key atrule">branch</span><span class="token punctuation">:</span> hexo
+  <span class="token key atrule">skip_cleanup</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">local_dir</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>FOLDER<span class="token punctuation">}</span>
+  <span class="token key atrule">fqdn</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>DOMAIN<span class="token punctuation">}</span>
+  <span class="token key atrule">token</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>TOKEN<span class="token punctuation">}</span>
+  <span class="token key atrule">target_branch</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>BRANCH<span class="token punctuation">}</span>
+</code></pre>
+<p>上述命令行脚本中的<strong>环境变量</strong>可在 Travis CI 项目配置页设置，示例如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">变量名</th>
+<th align="center">示例值</th>
+<th align="center">释义</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">TIME_ZONE</td>
+<td align="center">Asia/Chongqing</td>
+<td align="center">系统时区</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">SCRIPT</td>
+<td align="center">build</td>
+<td align="center">构建脚本名</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">FOLDER</td>
+<td align="center">public</td>
+<td align="center">网页生成器的输出目录</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">DOMAIN</td>
+<td align="center">example.com</td>
+<td align="center">自定义域名</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">TOKEN</td>
+<td align="center"></td>
+<td align="center">Git 平台个人访问令牌</td>
+<td align="center"><a href="https://github.com/settings/tokens/new" target="_blank" rel="noopener">https://github.com/settings/tokens/new</a></td>
+</tr>
+<tr>
+<td align="center">BRANCH</td>
+<td align="center">master</td>
+<td align="center">GitHub Pages 目标分支</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>新版个人网站初步落成！~</p>
+<h2 id="开源项目-API-文档生成"><a href="#开源项目-API-文档生成" class="headerlink" title="开源项目 API 文档生成"></a>开源项目 API 文档生成</h2><p>既然 Travis CI 配置脚本可以用环境变量变得灵活，那基于 JSDoc、ESDoc 之类的开源项目生成 <strong>API 文档站</strong>也可照搬以上方法了：</p>
+<ul>
+<li><p>再也不用在本地 Git <code>precommit</code> 钩子上执行<strong>文档生成脚本</strong>了，加快提交速度</p>
+</li>
+<li><p>把生成的文档放在独立的 <code>gh-pages</code> 分支，让 <code>master</code> 分支只放源码，<strong>提交记录</strong>更清爽</p>
+</li>
+<li><p>用 <code>git push --force</code> 也让<strong>文档站分支</strong>不保留不必要的提交记录，<strong>仓库体积</strong>最小化</p>
+</li>
+</ul>
+<p>但是，Travis 的 Windows 环境尚处测试阶段，我实测时出现“失败但无报错详情”的 bug，只好让 <a href="https://tech-query.me/Puppeteer-IE/">Puppeteer-IE</a> 改用 <a href="https://azure.microsoft.com/zh-cn/services/devops/pipelines/" target="_blank" rel="noopener">Azure Pipeline</a>：</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">trigger</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> master
+
+<span class="token key atrule">pool</span><span class="token punctuation">:</span>
+  <span class="token key atrule">vmImage</span><span class="token punctuation">:</span> <span class="token string">'vs2017-win2016'</span>
+
+<span class="token key atrule">steps</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">task</span><span class="token punctuation">:</span> NodeTool@0
+    <span class="token key atrule">inputs</span><span class="token punctuation">:</span>
+      <span class="token key atrule">versionSpec</span><span class="token punctuation">:</span> <span class="token string">'8.x'</span>
+    <span class="token key atrule">displayName</span><span class="token punctuation">:</span> <span class="token string">'Install Node.js'</span>
+
+  <span class="token punctuation">-</span> <span class="token key atrule">bash</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+      npm install
+      npm run build
+      cd ${DOC_FOLDER}
+      git init
+      git config user.name ${GIT_USER}
+      git config user.email ${GIT_EMAIL}
+      git add .
+      git commit -m "${GIT_MESSAGE}"
+      git push --force --quiet https://${GIT_TOKEN}@${GIT_URI}.git master:${GIT_BRANCH}</span>
+    <span class="token key atrule">displayName</span><span class="token punctuation">:</span> <span class="token string">'npm install &amp; build Document'</span>
+</code></pre>
+<p>再次领略 微软文档的一大特点 —— 要么一笔带过、不知所云，要么又臭又长、不明重点…… 好歹有个<strong>项目配置模板</strong>，连蒙带猜改一改，竟然能用…… 也算是不枉费我<a href="https://www.microsoft.com/china/techsummit/2018/" target="_blank" rel="noopener">秋天跑一趟上海</a>~</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
+<li><p> <a href="https://segmentfault.com/a/1190000013058880" target="_blank" rel="noopener">https://segmentfault.com/a/1190000013058880</a></p>
+</li>
+<li><p> <a href="https://ssk7833.github.io/blog/2016/01/21/using-TravisCI-to-deploy-on-GitHub-pages/" target="_blank" rel="noopener">https://ssk7833.github.io/blog/2016/01/21/using-TravisCI-to-deploy-on-GitHub-pages/</a></p>
+</li>
+<li><p> <a href="https://easyhexo.github.io/Easy-Hexo/" target="_blank" rel="noopener">https://easyhexo.github.io/Easy-Hexo/</a></p>
+</li>
+<li><p> <a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=vsts&amp;tabs=example#bash" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=vsts&amp;tabs=example#bash</a></p>
+</li>
+</ol>
+
+            </div>
+            <hr/>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">转载请注明: </span>
+                    <a href="https://tech-query.me" class="b-link-green">TechQuery</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/development/hello-hexo-travis/" class="b-link-green">Hello Hexo &amp; Travis !</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+    
+        <div class="disqus-card card" data-aos="fade-up">
+    <div id="disqus_thread" class="card-content">
+        <noscript>Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
+        </noscript>
+    </div>
+</div>
+
+<script type="text/javascript">
+    disqus_config = function () {
+        this.page.url = 'https://tech-query.me/development/hello-hexo-travis/';
+        this.page.identifier = '/development/hello-hexo-travis/';
+        this.page.title = 'Hello Hexo &amp; Travis !';
+    };
+    let disqus_shortname = 'tech-query';
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+        let d = document, s = d.createElement('script');
+        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="card">
+                <a href="/maintenance/one-key-software-installation/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="装机必备软件一键安装">
+                        
+                        <span class="card-title">装机必备软件一键安装</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">缘起接着《编程入门之开发工具一键安装》的思路，电脑维修一键装机也可用 Chocolatey 实现！
+回想我 200810 年在川大飞扬做骨干技术员时还没这么好的东西呢，PowerShell 也还没普及，要用 CMD、WSH/JS 绞尽脑汁地</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-31
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Maintenance/" class="post-category" target="_blank">
+                                    Maintenance
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Chocolatey/" target="_blank">
+                        <span class="chip bg-color">Chocolatey</span>
+                    </a>
+                    
+                    <a href="/tags/one-key/" target="_blank">
+                        <span class="chip bg-color">one-key</span>
+                    </a>
+                    
+                    <a href="/tags/Windows/" target="_blank">
+                        <span class="chip bg-color">Windows</span>
+                    </a>
+                    
+                    <a href="/tags/software/" target="_blank">
+                        <span class="chip bg-color">software</span>
+                    </a>
+                    
+                    <a href="/tags/install/" target="_blank">
+                        <span class="chip bg-color">install</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="card">
+                <a href="/development/coder-start-kit/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="编程入门之开发工具一键安装">
+                        
+                        <span class="card-title">编程入门之开发工具一键安装</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">编程开头难难倒编程小白的第一件事 恐怕是“安装开发工具”，即便是很多 程序猿老司机，也最怕“换电脑、配环境”……
+这时可能有人会喷：“肯定用的 Windows！Mac、Linux 这些类 UNIX 系统各种开发工具都自带，装其它的也很方便~</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Development/" class="post-category" target="_blank">
+                                    Development
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Chocolatey/" target="_blank">
+                        <span class="chip bg-color">Chocolatey</span>
+                    </a>
+                    
+                    <a href="/tags/HomeBrew/" target="_blank">
+                        <span class="chip bg-color">HomeBrew</span>
+                    </a>
+                    
+                    <a href="/tags/PowerShell/" target="_blank">
+                        <span class="chip bg-color">PowerShell</span>
+                    </a>
+                    
+                    <a href="/tags/one-key/" target="_blank">
+                        <span class="chip bg-color">one-key</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title">目录</div>
+            <div id="toc-content">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由 &copy;<a href="https://tech-query.me/" target="_blank">TechQuery</a>
+            基于 <a href="https://hexo.io/" target="_blank">Hexo</a> 
+            采用<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">
+                hexo-theme-matery
+            </a>的主题搭建.
+        </div>
+        <div class="col s12 m4 l4 social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title">搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input" autofocus="">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="https://lib.baomitu.com/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="https://lib.baomitu.com/masonry/4.2.2/masonry.pkgd.min.js"></script>
+<script src="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.js"></script>
+<script src="https://lib.baomitu.com/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+<script src="https://lib.baomitu.com/lightgallery/1.6.11/js/lightgallery-all.min.js"></script>
+
+<script src="/libs/others/clicklove.js"></script>
+
+<script src="/js/matery.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132866291-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-132866291-1');
+</script>
+
+
+<span id="cnzz_stat_icon_1275855156" hidden></span>
+<script src="//s23.cnzz.com/z_stat.php?id=1275855156&amp;online=1&amp;show=line"></script>
+</body>
+</html>

@@ -1,0 +1,803 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="FCC DevTalk - 水歌, TechQuery website Web JavaScript full-stack developer development coder programmer">
+    <meta name="description" content="
+freeCodeCamp 中文社区创始人 Miya 对我的采访
+
+
+
+1. 简要介绍一下自己吧。艺名水歌、网名 TechQuery，Web/JavaScript 全栈开发者，是多个国内外开源软件项目的作者、贡献者。现为 freeCodeC">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>FCC DevTalk - 水歌 | TechQuery</title>
+    <link rel="icon" type="image/png" href="/image/WebCell-2.png">
+
+    <link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css">
+    <link rel="stylesheet" href="/css/matery.css">
+    <link rel="stylesheet" href="/css/my.css">
+
+    <script src="https://lib.baomitu.com/jquery/2.2.4/jquery.min.js"></script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2017157453269189",
+        enable_page_level_ads: true
+    });
+    </script>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="TechQuery" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css"></head>
+
+</head>
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="container">
+            <div class="nav-wrapper">
+                <div class="brand-logo">
+                    <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/image/WebCell-0.png" class="logo-img hide-on-small-only">
+                        
+                        <span class="logo-span">TechQuery</span>
+                    </a>
+                </div>
+                <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>Tags</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>Categories</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>Archives</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/projects" class="waves-effect waves-light">
+            
+            <i class="fa fa-code-fork"></i>
+            
+            <span>Projects</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-slideshare"></i>
+            
+            <span>Lecture</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-code"></i>
+            
+            <span>Snippet</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-quora"></i>
+            
+            <span>Q & A</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>About</span>
+        </a>
+    </li>
+    
+    <li>
+        <a id="toggleSearch" class="waves-effect waves-light">
+            <i id="searchIcon" class="mdi-action-search"></i>
+        </a>
+    </li>
+
+</ul>
+
+<div class="side-nav" id="mobile-nav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/image/WebCell-0.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">TechQuery</div>
+        <div class="logo-desc">
+            
+            TechQuery, a Web &amp; JavaScript full-stack developer
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                Tags
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                Categories
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                Archives
+            </a>
+        </li>
+        
+        <li>
+            <a href="/projects" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code-fork"></i>
+                
+                Projects
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-slideshare"></i>
+                
+                Lecture
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code"></i>
+                
+                Snippet
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-quora"></i>
+                
+                Q &amp; A
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                About
+            </a>
+        </li>
+        
+        
+    </ul>
+
+    <div class="social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+</div>
+
+            </div>
+        </div>
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        FCC DevTalk - 水歌
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1,
+    #articleContent h2,
+    #articleContent h3,
+    #articleContent h4,
+    #articleContent h5,
+    #articleContent h6 {
+        padding-top: 76px;
+        margin-top: -76px;
+    }
+
+    #articleContent h1 {
+        line-height: 3.5rem;
+    }
+
+    #articleContent h2 {
+        line-height: 3.2rem;
+    }
+
+    #articleContent h3 {
+        line-height: 2.8rem;
+    }
+
+    #articleContent h4 {
+        line-height: 2.5rem;
+    }
+
+    #articleContent h5 {
+        line-height: 2.2rem;
+    }
+
+    #articleContent h6 {
+        line-height: 1.9rem;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            
+            <div class="article-tag">
+                
+                <a href="/tags/FCC/" target="_blank">
+                    <span class="chip bg-color">FCC</span>
+                </a>
+                
+                <a href="/tags/interview/" target="_blank">
+                    <span class="chip bg-color">interview</span>
+                </a>
+                
+            </div>
+            
+            <div class="post-info">
+                
+                <span class="post-cate">
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/Community/" class="post-category" target="_blank">
+                        Community
+                    </a>
+                    
+                </span>
+                
+
+                <span class="post-date">
+                    <i class="fa fa-clock-o fa-fw"></i>2019-04-23
+                </span>
+            </div>
+        </div>
+        <hr>
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <blockquote>
+<p><a href="https://www.freecodecamp.one/" target="_blank" rel="noopener">freeCodeCamp 中文社区</a>创始人 Miya 对我的采访</p>
+</blockquote>
+<img src="/community/fcc-devtalk-techquery/TechQuery-WebCell-cap.jpg" class="">
+
+<h2 id="1-简要介绍一下自己吧。"><a href="#1-简要介绍一下自己吧。" class="headerlink" title="1. 简要介绍一下自己吧。"></a>1. 简要介绍一下自己吧。</h2><p>艺名<strong>水歌</strong>、网名 TechQuery，<strong>Web/JavaScript 全栈开发者</strong>，是多个国内外开源软件项目的作者、贡献者。现为 <a href="https://fcc-cd.dev/" target="_blank" rel="noopener">freeCodeCamp 成都社区</a>第四任负责人，也在<a href="http://www.kaiyuanshe.cn/" target="_blank" rel="noopener">开源社</a>基础设施组和 <a href="https://www.thoughtworks.com/cn/" target="_blank" rel="noopener">ThoughtWorks</a> 公司工作。2018 年也终于成为小时候仰视的<a href="https://mvp.microsoft.com/" target="_blank" rel="noopener">微软最有价值专家</a>（开发者技术类）。</p>
+<h2 id="2-你是什么时候开始接触电脑，什么时候开始写代码的？"><a href="#2-你是什么时候开始接触电脑，什么时候开始写代码的？" class="headerlink" title="2. 你是什么时候开始接触电脑，什么时候开始写代码的？"></a>2. 你是什么时候开始接触电脑，什么时候开始写代码的？</h2><p>小学二年级暑假，老爸给我报了个电脑学习班，从 MS-DOS、Windows 95 开始学，就打开了新世界的大门。正巧学习班租用的是本地新华书店的写字楼，从那时起就养成了课后找书看着学的习惯。</p>
+<p>至于写代码，虽然小学三年级开始的计算机课有教 Logo 语言（小图龟），初一每周的兴趣课也有 VB 6 编程，但在当时惧怕数学、英语的我看来，都是抱着书催眠的东西…… 直到大一上 C 语言专业课也没自己写过实用程序。最早上手编程还是因为在大学 IT 社团为同学、老师修电脑太多，发现命令行脚本可以大大提高机械重复工作的效率。</p>
+<h2 id="3-水歌这个称呼是怎么来的？"><a href="#3-水歌这个称呼是怎么来的？" class="headerlink" title="3. 水歌这个称呼是怎么来的？"></a>3. 水歌这个称呼是怎么来的？</h2><p>因为在大学社团里一遇到技术、公益活动的话题就滔滔不绝，那时流行“论坛灌水”的说法，学长就叫我“水哥”…… 我一开始是拒绝的，听起来很“水”，可叫多了就“真香”了，后来又被“伪文艺”的我改成“水歌”~</p>
+<h2 id="4、你在大学阶段最难忘的经历是什么？"><a href="#4、你在大学阶段最难忘的经历是什么？" class="headerlink" title="4、你在大学阶段最难忘的经历是什么？"></a>4、你在大学阶段最难忘的经历是什么？</h2><blockquote>
+<p>我的大学 ≈ 图书馆看书写代码 + 做公益 IT 社团</p>
+</blockquote>
+<p>（这两点是我今天对 IT、编程、开源、社区有所思考、有所建树的基石）</p>
+<p>虽然高中合伙建过社团，但因为校史上从未有过 IT 社团，基本是自己摸索着做，换届半年后还让学弟给解散了，自觉很不成功…… 当来到川大，遇见<strong>飞扬俱乐部</strong>这个白手起家、日臻完善的<strong>公益 IT 社团</strong>，便毫不犹豫地投身进去。</p>
+<p>虽然我加入时飞扬已 5 岁，但却正处在从第一次危机中爬出来的过程 —— 技术员水平青黄不接，我们上一届卸任前还出了<strong>大型电脑维修活动</strong>现场丢了一台联想奥运纪念版笔记本的重大事故。但也是从那时起，我提出的“现场桌椅围合式布局”、设计的《电脑维修服务记录单》和起草的《电脑维修技术员考核大纲》成了飞扬至今的标配。</p>
+<p>本届团队上任前的<strong>改革研讨会</strong>上，我提出的“软件、网络两部合并为研发部”方案被采纳，并成为创始团队成员，开始跟着代码大神学艺。但前期还主要在带其他维修师傅带不过来的“可怜”徒弟，在实践中审校《电脑维修技术员培训教材》、开发<strong>软件维修工具</strong>，在研发部只担纲“产品经理”和官网副站长，并无独立编码能力，直到大三大四筹划创业也打算做个懂技术的产品经理。</p>
+<p>而随着<a href="https://www.fyscu.com/" target="_blank" rel="noopener">飞扬官网</a>建设的深入，我自己也发起了<a href="https://wiki.fyscu.com/" target="_blank" rel="noopener">【川大百科】</a>和<a href="https://mag.fyscu.com/" target="_blank" rel="noopener">《i 飞扬》杂志在线版</a>，本想<strong>给学弟学妹锻炼代码能力</strong>的工作长期无人问津，一气之下就现学现卖，开始成为<strong>真正的程序员</strong>了。其后 Windows 注册表分析器、校园宽带路由拨号器、百科数据迁移工具、在线杂志框架等作品相继出炉，它们也成为我后来霸面多家公司拿到多个前端 offer 的敲门砖。</p>
+<h2 id="5-大学毕业后，你的第一份工作是采购业务专员？"><a href="#5-大学毕业后，你的第一份工作是采购业务专员？" class="headerlink" title="5. 大学毕业后，你的第一份工作是采购业务专员？"></a>5. 大学毕业后，你的第一份工作是采购业务专员？</h2><p>家庭原因让我对书店有种特殊的情感，<strong>台湾诚品</strong>、<strong>贵阳西西弗</strong>等<strong>民营独立书店</strong>兴起后令我眼前一亮，对比国营古板的新华书店，觉得这才是“一个城市的精神家园”该有的样子！看了<a href="https://book.douban.com/subject/6429287/" target="_blank" rel="noopener">《独立书店，你好！》</a>之后，还曾走街串巷寻访成都的独立书店，所以当初就抱着“每天上班沐浴在油墨清香中”的想法去了一家成都本土的连锁书店。</p>
+<p>但近一年的工作让我发现，中国的图书发行行业无论是否国营，状态都相差不大，对绝大多数从业者而言只是生意，我用一张公式不多 Excel 自动表格和一个按键脚本把每天 3 小时的人工压缩成半小时程序运行，已经是大家眼中的“大神”了……</p>
+<img src="/community/fcc-devtalk-techquery/TechQuery-Coffee.jpg" class="">
+
+<h2 id="6-你是-JavaScript-全栈开发者，为什么选择这门语言？对于想学编程或者初入门编程的小伙伴，你有什么建议呢？"><a href="#6-你是-JavaScript-全栈开发者，为什么选择这门语言？对于想学编程或者初入门编程的小伙伴，你有什么建议呢？" class="headerlink" title="6. 你是 JavaScript 全栈开发者，为什么选择这门语言？对于想学编程或者初入门编程的小伙伴，你有什么建议呢？"></a>6. 你是 JavaScript 全栈开发者，为什么选择这门语言？对于想学编程或者初入门编程的小伙伴，你有什么建议呢？</h2><p>我与 JavaScript 结缘也是好事多磨。</p>
+<p>高中从电脑杂志上知道 JS 时 jQuery 刚刚发布，那时的主流舆论还是鄙视它的，把各种历史遗留问题和非语言标准的 IE bug 放大来写文章，把它渲染成一个充满 bug 的语言…… 那时，我还是看到文字多的 IT 书籍就退避三舍，没有任何实践，也就没有任何求证，就“人云亦云”了…… 现在真想对当年那些文章作者说：“报道出了偏差，你们可是要负责的！”</p>
+<p>后来在大学社团开发<strong>电脑装机自动化脚本</strong>，因为 Windows 的 DOS 批处理功能羸弱，微软常用的 VBS 语法太丑，新系统力推的 .Net PowerShell 性能、兼容性差，曾仰慕的新手神器 Python 也发展得很庞杂了，微软系统自带的 JS 方言 JScript 就成了首选。毕竟我们这一代大学生都是<a href="https://book.douban.com/subject/1679623/" target="_blank" rel="noopener">谭浩强“绿宝书”</a>养大的，“弱类型的类 C 脚本”写起来很舒服~</p>
+<p>但我从“懂你”这个层面真正爱上 JS，还是 2015 年劳动节在家仿写 jQuery 开始的，后来这个项目也成为我第一个成熟的开源项目 <a href="https://tech-query.me/iQuery.js/">iQuery.js</a>。</p>
+<blockquote>
+<p>JavaScript (ECMAScript 5) 是一门原生支持<strong>函数式编程范式</strong>的、基于<strong>原型</strong>的面向对象语言。</p>
+</blockquote>
+<p>在深入的实践中理解了一门语言的精髓，便会发出由衷的感叹 ——</p>
+<blockquote>
+<p>一个函数、一个对象就能千变万化，简洁得恰到好处、强大到无以复加！</p>
+</blockquote>
+<p>所以总的来说 ——</p>
+<blockquote>
+<p><strong>实践求真</strong>、<strong>学以致用</strong>是学好编程的要诀之一</p>
+</blockquote>
+<img src="/community/fcc-devtalk-techquery/TechQuery-Code4City.jpg" class="">
+
+<h2 id="7-你参与了很多开源项目，其中哪些经历让你觉得特别有成就感？"><a href="#7-你参与了很多开源项目，其中哪些经历让你觉得特别有成就感？" class="headerlink" title="7. 你参与了很多开源项目，其中哪些经历让你觉得特别有成就感？"></a>7. 你参与了很多开源项目，其中哪些经历让你觉得特别有成就感？</h2><p>高一从堂哥那儿知道了 Ubuntu，为我开启了<strong>开源世界</strong>的大门。早期只是国内外 Linux 发行版的小白用户，平时的技术钻研还主要是 Ghost XP。但也正是对当年四大系统论坛之一的 Deepin 技术理念的认同与关注，让我在它转型 Linux 的伊始就有所参与。至今还记得 <a href="https://www.deepin.org/" target="_blank" rel="noopener">Deepin Linux</a> 第一版发布后连夜安装体验，激动地给联合创始人 hiweed（冷罡华）写建议邮件。在之后的几个版本也给当时的核心开发之一写过 bug、改进汇总文章。如今，Deepin 不但成为<strong>最好的中文 Linux 发行版</strong>，而且也在国际上名列前茅！</p>
+<p>只提提改进建议总觉得自己还没真正参与进去，把自己积累的零散代码放在 GitHub 上也只是自娱自乐。终于在写开源代码 2 年后，2016 年从圣诞节前到来年春节后的两个月，我对 <code>jQuery.prototype.contents()</code> 方法支持 HTML 5 <code>&lt;template /&gt;</code> 标签的补丁，在外国前辈耐心指导下历经 8 次修改终于发布在 <a href="https://github.com/jquery/jquery/commit/74faa95835a917028a5063786833cb6a4ec83b02" target="_blank" rel="noopener">jQuery 3.2.0</a>！第一次在亿万人每天使用的国际开源项目中留下自己的名字，别提多美了，哈哈！</p>
+<p>当然，最让我有成就感的肯定是，有朝一日我自己开发的 <strong>Web Components 框架</strong> <a href="https://web-cell.dev/" target="_blank" rel="noopener">WebCell</a> 能步 Vue.js 之父尤雨溪的后尘，走出成都、走向世界啦！</p>
+<img src="/community/fcc-devtalk-techquery/TechQuery-WebCell-show.jpg" class="">
+
+<h2 id="8-你觉得国内有哪些不错的开源项目？"><a href="#8-你觉得国内有哪些不错的开源项目？" class="headerlink" title="8. 你觉得国内有哪些不错的开源项目？"></a>8. 你觉得国内有哪些不错的开源项目？</h2><p>与开源结缘的 14 年，我见过、用过太多国人开发的优秀开源软件，在此只列举还在活跃开发、受众甚广的各领域典型代表 ——</p>
+<ul>
+<li>硬件级：Grub4DOS，系统启动神器</li>
+<li>系统级：Deepin，最好的中文 Linux 桌面系统</li>
+<li>软件引擎：NW.js、Electron，国人创始、全球社区</li>
+<li>应用软件：Notepad++，Windows 上最强大的文本编辑器，台湾同胞力作</li>
+<li>Web 引擎：Vue.js，个人品牌经营最成功的国人开源项目</li>
+<li>Web 应用：Hexo，生态完善的静态内容网站生成器，台湾同胞力作</li>
+</ul>
+<h2 id="9-你在高中阶段就创建社团，大学期间是川大技术社团的骨干之一，如今是-freeCodeCamp-成都社区的第四任-leader，同时你还在其他技术社区中承担角色，你觉得应该如何运营一个技术社区呢？"><a href="#9-你在高中阶段就创建社团，大学期间是川大技术社团的骨干之一，如今是-freeCodeCamp-成都社区的第四任-leader，同时你还在其他技术社区中承担角色，你觉得应该如何运营一个技术社区呢？" class="headerlink" title="9. 你在高中阶段就创建社团，大学期间是川大技术社团的骨干之一，如今是 freeCodeCamp 成都社区的第四任 leader，同时你还在其他技术社区中承担角色，你觉得应该如何运营一个技术社区呢？"></a>9. 你在高中阶段就创建社团，大学期间是川大技术社团的骨干之一，如今是 freeCodeCamp 成都社区的第四任 leader，同时你还在其他技术社区中承担角色，你觉得应该如何运营一个技术社区呢？</h2><p>大二刚做维修技术师傅时，还像大一新生那样冲在干活儿的第一线，忙得顾不来自己的徒弟，一个徒弟就向社长反映，社长和我说了句 —— <strong>社团每项工作不是让 100% 胜任它的人去做得完美，而应该让还不够格、但可以努力一下做到的人去锻炼</strong>。从此我开始转变为<strong>导师</strong>的角色，<strong>事先规划</strong>、<strong>过程指导</strong>、<strong>事后复盘</strong>，4 年下来荣获“最受欢迎技术师傅”荣誉，但<strong>三个和尚</strong>问题还是屡见不鲜。</p>
+<p>离开大学校园来到 FCC 成都社区，第二任 leader 姜姜也刚上任，虽然她上学时没有社团经验，但兼职打工时<strong>敢闯敢干的拼劲儿</strong>让她能把我提议“半月一次小活动”的方案贯彻执行，<strong>女生天生的亲和力</strong>也让她能不断认识、邀请各路大神来做讲师。也正是因为成都社区的人脉扩大，让我们遇见了后来的第三任 leader 青松。</p>
+<p>青松与姜姜一见面就说“我想个人出资办个成都前端大会”，与我和姜姜在那一年前的打算不谋而合！而且他不但有想法，也已经做了一些功课，再加上<strong>超强的执行力</strong>，竟带领大家一个月就办成了首届<a href="https://web-conf.dev/" target="_blank" rel="noopener">成都 Web 前端大会</a>！从此大家对他十分佩服，也在换届时众望所归地高票接过姜姜的重担。刚上任就把原定中型活动的 React 技术交流会做成爆款大会，开创了<strong>技术大会整合技术招聘</strong>的新模式。接下来又多次与美团合办中型技术活动，也把我之前<strong>走进名企</strong>的想法做成系列活动，最后在第二届成都前端大会上支持我把<a href="https://web-conf.dev/#2018/" target="_blank" rel="noopener">开源市集</a>实验落地。</p>
+<p>姜姜为成都社区招募了不止青松一员大将，还有主办 <a href="https://git-dev.tk/" target="_blank" rel="noopener">Code for City 黑客松</a>的 AK、带 FCC 进校园的书香、技术才女 Helen、设计小生波波、设计才女佳琦、文采飞扬的民成、社工经验丰富的小山、创立技术周刊的倩玉和小白、摄影大牛南宾…… FCC 成都社区在两年内一跃成为<strong>成都著名、辐射西南、全国知名的城市技术社区</strong>，离不开这些<strong>被发掘出的人才各显神通</strong>！</p>
+<p>加上在 FCC 的两年半，我也做了十多年<strong>公益技术社团</strong>，自认为还没达到心中的“成功”，因为比起领工资的商业公司，公益组织要面临更严峻的<strong>人的积极性</strong>和<strong>工作传承性</strong>问题，对此我一直想不出一个满意的答案。</p>
+<p>但在 2019 年春节前后用 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 给开源社和 FCC 成都社区做新官网时，摸索出一套基于 <strong>GitHub 工作流</strong>的<a href="https://fcc-cd.dev/profile/guide/slide.html" target="_blank" rel="noopener">技术社区运营法</a>，把一个技术社区转化为一个<strong>开源文档项目</strong>，现正在 FCC 成都社区实验。</p>
+<img src="/community/fcc-devtalk-techquery/NGO-activity.png" class="">
+
+<h2 id="10、你今年有哪些计划呢？"><a href="#10、你今年有哪些计划呢？" class="headerlink" title="10、你今年有哪些计划呢？"></a>10、你今年有哪些计划呢？</h2><p>今年有幸加入 ThoughtWorks，希望能在“敏捷软件运动”发祥地之一的公司学习、锻炼团队工作能力，也向公司中的技术社区同仁取经，给我自己的开源项目和技术社区的运营带来一些启发与助益。</p>
+<p>同时，也期待我新创的“开源办社区”模式在我和 FCC 成都社区的小伙伴共同努力下，能有效地运作起来，造福更多人！</p>
+<p>至于自己的业余生活嘛，希望去年给自己挖的文体爱好大坑可以填上一些，哈哈~</p>
+<h2 id="11、对于最近在-GitHub-上关注度蛮高的-996-ICU，你怎么看？"><a href="#11、对于最近在-GitHub-上关注度蛮高的-996-ICU，你怎么看？" class="headerlink" title="11、对于最近在 GitHub 上关注度蛮高的 996.ICU，你怎么看？"></a>11、对于最近在 GitHub 上关注度蛮高的 996.ICU，你怎么看？</h2><p>改革开放 40 年来，年轻人终于学会了<strong>理性的抗争</strong>。感谢<strong>互联网</strong>！感谢<strong>万维网</strong>！！感谢<strong>开源运动</strong>！！！</p>
+<h2 id="12-你最喜欢哪部电影？"><a href="#12-你最喜欢哪部电影？" class="headerlink" title="12. 你最喜欢哪部电影？"></a>12. 你最喜欢哪部电影？</h2><p>作为一个“伪文艺”，我最不会回答“哪部作品最好”一类的问题了…… 问我“世界上最好的编程语言”我倒是能斩钉截铁 —— JavaScript！哈哈~</p>
+<p>其实即使我是“真文艺”也难以回答，不同类型片的镜头语言相差很大，就像各地美食一样，各有各的美味，还是看<a href="https://movie.douban.com/people/TechQuery/" target="_blank" rel="noopener">水歌版【豆瓣年度电影榜单】</a>吧，哈哈~</p>
+
+            </div>
+            <hr/>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">转载请注明: </span>
+                    <a href="https://tech-query.me" class="b-link-green">TechQuery</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/community/fcc-devtalk-techquery/" class="b-link-green">FCC DevTalk - 水歌</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+    
+        <div class="disqus-card card" data-aos="fade-up">
+    <div id="disqus_thread" class="card-content">
+        <noscript>Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
+        </noscript>
+    </div>
+</div>
+
+<script type="text/javascript">
+    disqus_config = function () {
+        this.page.url = 'https://tech-query.me/community/fcc-devtalk-techquery/';
+        this.page.identifier = '/community/fcc-devtalk-techquery/';
+        this.page.title = 'FCC DevTalk - 水歌';
+    };
+    let disqus_shortname = 'tech-query';
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+        let d = document, s = d.createElement('script');
+        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="card">
+                <a href="/development/web-chrome-update-at-google-io-2019/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Web 与 Chrome 最新进展 @Google I/O 2019">
+                        
+                        <span class="card-title">Web 与 Chrome 最新进展 @Google I/O 2019</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">
+Google I/O 2019 extend 成都站
+
+
+DOM 与 BOM
+延迟加载&lt;img src="path/to/image" loading="lazy" />
+
+&lt;iframe src="path/to/page"</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-15
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Development/" class="post-category" target="_blank">
+                                    Development
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Web/" target="_blank">
+                        <span class="chip bg-color">Web</span>
+                    </a>
+                    
+                    <a href="/tags/Chrome/" target="_blank">
+                        <span class="chip bg-color">Chrome</span>
+                    </a>
+                    
+                    <a href="/tags/Google/" target="_blank">
+                        <span class="chip bg-color">Google</span>
+                    </a>
+                    
+                    <a href="/tags/lecture/" target="_blank">
+                        <span class="chip bg-color">lecture</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="card">
+                <a href="/development/docker-in-windows/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="田窗里面开道场">
+                        
+                        <span class="card-title">田窗里面开道场</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">每次大家一谈起 Docker，Windows 总能成为“黑点”，也不知道那些“果珍”哪来的自信……
+别跟我说“不好装”！老子抄起 PowerShell 就是一把梭！Docker 核心、命令行、Compose、kubectl、图形界面客户端一</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Development/" class="post-category" target="_blank">
+                                    Development
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Docker/" target="_blank">
+                        <span class="chip bg-color">Docker</span>
+                    </a>
+                    
+                    <a href="/tags/Chocolatey/" target="_blank">
+                        <span class="chip bg-color">Chocolatey</span>
+                    </a>
+                    
+                    <a href="/tags/one-key/" target="_blank">
+                        <span class="chip bg-color">one-key</span>
+                    </a>
+                    
+                    <a href="/tags/Windows/" target="_blank">
+                        <span class="chip bg-color">Windows</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title">目录</div>
+            <div id="toc-content">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由 &copy;<a href="https://tech-query.me/" target="_blank">TechQuery</a>
+            基于 <a href="https://hexo.io/" target="_blank">Hexo</a> 
+            采用<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">
+                hexo-theme-matery
+            </a>的主题搭建.
+        </div>
+        <div class="col s12 m4 l4 social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title">搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input" autofocus="">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="https://lib.baomitu.com/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="https://lib.baomitu.com/masonry/4.2.2/masonry.pkgd.min.js"></script>
+<script src="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.js"></script>
+<script src="https://lib.baomitu.com/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+<script src="https://lib.baomitu.com/lightgallery/1.6.11/js/lightgallery-all.min.js"></script>
+
+<script src="/libs/others/clicklove.js"></script>
+
+<script src="/js/matery.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132866291-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-132866291-1');
+</script>
+
+
+<span id="cnzz_stat_icon_1275855156" hidden></span>
+<script src="//s23.cnzz.com/z_stat.php?id=1275855156&amp;online=1&amp;show=line"></script>
+</body>
+</html>

@@ -1,0 +1,816 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="安徒生童话：技术人的群聊, TechQuery website Web JavaScript full-stack developer development coder programmer">
+    <meta name="description" content="加过技术群的同学想必听过一句话 ——
+
+技术人不谈政治~
+
+不少群公告还直接明文规定 ——
+
+不要讨论敏感话题！
+
+最初我以为，大家真的不喜欢探讨政治，直到最近我所在的 FCC 成都社区遭受一次网络暴力……
+事件原文前两天我的一篇技术博文被">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>安徒生童话：技术人的群聊 | TechQuery</title>
+    <link rel="icon" type="image/png" href="/image/WebCell-2.png">
+
+    <link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css">
+    <link rel="stylesheet" href="/css/matery.css">
+    <link rel="stylesheet" href="/css/my.css">
+
+    <script src="https://lib.baomitu.com/jquery/2.2.4/jquery.min.js"></script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2017157453269189",
+        enable_page_level_ads: true
+    });
+    </script>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="TechQuery" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css"></head>
+
+</head>
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="container">
+            <div class="nav-wrapper">
+                <div class="brand-logo">
+                    <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/image/WebCell-0.png" class="logo-img hide-on-small-only">
+                        
+                        <span class="logo-span">TechQuery</span>
+                    </a>
+                </div>
+                <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>Tags</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>Categories</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>Archives</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/projects" class="waves-effect waves-light">
+            
+            <i class="fa fa-code-fork"></i>
+            
+            <span>Projects</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-slideshare"></i>
+            
+            <span>Lecture</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-code"></i>
+            
+            <span>Snippet</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-quora"></i>
+            
+            <span>Q & A</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>About</span>
+        </a>
+    </li>
+    
+    <li>
+        <a id="toggleSearch" class="waves-effect waves-light">
+            <i id="searchIcon" class="mdi-action-search"></i>
+        </a>
+    </li>
+
+</ul>
+
+<div class="side-nav" id="mobile-nav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/image/WebCell-0.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">TechQuery</div>
+        <div class="logo-desc">
+            
+            TechQuery, a Web &amp; JavaScript full-stack developer
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                Tags
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                Categories
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                Archives
+            </a>
+        </li>
+        
+        <li>
+            <a href="/projects" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code-fork"></i>
+                
+                Projects
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-slideshare"></i>
+                
+                Lecture
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code"></i>
+                
+                Snippet
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-quora"></i>
+                
+                Q &amp; A
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                About
+            </a>
+        </li>
+        
+        
+    </ul>
+
+    <div class="social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+</div>
+
+            </div>
+        </div>
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        安徒生童话：技术人的群聊
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1,
+    #articleContent h2,
+    #articleContent h3,
+    #articleContent h4,
+    #articleContent h5,
+    #articleContent h6 {
+        padding-top: 76px;
+        margin-top: -76px;
+    }
+
+    #articleContent h1 {
+        line-height: 3.5rem;
+    }
+
+    #articleContent h2 {
+        line-height: 3.2rem;
+    }
+
+    #articleContent h3 {
+        line-height: 2.8rem;
+    }
+
+    #articleContent h4 {
+        line-height: 2.5rem;
+    }
+
+    #articleContent h5 {
+        line-height: 2.2rem;
+    }
+
+    #articleContent h6 {
+        line-height: 1.9rem;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            
+            <div class="article-tag">
+                
+                <a href="/tags/politics/" target="_blank">
+                    <span class="chip bg-color">politics</span>
+                </a>
+                
+                <a href="/tags/common-sense/" target="_blank">
+                    <span class="chip bg-color">common-sense</span>
+                </a>
+                
+                <a href="/tags/COVID-19/" target="_blank">
+                    <span class="chip bg-color">COVID-19</span>
+                </a>
+                
+            </div>
+            
+            <div class="post-info">
+                
+                <span class="post-cate">
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/Community/" class="post-category" target="_blank">
+                        Community
+                    </a>
+                    
+                </span>
+                
+
+                <span class="post-date">
+                    <i class="fa fa-clock-o fa-fw"></i>2020-04-01
+                </span>
+            </div>
+        </div>
+        <hr>
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>加过<strong>技术群</strong>的同学想必听过一句话 ——</p>
+<blockquote>
+<p>技术人不谈<strong>政治</strong>~</p>
+</blockquote>
+<p>不少<strong>群公告</strong>还直接明文规定 ——</p>
+<blockquote>
+<p>不要讨论<strong>敏感话题</strong>！</p>
+</blockquote>
+<p>最初我以为，大家真的不喜欢探讨政治，直到最近我所在的 <a href="https://fcc-cd.dev/" target="_blank" rel="noopener">FCC 成都社区</a>遭受一次<strong>网络暴力</strong>……</p>
+<h2 id="事件原文"><a href="#事件原文" class="headerlink" title="事件原文"></a>事件原文</h2><p>前两天<a href="/development/web-text-speech/">我的一篇技术博文</a>被 FCC 成都社区公众号转载，并在多个技术群转发，唯独在一个平时毫无发言的<em>技术活动观众群</em>炸了，然后这篇推文的评论区也炸了 ——</p>
+<img src="/community/group-chat-for-techies/WHFY-bug-0.png" class="" title="公众号文章评论区">
+
+<img src="/community/group-chat-for-techies/WHFY-bug-1.png" class="" title="公众号文章恶意评论">
+
+<h2 id="焦点浅析"><a href="#焦点浅析" class="headerlink" title="焦点浅析"></a>焦点浅析</h2><p>先简要分析一下疾病命名的几个典型案例 ——</p>
+<table>
+<thead>
+<tr>
+<th align="center">曾用中文名</th>
+<th align="center">现用中文名</th>
+<th align="center">发现年月</th>
+<th align="center">发现地</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://zh.wikipedia.org/wiki/2019%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92%E7%97%85%E7%96%AB%E6%83%85" target="_blank" rel="noopener">武汉肺炎</a></td>
+<td align="center">新冠肺炎</td>
+<td align="center">2019 年 12 月</td>
+<td align="center">中国武汉</td>
+</tr>
+<tr>
+<td align="center"><a href="https://zh.wikipedia.org/wiki/%E9%9D%9E%E6%B4%B2%E8%B1%AC%E7%98%9F%E7%97%85%E6%AF%92%E7%A7%91#/%E6%B5%81%E8%A1%8C%E7%97%85%E5%AD%B8" target="_blank" rel="noopener">非洲猪瘟</a></td>
+<td align="center">非洲猪瘟</td>
+<td align="center">1921 年</td>
+<td align="center">肯尼亚</td>
+</tr>
+<tr>
+<td align="center"><a href="https://zh.wikipedia.org/wiki/%E9%98%BF%E8%8C%B2%E6%B5%B7%E9%BB%98%E7%97%87#/%E6%AD%B7%E5%8F%B2" target="_blank" rel="noopener">老年痴呆</a></td>
+<td align="center">阿兹海默症</td>
+<td align="center">1901 年</td>
+<td align="center">德国</td>
+</tr>
+</tbody></table>
+<p>由此看来，“<strong>疾病规范命名</strong>从新发现的开始实施”这一点并不成立。</p>
+<p>再者，若“善良的人”遵照<strong>政治正确</strong>来“消除歧视”、“一视同仁”：</p>
+<ul>
+<li>说武汉肺炎是<em>病毒自然进化</em>的“天灾”，那同为天灾的<a href="https://zh.wikipedia.org/wiki/%E6%B1%B6%E5%B7%9D%E5%A4%A7%E5%9C%B0%E9%9C%87" target="_blank" rel="noopener">汶川大地震</a>也应改为“5·12 大地震”，以免人们一听你是汶川县来的就投来“怜悯”的目光</li>
+<li>说武汉肺炎是<em>美国生物武器投毒</em>的“人祸”，那同为人祸的<a href="https://zh.wikipedia.org/wiki/%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%B1%A0%E6%AE%BA" target="_blank" rel="noopener">南京大屠杀</a>也应改为“日本大屠杀”，以免每每揭开南京人痛苦的伤疤</li>
+</ul>
+<p>因此，个人推测 ——</p>
+<blockquote>
+<p>病名改不改，只取决于<a href="https://zh.wikipedia.org/wiki/%E7%99%BD%E5%B7%A6" target="_blank" rel="noopener">欧洲白左</a>、<strong>亚洲黄左</strong>是否拿它做<strong>政治资本</strong>。</p>
+</blockquote>
+<h2 id="进阶分析"><a href="#进阶分析" class="headerlink" title="进阶分析"></a>进阶分析</h2><p>虽然<em>随大流跟着改</em>可以完全避免此类冲突，但为何我们仍要坚持叫“武汉肺炎”？是因为，<strong>事发地命名法</strong>能让大家<strong>铭记历史</strong>：</p>
+<ul>
+<li>记住南京大屠杀、侵华战争的伤痛本质源于祖国曾经<a href="https://zh.wikipedia.org/wiki/%E4%B8%9C%E4%BA%9A%E7%97%85%E5%A4%AB" target="_blank" rel="noopener">“东亚病夫”</a>的羸弱！</li>
+<li>记住汶川大地震的主要伤亡来自<a href="https://zh.wikipedia.org/wiki/%E8%B1%86%E8%85%90%E6%B8%A3%E5%B7%A5%E7%A8%8B" target="_blank" rel="noopener">豆腐渣工程</a>！</li>
+<li>记住武汉肺炎大量死亡、全球蔓延的根本原因，是<a href="https://zh.wikipedia.org/wiki/2019%E5%86%A0%E7%8B%80%E7%97%85%E6%AF%92%E7%97%85%E4%B8%AD%E5%9C%8B%E5%A4%A7%E9%99%B8%E5%8F%8D%E6%87%89%E8%88%87%E5%BD%B1%E9%9F%BF" target="_blank" rel="noopener">天朝衙门近一个月的隐瞒</a>！</li>
+</ul>
+<p>否则，过不了几年，国人一定会像<a href="https://movie.douban.com/subject/6011805/" target="_blank" rel="noopener">《一九四二》</a>原著作者刘震云的外婆那样 ——</p>
+<blockquote>
+<p>大饥荒？你问的是哪一年？六零年啊还是……？好几次，都记不清了……</p>
+</blockquote>
+<p><strong>把苦难歌颂成美德</strong>，<strong>好了伤疤忘了疼</strong>！这是中国人最大的<strong>民族劣根性</strong>！</p>
+<h2 id="深入剖析"><a href="#深入剖析" class="headerlink" title="深入剖析"></a>深入剖析</h2><p>再仔细看上面那些<strong>恶语相向</strong>的“网友”，是不是像极了<a href="https://www.wikiwand.com/zh-cn/%E6%96%87%E5%8C%96%E5%A4%A7%E9%9D%A9%E5%91%BD" target="_blank" rel="noopener">十年文革</a>中的<a href="https://www.wikiwand.com/zh-cn/%E7%BA%A2%E5%8D%AB%E5%85%B5" target="_blank" rel="noopener">红卫兵</a>？</p>
+<p>我方小编<strong>言语平和</strong>、<strong>论据充分</strong>，对方网民<strong>避重就轻</strong>、<strong>强词夺理</strong>乃至<strong>脏话连篇</strong>，急得跳脚！妥妥的 ——</p>
+<blockquote>
+<p>道理不够，“道德”来凑！</p>
+</blockquote>
+<p>想必 80、90 后家里的长辈都对文革记忆犹新，这些网民的言语是不是与红卫兵在<a href="https://zh.wikipedia.org/wiki/%E6%89%B9%E9%AC%A5" target="_blank" rel="noopener">批斗大会</a>上的嘴脸如出一辙？<strong>历史总是惊人地相似！</strong></p>
+<p>此次<strong>全国封城</strong>、<strong>全球停摆</strong>的大疫，不但没能换来<strong>国人的清醒</strong>，反倒<strong>在互联网时代复辟了文革</strong>！</p>
+<h2 id="陷入沉思"><a href="#陷入沉思" class="headerlink" title="陷入沉思"></a>陷入沉思</h2><p>最后，我们聊回技术群。</p>
+<p>我做 IT 社区这近 15 年，从 QQ 到微信，建了、加了数不过来的技术群。但无论每个群的技术方向是什么，群友画像又如何，有一点出奇的一致 ——</p>
+<blockquote>
+<p>平时问技术、聊技术没多少消息，但凡出现敏感话题，无论支持与反对，立马消息多到爆炸……（这还没完）</p>
+<p>在一通“<strong>你还想不想要这个群啦</strong>”的责备声中，和事老来了一句“换个话题，聊聊某某技术”，然后就</p>
+<p>冷<br>场<br>了<br>……</p>
+</blockquote>
+<p>请问你们到底是真的“<strong>不热衷政治</strong>”？还是真的“<strong>热爱技术</strong>”呢？？既然平时发点技术内容没几个吱声的，干嘛还怕这个群没了？？？</p>
+<p>所以我认为，除了<em>华为</em>这种<a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E5%BF%97%E6%84%BF%E5%86%9B" target="_blank" rel="noopener">抗美援朝志愿军</a>式的实质国家队，中国 IT 业<a href="https://zh.wikipedia.org/wiki/%E8%B6%85%E8%8B%B1%E8%B6%95%E7%BE%8E" target="_blank" rel="noopener">赶英超美</a>基本天方夜谭！因为如同体育领域，<a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E4%BD%93%E8%82%B2#/%E7%AE%A1%E7%90%86%E4%BD%93%E5%88%B6" target="_blank" rel="noopener">举国体制</a>只能造就“体育大国”，没有足够的群众基础无以打造“体育强国”，而天朝大多数所谓的<strong>技术社区</strong>、<strong>开源社区</strong>其实是 ——</p>
+<blockquote>
+<p><strong>假的，假的，全是假的！</strong></p>
+<p>—— <cite>武汉大妈</cite></p>
+</blockquote>
+<hr>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/*
+ * 有脑子的看不见 —— 以上纯属愚人节意淫，如有雷同，纯属巧合~
+ */</span>
+</code></pre>
+
+            </div>
+            <hr/>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">转载请注明: </span>
+                    <a href="https://tech-query.me" class="b-link-green">TechQuery</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/community/group-chat-for-techies/" class="b-link-green">安徒生童话：技术人的群聊</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+    
+        <div class="disqus-card card" data-aos="fade-up">
+    <div id="disqus_thread" class="card-content">
+        <noscript>Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
+        </noscript>
+    </div>
+</div>
+
+<script type="text/javascript">
+    disqus_config = function () {
+        this.page.url = 'https://tech-query.me/community/group-chat-for-techies/';
+        this.page.identifier = '/community/group-chat-for-techies/';
+        this.page.title = '安徒生童话：技术人的群聊';
+    };
+    let disqus_shortname = 'tech-query';
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+        let d = document, s = d.createElement('script');
+        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="card">
+                <a href="/development/headless-cms-strapi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="内容型网站后端一把梭">
+                        
+                        <span class="card-title">内容型网站后端一把梭</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">Web 全栈工程师经常遇到一些内容型网站的开发需求，比如个人博客、机构官网、新闻门户。这些虽是 Web 1.0、2.0 时代就烂大街的典型 Web-site，但面对不同的甲方，看似雷同的需求往往又有各种细节的定制化。
+虽然 WordPres</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-04-09
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Development/" class="post-category" target="_blank">
+                                    Development
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/API/" target="_blank">
+                        <span class="chip bg-color">API</span>
+                    </a>
+                    
+                    <a href="/tags/CMS/" target="_blank">
+                        <span class="chip bg-color">CMS</span>
+                    </a>
+                    
+                    <a href="/tags/Node-js/" target="_blank">
+                        <span class="chip bg-color">Node.js</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="card">
+                <a href="/development/web-text-speech/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Web 文本朗读 60 行代码实现">
+                        
+                        <span class="card-title">Web 文本朗读 60 行代码实现</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">国难当头在武汉肺炎在中国大陆肆虐的两个月，在后方的大家都在家闷得难受。一开始还在网上时刻关注各种疫情新闻，久而久之头昏眼花，十分疲惫。
+当发哨人艾芬医生的采访稿被封杀后，墙国网民再次群情激奋地力挺，把原文用各种文字、编码、平台记录下来，妥妥</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-28
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Development/" class="post-category" target="_blank">
+                                    Development
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Web/" target="_blank">
+                        <span class="chip bg-color">Web</span>
+                    </a>
+                    
+                    <a href="/tags/TTS/" target="_blank">
+                        <span class="chip bg-color">TTS</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title">目录</div>
+            <div id="toc-content">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由 &copy;<a href="https://tech-query.me/" target="_blank">TechQuery</a>
+            基于 <a href="https://hexo.io/" target="_blank">Hexo</a> 
+            采用<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">
+                hexo-theme-matery
+            </a>的主题搭建.
+        </div>
+        <div class="col s12 m4 l4 social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title">搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input" autofocus="">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="https://lib.baomitu.com/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="https://lib.baomitu.com/masonry/4.2.2/masonry.pkgd.min.js"></script>
+<script src="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.js"></script>
+<script src="https://lib.baomitu.com/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+<script src="https://lib.baomitu.com/lightgallery/1.6.11/js/lightgallery-all.min.js"></script>
+
+<script src="/libs/others/clicklove.js"></script>
+
+<script src="/js/matery.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132866291-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-132866291-1');
+</script>
+
+
+<span id="cnzz_stat_icon_1275855156" hidden></span>
+<script src="//s23.cnzz.com/z_stat.php?id=1275855156&amp;online=1&amp;show=line"></script>
+</body>
+</html>

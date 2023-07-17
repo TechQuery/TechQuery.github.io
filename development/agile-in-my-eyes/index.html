@@ -1,0 +1,923 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="敏捷开发之我见, TechQuery website Web JavaScript full-stack developer development coder programmer">
+    <meta name="description" content="入职 ThoughtWorks 后，公司邮箱曾收到一篇内部博客大赛的文章《真正的敏捷工作流 —— GitHub flow》，我心想“我一个 GitHub 公民应该会很适应 TW 吧”？
+果然…… 不要立 flag……
+敏捷不是什么大多数人对">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>敏捷开发之我见 | TechQuery</title>
+    <link rel="icon" type="image/png" href="/image/WebCell-2.png">
+
+    <link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css">
+    <link rel="stylesheet" href="/css/matery.css">
+    <link rel="stylesheet" href="/css/my.css">
+
+    <script src="https://lib.baomitu.com/jquery/2.2.4/jquery.min.js"></script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2017157453269189",
+        enable_page_level_ads: true
+    });
+    </script>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="TechQuery" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css"></head>
+
+</head>
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="container">
+            <div class="nav-wrapper">
+                <div class="brand-logo">
+                    <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/image/WebCell-0.png" class="logo-img hide-on-small-only">
+                        
+                        <span class="logo-span">TechQuery</span>
+                    </a>
+                </div>
+                <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>Tags</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>Categories</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>Archives</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/projects" class="waves-effect waves-light">
+            
+            <i class="fa fa-code-fork"></i>
+            
+            <span>Projects</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-slideshare"></i>
+            
+            <span>Lecture</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-code"></i>
+            
+            <span>Snippet</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-quora"></i>
+            
+            <span>Q & A</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>About</span>
+        </a>
+    </li>
+    
+    <li>
+        <a id="toggleSearch" class="waves-effect waves-light">
+            <i id="searchIcon" class="mdi-action-search"></i>
+        </a>
+    </li>
+
+</ul>
+
+<div class="side-nav" id="mobile-nav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/image/WebCell-0.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">TechQuery</div>
+        <div class="logo-desc">
+            
+            TechQuery, a Web &amp; JavaScript full-stack developer
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                Tags
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                Categories
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                Archives
+            </a>
+        </li>
+        
+        <li>
+            <a href="/projects" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code-fork"></i>
+                
+                Projects
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-slideshare"></i>
+                
+                Lecture
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code"></i>
+                
+                Snippet
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-quora"></i>
+                
+                Q &amp; A
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                About
+            </a>
+        </li>
+        
+        
+    </ul>
+
+    <div class="social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+</div>
+
+            </div>
+        </div>
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<div class="bg-cover post-cover" style="background-image: url('https://www.wangbase.com/blogimg/asset/201903/bg2019030701.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        敏捷开发之我见
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1,
+    #articleContent h2,
+    #articleContent h3,
+    #articleContent h4,
+    #articleContent h5,
+    #articleContent h6 {
+        padding-top: 76px;
+        margin-top: -76px;
+    }
+
+    #articleContent h1 {
+        line-height: 3.5rem;
+    }
+
+    #articleContent h2 {
+        line-height: 3.2rem;
+    }
+
+    #articleContent h3 {
+        line-height: 2.8rem;
+    }
+
+    #articleContent h4 {
+        line-height: 2.5rem;
+    }
+
+    #articleContent h5 {
+        line-height: 2.2rem;
+    }
+
+    #articleContent h6 {
+        line-height: 1.9rem;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            
+            <div class="article-tag">
+                
+                <a href="/tags/Agile/" target="_blank">
+                    <span class="chip bg-color">Agile</span>
+                </a>
+                
+            </div>
+            
+            <div class="post-info">
+                
+                <span class="post-cate">
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/Development/" class="post-category" target="_blank">
+                        Development
+                    </a>
+                    
+                </span>
+                
+
+                <span class="post-date">
+                    <i class="fa fa-clock-o fa-fw"></i>2019-07-31
+                </span>
+            </div>
+        </div>
+        <hr>
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>入职 ThoughtWorks 后，公司邮箱曾收到一篇内部博客大赛的文章《真正的敏捷工作流 —— GitHub flow》，我心想“我一个 <strong>GitHub 公民</strong>应该会很适应 TW 吧”？</p>
+<p>果然…… 不要立 flag……</p>
+<h2 id="敏捷不是什么"><a href="#敏捷不是什么" class="headerlink" title="敏捷不是什么"></a>敏捷不是什么</h2><p>大多数人对<strong>敏捷开发</strong>的理解主要停留在 ——</p>
+<blockquote>
+<p>敏捷开发周期短<br>瀑布开发周期长</p>
+</blockquote>
+<p>而我觉得，更本质的区别在于 ——</p>
+<blockquote>
+<p>敏捷是<strong>灵活</strong>的，<strong>拥抱变化</strong><br>瀑布是<strong>死板</strong>的，宁可一无所成，也绝不“犯错”</p>
+</blockquote>
+<p>但我在 TW 前两个项目的工作中发现，一些小伙伴把<strong>敏捷实践</strong>奉为金科玉律，不容改变……</p>
+<h2 id="陷入技术争论"><a href="#陷入技术争论" class="headerlink" title="陷入技术争论"></a>陷入技术争论</h2><h3 id="CORS-重不重要？"><a href="#CORS-重不重要？" class="headerlink" title="CORS 重不重要？"></a>CORS 重不重要？</h3><p>来 TW 的第一个项目是个内部中台项目，虽然迭代 1 的需求很简单，但创始人们一开始就志在推广到公司各团队，甚至独立对外出售或开源，<strong>前后端分离</strong>的架构迟早要面对<strong>跨域</strong>问题。后端从一开始就开启 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS" target="_blank" rel="noopener">HTTP CORS</a> 会极大地方便前端开发，各大<strong>后端框架</strong>也早就有成熟的中间件来<strong>一键化</strong>处理，比如 Node.JS 的 <a href="https://koa.bootcss.com/" target="_blank" rel="noopener">Koa</a> 框架 ——</p>
+<ol>
+<li>安装中间件</li>
+</ol>
+<pre class=" language-shell"><code class="language-shell">npm install @koa/cors
+</code></pre>
+<ol start="2">
+<li>启用中间件</li>
+</ol>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> Koa <span class="token keyword">from</span> <span class="token string">'koa'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> CORS <span class="token keyword">from</span> <span class="token string">'@koa/cors'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">new</span> <span class="token class-name">Koa</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">CORS</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>一分钟搞定！即便 Java、Spring 写法繁琐一点，一刻钟够不够？</p>
+<p>但我和同为新入职员工的 M 君一同向 Java <strong>后端主程</strong>建议此事，他却以多种理由拒绝 ——</p>
+<ol>
+<li>前端 webpack 自己先代理一下（之前代理出了一些罕见 bug，否则我们不会提出早开跨域）</li>
+<li>CORS 可能引起 CSRF 等安全问题（两者根本风马牛不相及，不懂的自己 Google）</li>
+<li>CORS 优先级不高，应该先抓紧做功能</li>
+<li>敏捷提倡<strong>代码集体所有制</strong>，若这个点对你真的很重要，我们没时间但你有时间，你可以直接去改（若本项目是 Node.JS 后端，我一人 <strong>JavaScript 前后端一把梭</strong>，还真不用麻烦你）</li>
+</ol>
+<p>结果就这么简单一事儿，用各种理由和我俩争执一上午，代码都没写就吃午饭了…… 说好的“着急做卡”呢？</p>
+<p>【八卦】第二天 M 君就以“个人身体原因”为由退出项目组，直到他离职前才私下告诉我“CORS 这么常识的事儿都如此争执，后面坑少不了”……</p>
+<h3 id="原生标准好不好？"><a href="#原生标准好不好？" class="headerlink" title="原生标准好不好？"></a>原生标准好不好？</h3><p>随后，令我和 M 君更加意外的是，一起加入第一个正式项目后，遇到了更多没必要的争执……</p>
+<table>
+<thead>
+<tr>
+<th align="center">需求</th>
+<th align="center">我们的方案</th>
+<th align="center">领导的要求</th>
+<th align="center">领导的评价</th>
+<th align="center">我们的看法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">全局异常捕获（后置拦截）</td>
+<td align="center"><a href="https://github.com/rtsao/browser-unhandled-rejection#readme" target="_blank" rel="noopener"><code>unhandledreject</code> 事件</a>（后置拦截）</td>
+<td align="center"><a href="https://github.com/axios/axios#interceptors" target="_blank" rel="noopener">Axios 拦截器</a>（前置拦截）</td>
+<td align="center">“你们怎么把代码改成这个鬼样子”</td>
+<td align="center">对合适但不常见的用法有偏见</td>
+</tr>
+<tr>
+<td align="center">分行列展示几项数据</td>
+<td align="center"><code>&lt;table /&gt;</code>（符合<strong>语义化规范</strong>，每列自动对齐）</td>
+<td align="center"><code>&lt;div /&gt;</code> + flex 模拟表格列对齐</td>
+<td align="center">“table 太老了，我们的用户也没有盲人”</td>
+<td align="center">看重“时髦”甚于<a href="https://developer.mozilla.org/zh-CN/docs/Web/Accessibility" target="_blank" rel="noopener">无障碍规范</a></td>
+</tr>
+<tr>
+<td align="center">文字罗列多个名词</td>
+<td align="center"><a href="/development/web-chrome-update-at-google-io-2019/#%E7%9F%AD%E8%AF%AD%E5%88%97%E8%A1%A8"><code>Intl.ListFormat</code></a> 依数量自适应中文标点、连词</td>
+<td align="center"><code>array.join(&#39;、&#39;)</code></td>
+<td align="center">“你这个我看不懂，我们没那么先进”</td>
+<td align="center">对<strong>书面文书写规范</strong>不重视</td>
+</tr>
+<tr>
+<td align="center">处理 HTTP 请求</td>
+<td align="center"><code>async</code> + <code>await</code> 解决冗长的“回调地狱”</td>
+<td align="center">Redux Saga 生成器 + 自定义回调</td>
+<td align="center">“Saga 唯一的缺点就是‘样板代码’多”</td>
+<td align="center">“重复代码多”违背<strong>编程消除重复</strong>的本质</td>
+</tr>
+</tbody></table>
+<p>一个 Web 国际标准通常历经三步走才发布 ——</p>
+<ol>
+<li><strong>一线开发者</strong>多年实践总结出<strong>标准提案</strong></li>
+<li>各大<strong>浏览器厂商</strong>尝试实现，提出<strong>改进意见</strong></li>
+<li><strong>W3C 标准委员会</strong>综合全球其它会员厂商意见</li>
+</ol>
+<p>上述业界领袖们多年争执后推出的正式标准，没有理由再在团队内部争执“该不该用”。我写这块代码我先用了新标准，你写那块暂时没用，都无可厚非，不影响大局。</p>
+<blockquote>
+<p>Code review 本是<strong>交流技术</strong>的契机，不是用来争执“看不看得顺眼”的。</p>
+</blockquote>
+<h2 id="开卡、关卡必须-BA、QA、UX、Dev-全到齐"><a href="#开卡、关卡必须-BA、QA、UX、Dev-全到齐" class="headerlink" title="开卡、关卡必须 BA、QA、UX、Dev 全到齐"></a>开卡、关卡必须 BA、QA、UX、Dev 全到齐</h2><p>多数<strong>故事卡</strong>的 UI 设计并无不清楚的细节，项目设计师又经常没时间，如不灵活变通，卡一直开不了或关不上，让 Dev 一直被阻塞，拖累了项目进度。</p>
+<p>而当 Dev 想先尝试写一下新卡的代码，却被告知“必须先开卡，否则做了后面 BA 改需求就要返工”，但敏捷实践不就要求“较大需求变更本迭代不做，要放到下个迭代的新卡”吗？若真到开卡时大量返工，那是 BA 的错误，与 Dev 无关。</p>
+<p>长此以往，对于 Dev 个人</p>
+<blockquote>
+<p>主观上不能<strong>尽其所能地写代码</strong>，消磨<strong>工作积极性</strong>；客观上白白增加了其做卡的时长，对其本人评价不利。</p>
+</blockquote>
+<h2 id="技术会议一言堂"><a href="#技术会议一言堂" class="headerlink" title="技术会议一言堂"></a>技术会议一言堂</h2><p>M 君离职前提议项目组前端要<strong>统一设计规范</strong>，后端主程便召集大家开会讨论，他提议全面封装出一套项目乃至公司的组件库，如 ——</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tw-button</span><span class="token punctuation">></span></span>
+  # shadow-root
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>vant-button</span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tw-button</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>我则补充道：</p>
+<blockquote>
+<p>过于简单的组件不需再封装一层，直接用现有组件库的即可，否则对开发、运行都增加负担。</p>
+</blockquote>
+<p>但双方争执不下，于是<strong>民主投票</strong>，其他人都赞同后端主程。</p>
+<p>几日后正式开发，</p>
+<blockquote>
+<p>S 君突然说：“我们还是每个组件都再封装一层吗？”<br>一个附和道：“没必要了吧？”<br>另一个也点头默许……</p>
+</blockquote>
+<p>对于前文中项目伊始我和 M 君提出的“Saga 样板代码多”问题，S 君后来接触那一块代码时也私下向领导提出同样的疑问。</p>
+<p>如此看来，我和 M 君有时并不是看起来“不好合作”，只是</p>
+<blockquote>
+<p>多数人在众人和领导面前 —— <strong>不敢讲真话</strong>！</p>
+</blockquote>
+<h2 id="Code-review-Code-rejected"><a href="#Code-review-Code-rejected" class="headerlink" title="Code review? Code rejected!"></a>Code review? Code rejected!</h2><p>每天下午的<strong>代码回顾会</strong>的一般步骤是</p>
+<ol>
+<li>该项目的前后端各自预定地点，集体开会</li>
+<li>每人照着 <strong>Git 变更记录</strong>，轮流讲解自己一天所写代码的来龙去脉</li>
+<li>其他人可随时提出意见，经探讨达成一致修改方案后记录在案</li>
+<li>检查前一天的修改方案是否实施</li>
+</ol>
+<p>但这个民主的议程，实际运行得似乎并不太民主 ——</p>
+<ul>
+<li>组长的代码 组员有异议的，若组长不赞同，有时就一笔带过、不予记录</li>
+<li>组员的代码 组长有异议的，即使组长没能<strong>有理有据</strong>地说服组员，组长也会记录在案</li>
+<li>组长对组员一些变量/函数命名等有异议，组员问组长和大家，无人说得出更好的建议，但组长依然要求该组员修改</li>
+<li>对于上述争议问题，组员事后没有修改，便被定性为“不重视 code review”</li>
+</ul>
+<p>可话说回来，既然敏捷开发是代码集体所有制，相持不下之际，谁有异议谁去改就好了，追着组员去改一点都不敏捷……</p>
+<h2 id="沟多通少"><a href="#沟多通少" class="headerlink" title="沟多通少"></a>沟多通少</h2><p>敏捷重视<strong>沟通与反馈</strong>，但实践起来也有不尽如人意的地方 ——</p>
+<table>
+<thead>
+<tr>
+<th align="center">问题</th>
+<th align="center">建议</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">凡事都要开会商量</td>
+<td align="center">能用<strong>简洁代码</strong>、<strong>国际标准</strong>解决的就不开会</td>
+</tr>
+<tr>
+<td align="center">多人多次反复拉通上下文</td>
+<td align="center"><strong>简洁文档</strong>、<strong>自动化办公工具</strong></td>
+</tr>
+<tr>
+<td align="center">大小会议经常严重超时</td>
+<td align="center">有人开始注意力不集中了说明要精简了</td>
+</tr>
+</tbody></table>
+<p>在入职不久后的“反馈文化”培训会上，一位人事小姐姐说：“看似很大的沟通成本，TW 认为这种民主的过程是值得的。”</p>
+<p>但社会上大有人在的“保守派”就是一直揪着<strong>民主的效率</strong>问题为独裁统治辩护、站台的！民主人士必须用<strong>更好的方法论</strong>、<strong>更新的技术手段</strong>去解决 ——</p>
+<blockquote>
+<p>太长不看，太久不听，太繁不做……</p>
+</blockquote>
+<p>但凡有人对上述<strong>繁琐、低效的沟通</strong>表现出一丝不悦，可能就会被同僚视为 —— 态度不好，难以融入团队！</p>
+<p>其实不限于交朋友、谈恋爱，人与人的沟通都可在短短几句话中判断“能否懂得起”。虽说所有问题在充足的时间内都可解决，但与其“你说东，我说西”迟迟不能共识，不如</p>
+<blockquote>
+<p>先尝试做起来，<strong>用事实说话</strong>会更清楚、更高效~</p>
+</blockquote>
+<p>用 Linux 和 Git 之父 Linus Torvalds 的名言就是 ——</p>
+<blockquote>
+<p>Talk is cheap, show me the code!</p>
+</blockquote>
+<p>俗话也说得好 ——</p>
+<blockquote>
+<p>懂得起的人不用解释，懂不起的不必解释~</p>
+</blockquote>
+<h2 id="不敏捷的感受"><a href="#不敏捷的感受" class="headerlink" title="不敏捷的感受"></a>不敏捷的感受</h2><p>如果每个员工都以“按点上下班，卖身领工资”的心态去工作，只要不加班，敏不敏捷、高不高效“与我何干”？才不着急上火呢！悠哉悠哉不好吗？</p>
+<p>但凡希望在日复一日的“搬砖”之余做些<strong>更有意义的事</strong>的人，多半焦躁不堪、疲惫不已。写过代码的都知道，状态差时就是在“写 bug”……</p>
+<p>于是，在第一个正式项目的迭代 1 结束时，M 君再次主动离开，并且是彻底的 —— 离职……</p>
+<p>他走前的一句话我一时不解其意 ——</p>
+<blockquote>
+<p>我之前创业时虽然练就了善于沟通的能力，但我现在很讨厌沟通……</p>
+</blockquote>
+<p>那时前文所述的种种才经历了不到一半，当全部经历后，我才明白 ——</p>
+<blockquote>
+<p>讨厌的不是沟通，而是不必要的低效沟通</p>
+</blockquote>
+<p>在 M 君离职的同时，我和上司有次长谈，其间我提了个问题 ——</p>
+<blockquote>
+<p>ThoughtWorks 有没有可能至少在某个局部，存在一定程度的<strong>表面和谐</strong>？</p>
+</blockquote>
+<p>她坚定地给了我否定的答案……</p>
+
+            </div>
+            <hr/>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">转载请注明: </span>
+                    <a href="https://tech-query.me" class="b-link-green">TechQuery</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/development/agile-in-my-eyes/" class="b-link-green">敏捷开发之我见</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+    
+        <div class="disqus-card card" data-aos="fade-up">
+    <div id="disqus_thread" class="card-content">
+        <noscript>Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
+        </noscript>
+    </div>
+</div>
+
+<script type="text/javascript">
+    disqus_config = function () {
+        this.page.url = 'https://tech-query.me/development/agile-in-my-eyes/';
+        this.page.identifier = '/development/agile-in-my-eyes/';
+        this.page.title = '敏捷开发之我见';
+    };
+    let disqus_shortname = 'tech-query';
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+        let d = document, s = d.createElement('script');
+        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="card">
+                <a href="/development/structured-resume-data/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="结构化简历数据">
+                        
+                        <span class="card-title">结构化简历数据</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">参加工作久了，经历公司多了，每次换工作写简历都烦得要死 ——
+
+常用招聘网站更新简历：简历编辑器改版了，操作习惯大变不说，数据格式很多也对不上号
+注册新招聘网站填简历：所需内容和之前其它网站差不多，但填法大相径庭
+
+所以，虽说每次只加一项前</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-14
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Development/" class="post-category" target="_blank">
+                                    Development
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/API/" target="_blank">
+                        <span class="chip bg-color">API</span>
+                    </a>
+                    
+                    <a href="/tags/data/" target="_blank">
+                        <span class="chip bg-color">data</span>
+                    </a>
+                    
+                    <a href="/tags/model/" target="_blank">
+                        <span class="chip bg-color">model</span>
+                    </a>
+                    
+                    <a href="/tags/document/" target="_blank">
+                        <span class="chip bg-color">document</span>
+                    </a>
+                    
+                    <a href="/tags/schema/" target="_blank">
+                        <span class="chip bg-color">schema</span>
+                    </a>
+                    
+                    <a href="/tags/SaaS/" target="_blank">
+                        <span class="chip bg-color">SaaS</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="card">
+                <a href="/development/web-chrome-update-at-google-io-2019/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Web 与 Chrome 最新进展 @Google I/O 2019">
+                        
+                        <span class="card-title">Web 与 Chrome 最新进展 @Google I/O 2019</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">
+Google I/O 2019 extend 成都站
+
+
+DOM 与 BOM
+延迟加载&lt;img src="path/to/image" loading="lazy" />
+
+&lt;iframe src="path/to/page"</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Development/" class="post-category" target="_blank">
+                                    Development
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Web/" target="_blank">
+                        <span class="chip bg-color">Web</span>
+                    </a>
+                    
+                    <a href="/tags/Chrome/" target="_blank">
+                        <span class="chip bg-color">Chrome</span>
+                    </a>
+                    
+                    <a href="/tags/Google/" target="_blank">
+                        <span class="chip bg-color">Google</span>
+                    </a>
+                    
+                    <a href="/tags/lecture/" target="_blank">
+                        <span class="chip bg-color">lecture</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title">目录</div>
+            <div id="toc-content">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由 &copy;<a href="https://tech-query.me/" target="_blank">TechQuery</a>
+            基于 <a href="https://hexo.io/" target="_blank">Hexo</a> 
+            采用<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">
+                hexo-theme-matery
+            </a>的主题搭建.
+        </div>
+        <div class="col s12 m4 l4 social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title">搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input" autofocus="">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="https://lib.baomitu.com/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="https://lib.baomitu.com/masonry/4.2.2/masonry.pkgd.min.js"></script>
+<script src="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.js"></script>
+<script src="https://lib.baomitu.com/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+<script src="https://lib.baomitu.com/lightgallery/1.6.11/js/lightgallery-all.min.js"></script>
+
+<script src="/libs/others/clicklove.js"></script>
+
+<script src="/js/matery.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132866291-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-132866291-1');
+</script>
+
+
+<span id="cnzz_stat_icon_1275855156" hidden></span>
+<script src="//s23.cnzz.com/z_stat.php?id=1275855156&amp;online=1&amp;show=line"></script>
+</body>
+</html>

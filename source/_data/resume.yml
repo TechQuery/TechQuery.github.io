@@ -17,7 +17,7 @@ basics:
 work:
   - name: idea2app
     position: CEO
-    url: https://ideapp.dev/
+    url: https://idea2.app/
     startDate: 2020-08-13
     summary: Team founder & Web/JavaScript full-stack engineer
     highlights:
@@ -144,6 +144,14 @@ education:
     startDate: 2008-09-01
     endDate: 2012-06-30
 awards:
+  - title: Most Valuable Professional
+    date: 2023-07-06
+    awarder: Microsoft
+    summary: Developer Technologies
+  - title: Most Valuable Professional
+    date: 2022-07-05
+    awarder: Microsoft
+    summary: Developer Technologies
   - title: Top contributor
     date: 2021-12-30
     awarder: freeCodeCamp.org

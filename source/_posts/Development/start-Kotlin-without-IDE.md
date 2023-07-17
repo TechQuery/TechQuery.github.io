@@ -283,4 +283,4 @@ https://github.com/idea2app/Kotlin-Spring-Boot
 [18]: https://github.com/features/packages
 [19]: https://git-scm.com/
 [20]: https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository
-[21]: https://ideapp.dev/
+[21]: https://idea2.app/

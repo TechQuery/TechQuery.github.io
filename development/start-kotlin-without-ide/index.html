@@ -1,0 +1,905 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="脱离 IDE，徒手 Kotlin！, TechQuery website Web JavaScript full-stack developer development coder programmer">
+    <meta name="description" content="Java、PHP 作为中国软件外包行业的扛把子，自然是码农最多、甲方最爱的后端技术栈，我自主创业以来也有不少甲方要求 Java + Spring 的架构。
+同时，JSer 一直很反感 Java 庞大的代码量，即便后来大行其道的 TypeSc">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>脱离 IDE，徒手 Kotlin！ | TechQuery</title>
+    <link rel="icon" type="image/png" href="/image/WebCell-2.png">
+
+    <link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css">
+    <link rel="stylesheet" href="/css/matery.css">
+    <link rel="stylesheet" href="/css/my.css">
+
+    <script src="https://lib.baomitu.com/jquery/2.2.4/jquery.min.js"></script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2017157453269189",
+        enable_page_level_ads: true
+    });
+    </script>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="TechQuery" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css"></head>
+
+</head>
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="container">
+            <div class="nav-wrapper">
+                <div class="brand-logo">
+                    <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/image/WebCell-0.png" class="logo-img hide-on-small-only">
+                        
+                        <span class="logo-span">TechQuery</span>
+                    </a>
+                </div>
+                <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>Tags</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>Categories</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>Archives</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/projects" class="waves-effect waves-light">
+            
+            <i class="fa fa-code-fork"></i>
+            
+            <span>Projects</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-slideshare"></i>
+            
+            <span>Lecture</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-code"></i>
+            
+            <span>Snippet</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-quora"></i>
+            
+            <span>Q & A</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>About</span>
+        </a>
+    </li>
+    
+    <li>
+        <a id="toggleSearch" class="waves-effect waves-light">
+            <i id="searchIcon" class="mdi-action-search"></i>
+        </a>
+    </li>
+
+</ul>
+
+<div class="side-nav" id="mobile-nav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/image/WebCell-0.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">TechQuery</div>
+        <div class="logo-desc">
+            
+            TechQuery, a Web &amp; JavaScript full-stack developer
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                Tags
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                Categories
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                Archives
+            </a>
+        </li>
+        
+        <li>
+            <a href="/projects" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code-fork"></i>
+                
+                Projects
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-slideshare"></i>
+                
+                Lecture
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code"></i>
+                
+                Snippet
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-quora"></i>
+                
+                Q &amp; A
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                About
+            </a>
+        </li>
+        
+        
+    </ul>
+
+    <div class="social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+</div>
+
+            </div>
+        </div>
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<div class="bg-cover post-cover" style="background-image: url('https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2021/09/Kotlin-Vs-Java-Featured-Image.jpeg?q=50&fit=contain&w=750&h=375&dpr=1.5')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        脱离 IDE，徒手 Kotlin！
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1,
+    #articleContent h2,
+    #articleContent h3,
+    #articleContent h4,
+    #articleContent h5,
+    #articleContent h6 {
+        padding-top: 76px;
+        margin-top: -76px;
+    }
+
+    #articleContent h1 {
+        line-height: 3.5rem;
+    }
+
+    #articleContent h2 {
+        line-height: 3.2rem;
+    }
+
+    #articleContent h3 {
+        line-height: 2.8rem;
+    }
+
+    #articleContent h4 {
+        line-height: 2.5rem;
+    }
+
+    #articleContent h5 {
+        line-height: 2.2rem;
+    }
+
+    #articleContent h6 {
+        line-height: 1.9rem;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            
+            <div class="article-tag">
+                
+                <a href="/tags/Java/" target="_blank">
+                    <span class="chip bg-color">Java</span>
+                </a>
+                
+                <a href="/tags/Kotlin/" target="_blank">
+                    <span class="chip bg-color">Kotlin</span>
+                </a>
+                
+            </div>
+            
+            <div class="post-info">
+                
+                <span class="post-cate">
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/Development/" class="post-category" target="_blank">
+                        Development
+                    </a>
+                    
+                </span>
+                
+
+                <span class="post-date">
+                    <i class="fa fa-clock-o fa-fw"></i>2022-01-06
+                </span>
+            </div>
+        </div>
+        <hr>
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>Java、PHP 作为中国软件外包行业的扛把子，自然是码农最多、甲方最爱的后端技术栈，我自主创业以来也有不少甲方要求 Java + Spring 的架构。</p>
+<p>同时，JSer 一直很反感 Java 庞大的代码量，即便后来大行其道的 <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener">TypeScript</a> 为 <a href="https://jscig.github.io/" target="_blank" rel="noopener">JavaScript</a> 生态引入强大的<strong>类型系统</strong>，但感谢 TS 之父也创造了 <a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank" rel="noopener">C#</a>，其代码也比 Java 简洁很多。</p>
+<p>于是，Java IDE 界新星 IntelliJ IDEA 的东家 JetBrains 发明的 <a href="https://kotlinlang.org/" target="_blank" rel="noopener">Kotlin 语言</a>，便因其现代性而受到 <a href="https://www.android.com/" target="_blank" rel="noopener">Google Android</a> 和我的青睐~</p>
+<p>虽然 Kotlin 官网首页非常小清新地给初学者展示了语言的几大核心用法，但正式文档的入口却繁杂而令人困惑，让我这种觉得他们家 IDE 太重的 <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code</a> 铁粉无所适从……</p>
+<p>故而有了以下徒手学习之旅 ——</p>
+<h2 id="Hello-Kotlin"><a href="#Hello-Kotlin" class="headerlink" title="Hello, Kotlin!"></a>Hello, Kotlin!</h2><h3 id="Just-for-“fun”"><a href="#Just-for-“fun”" class="headerlink" title="Just for “fun”"></a>Just for “fun”</h3><p><code>hello.kt</code></p>
+<pre class=" language-kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Hello, Kotlin!"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p>参考：<a href="https://kotlinlang.org/#try-kotlin" target="_blank" rel="noopener">https://kotlinlang.org/#try-kotlin</a></p>
+</blockquote>
+<h3 id="安装编译器"><a href="#安装编译器" class="headerlink" title="安装编译器"></a>安装编译器</h3><p>2018 年做 Python 教练的经历，给了我<a href="https://tech-query.me/development/coder-start-kit/">装环境一把梭</a>的底气。</p>
+<h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><pre class=" language-powershell"><code class="language-powershell">choco install kotlinc <span class="token operator">-</span>y
+</code></pre>
+<h4 id="Mac-OS-X"><a href="#Mac-OS-X" class="headerlink" title="Mac OS X"></a>Mac OS X</h4><pre class=" language-bash"><code class="language-bash">brew <span class="token function">install</span> kotlin
+</code></pre>
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>我只实验成功了“编译为 JAR 包再运行”的方法：</p>
+<pre class=" language-shell"><code class="language-shell">kotlinc hello.kt -include-runtime -d hello.jar
+java -jar hello.jar
+</code></pre>
+<blockquote>
+<p>参考：<a href="https://www.runoob.com/kotlin/kotlin-command-line.html" target="_blank" rel="noopener">https://www.runoob.com/kotlin/kotlin-command-line.html</a></p>
+</blockquote>
+<h2 id="Boot-Spring"><a href="#Boot-Spring" class="headerlink" title="Boot Spring"></a>Boot Spring</h2><p><a href="https://spring.io/projects/spring-boot" target="_blank" rel="noopener">Spring Boot</a> 算是 Java 最典范的后端 MVC 框架，再配上 Kotlin，写起来很像 <a href="https://github.com/idea2app/NodeTS-LeanCloud" target="_blank" rel="noopener">Node.js + TypeScript</a>、Python + <a href="https://flask.palletsprojects.com/" target="_blank" rel="noopener">Flask</a>/Django 等技术栈，利于工程师在它们之间风骚走位，自然值得学习。</p>
+<h3 id="下载脚手架"><a href="#下载脚手架" class="headerlink" title="下载脚手架"></a>下载脚手架</h3><pre class=" language-shell"><code class="language-shell">curl https://start.spring.io/starter.zip \
+    -d language=kotlin \
+    -d type=gradle-project \
+    -d dependencies=web,mustache,jpa,h2,devtools \
+    -d packageName=com.example.web \
+    -d name=Web \
+    -o web.zip
+</code></pre>
+<blockquote>
+<p>参考：<a href="https://spring.io/guides/tutorials/spring-boot-kotlin/#using-command-line" target="_blank" rel="noopener">https://spring.io/guides/tutorials/spring-boot-kotlin/#using-command-line</a></p>
+</blockquote>
+<h3 id="安装包管理器"><a href="#安装包管理器" class="headerlink" title="安装包管理器"></a>安装包管理器</h3><p>我选择 <a href="https://gradle.org/" target="_blank" rel="noopener">Gradle</a> 作为 JVM 语言的包管理器，主要因为它的配置文件不像老牌 Maven 的 XML 那样繁杂，而且支持 <strong>Kotlin 脚本语法</strong>，让我可以全身心地学习 Kotlin。</p>
+<p>感谢 <a href="https://github.com/mythcsj" target="_blank" rel="noopener">@mythcsj</a> 的解答，让我理解了：</p>
+<blockquote>
+<p>对于 JSer 而言，Maven 类似 NPM，既是个包管理器，也有自建包服务器；而 Gradle 类似 <a href="https://yarnpkg.com/" target="_blank" rel="noopener">Yarn</a>，是构建在前者成熟包服务器之上的新包管理器。</p>
+</blockquote>
+<h4 id="Windows-1"><a href="#Windows-1" class="headerlink" title="Windows"></a>Windows</h4><pre class=" language-powershell"><code class="language-powershell">choco install gradle <span class="token operator">-</span>y
+</code></pre>
+<h4 id="Mac-OS-X-1"><a href="#Mac-OS-X-1" class="headerlink" title="Mac OS X"></a>Mac OS X</h4><pre class=" language-bash"><code class="language-bash">brew <span class="token function">install</span> gradle
+</code></pre>
+<h3 id="墙内镜像"><a href="#墙内镜像" class="headerlink" title="墙内镜像"></a>墙内镜像</h3><p>懂的都懂，感谢阿里~</p>
+<p><code>build.gradle.kts</code></p>
+<pre class=" language-diff"><code class="language-diff">repositories {
+    mavenCentral()
+<span class="token inserted">+    maven(url = "https://maven.aliyun.com/repository/public")</span>
+<span class="token inserted">+    maven(url = "https://maven.aliyun.com/repository/gradle-plugin")</span>
+<span class="token inserted">+    maven(url = "https://maven.aliyun.com/repository/spring")</span>
+<span class="token inserted">+    maven(url = "https://maven.aliyun.com/repository/spring-plugin")</span>
+}
+</code></pre>
+<blockquote>
+<p>参考：<a href="https://developer.aliyun.com/mvn/guide" target="_blank" rel="noopener">https://developer.aliyun.com/mvn/guide</a></p>
+</blockquote>
+<h3 id="Hello-RESTful"><a href="#Hello-RESTful" class="headerlink" title="Hello, RESTful!"></a>Hello, RESTful!</h3><p><code>src\main\kotlin\com\example\web\HelloController.kt</code></p>
+<pre class=" language-kotlin"><code class="language-kotlin"><span class="token keyword">package</span> com<span class="token punctuation">.</span>example<span class="token punctuation">.</span>web<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>RestController<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>GetMapping<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>ResponseBody<span class="token punctuation">;</span>
+
+<span class="token annotation builtin">@RestController</span>
+<span class="token keyword">class</span> HelloController <span class="token punctuation">{</span>
+  <span class="token annotation builtin">@GetMapping</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span>
+  <span class="token annotation builtin">@ResponseBody</span>
+  <span class="token keyword">fun</span> <span class="token function">getData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> MutableMap<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Int<span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">mutableMapOf</span><span class="token punctuation">(</span><span class="token string">"a"</span> <span class="token keyword">to</span> <span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p>参考：</p>
+<ol>
+<li><a href="https://spring.io/guides/tutorials/spring-boot-kotlin/#_exposing_http_api" target="_blank" rel="noopener">https://spring.io/guides/tutorials/spring-boot-kotlin/#_exposing_http_api</a></li>
+<li><a href="https://spring.io/guides/gs/rest-service/#_create_a_resource_controller" target="_blank" rel="noopener">https://spring.io/guides/gs/rest-service/#_create_a_resource_controller</a></li>
+</ol>
+</blockquote>
+<h3 id="运行-1"><a href="#运行-1" class="headerlink" title="运行"></a>运行</h3><p>感谢 <a href="https://github.com/aruis" target="_blank" rel="noopener">@aruis</a> 的解答，才让我知道官方脚手架 <code>HELP.md</code> 一大堆链接里都没明确提及的本地运行命令是啥……</p>
+<pre class=" language-shell"><code class="language-shell">./gradlew bootRun
+</code></pre>
+<h3 id="Docker-镜像"><a href="#Docker-镜像" class="headerlink" title="Docker 镜像"></a>Docker 镜像</h3><p>再次感谢 <a href="https://github.com/idea2app/Kotlin-Spring-Boot/pull/2" target="_blank" rel="noopener">@aruis 发起的 Pull Request</a>，不仅帮我修复了团队脚手架的 bug，还写了 <code>Dockerfile</code>：</p>
+<pre class=" language-dockerfile"><code class="language-dockerfile">FROM openjdk:11.0-jre-slim
+
+ENV JAR_FILE_NAME demo-0.0.1-SNAPSHOT.jar
+COPY build/libs/$JAR_FILE_NAME app.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "app.jar"]
+</code></pre>
+<p>于是，我们可以在传统构建后，再构建 Docker 镜像：</p>
+<pre class=" language-shell"><code class="language-shell">./gradlew build
+docker build .
+</code></pre>
+<blockquote>
+<p>参考：<a href="https://spring.io/guides/gs/spring-boot-docker/" target="_blank" rel="noopener">https://spring.io/guides/gs/spring-boot-docker/</a></p>
+</blockquote>
+<h3 id="GitHub-actions-packages"><a href="#GitHub-actions-packages" class="headerlink" title="GitHub actions + packages"></a>GitHub actions + packages</h3><p>每次手动构建 Docker 镜像很烦，<a href="https://hub.docker.com/" target="_blank" rel="noopener">Docker Hub</a> 官方账号我也总是忘记，那就 GitHub <a href="https://github.com/features/actions" target="_blank" rel="noopener">actions</a> + <a href="https://github.com/features/packages" target="_blank" rel="noopener">packages</a> 服务一把梭吧~</p>
+<p><code>.github\workflows\release.yml</code></p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> Release Docker image
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">push</span><span class="token punctuation">:</span>
+    <span class="token key atrule">tags</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> v*
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">push_to_registries</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> Push Docker image to GitHub registry
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">permissions</span><span class="token punctuation">:</span>
+      <span class="token key atrule">packages</span><span class="token punctuation">:</span> write
+      <span class="token key atrule">contents</span><span class="token punctuation">:</span> read
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Check out the repo
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v2
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Set up JDK 17
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>java@v2
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">java-version</span><span class="token punctuation">:</span> <span class="token number">17</span>
+          <span class="token key atrule">distribution</span><span class="token punctuation">:</span> adopt
+          <span class="token key atrule">cache</span><span class="token punctuation">:</span> gradle
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Set up QEMU
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> docker/setup<span class="token punctuation">-</span>qemu<span class="token punctuation">-</span>action@v1
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Set up Docker Buildx
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> docker/setup<span class="token punctuation">-</span>buildx<span class="token punctuation">-</span>action@v1
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Login to GitHub Container Registry
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> docker/login<span class="token punctuation">-</span>action@v1
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">registry</span><span class="token punctuation">:</span> ghcr.io
+          <span class="token key atrule">username</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> github.repository_owner <span class="token punctuation">}</span><span class="token punctuation">}</span>
+          <span class="token key atrule">password</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.GITHUB_TOKEN <span class="token punctuation">}</span><span class="token punctuation">}</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Build Kotlin
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          chmod +x ./gradlew
+          ./gradlew build</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">id</span><span class="token punctuation">:</span> ImageName
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> ASzc/change<span class="token punctuation">-</span>string<span class="token punctuation">-</span>case<span class="token punctuation">-</span>action@v2
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">string</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> github.repository <span class="token punctuation">}</span><span class="token punctuation">}</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Push Image
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> docker/build<span class="token punctuation">-</span>push<span class="token punctuation">-</span>action@v2
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">context</span><span class="token punctuation">:</span> .
+          <span class="token key atrule">platforms</span><span class="token punctuation">:</span> linux/amd64
+          <span class="token key atrule">push</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+          <span class="token key atrule">tags</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+            ghcr.io/${{ steps.ImageName.outputs.lowercase }}:${{ github.ref_name }}
+            ghcr.io/${{ steps.ImageName.outputs.lowercase }}:latest</span>
+</code></pre>
+<p>每次发版只需用 <a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a> 打个 tag 即可：</p>
+<pre class=" language-shell"><code class="language-shell">git tag vX.Y.Z HEAD
+git push origin --tags
+</code></pre>
+<blockquote>
+<p>参考：</p>
+<ol>
+<li><a href="https://github.com/docker/build-push-action/blob/master/docs/advanced/push-multi-registries.md" target="_blank" rel="noopener">https://github.com/docker/build-push-action/blob/master/docs/advanced/push-multi-registries.md</a></li>
+<li><a href="https://tomgregory.com/build-gradle-projects-with-github-actions/" target="_blank" rel="noopener">https://tomgregory.com/build-gradle-projects-with-github-actions/</a></li>
+</ol>
+</blockquote>
+<h3 id="模板仓库"><a href="#模板仓库" class="headerlink" title="模板仓库"></a>模板仓库</h3><p>借助 <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository" target="_blank" rel="noopener">GitHub template 仓库</a>这一实用新特性，我们可以轻松创建新项目，最大限度地复用团队沉淀下来的项目公用代码。</p>
+<p>以上讲解的所有内容都汇总在我们 <a href="https://idea2.app/" target="_blank" rel="noopener">idea2app 团队</a>的脚手架中，欢迎大家试用、反馈：</p>
+<p><a href="https://github.com/idea2app/Kotlin-Spring-Boot" target="_blank" rel="noopener">https://github.com/idea2app/Kotlin-Spring-Boot</a></p>
+<h2 id="VS-Code-扩展"><a href="#VS-Code-扩展" class="headerlink" title="VS Code 扩展"></a>VS Code 扩展</h2><p>对于近些年风靡 <strong>Web 全栈开发</strong>领域的 VS Code，Java 生态支持自然不能少，虽然以下两个推荐的扩展插件还都是<em>预览版</em>，但对于日常应用开发足够了：</p>
+<ol>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack" target="_blank" rel="noopener">https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=fwcd.kotlin" target="_blank" rel="noopener">https://marketplace.visualstudio.com/items?itemName=fwcd.kotlin</a></li>
+</ol>
+<blockquote>
+<p>参考：<a href="https://www.jianshu.com/p/90158cdc6d18" target="_blank" rel="noopener">https://www.jianshu.com/p/90158cdc6d18</a></p>
+</blockquote>
+<h2 id="更多资料"><a href="#更多资料" class="headerlink" title="更多资料"></a>更多资料</h2><ol>
+<li>Kotlin 常用代码：<a href="https://devhints.io/kotlin" target="_blank" rel="noopener">https://devhints.io/kotlin</a></li>
+<li>Kotlin 文档速查：<a href="https://devdocs.io/kotlin~1.6/" target="_blank" rel="noopener">https://devdocs.io/kotlin~1.6/</a></li>
+</ol>
+
+            </div>
+            <hr/>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">转载请注明: </span>
+                    <a href="https://tech-query.me" class="b-link-green">TechQuery</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/development/start-kotlin-without-ide/" class="b-link-green">脱离 IDE，徒手 Kotlin！</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+    
+        <div class="disqus-card card" data-aos="fade-up">
+    <div id="disqus_thread" class="card-content">
+        <noscript>Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
+        </noscript>
+    </div>
+</div>
+
+<script type="text/javascript">
+    disqus_config = function () {
+        this.page.url = 'https://tech-query.me/development/start-kotlin-without-ide/';
+        this.page.identifier = '/development/start-kotlin-without-ide/';
+        this.page.title = '脱离 IDE，徒手 Kotlin！';
+    };
+    let disqus_shortname = 'tech-query';
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+        let d = document, s = d.createElement('script');
+        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="card">
+                <a href="/democracy/tiktok-is-not-drug/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="抖音 ≠ 精神鸦片 —— 言论自由之辨">
+                        
+                        <span class="card-title">抖音 ≠ 精神鸦片 —— 言论自由之辨</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">近两年，我无数次听到身边人说：“抖音里全是‘商女不知亡国恨’的小姐姐，是奶头乐，让大家都不想去看长文和长视频了。所以我早就卸载了，于是我的精神得到了净化……”云云。
+开始我还会心里打鼓：“啊，我不就是经常在抖音刷小姐姐的人吗？我好不上档次…</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2023-03-03
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Democracy/" class="post-category" target="_blank">
+                                    Democracy
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/freedom/" target="_blank">
+                        <span class="chip bg-color">freedom</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="card">
+                <a href="/development/web-progress-2021/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="2021 年的 Web 标准进展">
+                        
+                        <span class="card-title">2021 年的 Web 标准进展</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">
+Google DevFest 2021 成都站
+
+
+Web 组件
+前情提要
+
+
+服务端渲染
+Template to Shadow DOM&lt;host-element>
+  &lt;template shadowroot="open"></div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Development/" class="post-category" target="_blank">
+                                    Development
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Web/" target="_blank">
+                        <span class="chip bg-color">Web</span>
+                    </a>
+                    
+                    <a href="/tags/standard/" target="_blank">
+                        <span class="chip bg-color">standard</span>
+                    </a>
+                    
+                    <a href="/tags/component/" target="_blank">
+                        <span class="chip bg-color">component</span>
+                    </a>
+                    
+                    <a href="/tags/form/" target="_blank">
+                        <span class="chip bg-color">form</span>
+                    </a>
+                    
+                    <a href="/tags/API/" target="_blank">
+                        <span class="chip bg-color">API</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title">目录</div>
+            <div id="toc-content">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由 &copy;<a href="https://tech-query.me/" target="_blank">TechQuery</a>
+            基于 <a href="https://hexo.io/" target="_blank">Hexo</a> 
+            采用<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">
+                hexo-theme-matery
+            </a>的主题搭建.
+        </div>
+        <div class="col s12 m4 l4 social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title">搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input" autofocus="">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="https://lib.baomitu.com/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="https://lib.baomitu.com/masonry/4.2.2/masonry.pkgd.min.js"></script>
+<script src="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.js"></script>
+<script src="https://lib.baomitu.com/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+<script src="https://lib.baomitu.com/lightgallery/1.6.11/js/lightgallery-all.min.js"></script>
+
+<script src="/libs/others/clicklove.js"></script>
+
+<script src="/js/matery.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132866291-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-132866291-1');
+</script>
+
+
+<span id="cnzz_stat_icon_1275855156" hidden></span>
+<script src="//s23.cnzz.com/z_stat.php?id=1275855156&amp;online=1&amp;show=line"></script>
+</body>
+</html>

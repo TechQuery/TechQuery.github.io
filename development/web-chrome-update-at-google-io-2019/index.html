@@ -1,0 +1,1117 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Web 与 Chrome 最新进展 @Google I/O 2019, TechQuery website Web JavaScript full-stack developer development coder programmer">
+    <meta name="description" content="
+Google I/O 2019 extend 成都站
+
+
+DOM 与 BOM
+延迟加载&amp;lt;img src=&#34;path/to/image&#34; loading=&#34;lazy&#34; /&gt;
+
+&amp;lt;iframe src=&#34;path/to/page&#34;">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Web 与 Chrome 最新进展 @Google I/O 2019 | TechQuery</title>
+    <link rel="icon" type="image/png" href="/image/WebCell-2.png">
+
+    <link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css">
+    <link rel="stylesheet" href="/css/matery.css">
+    <link rel="stylesheet" href="/css/my.css">
+
+    <script src="https://lib.baomitu.com/jquery/2.2.4/jquery.min.js"></script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2017157453269189",
+        enable_page_level_ads: true
+    });
+    </script>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="TechQuery" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css"></head>
+
+</head>
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="container">
+            <div class="nav-wrapper">
+                <div class="brand-logo">
+                    <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/image/WebCell-0.png" class="logo-img hide-on-small-only">
+                        
+                        <span class="logo-span">TechQuery</span>
+                    </a>
+                </div>
+                <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>Tags</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>Categories</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>Archives</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/projects" class="waves-effect waves-light">
+            
+            <i class="fa fa-code-fork"></i>
+            
+            <span>Projects</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-slideshare"></i>
+            
+            <span>Lecture</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-code"></i>
+            
+            <span>Snippet</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-quora"></i>
+            
+            <span>Q & A</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>About</span>
+        </a>
+    </li>
+    
+    <li>
+        <a id="toggleSearch" class="waves-effect waves-light">
+            <i id="searchIcon" class="mdi-action-search"></i>
+        </a>
+    </li>
+
+</ul>
+
+<div class="side-nav" id="mobile-nav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/image/WebCell-0.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">TechQuery</div>
+        <div class="logo-desc">
+            
+            TechQuery, a Web &amp; JavaScript full-stack developer
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                Tags
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                Categories
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                Archives
+            </a>
+        </li>
+        
+        <li>
+            <a href="/projects" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code-fork"></i>
+                
+                Projects
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-slideshare"></i>
+                
+                Lecture
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code"></i>
+                
+                Snippet
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-quora"></i>
+                
+                Q &amp; A
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                About
+            </a>
+        </li>
+        
+        
+    </ul>
+
+    <div class="social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+</div>
+
+            </div>
+        </div>
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        Web 与 Chrome 最新进展 @Google I/O 2019
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1,
+    #articleContent h2,
+    #articleContent h3,
+    #articleContent h4,
+    #articleContent h5,
+    #articleContent h6 {
+        padding-top: 76px;
+        margin-top: -76px;
+    }
+
+    #articleContent h1 {
+        line-height: 3.5rem;
+    }
+
+    #articleContent h2 {
+        line-height: 3.2rem;
+    }
+
+    #articleContent h3 {
+        line-height: 2.8rem;
+    }
+
+    #articleContent h4 {
+        line-height: 2.5rem;
+    }
+
+    #articleContent h5 {
+        line-height: 2.2rem;
+    }
+
+    #articleContent h6 {
+        line-height: 1.9rem;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            
+            <div class="article-tag">
+                
+                <a href="/tags/Web/" target="_blank">
+                    <span class="chip bg-color">Web</span>
+                </a>
+                
+                <a href="/tags/Chrome/" target="_blank">
+                    <span class="chip bg-color">Chrome</span>
+                </a>
+                
+                <a href="/tags/Google/" target="_blank">
+                    <span class="chip bg-color">Google</span>
+                </a>
+                
+                <a href="/tags/lecture/" target="_blank">
+                    <span class="chip bg-color">lecture</span>
+                </a>
+                
+            </div>
+            
+            <div class="post-info">
+                
+                <span class="post-cate">
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/Development/" class="post-category" target="_blank">
+                        Development
+                    </a>
+                    
+                </span>
+                
+
+                <span class="post-date">
+                    <i class="fa fa-clock-o fa-fw"></i>2019-05-15
+                </span>
+            </div>
+        </div>
+        <hr>
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <blockquote>
+<p>Google I/O 2019 extend 成都站</p>
+</blockquote>
+<hr>
+<h2 id="DOM-与-BOM"><a href="#DOM-与-BOM" class="headerlink" title="DOM 与 BOM"></a>DOM 与 BOM</h2><hr>
+<h3 id="延迟加载"><a href="#延迟加载" class="headerlink" title="延迟加载"></a>延迟加载</h3><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>path/to/image<span class="token punctuation">"</span></span> <span class="token attr-name">loading</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>lazy<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>path/to/page<span class="token punctuation">"</span></span> <span class="token attr-name">loading</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>lazy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>iframe</span><span class="token punctuation">></span></span>
+</code></pre>
+<hr>
+<p><code>loading</code> 属性值</p>
+<ul>
+<li><code>lazy</code> 延迟加载</li>
+<li><code>eager</code> 立即加载</li>
+<li><code>auto</code> 浏览器自主判断加载策略（默认值）</li>
+</ul>
+<hr>
+<ul>
+<li><code>loading</code> 属性是早期提案 <code>lazyload</code> 属性的代替</li>
+<li>将在 Chrome 76 发布</li>
+</ul>
+<hr>
+<h3 id="门户框架"><a href="#门户框架" class="headerlink" title="门户框架"></a>门户框架</h3><h4 id="主页面"><a href="#主页面" class="headerlink" title="主页面"></a>主页面</h4><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>portal</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>path/to/page<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>portal</span><span class="token punctuation">></span></span>
+</code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> portal <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'portal'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+portal
+  <span class="token punctuation">.</span><span class="token function">activate</span><span class="token punctuation">(</span><span class="token punctuation">{</span> data<span class="token punctuation">:</span> <span class="token punctuation">{</span> key<span class="token punctuation">:</span> <span class="token string">'value'</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> portal<span class="token punctuation">.</span><span class="token function">postMessage</span><span class="token punctuation">(</span><span class="token punctuation">{</span> hello<span class="token punctuation">:</span> <span class="token string">'portal'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<hr>
+<h4 id="子页面"><a href="#子页面" class="headerlink" title="子页面"></a>子页面</h4><pre class=" language-javascript"><code class="language-javascript">window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'portalactivate'</span><span class="token punctuation">,</span> event <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// {key: 'value'}</span>
+
+  <span class="token keyword">const</span> portal <span class="token operator">=</span> event<span class="token punctuation">.</span><span class="token function">adoptPredecessor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 主页面</span>
+
+  document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>portal<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'message'</span><span class="token punctuation">,</span> event <span class="token operator">=</span><span class="token operator">></span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>
+    event<span class="token punctuation">.</span>data<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// {hello: 'portal'}</span>
+    window<span class="token punctuation">.</span>portalHost <span class="token comment" spellcheck="true">// 主页面 window 对象</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<hr>
+<p><img src="https://web.dev/hands-on-portals/glitch.gif" alt="Portal demo"></p>
+<hr>
+<h3 id="分享网页"><a href="#分享网页" class="headerlink" title="分享网页"></a>分享网页</h3><pre class=" language-javascript"><code class="language-javascript">document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'button.share'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'Hello'</span><span class="token punctuation">,</span> text<span class="token punctuation">:</span> <span class="token string">'World'</span><span class="token punctuation">,</span> url<span class="token punctuation">:</span> <span class="token string">'https://web.dev/'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>navigator<span class="token punctuation">.</span><span class="token function">canShare</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">await</span> navigator<span class="token punctuation">.</span><span class="token function">share</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Done!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>网页由 HTTPS 打开</li>
+<li>Android Chrome 61+</li>
+<li>分享调用在<strong>用户操作回调栈</strong>中发起</li>
+<li><a href="https://github.com/on2-dev/share-api-polyfill" target="_blank" rel="noopener">polyfill</a></li>
+</ul>
+<hr>
+<p>在 PWA 的 <code>manifest.json</code> 中多加一段</p>
+<p>即可成为<strong>分享目标</strong>（Chrome 71+）</p>
+<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"share_target"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"action"</span><span class="token operator">:</span> <span class="token string">"/path/to/share-target/"</span><span class="token punctuation">,</span>
+    <span class="token property">"method"</span><span class="token operator">:</span> <span class="token string">"GET"</span><span class="token punctuation">,</span>
+    <span class="token property">"enctype"</span><span class="token operator">:</span> <span class="token string">"application/x-www-form-urlencoded"</span><span class="token punctuation">,</span>
+    <span class="token property">"params"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"your_title_key"</span><span class="token punctuation">,</span>
+      <span class="token property">"text"</span><span class="token operator">:</span> <span class="token string">"your_text_key"</span><span class="token punctuation">,</span>
+      <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">"you_url_key"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><a href="https://web-share.glitch.me/" target="_blank" rel="noopener"><img src="https://developers.google.com/web/updates/images/2018/12/wst-send.png" alt="Share to PWA"></a></p>
+<hr>
+<h3 id="形状检测"><a href="#形状检测" class="headerlink" title="形状检测"></a>形状检测</h3><h4 id="文字"><a href="#文字" class="headerlink" title="文字"></a>文字</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> textDetector <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TextDetector</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> texts <span class="token operator">=</span> <span class="token keyword">await</span> textDetector<span class="token punctuation">.</span><span class="token function">detect</span><span class="token punctuation">(</span>image<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+texts<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>text <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<hr>
+<h4 id="条码"><a href="#条码" class="headerlink" title="条码"></a>条码</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> barcodeDetector <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BarcodeDetector</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  formats<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token string">'aztec'</span><span class="token punctuation">,</span>
+    <span class="token string">'code_128'</span><span class="token punctuation">,</span>
+    <span class="token string">'code_39'</span><span class="token punctuation">,</span>
+    <span class="token string">'code_93'</span><span class="token punctuation">,</span>
+    <span class="token string">'codabar'</span><span class="token punctuation">,</span>
+    <span class="token string">'data_matrix'</span><span class="token punctuation">,</span>
+    <span class="token string">'ean_13'</span><span class="token punctuation">,</span>
+    <span class="token string">'ean_8'</span><span class="token punctuation">,</span>
+    <span class="token string">'itf'</span><span class="token punctuation">,</span>
+    <span class="token string">'pdf417'</span><span class="token punctuation">,</span>
+    <span class="token string">'qr_code'</span><span class="token punctuation">,</span>
+    <span class="token string">'upc_a'</span><span class="token punctuation">,</span>
+    <span class="token string">'upc_e'</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> barcodes <span class="token operator">=</span> <span class="token keyword">await</span> barcodeDetector<span class="token punctuation">.</span><span class="token function">detect</span><span class="token punctuation">(</span>image<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+barcodes<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>barcode <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>barcode<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<hr>
+<h4 id="人脸"><a href="#人脸" class="headerlink" title="人脸"></a>人脸</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> faceDetector <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FaceDetector</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  maxDetectedFaces<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+  fastMode<span class="token punctuation">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> faces <span class="token operator">=</span> <span class="token keyword">await</span> faceDetector<span class="token punctuation">.</span><span class="token function">detect</span><span class="token punctuation">(</span>image<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+faces<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>face <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>face<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<hr>
+<ul>
+<li>Chrome 74+（开启<em>实验性 Web 平台特性</em>标记）</li>
+<li>支持 Web worker</li>
+<li><a href="https://github.com/WICG/shape-detection-api#overview" target="_blank" rel="noopener">各大平台支持</a></li>
+<li><a href="https://perceptiontoolkit.dev/getting-started/" target="_blank" rel="noopener">Web 感知工具包</a></li>
+</ul>
+<hr>
+<h3 id="更多草案-API"><a href="#更多草案-API" class="headerlink" title="更多草案 API"></a>更多草案 API</h3><ul>
+<li><a href="https://github.com/WICG/native-file-system" target="_blank" rel="noopener">文件系统</a></li>
+<li><a href="https://github.com/sso-google/sms-otp-retrieval" target="_blank" rel="noopener">短信验证</a></li>
+</ul>
+<hr>
+<h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><hr>
+<h3 id="同站-Cookie"><a href="#同站-Cookie" class="headerlink" title="同站 Cookie"></a>同站 Cookie</h3><pre><code># 站内跳转带 cookie
+Set-Cookie: a=1; SameSite=Strict
+
+# 跳转到本站带 cookie
+Set-Cookie: b=2; SameSite=Lax
+
+# 不限制 cookie
+Set-Cookie: c=3; SameSite=None
+</code></pre>
+<p><a href="https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00" target="_blank" rel="noopener">RFC 6265 bis</a></p>
+<hr>
+<p><a href="https://web.dev/samesite-cookies-explained/" target="_blank" rel="noopener"><img src="https://web.dev/samesite-cookies-explained/samesite-none-lax-strict.png"></a></p>
+<hr>
+<h3 id="Web-包协议"><a href="#Web-包协议" class="headerlink" title="Web 包协议"></a>Web 包协议</h3><p><img src="https://lh6.googleusercontent.com/n6lWJFxp7RqGt2HalG6-pHCDlGSUso1EHRGzpWP8CZRQ9jmfn18XwbxtUcaFvA5AwcyygTzp_sUu-UTgukCd8C-BTjpyytfyIpiAWuVD7sSuIlbQjeVqNH4ZbqWaqObfpr6cHw_S"></p>
+<hr>
+<div style="background: white">
+  <img src="https://developers.google.com/web/updates/images/2018/11/signed-exchanges.svg">
+</div>
+
+<hr>
+<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><hr>
+<h3 id="V8-提速、降费"><a href="#V8-提速、降费" class="headerlink" title="V8 提速、降费"></a>V8 提速、降费</h3><p><img src="https://oscimg.oschina.net/oscnet/20823b97896a3ff102da2e47223b4659e7a.jpg"></p>
+<hr>
+<p><img src="https://oscimg.oschina.net/oscnet/935cbd4dc8bff380d632898aef0d2e22068.jpg"></p>
+<hr>
+<p><img src="https://oscimg.oschina.net/oscnet/1d86e81a249205922d7881a8356a04f0a1f.jpg"></p>
+<hr>
+<h3 id="原生类型增强"><a href="#原生类型增强" class="headerlink" title="原生类型增强"></a>原生类型增强</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> integer <span class="token operator">=</span> 14_0000_0000<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1400000000</span>
+
+<span class="token keyword">const</span> bigInt <span class="token operator">=</span> <span class="token function">BigInt</span><span class="token punctuation">(</span>Number<span class="token punctuation">.</span>MAX_SAFE_INTEGER<span class="token punctuation">)</span> <span class="token operator">+</span> 1n<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 9007199254740992n</span>
+
+<span class="token punctuation">[</span>
+  <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">flat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// [1, 2, 3, 4]</span>
+
+Object<span class="token punctuation">.</span><span class="token function">fromEntries</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+  <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span><span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// {a: 1, b: 2}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">...</span><span class="token string">'FCC成都社区,FCC中文社区'</span><span class="token punctuation">.</span><span class="token function">matchAll</span><span class="token punctuation">(</span><span class="token regex">/\w+([^,]+)/g</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//  ['FCC成都社区', '成都社区']  ['FCC中文社区', '中文社区']</span>
+</code></pre>
+<hr>
+<h3 id="统一全局对象"><a href="#统一全局对象" class="headerlink" title="统一全局对象"></a>统一全局对象</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> globalThis <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 浏览器主线程</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> window <span class="token operator">!==</span> <span class="token string">'undefined'</span><span class="token punctuation">)</span> <span class="token keyword">return</span> window<span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// Web worker 线程</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> self <span class="token operator">!==</span> <span class="token string">'undefined'</span><span class="token punctuation">)</span> <span class="token keyword">return</span> self<span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// Node.JS</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> global <span class="token operator">!==</span> <span class="token string">'undefined'</span><span class="token punctuation">)</span> <span class="token keyword">return</span> global<span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// 其它运行时的非严格模式</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> <span class="token keyword">this</span> <span class="token operator">!==</span> <span class="token string">'undefined'</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>Stage-3</li>
+<li>Chrome 71、Firefox 65、Safari 12.1</li>
+</ul>
+<hr>
+<h3 id="国际化-API"><a href="#国际化-API" class="headerlink" title="国际化 API"></a>国际化 API</h3><h4 id="相对时间"><a href="#相对时间" class="headerlink" title="相对时间"></a>相对时间</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> formatter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Intl<span class="token punctuation">.</span>RelativeTimeFormat</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>formatter<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'day'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1天前</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>formatter<span class="token punctuation">.</span><span class="token function">formatToParts</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'day'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/*
+[
+    {
+        "type": "integer",
+        "value": "1",
+        "unit": "day"
+    },
+    {
+        "type": "literal",
+        "value": "天前"
+    }
+]
+*/</span>
+</code></pre>
+<ul>
+<li>Stage-3</li>
+<li>Chrome 71、Firefox 65</li>
+</ul>
+<hr>
+<h4 id="短语列表"><a href="#短语列表" class="headerlink" title="短语列表"></a>短语列表</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> and <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Intl<span class="token punctuation">.</span>ListFormat</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> type<span class="token punctuation">:</span> <span class="token string">'conjunction'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  or <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Intl<span class="token punctuation">.</span>ListFormat</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> type<span class="token punctuation">:</span> <span class="token string">'disjunction'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'GDG'</span><span class="token punctuation">,</span> <span class="token string">'FCC'</span><span class="token punctuation">,</span> <span class="token string">'ThoughtWorks'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>
+  and<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 'GDG、FCC和ThoughtWorks'</span>
+  or<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 'GDG、FCC或ThoughtWorks'</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>Stage-3</li>
+<li>Chrome 72、Opera 60</li>
+</ul>
+<hr>
+<h3 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h3><h4 id="allSettled"><a href="#allSettled" class="headerlink" title=".allSettled()"></a>.allSettled()</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">await</span> Promise<span class="token punctuation">.</span><span class="token function">allSettled</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+  <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'https://fcc-cd.dev/'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'https://google.com/'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 没有科学上网</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'所有请求已响应，部分可能失败'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="any"><a href="#any" class="headerlink" title=".any()"></a>.any()</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> fastest <span class="token operator">=</span> <span class="token keyword">await</span> Promise<span class="token punctuation">.</span><span class="token function">any</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+  <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'https://cdn.jsdelivr.net/npm/web-cell/dist/web-cell.min.js'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'https://unpkg.com/web-cell/dist/web-cell.min.js'</span><span class="token punctuation">)</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fastest<span class="token punctuation">.</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<hr>
+<h3 id="类实例成员"><a href="#类实例成员" class="headerlink" title="类实例成员"></a>类实例成员</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Example</span> <span class="token punctuation">{</span>
+  publicField <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  #privateField <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+
+  publicMethod <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>publicField<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 1</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>#privateField <span class="token comment" spellcheck="true">// 2</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li>Stage-3</li>
+<li>Babel 7</li>
+<li>Node 12</li>
+<li>Chrome 72 / V8 7.2（公开成员）</li>
+<li>Chrome 74 / V8 7.4（私有成员）</li>
+</ul>
+<hr>
+<h3 id="垃圾回收-API"><a href="#垃圾回收-API" class="headerlink" title="垃圾回收 API"></a>垃圾回收 API</h3><h4 id="提案来源"><a href="#提案来源" class="headerlink" title="提案来源"></a>提案来源</h4><ul>
+<li>Python 2.1+ 标准库 weakref 模块<ul>
+<li><a href="https://www.atjiang.com/Python2Lib-ds-weakref/" target="_blank" rel="noopener">https://www.atjiang.com/Python2Lib-ds-weakref/</a></li>
+<li><a href="https://learnku.com/docs/pymotw/weakref-a-weak-reference-to-an-object/3372" target="_blank" rel="noopener">https://learnku.com/docs/pymotw/weakref-a-weak-reference-to-an-object/3372</a></li>
+</ul>
+</li>
+<li><a href="https://blogs.oracle.com/sundararajan/weak-references-in-javascript" target="_blank" rel="noopener">JS Rhino 引擎可借用 Java WeakReference 类</a></li>
+<li><a href="https://zhuanlan.kanxue.com/article-4277.htm" target="_blank" rel="noopener">动态检测工具 Frida 的 JS API</a></li>
+</ul>
+<hr>
+<h4 id="WeakRef"><a href="#WeakRef" class="headerlink" title="WeakRef"></a>WeakRef</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> URI <span class="token operator">=</span> <span class="token string">'path/to/file'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> file <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token punctuation">(</span><span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span>URI<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">blob</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> ref <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">WeakRef</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  cache <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+cache<span class="token punctuation">[</span>URI<span class="token punctuation">]</span> <span class="token operator">=</span> ref<span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ref<span class="token punctuation">.</span><span class="token function">deref</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Blob {}</span>
+</code></pre>
+<h4 id="FinalizationGroup"><a href="#FinalizationGroup" class="headerlink" title="FinalizationGroup"></a>FinalizationGroup</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> cleaner <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FinalizationGroup</span><span class="token punctuation">(</span>iterator <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> URI <span class="token keyword">of</span> iterator<span class="token punctuation">)</span> <span class="token keyword">delete</span> cache<span class="token punctuation">[</span>URI<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+cleaner<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span>image<span class="token punctuation">,</span> URI<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<hr>
+<h2 id="Google"><a href="#Google" class="headerlink" title="Google"></a>Google</h2><hr>
+<h3 id="Search-How-to"><a href="#Search-How-to" class="headerlink" title="Search How to"></a>Search How to</h3><p><img src="https://developers.google.com/search/docs/data-types/images/howto-example2.png"></p>
+<hr>
+<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"@context"</span><span class="token operator">:</span> <span class="token string">"http://schema.org"</span><span class="token punctuation">,</span>
+  <span class="token property">"@type"</span><span class="token operator">:</span> <span class="token string">"HowTo"</span><span class="token punctuation">,</span>
+  <span class="token property">"image"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"@type"</span><span class="token operator">:</span> <span class="token string">"ImageObject"</span><span class="token punctuation">,</span>
+    <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">"https://example.com/1x1/photo.jpg"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"How to tie a tie"</span><span class="token punctuation">,</span>
+  <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"..."</span><span class="token punctuation">,</span>
+  <span class="token property">"totalTime"</span><span class="token operator">:</span> <span class="token string">"PT2M"</span><span class="token punctuation">,</span>
+  <span class="token property">"video"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"@type"</span><span class="token operator">:</span> <span class="token string">"VideoObject"</span><span class="token punctuation">,</span>
+    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Tie a Tie"</span><span class="token punctuation">,</span>
+    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"..."</span><span class="token punctuation">,</span>
+    <span class="token property">"thumbnailUrl"</span><span class="token operator">:</span> <span class="token string">"https://example.com/photos/photo.jpg"</span><span class="token punctuation">,</span>
+    <span class="token property">"contentUrl"</span><span class="token operator">:</span> <span class="token string">"http://www.example.com/videos/123_600x400.mp4"</span><span class="token punctuation">,</span>
+    <span class="token property">"embedUrl"</span><span class="token operator">:</span> <span class="token string">"http://www.example.com/videoplayer?id=123"</span><span class="token punctuation">,</span>
+    <span class="token property">"uploadDate"</span><span class="token operator">:</span> <span class="token string">"2019-01-05T08:00:00+08:00"</span><span class="token punctuation">,</span>
+    <span class="token property">"duration"</span><span class="token operator">:</span> <span class="token string">"P1MT10S"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"supply"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">"@type"</span><span class="token operator">:</span> <span class="token string">"HowToSupply"</span><span class="token punctuation">,</span>
+      <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"A tie"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">"@type"</span><span class="token operator">:</span> <span class="token string">"HowToSupply"</span><span class="token punctuation">,</span>
+      <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"A collared shirt"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"tool"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">"@type"</span><span class="token operator">:</span> <span class="token string">"HowToTool"</span><span class="token punctuation">,</span>
+      <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"A mirror"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"step"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">"@type"</span><span class="token operator">:</span> <span class="token string">"HowToStep"</span><span class="token punctuation">,</span>
+      <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Preparations"</span><span class="token punctuation">,</span>
+      <span class="token property">"text"</span><span class="token operator">:</span> <span class="token string">"..."</span><span class="token punctuation">,</span>
+      <span class="token property">"image"</span><span class="token operator">:</span> <span class="token string">"https://example.com/1x1/step1.jpg"</span><span class="token punctuation">,</span>
+      <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">"https://example.com/tie#step1"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">"@type"</span><span class="token operator">:</span> <span class="token string">"HowToStep"</span><span class="token punctuation">,</span>
+      <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Crossing once"</span><span class="token punctuation">,</span>
+      <span class="token property">"text"</span><span class="token operator">:</span> <span class="token string">"..."</span><span class="token punctuation">,</span>
+      <span class="token property">"image"</span><span class="token operator">:</span> <span class="token string">"https://example.com/1x1/step2.jpg"</span><span class="token punctuation">,</span>
+      <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">"https://example.com/tie#step2"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">"@type"</span><span class="token operator">:</span> <span class="token string">"HowToStep"</span><span class="token punctuation">,</span>
+      <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Second crossing"</span><span class="token punctuation">,</span>
+      <span class="token property">"text"</span><span class="token operator">:</span> <span class="token string">"..."</span><span class="token punctuation">,</span>
+      <span class="token property">"image"</span><span class="token operator">:</span> <span class="token string">"https://example.com/1x1/step3.jpg"</span><span class="token punctuation">,</span>
+      <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">"https://example.com/tie#step3"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">"@type"</span><span class="token operator">:</span> <span class="token string">"HowToStep"</span><span class="token punctuation">,</span>
+      <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Loop in"</span><span class="token punctuation">,</span>
+      <span class="token property">"text"</span><span class="token operator">:</span> <span class="token string">"..."</span><span class="token punctuation">,</span>
+      <span class="token property">"image"</span><span class="token operator">:</span> <span class="token string">"https://example.com/1x1/step4.jpg"</span><span class="token punctuation">,</span>
+      <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">"https://example.com/tie#step4"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">"@type"</span><span class="token operator">:</span> <span class="token string">"HowToStep"</span><span class="token punctuation">,</span>
+      <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Pull and tighten"</span><span class="token punctuation">,</span>
+      <span class="token property">"text"</span><span class="token operator">:</span> <span class="token string">"..."</span><span class="token punctuation">,</span>
+      <span class="token property">"image"</span><span class="token operator">:</span> <span class="token string">"https://example.com/1x1/step5.jpg"</span><span class="token punctuation">,</span>
+      <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">"https://example.com/tie#step5"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<h4 id="结构化元数据"><a href="#结构化元数据" class="headerlink" title="结构化元数据"></a>结构化元数据</h4><ul>
+<li><a href="https://schema.org/" target="_blank" rel="noopener">Schema.org</a></li>
+<li><a href="https://developers.google.com/search/docs/guides/search-gallery" target="_blank" rel="noopener">Google 搜索优化应用</a></li>
+</ul>
+<hr>
+<h3 id="Material-Design-夜间模式"><a href="#Material-Design-夜间模式" class="headerlink" title="Material Design 夜间模式"></a>Material Design 夜间模式</h3><p><a href="https://material.io/design/color/dark-theme.html" target="_blank" rel="noopener"><img src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1Eb0bcqf3yyrabY8JLOrfC9zq_nN8wCu9%2Fdarktheme-overview.png"></a></p>
+<hr>
+<h2 id="性感谷歌，在线教学"><a href="#性感谷歌，在线教学" class="headerlink" title="性感谷歌，在线教学"></a>性感谷歌，在线教学</h2><p><a href="https://web.dev/" target="_blank" rel="noopener">https://web.dev/</a></p>
+<p><a href="https://developers.google.cn/web/" target="_blank" rel="noopener">https://developers.google.cn/web/</a></p>
+<p><a href="https://events.google.com/io/codelabs/" target="_blank" rel="noopener">https://events.google.com/io/codelabs/</a></p>
+<p><a href="https://codelabs.developers.google.com/?cat=Web" target="_blank" rel="noopener">https://codelabs.developers.google.com/?cat=Web</a></p>
+<hr>
+<h2 id="关注-freeCodeCamp-成都社区"><a href="#关注-freeCodeCamp-成都社区" class="headerlink" title="关注 freeCodeCamp 成都社区"></a>关注 freeCodeCamp 成都社区</h2><p><a href="https://fcc-cd.dev/" target="_blank" rel="noopener">https://fcc-cd.dev/</a></p>
+<p><img src="/image/FCC-CDC-QRC.png"></p>
+
+            </div>
+            <hr/>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">转载请注明: </span>
+                    <a href="https://tech-query.me" class="b-link-green">TechQuery</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/development/web-chrome-update-at-google-io-2019/" class="b-link-green">Web 与 Chrome 最新进展 @Google I/O 2019</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+    
+        <div class="disqus-card card" data-aos="fade-up">
+    <div id="disqus_thread" class="card-content">
+        <noscript>Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
+        </noscript>
+    </div>
+</div>
+
+<script type="text/javascript">
+    disqus_config = function () {
+        this.page.url = 'https://tech-query.me/development/web-chrome-update-at-google-io-2019/';
+        this.page.identifier = '/development/web-chrome-update-at-google-io-2019/';
+        this.page.title = 'Web 与 Chrome 最新进展 @Google I/O 2019';
+    };
+    let disqus_shortname = 'tech-query';
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+        let d = document, s = d.createElement('script');
+        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="card">
+                <a href="/development/agile-in-my-eyes/">
+                    <div class="card-image">
+                        
+                        <img src="https://www.wangbase.com/blogimg/asset/201903/bg2019030701.jpg" class="responsive-img" alt="敏捷开发之我见">
+                        
+                        <span class="card-title">敏捷开发之我见</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">入职 ThoughtWorks 后，公司邮箱曾收到一篇内部博客大赛的文章《真正的敏捷工作流 —— GitHub flow》，我心想“我一个 GitHub 公民应该会很适应 TW 吧”？
+果然…… 不要立 flag……
+敏捷不是什么大多数人对</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-31
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Development/" class="post-category" target="_blank">
+                                    Development
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Agile/" target="_blank">
+                        <span class="chip bg-color">Agile</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="card">
+                <a href="/community/fcc-devtalk-techquery/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="FCC DevTalk - 水歌">
+                        
+                        <span class="card-title">FCC DevTalk - 水歌</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">
+freeCodeCamp 中文社区创始人 Miya 对我的采访
+
+
+
+1. 简要介绍一下自己吧。艺名水歌、网名 TechQuery，Web/JavaScript 全栈开发者，是多个国内外开源软件项目的作者、贡献者。现为 freeCodeC</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Community/" class="post-category" target="_blank">
+                                    Community
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/FCC/" target="_blank">
+                        <span class="chip bg-color">FCC</span>
+                    </a>
+                    
+                    <a href="/tags/interview/" target="_blank">
+                        <span class="chip bg-color">interview</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title">目录</div>
+            <div id="toc-content">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由 &copy;<a href="https://tech-query.me/" target="_blank">TechQuery</a>
+            基于 <a href="https://hexo.io/" target="_blank">Hexo</a> 
+            采用<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">
+                hexo-theme-matery
+            </a>的主题搭建.
+        </div>
+        <div class="col s12 m4 l4 social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title">搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input" autofocus="">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="https://lib.baomitu.com/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="https://lib.baomitu.com/masonry/4.2.2/masonry.pkgd.min.js"></script>
+<script src="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.js"></script>
+<script src="https://lib.baomitu.com/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+<script src="https://lib.baomitu.com/lightgallery/1.6.11/js/lightgallery-all.min.js"></script>
+
+<script src="/libs/others/clicklove.js"></script>
+
+<script src="/js/matery.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132866291-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-132866291-1');
+</script>
+
+
+<span id="cnzz_stat_icon_1275855156" hidden></span>
+<script src="//s23.cnzz.com/z_stat.php?id=1275855156&amp;online=1&amp;show=line"></script>
+</body>
+</html>

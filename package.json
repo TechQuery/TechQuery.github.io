@@ -13,7 +13,7 @@
     "url": "https://github.com/TechQuery/TechQuery.github.io/issues"
   },
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "resume-json": "cd source/_data/  &&  yaml2json resume.yml -p | sed -r s/T[0-9]+:[0-9]+:[0-9]+\\.[0-9]+Z//g > resume.json",
     "resume-html": "mkdir public  &&  cd source/_data/  &&  resume export ../../public/resume.html --theme kendall",
     "pack-resume": "npm run resume-json  &&  npm run resume-html",
@@ -34,7 +34,7 @@
     "hexo-generator-feed": "^2.2.0",
     "hexo-generator-index": "^1.0.0",
     "hexo-generator-search": "^2.4.3",
-    "hexo-generator-slidehtml": "0.0.62",
+    "hexo-generator-slidehtml": "^0.0.64",
     "hexo-generator-tag": "^1.0.0",
     "hexo-migrator-web": "^1.2.1",
     "hexo-permalink-pinyin": "^1.1.0",
@@ -42,16 +42,14 @@
     "hexo-renderer-ejs": "^1.0.0",
     "hexo-renderer-marked": "^3.3.0",
     "hexo-renderer-stylus": "^1.1.0",
-    "hexo-server": "^1.0.0",
-    "mkdirp": "^0.5.6",
-    "object-assign": "^4.1.1"
+    "hexo-server": "^1.0.0"
   },
   "devDependencies": {
-    "husky": "^8.0.3",
+    "husky": "^9.0.11",
     "jsonresume-theme-kendall": "^0.2.0",
-    "lint-staged": "^13.2.3",
-    "prettier": "^3.0.0",
-    "resume-cli": "^3.0.8",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "resume-cli": "^3.1.2",
     "yamljs": "^0.3.0"
   },
   "hexo": {

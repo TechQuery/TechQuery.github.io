@@ -1,7 +1,7 @@
 ---
 title: 汉服复兴与民族自信
 date: 2020-11-18 20:13:18
-updated: 2023-06-11 22:37:22
+updated: 2024-5-21 23:32:51
 categories:
   - Other
 tags:
@@ -13,7 +13,7 @@ tags:
 slidehtml: true
 ---
 
-> 2020 年[汉服出行日][1]前夕之闪电演讲
+> 始作于 2020 年[汉服出行日][1]前夕之闪电演讲
 
 [1]: https://www.google.com/search?q=%E6%B1%89%E6%9C%8D%E5%87%BA%E8%A1%8C%E6%97%A5
 
@@ -27,7 +27,23 @@ slidehtml: true
 
 ---
 
+<img style="height: 90vh" src="https://p1-mp.oeeee.com/202402/04/681x1114_65bf05f297f77.jpg" />
+
+---
+
+<img style="height: 90vh" src="https://p1-mp.oeeee.com/202402/04/681x1082_65bf0a270445a.jpg" />
+
+---
+
 ### 成都 —— 汉服之都
+
+---
+
+2019 年：
+
+- 汉服商家数量第一
+- 汉服产品销量第一
+- 汉服产业产值第一
 
 ---
 
@@ -36,6 +52,18 @@ slidehtml: true
 ---
 
 <img style="height: 90vh" src="./rank-brand.jpg" />
+
+---
+
+<img style="height: 90vh" src="./HanFu-ShuJin-0.gif" />
+
+---
+
+<img style="height: 90vh" src="./HanFu-ShuJin-1.jpg" />
+
+---
+
+<img style="height: 90vh" src="./HanFu-ShuJin-2.jpg" />
 
 ---
 
@@ -48,10 +76,12 @@ slidehtml: true
 ---
 
 <iframe
-    style="width: 100%; height: 90vh"
+    style="width: 100%; height: 80vh"
     src="https://www.youtube.com/embed/J8IHCGLKFV8"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
 ></iframe>
+
+（国际互联网视频，需科学上网）
 
 ---
 
@@ -85,27 +115,39 @@ slidehtml: true
 
 ---
 
+### 汉服小姐姐英语回怼无脑黑（上）
+
 <iframe
-    style="width: 100%; height: 90vh"
+    style="width: 100%; height: 70vh"
     src="https://www.youtube.com/embed/Wd6Z2ZOzbOY"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
 ></iframe>
 
+（国际互联网视频，需科学上网）
+
 ---
 
+### 汉服小姐姐英语回怼无脑黑（中）
+
 <iframe
-    style="width: 100%; height: 90vh"
+    style="width: 100%; height: 70vh"
     src="https://www.youtube.com/embed/VdimXc9eX7o"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
 ></iframe>
 
+（国际互联网视频，需科学上网）
+
 ---
 
+### 汉服小姐姐英语回怼无脑黑（下）
+
 <iframe
-    style="width: 100%; height: 90vh"
+    style="width: 100%; height: 70vh"
     src="https://www.youtube.com/embed/9HvIjVFmPME"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
 ></iframe>
+
+（国际互联网视频，需科学上网）
 
 ---
 
@@ -131,7 +173,11 @@ slidehtml: true
 
 ---
 
-## 正装·日常
+## 汉服复兴运动
+
+---
+
+### 正装·日常
 
 ---
 
@@ -144,6 +190,49 @@ slidehtml: true
 2003 年 11 月 22 日（明亡后 359 年）
 
 汉服首次回归日常，并见诸报端
+
+---
+
+### 装束·复原
+
+---
+
+<iframe 
+    style="width: 100%; height: 90vh"
+    scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"
+    src="//player.bilibili.com/player.html?isOutside=true&aid=82013542&bvid=BV13J4117752&cid=140706663&p=1"
+></iframe>
+
+---
+
+### 自知·正名
+
+---
+
+<img
+    style="height: 70vh"
+    src="https://imgcdn.yicai.com/uppics/images/2022/07/2076499c4430ac60b11021b80af494d2.jpg"
+/>
+
+Dior 抄袭马面裙
+
+---
+
+<img
+    style="height: 70vh"
+    src="https://princessdianabookboutique.wordpress.com/wp-content/uploads/2015/02/image626.jpg"
+/>
+
+1981 年英国王妃戴安娜在订婚宴上穿了马面裙
+
+---
+
+<img
+    style="height: 60vh"
+    src="https://princessdianabookboutique.wordpress.com/wp-content/uploads/2015/02/image627.jpg"
+/>
+
+[英文报道清晰说明了它是“Red silk satin Chinese embroidered skirt with chrysanthemum motif”（菊花图案红色丝缎中式绣裙）](https://princessdianabookboutique.wordpress.com/2015/02/23/its-goodbye-to-all-this-diana-on-the-verge-of-engagement-continues/)
 
 ---
 
@@ -166,7 +255,7 @@ slidehtml: true
 <video
     style="width: 100%; height: 90vh"
     controls
-    src="https://f.video.weibocdn.com/o0/aw7EGxPzlx07TgaVtrOE01041200CQtd0E010.mp4?label=mp4_hd&template=852x480.25.0&trans_finger=62b30a3f061b162e421008955c73f536&ori=0&ps=1BThihd3VLAY5R&Expires=1651780298&ssig=zc5FP3e147&KID=unistore,video">
+    src="./YunXiangYiChang.mp4">
 </video>
 
 ---

@@ -45,10 +45,10 @@
     "hexo-server": "^1.0.0"
   },
   "devDependencies": {
-    "husky": "^9.0.11",
+    "husky": "^9.1.3",
     "jsonresume-theme-kendall": "^0.2.0",
-    "lint-staged": "^15.2.2",
-    "prettier": "^3.2.5",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.3",
     "resume-cli": "^3.1.2",
     "yamljs": "^0.3.0"
   },

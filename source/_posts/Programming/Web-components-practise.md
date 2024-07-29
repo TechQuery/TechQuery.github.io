@@ -1,7 +1,7 @@
 ---
 title: Web 组件标准实践
 date: 2019-08-14 22:33:23
-updated: 2021-06-13 19:13:50
+updated: 2024-07-30 03:14:00
 categories:
   - Programming
 tags:
@@ -9,7 +9,6 @@ tags:
   - component
   - WebCell
   - W3C
-
 slidehtml: true
 ---
 
@@ -22,8 +21,8 @@ slidehtml: true
 - Web/JavaScript 全栈开发者
 - WebCell 等多个开源项目的作者
 - jQuery、Babel 等多个国际开源项目的贡献者
-- freeCodeCamp 成都社区负责人
-- 开源社官网开发组长、执委会成员
+- freeCodeCamp 成都社区主理人
+- 开源社理事、项目委员会主席
 - 微软 MVP
 
 ---
@@ -69,9 +68,9 @@ $.fn.myComponent = function (options) {
 ### 近代
 
 ```javascript
-import React from 'react';
+import { Component } from 'react';
 
-export default class MyComponent extends React.Component {
+export class MyComponent extends Component {
   render() {
     return <h1>Hello, World!</h1>;
   }
@@ -185,9 +184,9 @@ customElements.define('my-button', class extends HTMLButtonElement {}, {
 
 ```html
 <my-button>
-  <!-- shadow-root -->
-  <button><slot></slot></button>
-  <!-- shadow-root -->
+  <template shadowrootmode="open">
+    <button><slot></slot></button>
+  </template>
   按钮
 </my-button>
 ```
@@ -199,17 +198,17 @@ customElements.define('my-button', class extends HTMLButtonElement {}, {
 ```html
 <!-- 良 -->
 <my-button>
-  <!-- shadow-root -->
-  <slot></slot>
-  <!-- shadow-root -->
+  <template shadowrootmode="open">
+    <slot></slot>
+  </template>
   <button>按钮</button>
 </my-button>
 
 <!-- 优 -->
 <button is="my-button">
-  <!-- shadow-root -->
-  <slot></slot>
-  <!-- shadow-root -->
+  <template shadowrootmode="open">
+    <slot></slot>
+  </template>
   按钮
 </button>
 ```
@@ -255,7 +254,7 @@ IE 11 +
 ### 声明式组件
 
 <iframe
-    src="https://codesandbox.io/embed/webcell-demo-9gyll?autoresize=1&fontsize=14&hidenavigation=1&module=%2Fsrc%2FClock.tsx&theme=dark"
+    src="https://codesandbox.io/p/devbox/9gyll?embed=1&file=%2Fsrc%2FClock.tsx"
     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
     title="WebCell scaffold"
 ></iframe>
@@ -265,29 +264,25 @@ IE 11 +
 ### 官方适配 MobX
 
 ```javascript
-import { createCell } from 'web-cell';
-import { observer } from 'mobx-web-cell';
+import { observer } from 'web-cell';
 
 import { app } from '../model';
 
-export default observer(function PageIndex() {
-  return <div onClick={app.increase}>count: {app.count}</div>;
-});
+export const PageIndex = observer(() => (
+  <div onClick={app.increase}>count: {app.count}</div>
+));
 ```
 
 ---
 
 ```javascript
-import { createCell, component, mixin } from 'web-cell';
-import { observer } from 'mobx-web-cell';
+import { component, observer } from 'web-cell';
 
 import { app } from '../model';
 
+@component({ tagName: 'page-index' })
 @observer
-@component({
-  tagName: 'page-index'
-})
-export default class PageIndex extends mixin() {
+export class PageIndex extends HTMLElement {
   render() {
     return <div onClick={app.increase}>count: {app.count}</div>;
   }
@@ -303,34 +298,40 @@ export default class PageIndex extends mixin() {
 ---
 
 ```javascript
-import { documentReady, render, createCell, Fragment } from 'web-cell';
-import { History, PageProps, CellRouter } from 'cell-router/source';
+import { DOMRenderer } from 'dom-renderer';
+import { FC } from 'web-cell';
+import { createRouter, PageProps } from 'cell-router';
 
-const history = new History();
+const { Route, Link } = createRouter();
 
-function TestPage({ path, history, defaultSlot, ...data }: PageProps) {
-  return (
-    <ul>
-      <li>Path: {path}</li>
-      <li>Data: {JSON.stringify(data)}</li>
+const TestPage: FC<PageProps> = ({
+    className,
+    style,
+    path,
+    history,
+    ...data
+}) => (
+    <ul {...{ className, style }}>
+        <li>Path: {path}</li>
+        <li>Data: {JSON.stringify(data)}</li>
     </ul>
-  );
-}
+);
 
-documentReady.then(() =>
-  render(
+new DOMRenderer().render(
     <>
-      <nav>
-        <a href="test?a=1">Test</a>
-        <a href="example?b=2">Example</a>
-      </nav>
-      <CellRouter
-        className="router"
-        history={history}
-        routes={[{ paths: ['test', /^example/], component: TestPage }]}
-      />
+        <nav>
+            <Link to="test?a=1">Test</Link>
+            <Link to="example/2">Example</Link>
+        </nav>
+        <main className="router">
+            <Route
+                path=""
+                component={props => <div {...props}>Home Page</div>}
+            />
+            <Route path="test" component={TestPage} />
+            <Route path="example/:id" component={TestPage} />
+        </main>
     </>
-  )
 );
 ```
 
@@ -351,14 +352,16 @@ documentReady.then(() =>
 `source/page/index.ts`
 
 ```javascript
+import { lazy } from 'web-cell';
+
 export default [
   {
-    paths: ['', 'home'],
-    component: async () => (await import('./Home.tsx')).default
+    path: '',
+    component: lazy(() => import('./Home'))
   },
   {
-    paths: ['list'],
-    component: async () => (await import('./List.tsx')).default
+    path: 'list',
+    component: lazy(() => import('./List'))
   }
 ];
 ```
@@ -370,9 +373,9 @@ export default [
 ```bash
 npm init -y
 
-npm install web-cell mobx mobx-web-cell cell-router web-utility boot-cell
+npm i dom-renderer web-cell mobx cell-router web-utility boot-cell
 
-npm install parcel-bundler -D
+npm i parcel -D
 ```
 
 ---
@@ -386,10 +389,10 @@ npm install parcel-bundler -D
 
 ---
 
-### 官方组件库 —— Material Cell
+### 推荐组件库 —— MDUI
 
 <iframe
-    src="https://material.web-cell.dev/"
+    src="https://www.mdui.org/zh-cn/"
     style="width: 100%; height: 35rem"
 ></iframe>
 
@@ -397,11 +400,11 @@ npm install parcel-bundler -D
 
 ### 竞争对手
 
-Google Polymer
+- Google Polymer/Lit
 
-Ionic Stencil
+- Ionic Stencil
 
-Tencent Omi
+- Tencent Omi
 
 ---
 

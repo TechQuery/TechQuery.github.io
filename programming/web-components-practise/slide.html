@@ -1,0 +1,553 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Web 组件标准实践</title>
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.4.1/css/reveal.min.css">
+        
+        <!-- theme -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            var theme ='black';
+            switch (theme){
+                case 'black':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/black.min.css';
+                    break;
+                case 'beige':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/beige.min.css';
+                    break;
+                case 'blood':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/blood.min.css';
+                    break;
+                case 'league':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/league.min.css';
+                    break;
+                case 'moon':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/moon.min.css';
+                    break;
+                case 'night':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/night.min.css';
+                    break;
+                case 'serif':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/serif.min.css';
+                    break;
+                case 'sky':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/sky.min.css';
+                    break;
+                case 'solarized':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/solarized.min.css';
+                    break;
+                case 'white':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/white.min.css';
+                    break;
+                default:
+            }
+            
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.4.1/lib/css/zenburn.min.css">
+        <link href="https://cdn.bootcss.com/reveal.js/3.4.1/css/print/paper.min.css" rel="stylesheet">
+        <!-- Printing and PDF exports -->
+        
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown
+                         data-separator="^\n---\n"
+                         data-separator-vertical="^\n--\n"
+                         data-separator-notes="^Note:">
+                    <script type="text/template">Web 组件标准实践
+
+
+> 水歌 —— WebCell 引擎作者
+
+---
+
+## 水歌其人
+
+- Web/JavaScript 全栈开发者
+- WebCell 等多个开源项目的作者
+- jQuery、Babel 等多个国际开源项目的贡献者
+- freeCodeCamp 成都社区主理人
+- 开源社理事、项目委员会主席
+- 微软 MVP
+
+---
+
+## Web 组件的概念
+
+> 将网页中某块界面的 **HTML 结构**、**CSS 样式**、**JS 逻辑**，封装成一个**可移植的模块**
+
+---
+
+## Web 组件技术简史
+
+---
+
+### 上古时代
+
+- W3C: `<frameset />`、`<iframe />`
+
+- IE: HTML Component (HTC)
+
+---
+
+### 中古时代
+
+```javascript
+function MyComponent(options) {
+  this.options = options;
+}
+
+$.extend(MyComponent.prototype, {
+  method: function () {}
+});
+
+$.fn.myComponent = function (options) {
+  this.each(function () {
+    $.data(this, 'instance', new MyComponent(options));
+  });
+};
+```
+
+---
+
+### 近代
+
+```javascript
+import { Component } from 'react';
+
+export class MyComponent extends Component {
+  render() {
+    return <h1>Hello, World!</h1>;
+  }
+}
+```
+
+---
+
+### 历史问题
+
+- **隔离性**好的，**运行时**过重
+
+- **易用性**好的，**工程化**不佳
+
+- **实用性**强的，**工具链**过重
+
+---
+
+## Web 组件标准
+
+https://www.webcomponents.org/
+
+---
+
+### 标准集
+
+- HTML 5.3
+- DOM 4.1
+- CSS Variables level 1
+- ECMAScript 6+
+
+---
+
+### 主要目标
+
+- 运行时 轻量级 隔离环境
+
+- 框架无关的 DOM 接口
+
+---
+
+### 原生写法
+
+<iframe
+    height="600" style="width: 100%"
+    frameborder="no" scrolling="no" allowtransparency="true" allowfullscreen="true"
+    src="https://codepen.io/tech_query/embed/jONqOzj/?height=600&theme-id=31315&default-tab=html,result"
+>
+</iframe>
+
+---
+
+#### 样式定制
+
+```css
+my-component {
+  --my-color: blue;
+}
+```
+
+```css
+:host {
+}
+:host(.class) {
+}
+:host-context(.class) {
+}
+
+::slotted(*) {
+  color: var(--my-color);
+}
+```
+
+---
+
+#### 生命周期
+
+```javascript
+class MyComponent extends HTMLElement {
+  static get observedAttributes() {
+    return ['title'];
+  }
+  attributeChangedCallback(attrName, oldVal, newVal) {}
+
+  connectedCallback() {}
+  disconnectedCallback() {}
+
+  adoptedCallback() {}
+}
+```
+
+---
+
+#### 扩展原生
+
+```javascript
+customElements.define('my-button', class extends HTMLButtonElement {}, {
+  extends: 'button'
+});
+```
+
+```html
+<button is="my-button">按钮</button>
+```
+
+---
+
+### 规范模式
+
+#### 不要接管一切
+
+```html
+<my-button>
+  <template shadowrootmode="open">
+    <button><slot></slot></button>
+  </template>
+  按钮
+</my-button>
+```
+
+---
+
+#### 渐进增强，优雅降级
+
+```html
+<!-- 良 -->
+<my-button>
+  <template shadowrootmode="open">
+    <slot></slot>
+  </template>
+  <button>按钮</button>
+</my-button>
+
+<!-- 优 -->
+<button is="my-button">
+  <template shadowrootmode="open">
+    <slot></slot>
+  </template>
+  按钮
+</button>
+```
+
+---
+
+### 兼容性
+
+#### 原生
+
+- https://caniuse.com/#feat=custom-elementsv1
+
+- https://caniuse.com/#feat=shadowdomv1
+
+- https://caniuse.com/#feat=css-variables
+
+- https://caniuse.com/#feat=es6-class
+
+#### polyfill
+
+IE 11 +
+
+---
+
+### 工程问题
+
+- 数据绑定
+
+- 资源打包
+
+- 路由定义
+
+- 状态管理
+
+---
+
+## WebCell
+
+> 优雅、轻量的 Web 组件引擎
+
+---
+
+### 声明式组件
+
+<iframe
+    src="https://codesandbox.io/p/devbox/9gyll?embed=1&file=%2Fsrc%2FClock.tsx"
+    style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+    title="WebCell scaffold"
+></iframe>
+
+---
+
+### 官方适配 MobX
+
+```javascript
+import { observer } from 'web-cell';
+
+import { app } from '../model';
+
+export const PageIndex = observer(() => (
+  <div onClick={app.increase}>count: {app.count}</div>
+));
+```
+
+---
+
+```javascript
+import { component, observer } from 'web-cell';
+
+import { app } from '../model';
+
+@component({ tagName: 'page-index' })
+@observer
+export class PageIndex extends HTMLElement {
+  render() {
+    return <div onClick={app.increase}>count: {app.count}</div>;
+  }
+}
+```
+
+---
+
+### 极简路由 —— Cell Router
+
+> 路径即状态，容器即组件
+
+---
+
+```javascript
+import { DOMRenderer } from 'dom-renderer';
+import { FC } from 'web-cell';
+import { createRouter, PageProps } from 'cell-router';
+
+const { Route, Link } = createRouter();
+
+const TestPage: FC<PageProps> = ({
+    className,
+    style,
+    path,
+    history,
+    ...data
+}) => (
+    <ul {...{ className, style }}>
+        <li>Path: {path}</li>
+        <li>Data: {JSON.stringify(data)}</li>
+    </ul>
+);
+
+new DOMRenderer().render(
+    <>
+        <nav>
+            <Link to="test?a=1">Test</Link>
+            <Link to="example/2">Example</Link>
+        </nav>
+        <main className="router">
+            <Route
+                path=""
+                component={props => <div {...props}>Home Page</div>}
+            />
+            <Route path="test" component={TestPage} />
+            <Route path="example/:id" component={TestPage} />
+        </main>
+    </>
+);
+```
+
+---
+
+#### 异步加载页面
+
+`tsconfig.json`
+
+```json
+{
+  "compilerOptions": {
+    "module": "ESNext"
+  }
+}
+```
+
+`source/page/index.ts`
+
+```javascript
+import { lazy } from 'web-cell';
+
+export default [
+  {
+    path: '',
+    component: lazy(() => import('./Home'))
+  },
+  {
+    path: 'list',
+    component: lazy(() => import('./List'))
+  }
+];
+```
+
+---
+
+### 开箱即用
+
+```bash
+npm init -y
+
+npm i dom-renderer web-cell mobx cell-router web-utility boot-cell
+
+npm i parcel -D
+```
+
+---
+
+### 官方组件库 —— BootCell
+
+<iframe
+    src="https://bootstrap.web-cell.dev/"
+    style="width: 100%; height: 35rem"
+></iframe>
+
+---
+
+### 推荐组件库 —— MDUI
+
+<iframe
+    src="https://www.mdui.org/zh-cn/"
+    style="width: 100%; height: 35rem"
+></iframe>
+
+---
+
+### 竞争对手
+
+- Google Polymer/Lit
+
+- Ionic Stencil
+
+- Tencent Omi
+
+---
+
+![](/image/WebCell-1.png)
+
+https://web-cell.dev/
+</script>
+                </section>
+            </div>
+        </div>
+
+        <script src="https://cdn.bootcss.com/reveal.js/3.4.1/lib/js/head.min.js"></script>
+        <script src="https://cdn.bootcss.com/reveal.js/3.4.1/js/reveal.min.js"></script>
+
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
+                // 是否在右下角展示控制条
+                controls: true,
+                // 是否显示演示的进度条
+                progress: true,
+                // 是否显示当前幻灯片的页数编号，也可以使用代码 “slideNumber: 'c/t'” ，表示当前页/总页数。
+                slideNumber: false,
+                // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+                history: false,
+                // 是否启用键盘快捷键来导航
+                keyboard: true,
+                // 是否启用幻灯片的概览模式，可使用 "Esc" 或 "o" 键来切换概览模式
+                overview: true,
+                // 是否将幻灯片垂直居中
+                center: true,
+                // 是否在触屏设备上启用触摸滑动切换
+                touch: true,
+                // 是否循环演示
+                loop: false,
+                // 是否将演示的方向变成 RTL，即从右往左
+                rtl: false,
+                // 是否每次演示的时候，随机幻灯片的顺序
+                shuffle: false,
+                // 全局开启和关闭碎片。
+                fragments: true,
+                // 标识演示文稿是否在嵌入模式中运行，即包含在屏幕的有限部分中的
+                embedded: false,
+                // 标识当问号键被点击的时候是否应该显示一个帮助的覆盖层
+                help: true,
+                // 标识演讲者备注标志是否让所有观看者可见
+                showNotes: false,
+                // 两个幻灯片之间自动切换的时间间隔（毫秒）
+                // 当设置成 0 的时候则禁止自动切换
+                // 该值可以被幻灯片上的 “data-autoslide” 属性覆盖
+                autoSlide: 0,
+                // 当遇到用户输入的时候停止自动切换
+                autoSlideStoppable: true,
+                // 当自动滑动时，使用此方法进行导航。
+                autoSlideMethod: Reveal.navigateNext,
+                // 是否启用通过鼠标滚轮来导航幻灯片
+                mouseWheel: false,
+                // 是否在移动设备上隐藏地址栏
+                hideAddressBar: true,
+                // 是否在一个弹出的 iframe 中打开幻灯片中的链接
+                previewLinks: false,
+                // 切换过渡效果
+                transition: 'none', // none/fade/slide/convex/concave/zoom
+                // 过渡速度
+                transitionSpeed: 'default', // default/fast/slow
+                // 全屏幻灯片背景的过渡效果
+                backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+                // 加载除当前可见的幻灯片之外的幻灯片数量
+                viewDistance: 3,
+                // 视差背景图片
+                parallaxBackgroundImage: '',
+                // e.g. 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'
+                // 视差背景尺寸
+                parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+                // 移动视差背景（水平和垂直）滑动变化的数量, 例如 100
+                // - 除了指定自动计算
+                // - 设置为 0 时，禁止沿轴运动
+                parallaxBackgroundHorizontal: null,
+                parallaxBackgroundVertical: null,
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.4.1/plugin/markdown/marked.js' },
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.4.1/plugin/markdown/markdown.min.js' },
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.4.1/plugin/notes/notes.min.js', async: true },
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.4.1/plugin/highlight/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+</html>

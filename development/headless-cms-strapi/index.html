@@ -1,0 +1,932 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="内容型网站后端一把梭, TechQuery website Web JavaScript full-stack developer development coder programmer">
+    <meta name="description" content="Web 全栈工程师经常遇到一些内容型网站的开发需求，比如个人博客、机构官网、新闻门户。这些虽是 Web 1.0、2.0 时代就烂大街的典型 Web-site，但面对不同的甲方，看似雷同的需求往往又有各种细节的定制化。
+虽然 WordPres">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>内容型网站后端一把梭 | TechQuery</title>
+    <link rel="icon" type="image/png" href="/image/WebCell-2.png">
+
+    <link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css">
+    <link rel="stylesheet" href="/css/matery.css">
+    <link rel="stylesheet" href="/css/my.css">
+
+    <script src="https://lib.baomitu.com/jquery/2.2.4/jquery.min.js"></script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2017157453269189",
+        enable_page_level_ads: true
+    });
+    </script>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="TechQuery" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css"></head>
+
+</head>
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="container">
+            <div class="nav-wrapper">
+                <div class="brand-logo">
+                    <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/image/WebCell-0.png" class="logo-img hide-on-small-only">
+                        
+                        <span class="logo-span">TechQuery</span>
+                    </a>
+                </div>
+                <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>Tags</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>Categories</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>Archives</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/projects" class="waves-effect waves-light">
+            
+            <i class="fa fa-code-fork"></i>
+            
+            <span>Projects</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-slideshare"></i>
+            
+            <span>Lecture</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-code"></i>
+            
+            <span>Snippet</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-quora"></i>
+            
+            <span>Q & A</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>About</span>
+        </a>
+    </li>
+    
+    <li>
+        <a id="toggleSearch" class="waves-effect waves-light">
+            <i id="searchIcon" class="mdi-action-search"></i>
+        </a>
+    </li>
+
+</ul>
+
+<div class="side-nav" id="mobile-nav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/image/WebCell-0.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">TechQuery</div>
+        <div class="logo-desc">
+            
+            TechQuery, a Web &amp; JavaScript full-stack developer
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                Tags
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                Categories
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                Archives
+            </a>
+        </li>
+        
+        <li>
+            <a href="/projects" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code-fork"></i>
+                
+                Projects
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-slideshare"></i>
+                
+                Lecture
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code"></i>
+                
+                Snippet
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-quora"></i>
+                
+                Q &amp; A
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                About
+            </a>
+        </li>
+        
+        
+    </ul>
+
+    <div class="social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+</div>
+
+            </div>
+        </div>
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        内容型网站后端一把梭
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1,
+    #articleContent h2,
+    #articleContent h3,
+    #articleContent h4,
+    #articleContent h5,
+    #articleContent h6 {
+        padding-top: 76px;
+        margin-top: -76px;
+    }
+
+    #articleContent h1 {
+        line-height: 3.5rem;
+    }
+
+    #articleContent h2 {
+        line-height: 3.2rem;
+    }
+
+    #articleContent h3 {
+        line-height: 2.8rem;
+    }
+
+    #articleContent h4 {
+        line-height: 2.5rem;
+    }
+
+    #articleContent h5 {
+        line-height: 2.2rem;
+    }
+
+    #articleContent h6 {
+        line-height: 1.9rem;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            
+            <div class="article-tag">
+                
+                <a href="/tags/API/" target="_blank">
+                    <span class="chip bg-color">API</span>
+                </a>
+                
+                <a href="/tags/CMS/" target="_blank">
+                    <span class="chip bg-color">CMS</span>
+                </a>
+                
+                <a href="/tags/Node-js/" target="_blank">
+                    <span class="chip bg-color">Node.js</span>
+                </a>
+                
+            </div>
+            
+            <div class="post-info">
+                
+                <span class="post-cate">
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/Development/" class="post-category" target="_blank">
+                        Development
+                    </a>
+                    
+                </span>
+                
+
+                <span class="post-date">
+                    <i class="fa fa-clock-o fa-fw"></i>2020-04-09
+                </span>
+            </div>
+        </div>
+        <hr>
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p><strong>Web 全栈工程师</strong>经常遇到一些<strong>内容型网站</strong>的开发需求，比如个人博客、机构官网、新闻门户。这些虽是 Web 1.0、2.0 时代就烂大街的典型 Web-site，但面对不同的甲方，看似雷同的需求往往又有各种细节的定制化。</p>
+<p>虽然 WordPress、Discuz!X 等<strong>建站系统</strong>早已非常成熟，但在人们更看重 UI/UX 设计的今天，它们专用的<strong>模板引擎</strong>反而成了二次开发最大的障碍。只要是近两年做过 <strong>Web 前端开发</strong>的同学就知道，不能利用<strong>基于 Node.js 的现代化工具链</strong>的项目，开发起来有多蛋疼。</p>
+<p><strong>Web 前后端分离</strong>催生了 Web 前端岗位，也让 <a href="https://wordpress.org/" target="_blank" rel="noopener">WordPress</a>、<a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a> 这些老牌 CMS 系统开放了 <strong>RESTful API</strong>。但有的开源项目做得更加激进 —— <a href="https://github.com/search?q=Headless+CMS&ref=opensearch" target="_blank" rel="noopener">Headless CMS</a>，前台界面都省了，只有<strong>后端 API</strong> 和<strong>后台界面</strong>，普通用户看啥你们自己写~</p>
+<p>这其中最为优秀的便是 <a href="https://strapi.io/" target="_blank" rel="noopener">Strapi</a>，因为它的后台设计不局限于传统的博客、门户，而是：</p>
+<ol>
+<li><strong>数据模型</strong>灵活可配置（可用 Git 管理 JSON 配置文件）</li>
+<li>RESTful API 完全支持 <strong>CRUD</strong>（增删查改）和 <strong>RBAC</strong>（角色权限）</li>
+<li>自身是个标准的 <strong>Node.js 后端项目</strong>，并有留有二次开发接口</li>
+<li>包括 <a href="https://swagger.io/" target="_blank" rel="noopener">Swagger</a> Documentation 在内的插件生态</li>
+</ol>
+<p>这使得它既像 BaaS 中的 <a href="https://leancloud.cn/" target="_blank" rel="noopener">LeanCloud</a>，又像 Python 开发框架 <a href="https://www.djangoproject.com/" target="_blank" rel="noopener">Django</a>，在<strong>简单易用</strong>的同时，又不束缚专业开发者。</p>
+<img src="/development/headless-cms-strapi/Strapi-admin.png" class="">
+
+<h2 id="本地开发"><a href="#本地开发" class="headerlink" title="本地开发"></a>本地开发</h2><h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><p>以下命令会一键<strong>创建项目骨架</strong>、<strong>安装依赖包</strong>、<strong>启动开发模式</strong>：</p>
+<pre class=" language-shell"><code class="language-shell">npm init strapi-app ~/my-project --quickstart
+</code></pre>
+<h3 id="开发模式启动"><a href="#开发模式启动" class="headerlink" title="开发模式启动"></a>开发模式启动</h3><p>下次继续开发时，则执行以下命令：</p>
+<pre class=" language-shell"><code class="language-shell">cd ~/my-project
+npm run develop
+</code></pre>
+<p>如果执行 <code>npm start</code>，启动的后台系统只能添加数据，不能修改数据结构，是<strong>线上生产</strong>模式。</p>
+<h3 id="创建代码库"><a href="#创建代码库" class="headerlink" title="创建代码库"></a>创建代码库</h3><p><a href="https://github.com/new" target="_blank" rel="noopener">在 GitHub 上创建代码库</a>后，把生成的代码传上去：</p>
+<pre class=" language-shell"><code class="language-shell">git init
+git remote add origin https://github.com/my-id/my-project.git
+git add .
+git commit -m "[add] Strapi framework"
+git push
+</code></pre>
+<h2 id="服务器部署"><a href="#服务器部署" class="headerlink" title="服务器部署"></a>服务器部署</h2><p>下面以 Linux (Ubuntu 20.04) 为例，简介线上部署。</p>
+<h3 id="安装容器环境"><a href="#安装容器环境" class="headerlink" title="安装容器环境"></a>安装容器环境</h3><pre class=" language-shell"><code class="language-shell"># 更新包管理器数据库
+apt update
+# 安装 Python PIP
+apt install python-pip
+# 安装 Docker
+curl -fsSL https://get.docker.com | sh
+# 安装 Docker Compose
+pip install docker-compose
+</code></pre>
+<h3 id="初始化-Git"><a href="#初始化-Git" class="headerlink" title="初始化 Git"></a>初始化 Git</h3><p>为了后面<strong>自动化部署</strong>的方便，需要生成好 <strong>SSH 密钥对</strong>：</p>
+<pre class=" language-shell"><code class="language-shell"># 生成 SSH Key
+ssh-keygen -t rsa -b 4096 -C "my_email@example.com"
+# 启动 SSH 后台服务
+eval `ssh-agent -s`
+
+cd ~/.ssh
+# 添加 SSH Key 私钥
+ssh-add id_rsa
+# 信任 SSH Key 公钥
+cat id_rsa.pub > authorized_keys
+</code></pre>
+<h3 id="部署配置文件"><a href="#部署配置文件" class="headerlink" title="部署配置文件"></a>部署配置文件</h3><p>将以下两个文件放在代码库相应路径中，并提交：</p>
+<h4 id="Docker-服务编排"><a href="#Docker-服务编排" class="headerlink" title="Docker 服务编排"></a>Docker 服务编排</h4><p><code>~/my-project/docker-compose.yml</code></p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3'</span>
+
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">strapi</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> strapi/strapi
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> ./<span class="token punctuation">:</span>/srv/app
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">'1337:1337'</span>
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> NODE_ENV=production
+</code></pre>
+<p>以上配置的是最简单的 <a href="https://www.sqlite.org/" target="_blank" rel="noopener">SQLite</a> 数据库，小型网站完全足够。</p>
+<h4 id="GitHub-Actions-持续部署"><a href="#GitHub-Actions-持续部署" class="headerlink" title="GitHub Actions 持续部署"></a>GitHub Actions 持续部署</h4><p>以下配置让我们无需每次更新 Strapi 配置、代码时，登录服务器手动部署新版本：</p>
+<p><code>~/my-project/.github/workflows/main.yml</code></p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy Server
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">push</span><span class="token punctuation">:</span>
+    <span class="token key atrule">branches</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> master
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">SSH</span><span class="token punctuation">:</span>
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Checkout
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@master
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Clean
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          rm -rf .git/ .gitignore .github/ .editorconfig .eslint*</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Transport
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> garygrossgarten/github<span class="token punctuation">-</span>action<span class="token punctuation">-</span>scp@release
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">local</span><span class="token punctuation">:</span> ./
+          <span class="token key atrule">remote</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.PATH <span class="token punctuation">}</span><span class="token punctuation">}</span>
+          <span class="token key atrule">host</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.HOST <span class="token punctuation">}</span><span class="token punctuation">}</span>
+          <span class="token key atrule">username</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.USER <span class="token punctuation">}</span><span class="token punctuation">}</span>
+          <span class="token key atrule">privateKey</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.SSH_KEY <span class="token punctuation">}</span><span class="token punctuation">}</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> garygrossgarten/github<span class="token punctuation">-</span>action<span class="token punctuation">-</span>ssh@release
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">host</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.HOST <span class="token punctuation">}</span><span class="token punctuation">}</span>
+          <span class="token key atrule">username</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.USER <span class="token punctuation">}</span><span class="token punctuation">}</span>
+          <span class="token key atrule">privateKey</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.SSH_KEY <span class="token punctuation">}</span><span class="token punctuation">}</span>
+          <span class="token key atrule">command</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+            cd ${{ secrets.PATH }}
+            echo BASE_URL=${{ secrets.BASE_URL }} > .env
+            docker-compose down
+            docker-compose up -d</span>
+</code></pre>
+<p>【注意】在推送代码前，务必去 <code>https://github.com/my-id/my-project/settings/secrets</code> 页面创建好上述配置中的变量：</p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>PATH</code></td>
+<td align="center">服务器<strong>代码目录</strong></td>
+</tr>
+<tr>
+<td align="center"><code>HOST</code></td>
+<td align="center">服务器 <strong>IP 地址</strong>或<strong>域名</strong></td>
+</tr>
+<tr>
+<td align="center"><code>USER</code></td>
+<td align="center">服务器<strong>用户名</strong></td>
+</tr>
+<tr>
+<td align="center"><code>SSH_KEY</code></td>
+<td align="center"><code>ssh-keygen</code> 命令生成的<strong>私钥</strong>，通常存在 <code>~/.ssh/id_rsa</code></td>
+</tr>
+<tr>
+<td align="center"><code>BASE_URL</code></td>
+<td align="center">服务器 HTTP 访问根地址</td>
+</tr>
+</tbody></table>
+<h3 id="HTTPS-一键搞定"><a href="#HTTPS-一键搞定" class="headerlink" title="HTTPS 一键搞定"></a>HTTPS 一键搞定</h3><p>网站上线时，<strong>服务器配置 HTTPS</strong> 一直是非常难搞的事 ——</p>
+<ul>
+<li><a href="https://www.cloudflare.com/" target="_blank" rel="noopener">CloudFlare</a> 域名服务虽自带<strong>免费 HTTPS 证书</strong>，但<em>墙内速度</em>一直堪忧</li>
+<li>Nginx 虽有 <a href="https://github.com/nginx-proxy/nginx-proxy" target="_blank" rel="noopener">Docker 打包的反向代理方案</a>，但配置还是容易出错</li>
+</ul>
+<p>幸得网友推荐一神器 —— <a href="https://caddyserver.com/" target="_blank" rel="noopener">Caddy</a>，老子又可以<strong>一把梭</strong>了！</p>
+<h4 id="安装-Caddy"><a href="#安装-Caddy" class="headerlink" title="安装 Caddy"></a>安装 Caddy</h4><pre class=" language-shell"><code class="language-shell">echo "deb [trusted=yes] https://apt.fury.io/caddy/ /" \
+    | sudo tee -a /etc/apt/sources.list.d/caddy-fury.list
+sudo apt update
+sudo apt install caddy
+</code></pre>
+<h4 id="启用-Caddy"><a href="#启用-Caddy" class="headerlink" title="启用 Caddy"></a>启用 Caddy</h4><p>只要映射好<strong>域名 A 记录</strong>，官网上的一条示例命令就能<strong>自动申请证书并配置好</strong>，<code>80</code>、<code>443</code> 端口即刻可用：</p>
+<pre class=" language-shell"><code class="language-shell">caddy reverse-proxy --from example.com --to localhost:1337
+</code></pre>
+<p>当然，日常使用肯定得扔后台了：</p>
+<pre class=" language-shell"><code class="language-shell">sudo -i
+nohup caddy reverse-proxy --from example.com --to localhost:1337 > /tmp/caddy.log 2>&1 &
+</code></pre>
+<h2 id="扩展插件"><a href="#扩展插件" class="headerlink" title="扩展插件"></a>扩展插件</h2><p>推荐一些日常项目中常用的<strong>扩展设置</strong>、<strong>外部插件</strong>，让 Strapi 用起来更爽：</p>
+<ul>
+<li><a href="https://strapi.io/documentation/v3.x/plugins/users-permissions.html#providers" target="_blank" rel="noopener">OAuth 登录</a></li>
+<li>文件上传<ul>
+<li><a href="https://github.com/jakeFeldman/strapi-provider-upload-azure-storage" target="_blank" rel="noopener">微软 Azure Storage</a></li>
+<li><a href="https://github.com/hezzze/strapi-provider-upload-oss" target="_blank" rel="noopener">阿里云 OSS</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/TechQuery/strapi-plugin-ckeditor" target="_blank" rel="noopener">富文本编辑器</a></li>
+<li><a href="https://www.npmjs.com/package/strapi-plugin-documentation" target="_blank" rel="noopener">API 文档生成</a></li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>经过前面的一顿折腾，<strong>开发者</strong>只需在本机浏览器中点点鼠标、轻敲键盘，就能实现<strong>网站数据结构</strong>的设计；推送代码到 GitHub，就能实现网站后台的更新。而<strong>运营专员</strong>访问的线上后台锁定了数据结构，他们只能在现有数据表中添加具体数据。这样一来，面对单纯的数据存取，<strong>后端 API</strong> 和<strong>后台 UI</strong> 都不用开发了~</p>
+<p>最后，推荐一些后续学习资料：</p>
+<ul>
+<li><a href="https://strapi.io/blog/release-beta-18-dynamic-zones" target="_blank" rel="noopener">Strapi 后台操作视频</a></li>
+<li><a href="https://github.com/kaiyuanshe/OrgServer" target="_blank" rel="noopener">「组织管理系统」项目脚手架</a></li>
+<li><a href="https://github.com/EasyWebApp/MobX-Strapi" target="_blank" rel="noopener">Strapi 的 MobX SDK</a></li>
+</ul>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ol>
+<li><a href="https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank" rel="noopener">https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</a></li>
+<li><a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script" target="_blank" rel="noopener">https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script</a></li>
+<li><a href="https://yq.aliyun.com/articles/514624" target="_blank" rel="noopener">https://yq.aliyun.com/articles/514624</a></li>
+<li><a href="https://strapi.io/documentation/v3.x/installation/docker.html" target="_blank" rel="noopener">https://strapi.io/documentation/v3.x/installation/docker.html</a></li>
+<li><a href="https://cgo.gitbook.io/my-it-blog/linux-1/caddy-de-xia-zai-an-zhuang-pei-zhi-qi-dong" target="_blank" rel="noopener">https://cgo.gitbook.io/my-it-blog/linux-1/caddy-de-xia-zai-an-zhuang-pei-zhi-qi-dong</a></li>
+</ol>
+
+            </div>
+            <hr/>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">转载请注明: </span>
+                    <a href="https://tech-query.me" class="b-link-green">TechQuery</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/development/headless-cms-strapi/" class="b-link-green">内容型网站后端一把梭</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+    
+        <div class="disqus-card card" data-aos="fade-up">
+    <div id="disqus_thread" class="card-content">
+        <noscript>Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
+        </noscript>
+    </div>
+</div>
+
+<script type="text/javascript">
+    disqus_config = function () {
+        this.page.url = 'https://tech-query.me/development/headless-cms-strapi/';
+        this.page.identifier = '/development/headless-cms-strapi/';
+        this.page.title = '内容型网站后端一把梭';
+    };
+    let disqus_shortname = 'tech-query';
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+        let d = document, s = d.createElement('script');
+        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="card">
+                <a href="/development/truth-of-pixel-level-restoration/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Web 前端“像素级还原”的真相">
+                        
+                        <span class="card-title">Web 前端“像素级还原”的真相</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">
+freeCodeCamp 中文社区
+首次直播分享会
+
+
+互联网公司“金句”
+
+这个很简单，技术我不懂，明天我就要！
+—— 产品经理
+
+
+
+前端应该“像素级还原”设计图！
+—— UI 设计师
+
+
+Web 前端开发的真相
+几乎不用“像素”这个</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-22
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Development/" class="post-category" target="_blank">
+                                    Development
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Web/" target="_blank">
+                        <span class="chip bg-color">Web</span>
+                    </a>
+                    
+                    <a href="/tags/GUI/" target="_blank">
+                        <span class="chip bg-color">GUI</span>
+                    </a>
+                    
+                    <a href="/tags/design/" target="_blank">
+                        <span class="chip bg-color">design</span>
+                    </a>
+                    
+                    <a href="/tags/front-end/" target="_blank">
+                        <span class="chip bg-color">front-end</span>
+                    </a>
+                    
+                    <a href="/tags/CSS/" target="_blank">
+                        <span class="chip bg-color">CSS</span>
+                    </a>
+                    
+                    <a href="/tags/layout/" target="_blank">
+                        <span class="chip bg-color">layout</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="card">
+                <a href="/community/group-chat-for-techies/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="安徒生童话：技术人的群聊">
+                        
+                        <span class="card-title">安徒生童话：技术人的群聊</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">加过技术群的同学想必听过一句话 ——
+
+技术人不谈政治~
+
+不少群公告还直接明文规定 ——
+
+不要讨论敏感话题！
+
+最初我以为，大家真的不喜欢探讨政治，直到最近我所在的 FCC 成都社区遭受一次网络暴力……
+事件原文前两天我的一篇技术博文被</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-04-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Community/" class="post-category" target="_blank">
+                                    Community
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/politics/" target="_blank">
+                        <span class="chip bg-color">politics</span>
+                    </a>
+                    
+                    <a href="/tags/common-sense/" target="_blank">
+                        <span class="chip bg-color">common-sense</span>
+                    </a>
+                    
+                    <a href="/tags/COVID-19/" target="_blank">
+                        <span class="chip bg-color">COVID-19</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title">目录</div>
+            <div id="toc-content">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由 &copy;<a href="https://tech-query.me/" target="_blank">TechQuery</a>
+            基于 <a href="https://hexo.io/" target="_blank">Hexo</a> 
+            采用<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">
+                hexo-theme-matery
+            </a>的主题搭建.
+        </div>
+        <div class="col s12 m4 l4 social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title">搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input" autofocus="">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="https://lib.baomitu.com/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="https://lib.baomitu.com/masonry/4.2.2/masonry.pkgd.min.js"></script>
+<script src="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.js"></script>
+<script src="https://lib.baomitu.com/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+<script src="https://lib.baomitu.com/lightgallery/1.6.11/js/lightgallery-all.min.js"></script>
+
+<script src="/libs/others/clicklove.js"></script>
+
+<script src="/js/matery.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132866291-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-132866291-1');
+</script>
+
+
+<span id="cnzz_stat_icon_1275855156" hidden></span>
+<script src="//s23.cnzz.com/z_stat.php?id=1275855156&amp;online=1&amp;show=line"></script>
+</body>
+</html>

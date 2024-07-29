@@ -1,0 +1,813 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="【浏览器小工具】墙内 Google 划词搜索, TechQuery website Web JavaScript full-stack developer development coder programmer">
+    <meta name="description" content="天朝习大大继位之后，政坛、社会暗流更加汹涌，各路高官皆有落马者…… 好在江山依然稳固，彭阿姨依然美丽，但我大谷歌却牺牲更大，义务封口近一岁，重放新声遥无期……
+好在我朝素不缺侠肝义胆之士，树立数个海外镜像来招魂，其魂最真者 —— 某 V2E">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>【浏览器小工具】墙内 Google 划词搜索 | TechQuery</title>
+    <link rel="icon" type="image/png" href="/image/WebCell-2.png">
+
+    <link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css">
+    <link rel="stylesheet" href="/css/matery.css">
+    <link rel="stylesheet" href="/css/my.css">
+
+    <script src="https://lib.baomitu.com/jquery/2.2.4/jquery.min.js"></script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2017157453269189",
+        enable_page_level_ads: true
+    });
+    </script>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="TechQuery" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css"></head>
+
+</head>
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="container">
+            <div class="nav-wrapper">
+                <div class="brand-logo">
+                    <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/image/WebCell-0.png" class="logo-img hide-on-small-only">
+                        
+                        <span class="logo-span">TechQuery</span>
+                    </a>
+                </div>
+                <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>Tags</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>Categories</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>Archives</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/projects" class="waves-effect waves-light">
+            
+            <i class="fa fa-code-fork"></i>
+            
+            <span>Projects</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-slideshare"></i>
+            
+            <span>Lecture</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-code"></i>
+            
+            <span>Snippet</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-quora"></i>
+            
+            <span>Q & A</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>About</span>
+        </a>
+    </li>
+    
+    <li>
+        <a id="toggleSearch" class="waves-effect waves-light">
+            <i id="searchIcon" class="mdi-action-search"></i>
+        </a>
+    </li>
+
+</ul>
+
+<div class="side-nav" id="mobile-nav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/image/WebCell-0.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">TechQuery</div>
+        <div class="logo-desc">
+            
+            TechQuery, a Web &amp; JavaScript full-stack developer
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                Tags
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                Categories
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                Archives
+            </a>
+        </li>
+        
+        <li>
+            <a href="/projects" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code-fork"></i>
+                
+                Projects
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-slideshare"></i>
+                
+                Lecture
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code"></i>
+                
+                Snippet
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-quora"></i>
+                
+                Q &amp; A
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                About
+            </a>
+        </li>
+        
+        
+    </ul>
+
+    <div class="social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+</div>
+
+            </div>
+        </div>
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        【浏览器小工具】墙内 Google 划词搜索
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1,
+    #articleContent h2,
+    #articleContent h3,
+    #articleContent h4,
+    #articleContent h5,
+    #articleContent h6 {
+        padding-top: 76px;
+        margin-top: -76px;
+    }
+
+    #articleContent h1 {
+        line-height: 3.5rem;
+    }
+
+    #articleContent h2 {
+        line-height: 3.2rem;
+    }
+
+    #articleContent h3 {
+        line-height: 2.8rem;
+    }
+
+    #articleContent h4 {
+        line-height: 2.5rem;
+    }
+
+    #articleContent h5 {
+        line-height: 2.2rem;
+    }
+
+    #articleContent h6 {
+        line-height: 1.9rem;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            
+            <div class="article-tag">
+                
+                <a href="/tags/Google/" target="_blank">
+                    <span class="chip bg-color">Google</span>
+                </a>
+                
+                <a href="/tags/browser/" target="_blank">
+                    <span class="chip bg-color">browser</span>
+                </a>
+                
+                <a href="/tags/bookmark/" target="_blank">
+                    <span class="chip bg-color">bookmark</span>
+                </a>
+                
+                <a href="/tags/toolkit/" target="_blank">
+                    <span class="chip bg-color">toolkit</span>
+                </a>
+                
+            </div>
+            
+            <div class="post-info">
+                
+                <span class="post-cate">
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/Programming/" class="post-category" target="_blank">
+                        Programming
+                    </a>
+                    
+                </span>
+                
+
+                <span class="post-date">
+                    <i class="fa fa-clock-o fa-fw"></i>2014-11-25
+                </span>
+            </div>
+        </div>
+        <hr>
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>天朝<strong>习大大</strong>继位之后，政坛、社会暗流更加汹涌，各路高官皆有落马者…… <strong>好在江山依然稳固，彭阿姨依然美丽</strong>，但我<strong>大谷歌</strong>却牺牲更大，义务封口近一岁，重放新声遥无期……</p>
+<p>好在我朝素不缺<strong>侠肝义胆之士</strong>，树立数个<strong>海外镜像</strong>来招魂，其魂最真者 —— <a href="http://www.v2ex.com/t/126018" target="_blank" rel="noopener">某 <strong>V2EX</strong> 大神的一声<strong>天问</strong> —— 路在何方！~</a></p>
+<p>鄙人不才，仅能<strong>低调地传承侠客的义举</strong> —— 把大神的招魂镜像封装在<a href="http://bbs.fyscu.com/forum.php?mod=viewthread&tid=3677" target="_blank" rel="noopener">我之前做的一个 Bookmarklet</a> 中，并再次优化，方便大家使用 ——</p>
+<h2 id="安装用代码"><a href="#安装用代码" class="headerlink" title="安装用代码"></a>安装用代码</h2><!-- prettier-ignore-start -->
+<pre class=" language-javascript"><code class="language-javascript">javascript<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>BOM<span class="token punctuation">,</span>DOM<span class="token punctuation">,</span>SL<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">function</span> <span class="token function">iRegExp</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> c<span class="token operator">=</span><span class="token regex">/ /</span><span class="token punctuation">;</span><span class="token keyword">return</span> c<span class="token punctuation">.</span><span class="token function">compile</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">,</span>c<span class="token punctuation">}</span><span class="token keyword">var</span> trim<span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> a<span class="token operator">=</span><span class="token function">iRegExp</span><span class="token punctuation">(</span><span class="token string">"(^s*)|(s*$)"</span><span class="token punctuation">,</span><span class="token string">"g"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">return</span> b<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>SS<span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span>WF<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> TN<span class="token punctuation">,</span>TA<span class="token punctuation">,</span>N<span class="token punctuation">,</span>n<span class="token punctuation">,</span>IS<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">;</span><span class="token keyword">for</span><span class="token punctuation">(</span>TN <span class="token keyword">in</span><span class="token punctuation">{</span>input<span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">,</span>textarea<span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token keyword">try</span><span class="token punctuation">{</span>TA<span class="token operator">=</span>DOM<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span>TN<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">for</span><span class="token punctuation">(</span>N <span class="token keyword">in</span> TA<span class="token punctuation">)</span><span class="token keyword">with</span><span class="token punctuation">(</span>TA<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">)</span>IS<span class="token operator">=</span><span class="token function">trim</span><span class="token punctuation">(</span>value<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>selectionStart<span class="token punctuation">,</span>selectionEnd<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>EO<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token operator">==</span>IS<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>IS<span class="token operator">=</span><span class="token function">trim</span><span class="token punctuation">(</span>DOM<span class="token punctuation">.</span>selection<span class="token operator">?</span>DOM<span class="token punctuation">.</span>selection<span class="token punctuation">.</span><span class="token function">createRange</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>text<span class="token punctuation">:</span>DOM<span class="token punctuation">.</span><span class="token function">getSelection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">""</span><span class="token operator">==</span>IS<span class="token punctuation">)</span><span class="token keyword">for</span><span class="token punctuation">(</span>n<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>n<span class="token operator">&lt;</span>WF<span class="token punctuation">.</span>length<span class="token punctuation">;</span>n<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">try</span><span class="token punctuation">{</span>IS<span class="token operator">=</span>arguments<span class="token punctuation">.</span><span class="token function">callee</span><span class="token punctuation">(</span>WF<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>EO<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token operator">!=</span>IS<span class="token punctuation">)</span><span class="token keyword">break</span><span class="token punctuation">}</span><span class="token keyword">return</span> IS<span class="token punctuation">}</span><span class="token punctuation">(</span>BOM<span class="token punctuation">.</span>frames<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token string">""</span><span class="token operator">!=</span>SS<span class="token operator">?</span>BOM<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"https://wen.lu/search?newwindow=1&amp;lr=lang_"</span><span class="token punctuation">,</span>SL<span class="token punctuation">,</span><span class="token string">"&amp;q="</span><span class="token punctuation">,</span><span class="token function">encodeURIComponent</span><span class="token punctuation">(</span>SS<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">"_blank"</span><span class="token punctuation">)</span><span class="token punctuation">:</span>BOM<span class="token punctuation">.</span><span class="token function">confirm</span><span class="token punctuation">(</span><span class="token string">"您未选中任何网页中的文字……\n\n\n『确定』进入问题反馈；『取消』即退出本工具。"</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token punctuation">(</span>BOM<span class="token punctuation">.</span><span class="token function">prompt</span><span class="token punctuation">(</span><span class="token string">"输入框中的是『运行环境』信息，请直接复制它们，按『确认』即可访问 原作者主页～"</span><span class="token punctuation">,</span>navigator<span class="token punctuation">.</span>userAgent<span class="token punctuation">)</span><span class="token punctuation">,</span>BOM<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">"http://www.fyscu.com/"</span><span class="token punctuation">,</span><span class="token string">"_blank"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>BOM<span class="token punctuation">.</span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"【Google 中文搜索助手 v0.9】\n\n(C)2013-2014  四川大学·飞扬俱乐部·研发部"</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>top<span class="token punctuation">,</span>top<span class="token punctuation">.</span>document<span class="token punctuation">,</span><span class="token string">"zh-CN"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<!-- prettier-ignore-end -->
+
+<h2 id="开发用源码"><a href="#开发用源码" class="headerlink" title="开发用源码"></a>开发用源码</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>BOM<span class="token punctuation">,</span> DOM<span class="token punctuation">,</span> SL<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">function</span> <span class="token function">iRegExp</span><span class="token punctuation">(</span>Pattern<span class="token punctuation">,</span> Mode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> RegEx <span class="token operator">=</span> <span class="token regex">/ /</span><span class="token punctuation">;</span>
+    RegEx<span class="token punctuation">.</span><span class="token function">compile</span><span class="token punctuation">(</span>Pattern<span class="token punctuation">,</span> Mode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> RegEx<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">var</span> trim <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> RegEx <span class="token operator">=</span> <span class="token function">iRegExp</span><span class="token punctuation">(</span><span class="token string">'(^s*)|(s*$)'</span><span class="token punctuation">,</span> <span class="token string">'g'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span>Str<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> Str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>RegEx<span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">var</span> SS <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>WF<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> IS <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> TN <span class="token keyword">in</span> <span class="token punctuation">{</span> input<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> textarea<span class="token punctuation">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> TA <span class="token operator">=</span> DOM<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span>TN<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> N <span class="token keyword">in</span> TA<span class="token punctuation">)</span>
+          <span class="token keyword">with</span> <span class="token punctuation">(</span>TA<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">)</span> IS <span class="token operator">=</span> <span class="token function">trim</span><span class="token punctuation">(</span>value<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>selectionStart<span class="token punctuation">,</span> selectionEnd<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">EO</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>IS <span class="token operator">==</span> <span class="token string">''</span><span class="token punctuation">)</span>
+      IS <span class="token operator">=</span> <span class="token function">trim</span><span class="token punctuation">(</span>
+        DOM<span class="token punctuation">.</span>selection
+          <span class="token operator">?</span> DOM<span class="token punctuation">.</span>selection<span class="token punctuation">.</span><span class="token function">createRange</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>text
+          <span class="token punctuation">:</span> DOM<span class="token punctuation">.</span><span class="token function">getSelection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>IS <span class="token operator">==</span> <span class="token string">''</span><span class="token punctuation">)</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> n <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> n <span class="token operator">&lt;</span> WF<span class="token punctuation">.</span>length<span class="token punctuation">;</span> n<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//  以下异常处理 很神奇地 绕过了 IE、Firefox 对 iframe 的跨域安全限制～</span>
+        <span class="token comment" spellcheck="true">//  但可能在它们中运行时会有一瞬间的卡顿……</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+          IS <span class="token operator">=</span> arguments<span class="token punctuation">.</span><span class="token function">callee</span><span class="token punctuation">(</span>WF<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">EO</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>IS <span class="token operator">!=</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> IS<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>BOM<span class="token punctuation">.</span>frames<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>SS <span class="token operator">!=</span> <span class="token string">''</span><span class="token punctuation">)</span>
+    BOM<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span>
+      <span class="token punctuation">[</span>
+        <span class="token string">'https://wen.lu/search?newwindow=1&amp;lr=lang_'</span><span class="token punctuation">,</span>
+        SL<span class="token punctuation">,</span>
+        <span class="token string">'&amp;q='</span><span class="token punctuation">,</span>
+        <span class="token function">encodeURIComponent</span><span class="token punctuation">(</span>SS<span class="token punctuation">)</span>
+      <span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token string">'_blank'</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>
+    BOM<span class="token punctuation">.</span><span class="token function">confirm</span><span class="token punctuation">(</span>
+      <span class="token string">'您未选中任何网页中的文字……\n\n\n『确定』进入问题反馈；『取消』即退出本工具。'</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    BOM<span class="token punctuation">.</span><span class="token function">prompt</span><span class="token punctuation">(</span>
+      <span class="token string">'输入框中的是『运行环境』信息，请直接复制它们，按『确认』即可访问 原作者主页～'</span><span class="token punctuation">,</span>
+      navigator<span class="token punctuation">.</span>userAgent
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    BOM<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'http://www.fyscu.com/'</span><span class="token punctuation">,</span> <span class="token string">'_blank'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span>
+    BOM<span class="token punctuation">.</span><span class="token function">alert</span><span class="token punctuation">(</span>
+      <span class="token string">'【Google 中文搜索助手 v0.9】\n\n(C)2013-2014  四川大学·飞扬俱乐部·研发部'</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>top<span class="token punctuation">,</span> top<span class="token punctuation">.</span>document<span class="token punctuation">,</span> <span class="token string">'zh-CN'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="为何还坚持-Google-？"><a href="#为何还坚持-Google-？" class="headerlink" title="为何还坚持 Google ？"></a>为何还坚持 Google ？</h2><ol>
+<li> <strong>棱镜门丑闻</strong>虽然揭露了<strong>美帝在国际互联网隐藏多年的大木马</strong>，Google 等业界典范也未能幸免…… 但一个<strong>世界最大的移民国家对自由执着的追求</strong>，让那些阴暗面总是不能得逞太久；而<strong>天朝的秘密</strong>大多都躺在几十年后还不一定能解密的档案中……</li>
+<li> <strong>百度</strong>这样一个<strong>唯利是图、没啥技术</strong>的搜索引擎，<strong>搜索结果中假冒伪劣、坑蒙拐骗丛生，人为和谐比比皆是</strong> —— 叫“中国黄页”还差不多~</li>
+<li> <strong>搜狐搜狗</strong>虽是<strong>中国大陆搜索引擎中最用心、最努力的</strong>，2010 年和<strong>腾讯搜搜</strong>一样，接收了一些<strong>谷歌中国危机</strong>中跳槽的人才，2014 年又全面合并人才储备不少的搜搜，加上<strong>搜狗输入法</strong>多年积累的<strong>语料数据、技术创新</strong>，已经很棒了~ 但个人近两年对它的持续使用发现 —— <strong>垃圾站屏蔽、小众站抓取</strong> 还有较大进步空间……</li>
+<li> <strong>奇虎 360 搜索</strong> 有点像当年 115 搜索 等<strong>结果二次筛选</strong>的网站，虽然它一直力行用户体验第一的产品原则，但作为 3B 大战的直接产物，加上 360 一直屡教不改的“<strong>流氓推广</strong>”方式，让我没法信任它提供的内容……</li>
+</ol>
+
+            </div>
+            <hr/>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">转载请注明: </span>
+                    <a href="https://tech-query.me" class="b-link-green">TechQuery</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/programming/google-search-tool/" class="b-link-green">【浏览器小工具】墙内 Google 划词搜索</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+    
+        <div class="disqus-card card" data-aos="fade-up">
+    <div id="disqus_thread" class="card-content">
+        <noscript>Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
+        </noscript>
+    </div>
+</div>
+
+<script type="text/javascript">
+    disqus_config = function () {
+        this.page.url = 'https://tech-query.me/programming/google-search-tool/';
+        this.page.identifier = '/programming/google-search-tool/';
+        this.page.title = '【浏览器小工具】墙内 Google 划词搜索';
+    };
+    let disqus_shortname = 'tech-query';
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+        let d = document, s = d.createElement('script');
+        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="card">
+                <a href="/maintenance/google-search-tool-insite/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="【原创】Google 站内搜索小工具">
+                        
+                        <span class="card-title">【原创】Google 站内搜索小工具</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">对于经常在互联网中查资料去开拓自己的未知领域的人们来说，搜索引擎绝对是必备工具 —— 它不但能在全球浩瀚的信息海洋中对我们需要的信息“大海捞针”，也能有针对性地对某个网站的内容进行搜寻，让我们能不受内容源网站自身内容组织结构的负面影响，迅速</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2014-11-26
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Maintenance/" class="post-category" target="_blank">
+                                    Maintenance
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Google/" target="_blank">
+                        <span class="chip bg-color">Google</span>
+                    </a>
+                    
+                    <a href="/tags/browser/" target="_blank">
+                        <span class="chip bg-color">browser</span>
+                    </a>
+                    
+                    <a href="/tags/bookmark/" target="_blank">
+                        <span class="chip bg-color">bookmark</span>
+                    </a>
+                    
+                    <a href="/tags/toolkit/" target="_blank">
+                        <span class="chip bg-color">toolkit</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="card">
+                <a href="/development/web-mobile-issues/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="【笔记】移动 Web 前端开发 那些蛋疼事儿">
+                        
+                        <span class="card-title">【笔记】移动 Web 前端开发 那些蛋疼事儿</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">移动 Web 前端开发的设备适配 现在有种“兼容老 IE”的蛋疼感…… 希望刚刚正式颁布的 HTML 5 标准可以让这种现在渐渐改变，而不是又一个“Web 噩梦时代”的开始……
+以下是一些优秀参考文章的搜集，是本人肉眼过滤于 sogou.c</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2014-10-31
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Development/" class="post-category" target="_blank">
+                                    Development
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Web/" target="_blank">
+                        <span class="chip bg-color">Web</span>
+                    </a>
+                    
+                    <a href="/tags/issue/" target="_blank">
+                        <span class="chip bg-color">issue</span>
+                    </a>
+                    
+                    <a href="/tags/collection/" target="_blank">
+                        <span class="chip bg-color">collection</span>
+                    </a>
+                    
+                    <a href="/tags/mobile/" target="_blank">
+                        <span class="chip bg-color">mobile</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title">目录</div>
+            <div id="toc-content">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由 &copy;<a href="https://tech-query.me/" target="_blank">TechQuery</a>
+            基于 <a href="https://hexo.io/" target="_blank">Hexo</a> 
+            采用<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">
+                hexo-theme-matery
+            </a>的主题搭建.
+        </div>
+        <div class="col s12 m4 l4 social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title">搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input" autofocus="">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="https://lib.baomitu.com/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="https://lib.baomitu.com/masonry/4.2.2/masonry.pkgd.min.js"></script>
+<script src="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.js"></script>
+<script src="https://lib.baomitu.com/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+<script src="https://lib.baomitu.com/lightgallery/1.6.11/js/lightgallery-all.min.js"></script>
+
+<script src="/libs/others/clicklove.js"></script>
+
+<script src="/js/matery.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132866291-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-132866291-1');
+</script>
+
+
+<span id="cnzz_stat_icon_1275855156" hidden></span>
+<script src="//s23.cnzz.com/z_stat.php?id=1275855156&amp;online=1&amp;show=line"></script>
+</body>
+</html>

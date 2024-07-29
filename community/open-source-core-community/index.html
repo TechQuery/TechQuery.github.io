@@ -1,0 +1,839 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="水歌：开源之“道”的三股势力丨COSCon&#39;20 专访, TechQuery website Web JavaScript full-stack developer development coder programmer">
+    <meta name="description" content="
+【原文链接】https://mp.weixin.qq.com/s/JSIGP8ZbJPz1KpiJcEyRuw
+
+
+    
+
+
+2020 中国开源年会 (COSCon’20) 将于 10 月 24-25 日由开源社举办，SegmentF">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>水歌：开源之“道”的三股势力丨COSCon&#39;20 专访 | TechQuery</title>
+    <link rel="icon" type="image/png" href="/image/WebCell-2.png">
+
+    <link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css">
+    <link rel="stylesheet" href="/css/matery.css">
+    <link rel="stylesheet" href="/css/my.css">
+
+    <script src="https://lib.baomitu.com/jquery/2.2.4/jquery.min.js"></script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2017157453269189",
+        enable_page_level_ads: true
+    });
+    </script>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="TechQuery" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css"></head>
+
+</head>
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="container">
+            <div class="nav-wrapper">
+                <div class="brand-logo">
+                    <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/image/WebCell-0.png" class="logo-img hide-on-small-only">
+                        
+                        <span class="logo-span">TechQuery</span>
+                    </a>
+                </div>
+                <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>Tags</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>Categories</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>Archives</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/projects" class="waves-effect waves-light">
+            
+            <i class="fa fa-code-fork"></i>
+            
+            <span>Projects</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-slideshare"></i>
+            
+            <span>Lecture</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-code"></i>
+            
+            <span>Snippet</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-quora"></i>
+            
+            <span>Q & A</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>About</span>
+        </a>
+    </li>
+    
+    <li>
+        <a id="toggleSearch" class="waves-effect waves-light">
+            <i id="searchIcon" class="mdi-action-search"></i>
+        </a>
+    </li>
+
+</ul>
+
+<div class="side-nav" id="mobile-nav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/image/WebCell-0.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">TechQuery</div>
+        <div class="logo-desc">
+            
+            TechQuery, a Web &amp; JavaScript full-stack developer
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                Tags
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                Categories
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                Archives
+            </a>
+        </li>
+        
+        <li>
+            <a href="/projects" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code-fork"></i>
+                
+                Projects
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-slideshare"></i>
+                
+                Lecture
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code"></i>
+                
+                Snippet
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-quora"></i>
+                
+                Q &amp; A
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                About
+            </a>
+        </li>
+        
+        
+    </ul>
+
+    <div class="social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+</div>
+
+            </div>
+        </div>
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        水歌：开源之“道”的三股势力丨COSCon&#39;20 专访
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1,
+    #articleContent h2,
+    #articleContent h3,
+    #articleContent h4,
+    #articleContent h5,
+    #articleContent h6 {
+        padding-top: 76px;
+        margin-top: -76px;
+    }
+
+    #articleContent h1 {
+        line-height: 3.5rem;
+    }
+
+    #articleContent h2 {
+        line-height: 3.2rem;
+    }
+
+    #articleContent h3 {
+        line-height: 2.8rem;
+    }
+
+    #articleContent h4 {
+        line-height: 2.5rem;
+    }
+
+    #articleContent h5 {
+        line-height: 2.2rem;
+    }
+
+    #articleContent h6 {
+        line-height: 1.9rem;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            
+            <div class="article-tag">
+                
+                <a href="/tags/Open-Source/" target="_blank">
+                    <span class="chip bg-color">Open Source</span>
+                </a>
+                
+                <a href="/tags/COSCon/" target="_blank">
+                    <span class="chip bg-color">COSCon</span>
+                </a>
+                
+                <a href="/tags/China/" target="_blank">
+                    <span class="chip bg-color">China</span>
+                </a>
+                
+            </div>
+            
+            <div class="post-info">
+                
+                <span class="post-cate">
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/Community/" class="post-category" target="_blank">
+                        Community
+                    </a>
+                    
+                </span>
+                
+
+                <span class="post-date">
+                    <i class="fa fa-clock-o fa-fw"></i>2020-10-23
+                </span>
+            </div>
+        </div>
+        <hr>
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <blockquote>
+<p>【原文链接】<a href="https://mp.weixin.qq.com/s/JSIGP8ZbJPz1KpiJcEyRuw" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/JSIGP8ZbJPz1KpiJcEyRuw</a></p>
+</blockquote>
+<figure>
+    <img src="https://ows.blob.core.chinacloudapi.cn/files/assets/COS_Con_20_abaa9e2a66.png" />
+</figure>
+
+<p>2020 中国开源年会 (COSCon’20) 将于 10 月 24-25 日由开源社举办，SegmentFault 思否社区为本次大会的战略合作媒体，并将进行独家的线上直播。</p>
+<p>本次年会将采取线上线下相结合的形式，<strong>北京、上海、深圳、成都、长沙五城联动</strong>，11 个分会场，线上线下同时进行。</p>
+<hr>
+<p>为了让大家进一步了解开源、了解本次 COSCon’20，SegmentFault 思否特别采访了水歌老师。</p>
+<p>水歌是一位  <strong>Web/JavaScript 全栈开发者</strong>，也是 WebCell 前端开源框架作者，现任 freeCodeCamp 成都社区负责人、开源社执委会成员、微软最有价值专家（开发者技术领域），日常爱好音乐、电影、汉服、滑雪。</p>
+<p>长期活跃于开源社区的他，致力于<strong>在开放生态中为社会创造价值</strong>。在本次的开源年会中，水歌老师将以出品人及主持人的身份掌舵「Web 全栈及其他」分论坛，并出席同期于成都举办的开源线下聚会活动。</p>
+<figure>
+    <img src="/community/fcc-devtalk-techquery/TechQuery-WebCell-cap.jpg" />
+</figure>
+
+<p>以下为 SegmentFault 思否对水歌老师的访谈内容：</p>
+<h2 id="如果需要给“开源”下一个定义，您认为是什么？"><a href="#如果需要给“开源”下一个定义，您认为是什么？" class="headerlink" title="如果需要给“开源”下一个定义，您认为是什么？"></a>如果需要给“开源”下一个定义，您认为是什么？</h2><p>开源一词虽源于“开放源代码”，但公布源码仅为其表面，其核心是一种<strong>开放式社会化协作</strong>，所以<strong>开源硬件</strong>、<strong>开放文档</strong>、基于 Creative Commons 协议的<strong>开放文艺作品</strong>等，乃至公益、慈善机构等<strong>开放社群</strong>，皆为开源。</p>
+<h2 id="您认为开源对于开发者来说，最大的价值和意义是什么？"><a href="#您认为开源对于开发者来说，最大的价值和意义是什么？" class="headerlink" title="您认为开源对于开发者来说，最大的价值和意义是什么？"></a>您认为开源对于开发者来说，最大的价值和意义是什么？</h2><p>对个人开发者是一种<strong>能力的锻炼与证明</strong>，对企业是一种<strong>更高效的创新与营销模式</strong>。</p>
+<h2 id="您认为什么样的开源项目算是优质的开源项目？有没有一些评判标准？"><a href="#您认为什么样的开源项目算是优质的开源项目？有没有一些评判标准？" class="headerlink" title="您认为什么样的开源项目算是优质的开源项目？有没有一些评判标准？"></a>您认为什么样的开源项目算是优质的开源项目？有没有一些评判标准？</h2><p><strong>社群开放、平等、自主</strong>，剩下的<strong>高质量的代码</strong>、<strong>清晰的文档</strong>、<strong>自动化的工作流</strong>等等，便纷至沓来~</p>
+<h2 id="能否分享一下您对国内开源技术和产品的看法？"><a href="#能否分享一下您对国内开源技术和产品的看法？" class="headerlink" title="能否分享一下您对国内开源技术和产品的看法？"></a>能否分享一下您对国内开源技术和产品的看法？</h2><p>国内 IT 业在技术、产品上虽与欧美还有差距，但开源界还是有不少开始显现全球影响力的项目，这些“术”的层面对勤奋钻研的华人而言并非不可逾越的鸿沟。但从“道”的层面看，<strong>完整的开源界由三股势力构成</strong>：</p>
+<ol>
+<li><p> <strong>草根开发者社群</strong>：所谓“市集”，也是自由软件、开源软件的发祥地</p>
+</li>
+<li><p> <strong>公司开源团队</strong>：所谓“大教堂”，一般是<strong>开源商业公司</strong>（RedHat 等）或<strong>开源转型的传统公司</strong>（Microsoft 等）</p>
+</li>
+<li><p> <strong>开源基金会</strong>：依赖开源的公司捐款给基金会，基金会招募草根开发者</p>
+</li>
+</ol>
+<p>反观中国大陆：</p>
+<ol>
+<li><p> 只有大公司以 KPI 的方式做开源比较强，<strong>以开源为核心商业模式的公司</strong>凤毛麟角</p>
+</li>
+<li><p> 纯民间的基金会仍有政策上很大的<strong>免税、公募资格</strong>门槛，现在完全称不上气候</p>
+</li>
+<li><p> 而我国最不缺的人，却几乎没有前文所述“开放、平等、自主”之意识，除了现在人人都使用开源软件，但在<strong>社群影响力</strong>上比十年前并没强多少</p>
+</li>
+</ol>
+<p>因此，我很赞同某同仁的一个观点 ——</p>
+<blockquote>
+<p>若国人只学习洋人的技术，而不学习<strong>诞生创新技术的社会氛围</strong>，那就永远只能做跟随者，今日中国之开源只能是一场“<strong>新洋务运动</strong>”！</p>
+</blockquote>
+<h2 id="您在具体开源的过程中遇到的最大的挑战是什么？"><a href="#您在具体开源的过程中遇到的最大的挑战是什么？" class="headerlink" title="您在具体开源的过程中遇到的最大的挑战是什么？"></a>您在具体开源的过程中遇到的最大的挑战是什么？</h2><ul>
+<li><p>当你有个好想法时，别人说：你先做个样子我看看~</p>
+</li>
+<li><p>当你写了个原型时，别人说：你做稳定了我再试试~</p>
+</li>
+<li><p>当你发了稳定版时，别人说：你生态完善了我就用~</p>
+</li>
+<li><p>当你写完周边库时，别人说：你有大厂项目社区大？</p>
+</li>
+</ul>
+<h2 id="对于开源行业未来的发展，您有什么期待？"><a href="#对于开源行业未来的发展，您有什么期待？" class="headerlink" title="对于开源行业未来的发展，您有什么期待？"></a>对于开源行业未来的发展，您有什么期待？</h2><p>期待中国大陆有更多人参与开源项目、开放社群，而不只是做个<em>成品使用者</em>、_活动围观者_。</p>
+<h2 id="您认为开源的概念和文化，有哪些可以被借鉴到其他领域？其他领域的文化有哪些可以被开源行业所参考？"><a href="#您认为开源的概念和文化，有哪些可以被借鉴到其他领域？其他领域的文化有哪些可以被开源行业所参考？" class="headerlink" title="您认为开源的概念和文化，有哪些可以被借鉴到其他领域？其他领域的文化有哪些可以被开源行业所参考？"></a>您认为开源的概念和文化，有哪些可以被借鉴到其他领域？其他领域的文化有哪些可以被开源行业所参考？</h2><p><strong>开放、平等、自主的社会化协作</strong>是放之四海而皆准的<strong>最佳实践</strong>，是来自开源界的馈赠。</p>
+<p>而在开源人的交流上，我近两年在借鉴境外<strong>技术嘉年华</strong>、境内 ACG 漫展，努力尝试「<strong>开源市集</strong>」这种活动形式，期望技术宅们能多走出来联络，不能只在电脑前面闭门造车：</p>
+<ol>
+<li> <a href="https://web-conf.dev/#2018" target="_blank" rel="noopener">2018 成都 Web 前端大会「开源市集」</a></li>
+<li> <a href="http://coscon.kaiyuanshe.cn/" target="_blank" rel="noopener">2020 中国开源年会·成都分会场「开源市集」</a></li>
+</ol>
+<p>欢迎大家踊跃参与今年 COSCon’20 的开源市集，我也会经常分享我的开源经验，并支持更多有心的小伙伴参与开源~</p>
+<hr>
+<p>10 月 24 ~ 25 日，水歌老师将作为 <strong>「Web 全栈应用」分论坛</strong>的主持人和<strong>成都分会场</strong>的负责人，以下为相关活动日程及嘉宾、展位名单：</p>
+<img src="/community/open-source-core-community/agenda-10-24-0.png" class="">
+
+<img src="/community/open-source-core-community/agenda-10-24-1.png" class="">
+
+<img src="/community/open-source-core-community/agenda-10-25.png" class="">
+
+<img src="/community/open-source-core-community/exhibition.png" class="">
+
+            </div>
+            <hr/>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">转载请注明: </span>
+                    <a href="https://tech-query.me" class="b-link-green">TechQuery</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/community/open-source-core-community/" class="b-link-green">水歌：开源之“道”的三股势力丨COSCon&#39;20 专访</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+    
+        <div class="disqus-card card" data-aos="fade-up">
+    <div id="disqus_thread" class="card-content">
+        <noscript>Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
+        </noscript>
+    </div>
+</div>
+
+<script type="text/javascript">
+    disqus_config = function () {
+        this.page.url = 'https://tech-query.me/community/open-source-core-community/';
+        this.page.identifier = '/community/open-source-core-community/';
+        this.page.title = '水歌：开源之“道”的三股势力丨COSCon&#39;20 专访';
+    };
+    let disqus_shortname = 'tech-query';
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+        let d = document, s = d.createElement('script');
+        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="card">
+                <a href="/other/hanfu-revival-and-national-confidence/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="汉服复兴与民族自信">
+                        
+                        <span class="card-title">汉服复兴与民族自信</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">
+始作于 2020 年汉服出行日前夕之闪电演讲
+
+
+汉服复兴 —— 近年的现象级文化
+
+
+
+
+
+
+
+
+
+成都 —— 汉服之都
+2019 年：
+
+汉服商家数量第一
+汉服产品销量第一
+汉服产业产值第一
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+曾经的汉</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-18
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Other/" class="post-category" target="_blank">
+                                    Other
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/China/" target="_blank">
+                        <span class="chip bg-color">China</span>
+                    </a>
+                    
+                    <a href="/tags/HanFu/" target="_blank">
+                        <span class="chip bg-color">HanFu</span>
+                    </a>
+                    
+                    <a href="/tags/dress/" target="_blank">
+                        <span class="chip bg-color">dress</span>
+                    </a>
+                    
+                    <a href="/tags/culture/" target="_blank">
+                        <span class="chip bg-color">culture</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="card">
+                <a href="/development/typescript-for-beginners/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="为何新手可用 TypeScript？">
+                        
+                        <span class="card-title">为何新手可用 TypeScript？</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">TypeScript 官网开宗明义 ——
+
+TypeScript 是适用于任何规模应用的 JavaScript
+
+其中奥妙，且看我一个边干边学的 JS 码农娓娓道来~
+安装简单因为 TypeScript 官方支持 ECMAScript 最新</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Development/" class="post-category" target="_blank">
+                                    Development
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/TypeScript/" target="_blank">
+                        <span class="chip bg-color">TypeScript</span>
+                    </a>
+                    
+                    <a href="/tags/ECMAScript/" target="_blank">
+                        <span class="chip bg-color">ECMAScript</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title">目录</div>
+            <div id="toc-content">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由 &copy;<a href="https://tech-query.me/" target="_blank">TechQuery</a>
+            基于 <a href="https://hexo.io/" target="_blank">Hexo</a> 
+            采用<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">
+                hexo-theme-matery
+            </a>的主题搭建.
+        </div>
+        <div class="col s12 m4 l4 social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title">搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input" autofocus="">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="https://lib.baomitu.com/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="https://lib.baomitu.com/masonry/4.2.2/masonry.pkgd.min.js"></script>
+<script src="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.js"></script>
+<script src="https://lib.baomitu.com/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+<script src="https://lib.baomitu.com/lightgallery/1.6.11/js/lightgallery-all.min.js"></script>
+
+<script src="/libs/others/clicklove.js"></script>
+
+<script src="/js/matery.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132866291-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-132866291-1');
+</script>
+
+
+<span id="cnzz_stat_icon_1275855156" hidden></span>
+<script src="//s23.cnzz.com/z_stat.php?id=1275855156&amp;online=1&amp;show=line"></script>
+</body>
+</html>

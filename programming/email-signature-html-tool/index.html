@@ -1,0 +1,810 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="电子邮件签名档 HTML 手写时的折腾（附 原创工具）, TechQuery website Web JavaScript full-stack developer development coder programmer">
+    <meta name="description" content="【原文链接】https://my.oschina.net/TechQuery/blog/350954
+入职必修课鄙人作为码农进厂开电脑的第一件正事就是 —— 在 Foxmail 客户端中设置自己公司的域名邮箱，并加上看起来还挺专业的签名档。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>电子邮件签名档 HTML 手写时的折腾（附 原创工具） | TechQuery</title>
+    <link rel="icon" type="image/png" href="/image/WebCell-2.png">
+
+    <link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css">
+    <link rel="stylesheet" href="/css/matery.css">
+    <link rel="stylesheet" href="/css/my.css">
+
+    <script src="https://lib.baomitu.com/jquery/2.2.4/jquery.min.js"></script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2017157453269189",
+        enable_page_level_ads: true
+    });
+    </script>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="TechQuery" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css"></head>
+
+</head>
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="container">
+            <div class="nav-wrapper">
+                <div class="brand-logo">
+                    <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/image/WebCell-0.png" class="logo-img hide-on-small-only">
+                        
+                        <span class="logo-span">TechQuery</span>
+                    </a>
+                </div>
+                <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>Tags</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>Categories</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>Archives</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/projects" class="waves-effect waves-light">
+            
+            <i class="fa fa-code-fork"></i>
+            
+            <span>Projects</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-slideshare"></i>
+            
+            <span>Lecture</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-code"></i>
+            
+            <span>Snippet</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+            
+            <i class="fa fa-quora"></i>
+            
+            <span>Q & A</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>About</span>
+        </a>
+    </li>
+    
+    <li>
+        <a id="toggleSearch" class="waves-effect waves-light">
+            <i id="searchIcon" class="mdi-action-search"></i>
+        </a>
+    </li>
+
+</ul>
+
+<div class="side-nav" id="mobile-nav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/image/WebCell-0.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">TechQuery</div>
+        <div class="logo-desc">
+            
+            TechQuery, a Web &amp; JavaScript full-stack developer
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                Tags
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                Categories
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                Archives
+            </a>
+        </li>
+        
+        <li>
+            <a href="/projects" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code-fork"></i>
+                
+                Projects
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://ppt.baomitu.com/lecturer/10109/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-slideshare"></i>
+                
+                Lecture
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://codepen.io/tech_query/" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-code"></i>
+                
+                Snippet
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://www.zhihu.com/people/Tech_Query/answers/by_votes" target="_blank" rel="noopener" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-quora"></i>
+                
+                Q &amp; A
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                About
+            </a>
+        </li>
+        
+        
+    </ul>
+
+    <div class="social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+</div>
+
+            </div>
+        </div>
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        电子邮件签名档 HTML 手写时的折腾（附 原创工具）
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1,
+    #articleContent h2,
+    #articleContent h3,
+    #articleContent h4,
+    #articleContent h5,
+    #articleContent h6 {
+        padding-top: 76px;
+        margin-top: -76px;
+    }
+
+    #articleContent h1 {
+        line-height: 3.5rem;
+    }
+
+    #articleContent h2 {
+        line-height: 3.2rem;
+    }
+
+    #articleContent h3 {
+        line-height: 2.8rem;
+    }
+
+    #articleContent h4 {
+        line-height: 2.5rem;
+    }
+
+    #articleContent h5 {
+        line-height: 2.2rem;
+    }
+
+    #articleContent h6 {
+        line-height: 1.9rem;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            
+            <div class="article-tag">
+                
+                <a href="/tags/toolkit/" target="_blank">
+                    <span class="chip bg-color">toolkit</span>
+                </a>
+                
+                <a href="/tags/HTML/" target="_blank">
+                    <span class="chip bg-color">HTML</span>
+                </a>
+                
+                <a href="/tags/Email/" target="_blank">
+                    <span class="chip bg-color">Email</span>
+                </a>
+                
+            </div>
+            
+            <div class="post-info">
+                
+                <span class="post-cate">
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/Programming/" class="post-category" target="_blank">
+                        Programming
+                    </a>
+                    
+                </span>
+                
+
+                <span class="post-date">
+                    <i class="fa fa-clock-o fa-fw"></i>2014-12-01
+                </span>
+            </div>
+        </div>
+        <hr>
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>【原文链接】<a href="https://my.oschina.net/TechQuery/blog/350954" target="_blank" rel="noopener">https://my.oschina.net/TechQuery/blog/350954</a></p>
+<h2 id="入职必修课"><a href="#入职必修课" class="headerlink" title="入职必修课"></a>入职必修课</h2><p>鄙人作为码农进厂开电脑的第一件正事就是 —— 在 Foxmail 客户端中设置自己<strong>公司的域名邮箱</strong>，并加上看起来还挺<strong>专业的签名档</strong>。</p>
+<p>接收欢迎新人的邮件，选中老员工的签名档并复制粘贴到写邮件设置中，修改个人信息并保存 —— 这似乎很轻松，但…… 职位一处的文字稍长一些就显示不全…… 旁边那么多空白竟然不能<strong>自适应</strong>？！作为一个<strong>前端程序猿</strong>，简直不能忍 —— 改代码！</p>
+<p>虽然 Foxmail 客户端的<strong>富文本编辑器</strong>几乎和 QQ 邮箱一样（原本也是同一个团队的作品嘛），但竟然不支持 <strong>HTML 格式化</strong>…… 还好在线代码格式化工具很多。但格式化之后，代码依然很烂 —— 各种样式还用 HTML 4 的标签属性，style 属性也是一坨一坨地堆着，姓名、职位、手机、电邮等竟然还用 <code>&lt;input type=&quot;text&quot; /&gt;</code>……</p>
+<p>Foxmail 自己加上去的全局样式不是用 <code>&lt;style /&gt;</code> 写在最前面吗？这么乱的代码，哥怎么有心情改？！写个简称得了，管你们看不看得懂~</p>
+<h2 id="收拾“旧河山”"><a href="#收拾“旧河山”" class="headerlink" title="收拾“旧河山”"></a>收拾“旧河山”</h2><p>俩月后，公司新产品上线，要在签名档已有的俩二维码中间再加一个 —— 公司网管兄用 DreamWeaver 死活改不好，于是来找我帮忙…… 那就不客气了 —— 直接用自己的 CSS 框架的布局模块来重写，那叫一个畅爽~</p>
+<p>写完之后在浏览器里测试完美，便即刻粘贴到 Foxmail 中 —— 样式没了？！</p>
+<p>再尝试用 Foxmail <strong>邮件模板</strong> —— 样式又没了？！</p>
+<p>只好用浏览器调试器一个一个元素地把<strong>外联样式</strong>填回 style 属性中……</p>
+<p>再试 Outlook —— 还是没样式！连 <strong>DataURL 形式的图片</strong>都叉了？！</p>
+<h2 id="前端猿的-Hack"><a href="#前端猿的-Hack" class="headerlink" title="前端猿的 Hack"></a>前端猿的 Hack</h2><p>最后只好登录公司<strong>邮件服务的 Web 版</strong>，在账号选项中设置签名档 —— 连 <strong>HTML 源码编辑模式</strong>都没了……</p>
+<p>那就只能把 新签名档源码在浏览器中打开，再全选、复制、粘贴到邮件系统编辑框 —— 测试邮件基本正常，除了<strong>逼死强迫症的水平滚动条</strong>……（马丹，这不在同事面前显得我很没水平？！）</p>
+<p><img src="http://static.oschina.net/uploads/space/2014/1201/154333_73Tz_1171658.png" alt="Web Mail 签名档设置"></p>
+<p>仔细查看测试邮件的源代码之后发现 —— <strong>所有 style 的长度数值都从百分比变成了像素绝对值</strong>……</p>
+<p>我想应该是 浏览器等客户端程序在复制 HTML 等富文本时把相对值转换成了绝对值，可以用下面的原创程序初步验证 ——</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>BOM<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> isIE <span class="token operator">=</span> <span class="token operator">!</span><span class="token operator">!</span>BOM<span class="token punctuation">.</span>document<span class="token punctuation">.</span>attachEvent<span class="token punctuation">;</span>
+
+  BOM<span class="token punctuation">.</span>CB_getData <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>cType<span class="token punctuation">,</span> CallBack<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> This <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">,</span>
+      EM <span class="token operator">=</span> isIE
+        <span class="token operator">?</span> <span class="token punctuation">[</span><span class="token string">'attachEvent'</span><span class="token punctuation">,</span> <span class="token string">'onpaste'</span><span class="token punctuation">,</span> <span class="token string">'detachEvent'</span><span class="token punctuation">]</span>
+        <span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'addEventListener'</span><span class="token punctuation">,</span> <span class="token string">'paste'</span><span class="token punctuation">,</span> <span class="token string">'removeEventListener'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>cType <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>isIE<span class="token punctuation">)</span>
+      <span class="token keyword">switch</span> <span class="token punctuation">(</span>cType<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">'text'</span><span class="token punctuation">:</span>
+          cType <span class="token operator">=</span> <span class="token string">'text/plain'</span><span class="token punctuation">;</span>
+          <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token string">'url'</span><span class="token punctuation">:</span>
+          cType <span class="token operator">=</span> <span class="token string">'text/unicode'</span><span class="token punctuation">;</span>
+          <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token string">'html'</span><span class="token punctuation">:</span>
+          cType <span class="token operator">=</span> <span class="token string">'text/html'</span><span class="token punctuation">;</span>
+          <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    This<span class="token punctuation">.</span>document<span class="token punctuation">[</span>EM<span class="token punctuation">[</span>cType <span class="token operator">?</span> <span class="token number">0</span> <span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">(</span>
+      EM<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> PO <span class="token operator">=</span> isIE <span class="token operator">?</span> This <span class="token punctuation">:</span> arguments<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">var</span> CBR <span class="token operator">=</span> CallBack<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>
+          isIE <span class="token operator">?</span> PO<span class="token punctuation">.</span>srcElement <span class="token punctuation">:</span> PO<span class="token punctuation">.</span>target<span class="token punctuation">,</span>
+          PO<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span>cType<span class="token punctuation">)</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>CBR<span class="token punctuation">)</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>isIE<span class="token punctuation">)</span> PO<span class="token punctuation">.</span>event<span class="token punctuation">.</span>returnValue <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+          <span class="token keyword">else</span> PO<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      isIE <span class="token operator">?</span> undefined <span class="token punctuation">:</span> <span class="token boolean">false</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//  粘贴事件发生时，回调函数的首个参数 将赋值为 剪贴板中的内容</span>
+<span class="token function">CB_getData</span><span class="token punctuation">(</span><span class="token string">'HTML'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>Content<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//  返回 false 阻止浏览器 事件默认行为，即不在用户粘贴的地方输出 剪贴板内容（同 jQuery）</span>
+</code></pre>
+<p>网管小哥只好把浏览器窗口拉窄一些再复制粘贴 —— 至少看起来没啥问题了……（但我知道在一些领导的轻薄笔记本、平板电脑等更窄的屏幕上还会溢出啊）</p>
+<p>最后的最后 —— 在 <strong>Web 邮箱的签名档设置框</strong>中右击打开调试器，直接编辑它的 <strong>HTML 文档片段</strong>，把签名档源码粘贴进去再返回来保存 —— 发出来的测试邮件源码完整保留了<strong>长度值的百分比原值</strong>~</p>
+<p><img src="http://static.oschina.net/uploads/space/2014/1201/154419_B5gz_1171658.png" alt="Web Mail 签名档编辑框内容代码注入"></p>
+<h2 id="后话"><a href="#后话" class="headerlink" title="后话"></a>后话</h2><p>按理说，<strong>E-mail</strong> 这种兼容 HTML 格式的<strong>经典互联网标准</strong> 应该至少支持 HTML 4 + CSS 2 吧？哥手写的布局系统基于 display: table(-cell) 就不行？</p>
+<p>Outlook、Foxmail 等 <strong>Windows 邮件客户端</strong> 渲染 HTML 应该直接调用本机的 <strong>IE 内核</strong>吧？哥用的可是 <strong>IE 11</strong> 啊~</p>
+<p>咋就这么多不兼容的坑坑呢……？</p>
+<hr>
+<p>其实很多<strong>网站系统的富文本编辑框</strong> 都没有 <strong>HTML 代码编辑模式</strong>，直接复制粘贴<strong>富文本片段</strong>经常会格式出错（比如 <strong>微信公众平台</strong>编辑模式的图文消息发布模块）……</p>
+<p>在后台程序过滤之外，<strong>前端工程师</strong> 能一劳永逸地解决此类问题的方法只有 —— 用 <strong>JavaScript</strong> 做 <strong>HTML 代码片段注入</strong>……</p>
+<p>所以我写了个 <strong>Bookmarklet</strong>（网页浏览器 <strong>书签栏按钮小工具</strong>）发布在 <a href="http://gitee.com/Tech_Query/iBookmarkLet" target="_blank" rel="noopener"><strong>Git@OSC</strong></a> 上，欢迎大家折腾、<strong>提 issue</strong>~</p>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ol>
+<li> <a href="http://www.topcss.org/?tag=document-activeelement" target="_blank" rel="noopener">http://www.topcss.org/?tag=document-activeelement</a></li>
+<li> <a href="http://www.cnblogs.com/hughtxp/p/3939976.html" target="_blank" rel="noopener">http://www.cnblogs.com/hughtxp/p/3939976.html</a></li>
+<li> <a href="http://blog.csdn.net/lee_magnum/article/details/17761441" target="_blank" rel="noopener">http://blog.csdn.net/lee_magnum/article/details/17761441</a></li>
+<li> <a href="http://www.cnblogs.com/xzhang/p/3968204.html" target="_blank" rel="noopener">http://www.cnblogs.com/xzhang/p/3968204.html</a></li>
+</ol>
+
+            </div>
+            <hr/>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">转载请注明: </span>
+                    <a href="https://tech-query.me" class="b-link-green">TechQuery</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/programming/email-signature-html-tool/" class="b-link-green">电子邮件签名档 HTML 手写时的折腾（附 原创工具）</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+    
+        <div class="disqus-card card" data-aos="fade-up">
+    <div id="disqus_thread" class="card-content">
+        <noscript>Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
+        </noscript>
+    </div>
+</div>
+
+<script type="text/javascript">
+    disqus_config = function () {
+        this.page.url = 'https://tech-query.me/programming/email-signature-html-tool/';
+        this.page.identifier = '/programming/email-signature-html-tool/';
+        this.page.title = '电子邮件签名档 HTML 手写时的折腾（附 原创工具）';
+    };
+    let disqus_shortname = 'tech-query';
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+        let d = document, s = d.createElement('script');
+        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="card">
+                <a href="/maintenance/deepin-2014/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="【爱之深】Linux Deepin 2014 试用札记">
+                        
+                        <span class="card-title">【爱之深】Linux Deepin 2014 试用札记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">【原文链接】https://my.oschina.net/TechQuery/blog/380778
+高度赞扬作为一个关注 中国开源社区、深度技术论坛 近十年的技术员、程序员，私以为 —— Linux Deepin 2014 是 第一款真正</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2015-02-28
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Maintenance/" class="post-category" target="_blank">
+                                    Maintenance
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/" target="_blank">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/tags/Deepin/" target="_blank">
+                        <span class="chip bg-color">Deepin</span>
+                    </a>
+                    
+                    <a href="/tags/system/" target="_blank">
+                        <span class="chip bg-color">system</span>
+                    </a>
+                    
+                    <a href="/tags/software/" target="_blank">
+                        <span class="chip bg-color">software</span>
+                    </a>
+                    
+                    <a href="/tags/bug/" target="_blank">
+                        <span class="chip bg-color">bug</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="card">
+                <a href="/maintenance/google-search-tool-insite/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="【原创】Google 站内搜索小工具">
+                        
+                        <span class="card-title">【原创】Google 站内搜索小工具</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">对于经常在互联网中查资料去开拓自己的未知领域的人们来说，搜索引擎绝对是必备工具 —— 它不但能在全球浩瀚的信息海洋中对我们需要的信息“大海捞针”，也能有针对性地对某个网站的内容进行搜寻，让我们能不受内容源网站自身内容组织结构的负面影响，迅速</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2014-11-26
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Maintenance/" class="post-category" target="_blank">
+                                    Maintenance
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Google/" target="_blank">
+                        <span class="chip bg-color">Google</span>
+                    </a>
+                    
+                    <a href="/tags/browser/" target="_blank">
+                        <span class="chip bg-color">browser</span>
+                    </a>
+                    
+                    <a href="/tags/bookmark/" target="_blank">
+                        <span class="chip bg-color">bookmark</span>
+                    </a>
+                    
+                    <a href="/tags/toolkit/" target="_blank">
+                        <span class="chip bg-color">toolkit</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title">目录</div>
+            <div id="toc-content">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由 &copy;<a href="https://tech-query.me/" target="_blank">TechQuery</a>
+            基于 <a href="https://hexo.io/" target="_blank">Hexo</a> 
+            采用<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">
+                hexo-theme-matery
+            </a>的主题搭建.
+        </div>
+        <div class="col s12 m4 l4 social-link"><a href="mailto:shiy2008@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="https://github.com/TechQuery" class="tooltipped" target="_blank" data-tooltip="访问我的 GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="https://www.linkedin.com/in/techquery/" class="tooltipped" target="_blank" data-tooltip="领英招募我" data-position="top" data-delay="50">
+    <i class="fa fa-linkedin"></i>
+</a>
+<a href="https://jq.qq.com/?_wv=1027&k=5he1Sw1" target="_blank" class="tooltipped" data-tooltip="QQ: 458784398" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title">搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input" autofocus="">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="https://lib.baomitu.com/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="https://lib.baomitu.com/masonry/4.2.2/masonry.pkgd.min.js"></script>
+<script src="https://lib.baomitu.com/aos/3.0.0-beta.6/aos.js"></script>
+<script src="https://lib.baomitu.com/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+<script src="https://lib.baomitu.com/lightgallery/1.6.11/js/lightgallery-all.min.js"></script>
+
+<script src="/libs/others/clicklove.js"></script>
+
+<script src="/js/matery.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132866291-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-132866291-1');
+</script>
+
+
+<span id="cnzz_stat_icon_1275855156" hidden></span>
+<script src="//s23.cnzz.com/z_stat.php?id=1275855156&amp;online=1&amp;show=line"></script>
+</body>
+</html>

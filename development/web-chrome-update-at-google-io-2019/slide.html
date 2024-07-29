@@ -1,0 +1,699 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Web 与 Chrome 最新进展 @Google I/O 2019</title>
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.4.1/css/reveal.min.css">
+        
+        <!-- theme -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            var theme ='black';
+            switch (theme){
+                case 'black':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/black.min.css';
+                    break;
+                case 'beige':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/beige.min.css';
+                    break;
+                case 'blood':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/blood.min.css';
+                    break;
+                case 'league':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/league.min.css';
+                    break;
+                case 'moon':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/moon.min.css';
+                    break;
+                case 'night':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/night.min.css';
+                    break;
+                case 'serif':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/serif.min.css';
+                    break;
+                case 'sky':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/sky.min.css';
+                    break;
+                case 'solarized':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/solarized.min.css';
+                    break;
+                case 'white':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/white.min.css';
+                    break;
+                default:
+            }
+            
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.4.1/lib/css/zenburn.min.css">
+        <link href="https://cdn.bootcss.com/reveal.js/3.4.1/css/print/paper.min.css" rel="stylesheet">
+        <!-- Printing and PDF exports -->
+        
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown
+                         data-separator="^\n---\n"
+                         data-separator-vertical="^\n--\n"
+                         data-separator-notes="^Note:">
+                    <script type="text/template">Web 与 Chrome 最新进展 @Google I/O 2019
+
+
+> Google I/O 2019 extend 成都站
+
+---
+
+## DOM 与 BOM
+
+---
+
+### 延迟加载
+
+```html
+<img src="path/to/image" loading="lazy" />
+
+<iframe src="path/to/page" loading="lazy"></iframe>
+```
+
+---
+
+`loading` 属性值
+
+- `lazy` 延迟加载
+- `eager` 立即加载
+- `auto` 浏览器自主判断加载策略（默认值）
+
+---
+
+- `loading` 属性是早期提案 `lazyload` 属性的代替
+- 将在 Chrome 76 发布
+
+---
+
+### 门户框架
+
+#### 主页面
+
+```html
+<portal src="path/to/page"></portal>
+```
+
+```javascript
+const portal = document.querySelector('portal');
+
+portal
+  .activate({ data: { key: 'value' } })
+  .then(() => portal.postMessage({ hello: 'portal' }));
+```
+
+---
+
+#### 子页面
+
+```javascript
+window.addEventListener('portalactivate', event => {
+  console.log(event.data); // {key: 'value'}
+
+  const portal = event.adoptPredecessor(); // 主页面
+
+  document.body.append(portal);
+});
+
+window.addEventListener('message', event =>
+  console.log(
+    event.data, // {hello: 'portal'}
+    window.portalHost // 主页面 window 对象
+  )
+);
+```
+
+---
+
+![Portal demo](https://web.dev/hands-on-portals/glitch.gif)
+
+---
+
+### 分享网页
+
+```javascript
+document.querySelector('button.share').addEventListener('click', async () => {
+  const data = { title: 'Hello', text: 'World', url: 'https://web.dev/' };
+
+  if (!navigator.canShare(data)) return;
+
+  await navigator.share(data);
+
+  console.log('Done!');
+});
+```
+
+- 网页由 HTTPS 打开
+- Android Chrome 61+
+- 分享调用在**用户操作回调栈**中发起
+- [polyfill](https://github.com/on2-dev/share-api-polyfill)
+
+---
+
+在 PWA 的 `manifest.json` 中多加一段
+
+即可成为**分享目标**（Chrome 71+）
+
+```json
+{
+  "share_target": {
+    "action": "/path/to/share-target/",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "your_title_key",
+      "text": "your_text_key",
+      "url": "you_url_key"
+    }
+  }
+}
+```
+
+---
+
+[![Share to PWA](https://developers.google.com/web/updates/images/2018/12/wst-send.png)](https://web-share.glitch.me/)
+
+---
+
+### 形状检测
+
+#### 文字
+
+```javascript
+const textDetector = new TextDetector();
+
+const texts = await textDetector.detect(image);
+
+texts.forEach(text => console.log(text));
+```
+
+---
+
+#### 条码
+
+```javascript
+const barcodeDetector = new BarcodeDetector({
+  formats: [
+    'aztec',
+    'code_128',
+    'code_39',
+    'code_93',
+    'codabar',
+    'data_matrix',
+    'ean_13',
+    'ean_8',
+    'itf',
+    'pdf417',
+    'qr_code',
+    'upc_a',
+    'upc_e'
+  ]
+});
+
+const barcodes = await barcodeDetector.detect(image);
+
+barcodes.forEach(barcode => console.log(barcode));
+```
+
+---
+
+#### 人脸
+
+```javascript
+const faceDetector = new FaceDetector({
+  maxDetectedFaces: 5,
+  fastMode: false
+});
+
+const faces = await faceDetector.detect(image);
+
+faces.forEach(face => console.log(face));
+```
+
+---
+
+- Chrome 74+（开启*实验性 Web 平台特性*标记）
+- 支持 Web worker
+- [各大平台支持](https://github.com/WICG/shape-detection-api#overview)
+- [Web 感知工具包](https://perceptiontoolkit.dev/getting-started/)
+
+---
+
+### 更多草案 API
+
+- [文件系统](https://github.com/WICG/native-file-system)
+- [短信验证](https://github.com/sso-google/sms-otp-retrieval)
+
+---
+
+## HTTP
+
+---
+
+### 同站 Cookie
+
+```
+# 站内跳转带 cookie
+Set-Cookie: a=1; SameSite=Strict
+
+# 跳转到本站带 cookie
+Set-Cookie: b=2; SameSite=Lax
+
+# 不限制 cookie
+Set-Cookie: c=3; SameSite=None
+```
+
+[RFC 6265 bis](https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00)
+
+---
+
+[![](https://web.dev/samesite-cookies-explained/samesite-none-lax-strict.png)](https://web.dev/samesite-cookies-explained/)
+
+---
+
+### Web 包协议
+
+![](https://lh6.googleusercontent.com/n6lWJFxp7RqGt2HalG6-pHCDlGSUso1EHRGzpWP8CZRQ9jmfn18XwbxtUcaFvA5AwcyygTzp_sUu-UTgukCd8C-BTjpyytfyIpiAWuVD7sSuIlbQjeVqNH4ZbqWaqObfpr6cHw_S)
+
+---
+
+<div style="background: white">
+  <img src="https://developers.google.com/web/updates/images/2018/11/signed-exchanges.svg">
+</div>
+
+---
+
+## JavaScript
+
+---
+
+### V8 提速、降费
+
+![](https://oscimg.oschina.net/oscnet/20823b97896a3ff102da2e47223b4659e7a.jpg)
+
+---
+
+![](https://oscimg.oschina.net/oscnet/935cbd4dc8bff380d632898aef0d2e22068.jpg)
+
+---
+
+![](https://oscimg.oschina.net/oscnet/1d86e81a249205922d7881a8356a04f0a1f.jpg)
+
+---
+
+### 原生类型增强
+
+```javascript
+const integer = 14_0000_0000; // 1400000000
+
+const bigInt = BigInt(Number.MAX_SAFE_INTEGER) + 1n; // 9007199254740992n
+
+[
+  [1, 2],
+  [3, 4]
+].flat(); // [1, 2, 3, 4]
+
+Object.fromEntries([
+  ['a', 1],
+  ['b', 2]
+]); // {a: 1, b: 2}
+
+console.log(...'FCC成都社区,FCC中文社区'.matchAll(/\w+([^,]+)/g));
+//  ['FCC成都社区', '成都社区']  ['FCC中文社区', '中文社区']
+```
+
+---
+
+### 统一全局对象
+
+```javascript
+const globalThis = (() => {
+  // 浏览器主线程
+  if (typeof window !== 'undefined') return window;
+  // Web worker 线程
+  if (typeof self !== 'undefined') return self;
+  // Node.JS
+  if (typeof global !== 'undefined') return global;
+  // 其它运行时的非严格模式
+  if (typeof this !== 'undefined') return this;
+})();
+```
+
+- Stage-3
+- Chrome 71、Firefox 65、Safari 12.1
+
+---
+
+### 国际化 API
+
+#### 相对时间
+
+```javascript
+const formatter = new Intl.RelativeTimeFormat('zh-CN');
+
+console.log(formatter.format(-1, 'day')); // 1天前
+
+console.log(formatter.formatToParts(-1, 'day'));
+/*
+[
+    {
+        "type": "integer",
+        "value": "1",
+        "unit": "day"
+    },
+    {
+        "type": "literal",
+        "value": "天前"
+    }
+]
+*/
+```
+
+- Stage-3
+- Chrome 71、Firefox 65
+
+---
+
+#### 短语列表
+
+```javascript
+const and = new Intl.ListFormat('zh-CN', { type: 'conjunction' }),
+  or = new Intl.ListFormat('zh-CN', { type: 'disjunction' });
+
+const list = ['GDG', 'FCC', 'ThoughtWorks'];
+
+console.log(
+  and.format(list), // 'GDG、FCC和ThoughtWorks'
+  or.format(list) // 'GDG、FCC或ThoughtWorks'
+);
+```
+
+- Stage-3
+- Chrome 72、Opera 60
+
+---
+
+### Promise
+
+#### .allSettled()
+
+```javascript
+await Promise.allSettled([
+  fetch('https://fcc-cd.dev/'),
+  fetch('https://google.com/') // 没有科学上网
+]);
+
+console.log('所有请求已响应，部分可能失败');
+```
+
+#### .any()
+
+```javascript
+const fastest = await Promise.any([
+  fetch('https://cdn.jsdelivr.net/npm/web-cell/dist/web-cell.min.js'),
+  fetch('https://unpkg.com/web-cell/dist/web-cell.min.js')
+]);
+
+console.log(fastest.url);
+```
+
+---
+
+### 类实例成员
+
+```javascript
+class Example {
+  publicField = 1;
+  #privateField = 2;
+
+  publicMethod = () =>
+    console.log(
+      this.publicField, // 1
+      this.#privateField // 2
+    );
+}
+```
+
+- Stage-3
+- Babel 7
+- Node 12
+- Chrome 72 / V8 7.2（公开成员）
+- Chrome 74 / V8 7.4（私有成员）
+
+---
+
+### 垃圾回收 API
+
+#### 提案来源
+
+- Python 2.1+ 标准库 weakref 模块
+  - https://www.atjiang.com/Python2Lib-ds-weakref/
+  - https://learnku.com/docs/pymotw/weakref-a-weak-reference-to-an-object/3372
+- [JS Rhino 引擎可借用 Java WeakReference 类](https://blogs.oracle.com/sundararajan/weak-references-in-javascript)
+- [动态检测工具 Frida 的 JS API](https://zhuanlan.kanxue.com/article-4277.htm)
+
+---
+
+#### WeakRef
+
+```javascript
+const URI = 'path/to/file';
+
+const file = await (await fetch(URI)).blob();
+
+const ref = new WeakRef(file),
+  cache = {};
+
+cache[URI] = ref;
+
+console.log(ref.deref()); // Blob {}
+```
+
+#### FinalizationGroup
+
+```javascript
+const cleaner = new FinalizationGroup(iterator => {
+  for (const URI of iterator) delete cache[URI];
+});
+
+cleaner.register(image, URI);
+```
+
+---
+
+## Google
+
+---
+
+### Search How to
+
+![](https://developers.google.com/search/docs/data-types/images/howto-example2.png)
+
+---
+
+```json
+{
+  "@context": "http://schema.org",
+  "@type": "HowTo",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://example.com/1x1/photo.jpg"
+  },
+  "name": "How to tie a tie",
+  "description": "...",
+  "totalTime": "PT2M",
+  "video": {
+    "@type": "VideoObject",
+    "name": "Tie a Tie",
+    "description": "...",
+    "thumbnailUrl": "https://example.com/photos/photo.jpg",
+    "contentUrl": "http://www.example.com/videos/123_600x400.mp4",
+    "embedUrl": "http://www.example.com/videoplayer?id=123",
+    "uploadDate": "2019-01-05T08:00:00+08:00",
+    "duration": "P1MT10S"
+  },
+  "supply": [
+    {
+      "@type": "HowToSupply",
+      "name": "A tie"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "A collared shirt"
+    }
+  ],
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "A mirror"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Preparations",
+      "text": "...",
+      "image": "https://example.com/1x1/step1.jpg",
+      "url": "https://example.com/tie#step1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Crossing once",
+      "text": "...",
+      "image": "https://example.com/1x1/step2.jpg",
+      "url": "https://example.com/tie#step2"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Second crossing",
+      "text": "...",
+      "image": "https://example.com/1x1/step3.jpg",
+      "url": "https://example.com/tie#step3"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Loop in",
+      "text": "...",
+      "image": "https://example.com/1x1/step4.jpg",
+      "url": "https://example.com/tie#step4"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Pull and tighten",
+      "text": "...",
+      "image": "https://example.com/1x1/step5.jpg",
+      "url": "https://example.com/tie#step5"
+    }
+  ]
+}
+```
+
+---
+
+#### 结构化元数据
+
+- [Schema.org](https://schema.org/)
+- [Google 搜索优化应用](https://developers.google.com/search/docs/guides/search-gallery)
+
+---
+
+### Material Design 夜间模式
+
+[![](https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1Eb0bcqf3yyrabY8JLOrfC9zq_nN8wCu9%2Fdarktheme-overview.png)](https://material.io/design/color/dark-theme.html)
+
+---
+
+## 性感谷歌，在线教学
+
+https://web.dev/
+
+https://developers.google.cn/web/
+
+https://events.google.com/io/codelabs/
+
+https://codelabs.developers.google.com/?cat=Web
+
+---
+
+## 关注 freeCodeCamp 成都社区
+
+https://fcc-cd.dev/
+
+![](/image/FCC-CDC-QRC.png)
+</script>
+                </section>
+            </div>
+        </div>
+
+        <script src="https://cdn.bootcss.com/reveal.js/3.4.1/lib/js/head.min.js"></script>
+        <script src="https://cdn.bootcss.com/reveal.js/3.4.1/js/reveal.min.js"></script>
+
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
+                // 是否在右下角展示控制条
+                controls: true,
+                // 是否显示演示的进度条
+                progress: true,
+                // 是否显示当前幻灯片的页数编号，也可以使用代码 “slideNumber: 'c/t'” ，表示当前页/总页数。
+                slideNumber: false,
+                // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+                history: false,
+                // 是否启用键盘快捷键来导航
+                keyboard: true,
+                // 是否启用幻灯片的概览模式，可使用 "Esc" 或 "o" 键来切换概览模式
+                overview: true,
+                // 是否将幻灯片垂直居中
+                center: true,
+                // 是否在触屏设备上启用触摸滑动切换
+                touch: true,
+                // 是否循环演示
+                loop: false,
+                // 是否将演示的方向变成 RTL，即从右往左
+                rtl: false,
+                // 是否每次演示的时候，随机幻灯片的顺序
+                shuffle: false,
+                // 全局开启和关闭碎片。
+                fragments: true,
+                // 标识演示文稿是否在嵌入模式中运行，即包含在屏幕的有限部分中的
+                embedded: false,
+                // 标识当问号键被点击的时候是否应该显示一个帮助的覆盖层
+                help: true,
+                // 标识演讲者备注标志是否让所有观看者可见
+                showNotes: false,
+                // 两个幻灯片之间自动切换的时间间隔（毫秒）
+                // 当设置成 0 的时候则禁止自动切换
+                // 该值可以被幻灯片上的 “data-autoslide” 属性覆盖
+                autoSlide: 0,
+                // 当遇到用户输入的时候停止自动切换
+                autoSlideStoppable: true,
+                // 当自动滑动时，使用此方法进行导航。
+                autoSlideMethod: Reveal.navigateNext,
+                // 是否启用通过鼠标滚轮来导航幻灯片
+                mouseWheel: false,
+                // 是否在移动设备上隐藏地址栏
+                hideAddressBar: true,
+                // 是否在一个弹出的 iframe 中打开幻灯片中的链接
+                previewLinks: false,
+                // 切换过渡效果
+                transition: 'none', // none/fade/slide/convex/concave/zoom
+                // 过渡速度
+                transitionSpeed: 'default', // default/fast/slow
+                // 全屏幻灯片背景的过渡效果
+                backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+                // 加载除当前可见的幻灯片之外的幻灯片数量
+                viewDistance: 3,
+                // 视差背景图片
+                parallaxBackgroundImage: '',
+                // e.g. 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'
+                // 视差背景尺寸
+                parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+                // 移动视差背景（水平和垂直）滑动变化的数量, 例如 100
+                // - 除了指定自动计算
+                // - 设置为 0 时，禁止沿轴运动
+                parallaxBackgroundHorizontal: null,
+                parallaxBackgroundVertical: null,
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.4.1/plugin/markdown/marked.js' },
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.4.1/plugin/markdown/markdown.min.js' },
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.4.1/plugin/notes/notes.min.js', async: true },
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.4.1/plugin/highlight/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,277 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>让 Web 打包器再次简单！</title>
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.4.1/css/reveal.min.css">
+        
+        <!-- theme -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            var theme ='black';
+            switch (theme){
+                case 'black':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/black.min.css';
+                    break;
+                case 'beige':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/beige.min.css';
+                    break;
+                case 'blood':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/blood.min.css';
+                    break;
+                case 'league':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/league.min.css';
+                    break;
+                case 'moon':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/moon.min.css';
+                    break;
+                case 'night':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/night.min.css';
+                    break;
+                case 'serif':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/serif.min.css';
+                    break;
+                case 'sky':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/sky.min.css';
+                    break;
+                case 'solarized':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/solarized.min.css';
+                    break;
+                case 'white':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/white.min.css';
+                    break;
+                default:
+            }
+            
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.4.1/lib/css/zenburn.min.css">
+        <link href="https://cdn.bootcss.com/reveal.js/3.4.1/css/print/paper.min.css" rel="stylesheet">
+        <!-- Printing and PDF exports -->
+        
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown
+                         data-separator="^\n---\n"
+                         data-separator-vertical="^\n--\n"
+                         data-separator-notes="^Note:">
+                    <script type="text/template">让 Web 打包器再次简单！
+
+
+> 华为云开发者社区<br>
+> 2021 年 3 月 27 日演讲
+
+---
+
+## Web 最初很简单
+
+- HTTP
+- HTML
+- CSS
+- JavaScript
+
+---
+
+<iframe
+    style="width: 100%; height: 90vh"
+    scrolling="no" frameborder="no" loading="lazy"
+    allowtransparency="true" allowfullscreen="true"
+    title="Web standard - Resource import"
+    src="https://codepen.io/tech_query/embed/MWbVwWv?height=265&theme-id=dark&default-tab=html,result"
+></iframe>
+
+---
+
+## Web 后来很强大
+
+- BOM、DOM
+- LESS、SASS、Stylus
+- ECMAScript 6+、TypeScript
+- WebAssembly
+- Canvas、WebGL
+- WebSocket
+- IndexedDB
+- Web Worker、PWA
+- WebUSB、WebAuthn
+- ……
+
+---
+
+### Web 打包器变得很复杂
+
+---
+
+#### JavaScript 库打包器
+
+|                <small>名称及官网</small>                |             <small>简介</small>              |             <small>备注</small>             |
+| :-----------------------------------------------------: | :------------------------------------------: | :-----------------------------------------: |
+|  [AMD-bundle.js](https://tech-query.me/AMD_bundle.js/)  | <small>AMD、CJS 和 ES 通用模块打包器</small> | <small>本人开发 jQuery 仿制版时自研</small> |
+|           [rollup.js](https://rollupjs.org/)            |         <small>ES 模块打包器</small>         | <small>全球首个知名的 ES 模块打包器</small> |
+| [MicroBundle](https://github.com/developit/microbundle) |   <small>基于 rollup 的 JS 打包器</small>    |   <small>Preact 等知名库的打包器</small>    |
+|          [ESBuild](https://esbuild.github.io/)          | <small>用 Go 语言开发的 ES/TS 打包器</small> |         <small>全球性能最强</small>         |
+
+---
+
+#### Web 应用打包器
+
+|       <small>名称及官网</small>        |                    <small>简介</small>                     |              <small>备注</small>              |
+| :------------------------------------: | :--------------------------------------------------------: | :-------------------------------------------: |
+| [DevCLI](https://web-cell.dev/DevCLI/) | <small>HTML 5、CSS 3、ECMAScript 6+ 原生资源打包器</small> |  <small>本人开发 WebCell 1.0 时自研</small>   |
+|   [webpack](https://webpack.js.org/)   |            <small>插件化 Web 资源打包器</small>            |   <small>全球最著名、最复杂的打包器</small>   |
+|    [Parcel](https://parceljs.org/)     |          <small>零配置 Web 原生资源打包器</small>          |   <small>全球次著名、最易用的打包器</small>   |
+| [Snowpack](https://www.snowpack.dev/)  |       <small>基于 ESBuild 的 Web 资源打包器</small>        | <small>全球首个知名 ES 模块应用打包器</small> |
+|       [Vite](http://vitejs.dev/)       |  <small>基于 rollup 和 ESBuild 的 Web 资源打包器</small>   |   <small>尤雨溪开发 Vue 3.0 时自研</small>    |
+
+---
+
+#### 痛点：配置复杂！！！
+
+1. 标准滞后
+2. 实现繁多
+3. 配置复杂
+4. 迁移困难
+
+---
+
+代码还没写，环境配一天……
+
+---
+
+## 我理想中的打包器
+
+| 本人自研（已废弃） | 社区同款 |                社区现状                |
+| :----------------: | :------: | :------------------------------------: |
+|   AMD-bundle.js    | ESBuild  | CSS modules 官方尚未支持，但有社区插件 |
+|       DevCLI       |  Parcel  |    v1 bug 无人修复，v2 变复杂且难产    |
+
+---
+
+### 设计原则
+
+- **资源文件引入机制**只依赖 **HTML、CSS、JavaScript 原生语法**
+- **资源文件扩展名**支持：
+  - MarkDown、LESS、SASS、TypeScript 等**高级编译语言**
+  - JSON、YAML、CSV 等**文本数据格式**
+  - 图片、音视频等**二进制文件的 URI**
+
+---
+
+- 根据依赖树的需要，自动安装**资源编译器**
+- 自动读取项目现有的各种**编译器配置文件**
+- **打包配置**按社区习惯设置**最优默认值**
+- 配置文件支持 [JSON schema](https://json-schema.org/)、**ES 模块**和 **TypeScript 类型定义**
+
+---
+
+### 架构概略
+
+1. 编译器转换各类代码文件
+2. 编译器生成**抽象语法树**，并查找**资源引用语句**
+3. 构造依赖树
+4. 基于观察者模型**增量更新依赖**
+
+---
+
+## 我有一个梦想
+
+---
+
+Web standard first!
+
+---
+
+Make the Web bundler easy again!
+</script>
+                </section>
+            </div>
+        </div>
+
+        <script src="https://cdn.bootcss.com/reveal.js/3.4.1/lib/js/head.min.js"></script>
+        <script src="https://cdn.bootcss.com/reveal.js/3.4.1/js/reveal.min.js"></script>
+
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
+                // 是否在右下角展示控制条
+                controls: true,
+                // 是否显示演示的进度条
+                progress: true,
+                // 是否显示当前幻灯片的页数编号，也可以使用代码 “slideNumber: 'c/t'” ，表示当前页/总页数。
+                slideNumber: false,
+                // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+                history: false,
+                // 是否启用键盘快捷键来导航
+                keyboard: true,
+                // 是否启用幻灯片的概览模式，可使用 "Esc" 或 "o" 键来切换概览模式
+                overview: true,
+                // 是否将幻灯片垂直居中
+                center: true,
+                // 是否在触屏设备上启用触摸滑动切换
+                touch: true,
+                // 是否循环演示
+                loop: false,
+                // 是否将演示的方向变成 RTL，即从右往左
+                rtl: false,
+                // 是否每次演示的时候，随机幻灯片的顺序
+                shuffle: false,
+                // 全局开启和关闭碎片。
+                fragments: true,
+                // 标识演示文稿是否在嵌入模式中运行，即包含在屏幕的有限部分中的
+                embedded: false,
+                // 标识当问号键被点击的时候是否应该显示一个帮助的覆盖层
+                help: true,
+                // 标识演讲者备注标志是否让所有观看者可见
+                showNotes: false,
+                // 两个幻灯片之间自动切换的时间间隔（毫秒）
+                // 当设置成 0 的时候则禁止自动切换
+                // 该值可以被幻灯片上的 “data-autoslide” 属性覆盖
+                autoSlide: 0,
+                // 当遇到用户输入的时候停止自动切换
+                autoSlideStoppable: true,
+                // 当自动滑动时，使用此方法进行导航。
+                autoSlideMethod: Reveal.navigateNext,
+                // 是否启用通过鼠标滚轮来导航幻灯片
+                mouseWheel: false,
+                // 是否在移动设备上隐藏地址栏
+                hideAddressBar: true,
+                // 是否在一个弹出的 iframe 中打开幻灯片中的链接
+                previewLinks: false,
+                // 切换过渡效果
+                transition: 'none', // none/fade/slide/convex/concave/zoom
+                // 过渡速度
+                transitionSpeed: 'default', // default/fast/slow
+                // 全屏幻灯片背景的过渡效果
+                backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+                // 加载除当前可见的幻灯片之外的幻灯片数量
+                viewDistance: 3,
+                // 视差背景图片
+                parallaxBackgroundImage: '',
+                // e.g. 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'
+                // 视差背景尺寸
+                parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+                // 移动视差背景（水平和垂直）滑动变化的数量, 例如 100
+                // - 除了指定自动计算
+                // - 设置为 0 时，禁止沿轴运动
+                parallaxBackgroundHorizontal: null,
+                parallaxBackgroundVertical: null,
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.4.1/plugin/markdown/marked.js' },
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.4.1/plugin/markdown/markdown.min.js' },
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.4.1/plugin/notes/notes.min.js', async: true },
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.4.1/plugin/highlight/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+</html>

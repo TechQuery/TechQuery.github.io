@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>TechQuery</title>
+  
+  <subtitle>Web &amp; JavaScript</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://tech-query.me/"/>
+  <updated>2024-07-29T19:49:24.182Z</updated>
+  <id>https://tech-query.me/</id>
+  
+  <author>
+    <name>TechQuery</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>民主的真谛</title>
+    <link href="https://tech-query.me/democracy/true-meaning-of-democracy/"/>
+    <id>https://tech-query.me/democracy/true-meaning-of-democracy/</id>
+    <published>2023-07-17T20:49:13.000Z</published>
+    <updated>2024-07-29T19:49:24.182Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;民主-≠-有了就能好&quot;&gt;&lt;a href=&quot;#民主-≠-有了就能好&quot; class=&quot;headerlink&quot; title=&quot;民主 ≠ 有了就能好&quot;&gt;&lt;/a&gt;民主 ≠
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Democracy" scheme="https://tech-query.me/categories/Democracy/"/>
+    
+    
+      <category term="误区" scheme="https://tech-query.me/tags/%E8%AF%AF%E5%8C%BA/"/>
+    
+      <category term="法制" scheme="https://tech-query.me/tags/%E6%B3%95%E5%88%B6/"/>
+    
+      <category term="宪法" scheme="https://tech-query.me/tags/%E5%AE%AA%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>抖音 ≠ 精神鸦片 —— 言论自由之辨</title>
+    <link href="https://tech-query.me/democracy/tiktok-is-not-drug/"/>
+    <id>https://tech-query.me/democracy/tiktok-is-not-drug/</id>
+    <published>2023-03-02T16:49:00.000Z</published>
+    <updated>2023-03-03T13:46:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;近两年，我无数次听到身边人说：“&lt;a href=&quot;https://www.douyin.com/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Democracy" scheme="https://tech-query.me/categories/Democracy/"/>
+    
+    
+      <category term="freedom" scheme="https://tech-query.me/tags/freedom/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>脱离 IDE，徒手 Kotlin！</title>
+    <link href="https://tech-query.me/development/start-kotlin-without-ide/"/>
+    <id>https://tech-query.me/development/start-kotlin-without-ide/</id>
+    <published>2022-01-06T15:40:06.000Z</published>
+    <updated>2024-07-29T19:49:24.186Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Java、PHP 作为中国软件外包行业的扛把子，自然是码农最多、甲方最爱的后端技术栈，我自主创业以来也有不少甲方要求 Java + Spring 的架构。&lt;/p&gt;
+&lt;p&gt;同时，JSer 一直很反感 Java 庞大的代码量，即便后来大行其道的 &lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Development" scheme="https://tech-query.me/categories/Development/"/>
+    
+    
+      <category term="Java" scheme="https://tech-query.me/tags/Java/"/>
+    
+      <category term="Kotlin" scheme="https://tech-query.me/tags/Kotlin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021 年的 Web 标准进展</title>
+    <link href="https://tech-query.me/development/web-progress-2021/"/>
+    <id>https://tech-query.me/development/web-progress-2021/</id>
+    <published>2021-12-11T06:00:00.000Z</published>
+    <updated>2024-07-29T19:49:24.182Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;Google DevFest 2021 成都站&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;Web-组件&quot;&gt;&lt;a href=&quot;#Web-组件&quot; class=&quot;headerlink&quot; title=&quot;Web 组件&quot;&gt;&lt;/a&gt;Web
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Development" scheme="https://tech-query.me/categories/Development/"/>
+    
+    
+      <category term="Web" scheme="https://tech-query.me/tags/Web/"/>
+    
+      <category term="standard" scheme="https://tech-query.me/tags/standard/"/>
+    
+      <category term="component" scheme="https://tech-query.me/tags/component/"/>
+    
+      <category term="form" scheme="https://tech-query.me/tags/form/"/>
+    
+      <category term="API" scheme="https://tech-query.me/tags/API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开源给中国的精神启示</title>
+    <link href="https://tech-query.me/community/spiritual-inspiration-of-open-source-to-china/"/>
+    <id>https://tech-query.me/community/spiritual-inspiration-of-open-source-to-china/</id>
+    <published>2021-10-25T13:00:00.000Z</published>
+    <updated>2024-07-29T19:49:24.182Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;COSCon 2021&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;开源之功利&quot;&gt;&lt;a href=&quot;#开源之功利&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Community" scheme="https://tech-query.me/categories/Community/"/>
+    
+    
+      <category term="China" scheme="https://tech-query.me/tags/China/"/>
+    
+      <category term="open-source" scheme="https://tech-query.me/tags/open-source/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自由职业者中文手册</title>
+    <link href="https://tech-query.me/other/freelancer-chinese-manual/"/>
+    <id>https://tech-query.me/other/freelancer-chinese-manual/</id>
+    <published>2021-05-23T09:23:55.000Z</published>
+    <updated>2024-07-29T19:49:24.186Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;在线流程&quot;&gt;&lt;a href=&quot;#在线流程&quot; class=&quot;headerlink&quot; title=&quot;在线流程&quot;&gt;&lt;/a&gt;在线流程&lt;/h2&gt;&lt;h3 id=&quot;合同签名&quot;&gt;&lt;a href=&quot;#合同签名&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Other" scheme="https://tech-query.me/categories/Other/"/>
+    
+    
+      <category term="FreeLancer" scheme="https://tech-query.me/tags/FreeLancer/"/>
+    
+      <category term="manual" scheme="https://tech-query.me/tags/manual/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>让 Web 打包器再次简单！</title>
+    <link href="https://tech-query.me/development/make-web-bundler-easy-again/"/>
+    <id>https://tech-query.me/development/make-web-bundler-easy-again/</id>
+    <published>2021-02-27T16:11:35.000Z</published>
+    <updated>2024-07-29T19:49:24.186Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;华为云开发者社区&lt;br&gt;&lt;br&gt;2021 年 3 月 27 日演讲&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;Web-最初很简单&quot;&gt;&lt;a href=&quot;#Web-最初很简单&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Development" scheme="https://tech-query.me/categories/Development/"/>
+    
+    
+      <category term="Web" scheme="https://tech-query.me/tags/Web/"/>
+    
+      <category term="bundle" scheme="https://tech-query.me/tags/bundle/"/>
+    
+      <category term="easy" scheme="https://tech-query.me/tags/easy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>美国王牌</title>
+    <link href="https://tech-query.me/democracy/america-trump/"/>
+    <id>https://tech-query.me/democracy/america-trump/</id>
+    <published>2021-01-12T11:39:38.000Z</published>
+    <updated>2024-07-29T19:49:24.182Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;权利还给人民&quot;&gt;&lt;a href=&quot;#权利还给人民&quot; class=&quot;headerlink&quot; title=&quot;权利还给人民&quot;&gt;&lt;/a&gt;权利还给人民&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Today’s ceremony, however, has very
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Democracy" scheme="https://tech-query.me/categories/Democracy/"/>
+    
+    
+      <category term="USA" scheme="https://tech-query.me/tags/USA/"/>
+    
+      <category term="Trump" scheme="https://tech-query.me/tags/Trump/"/>
+    
+      <category term="election" scheme="https://tech-query.me/tags/election/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【译】更强大的表单控件</title>
+    <link href="https://tech-query.me/programming/more-capable-form-controls/"/>
+    <id>https://tech-query.me/programming/more-capable-form-controls/</id>
+    <published>2020-12-19T05:30:48.000Z</published>
+    <updated>2024-07-29T19:49:24.274Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;原文：&lt;a href=&quot;https://web.dev/more-capable-form-controls/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Programming" scheme="https://tech-query.me/categories/Programming/"/>
+    
+    
+      <category term="Web" scheme="https://tech-query.me/tags/Web/"/>
+    
+      <category term="standard" scheme="https://tech-query.me/tags/standard/"/>
+    
+      <category term="component" scheme="https://tech-query.me/tags/component/"/>
+    
+      <category term="form" scheme="https://tech-query.me/tags/form/"/>
+    
+      <category term="API" scheme="https://tech-query.me/tags/API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>汉服复兴与民族自信</title>
+    <link href="https://tech-query.me/other/hanfu-revival-and-national-confidence/"/>
+    <id>https://tech-query.me/other/hanfu-revival-and-national-confidence/</id>
+    <published>2020-11-18T12:13:18.000Z</published>
+    <updated>2024-05-21T15:32:51.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;始作于 2020 年&lt;a href=&quot;https://www.google.com/search?q=%E6%B1%89%E6%9C%8D%E5%87%BA%E8%A1%8C%E6%97%A5&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Other" scheme="https://tech-query.me/categories/Other/"/>
+    
+    
+      <category term="China" scheme="https://tech-query.me/tags/China/"/>
+    
+      <category term="HanFu" scheme="https://tech-query.me/tags/HanFu/"/>
+    
+      <category term="dress" scheme="https://tech-query.me/tags/dress/"/>
+    
+      <category term="culture" scheme="https://tech-query.me/tags/culture/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>水歌：开源之“道”的三股势力丨COSCon&#39;20 专访</title>
+    <link href="https://tech-query.me/community/open-source-core-community/"/>
+    <id>https://tech-query.me/community/open-source-core-community/</id>
+    <published>2020-10-23T13:51:00.000Z</published>
+    <updated>2024-07-29T19:49:24.174Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;【原文链接】&lt;a href=&quot;https://mp.weixin.qq.com/s/JSIGP8ZbJPz1KpiJcEyRuw&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Community" scheme="https://tech-query.me/categories/Community/"/>
+    
+    
+      <category term="Open Source" scheme="https://tech-query.me/tags/Open-Source/"/>
+    
+      <category term="COSCon" scheme="https://tech-query.me/tags/COSCon/"/>
+    
+      <category term="China" scheme="https://tech-query.me/tags/China/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为何新手可用 TypeScript？</title>
+    <link href="https://tech-query.me/development/typescript-for-beginners/"/>
+    <id>https://tech-query.me/development/typescript-for-beginners/</id>
+    <published>2020-08-10T16:06:54.000Z</published>
+    <updated>2020-11-01T16:46:07.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://www.typescriptlang.org/zh/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;TypeScript 官网&lt;/a&gt;开宗明义 ——&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;TypeScript
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Development" scheme="https://tech-query.me/categories/Development/"/>
+    
+    
+      <category term="TypeScript" scheme="https://tech-query.me/tags/TypeScript/"/>
+    
+      <category term="ECMAScript" scheme="https://tech-query.me/tags/ECMAScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>讲烂了的 JavaScript 原型继承</title>
+    <link href="https://tech-query.me/programming/javascript-prototype-inheritance/"/>
+    <id>https://tech-query.me/programming/javascript-prototype-inheritance/</id>
+    <published>2020-08-10T12:16:00.000Z</published>
+    <updated>2024-07-29T19:49:24.274Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;创建普通对象&quot;&gt;&lt;a href=&quot;#创建普通对象&quot; class=&quot;headerlink&quot; title=&quot;创建普通对象&quot;&gt;&lt;/a&gt;创建普通对象&lt;/h2&gt;&lt;h3 id=&quot;对象字面量&quot;&gt;&lt;a href=&quot;#对象字面量&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Programming" scheme="https://tech-query.me/categories/Programming/"/>
+    
+    
+      <category term="ECMAScript" scheme="https://tech-query.me/tags/ECMAScript/"/>
+    
+      <category term="JavaScript" scheme="https://tech-query.me/tags/JavaScript/"/>
+    
+      <category term="OOP" scheme="https://tech-query.me/tags/OOP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Web 前端“像素级还原”的真相</title>
+    <link href="https://tech-query.me/development/truth-of-pixel-level-restoration/"/>
+    <id>https://tech-query.me/development/truth-of-pixel-level-restoration/</id>
+    <published>2020-05-22T07:13:46.000Z</published>
+    <updated>2024-07-29T19:49:24.182Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;freeCodeCamp 中文社区&lt;/p&gt;
+&lt;p&gt;首次直播分享会&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;互联网公司“金句”&quot;&gt;&lt;a href=&quot;#互联网公司“金句”&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Development" scheme="https://tech-query.me/categories/Development/"/>
+    
+    
+      <category term="Web" scheme="https://tech-query.me/tags/Web/"/>
+    
+      <category term="GUI" scheme="https://tech-query.me/tags/GUI/"/>
+    
+      <category term="design" scheme="https://tech-query.me/tags/design/"/>
+    
+      <category term="front-end" scheme="https://tech-query.me/tags/front-end/"/>
+    
+      <category term="CSS" scheme="https://tech-query.me/tags/CSS/"/>
+    
+      <category term="layout" scheme="https://tech-query.me/tags/layout/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>内容型网站后端一把梭</title>
+    <link href="https://tech-query.me/development/headless-cms-strapi/"/>
+    <id>https://tech-query.me/development/headless-cms-strapi/</id>
+    <published>2020-04-09T12:05:18.000Z</published>
+    <updated>2020-11-17T12:11:30.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;Web 全栈工程师&lt;/strong&gt;经常遇到一些&lt;strong&gt;内容型网站&lt;/strong&gt;的开发需求，比如个人博客、机构官网、新闻门户。这些虽是 Web 1.0、2.0 时代就烂大街的典型
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Development" scheme="https://tech-query.me/categories/Development/"/>
+    
+    
+      <category term="API" scheme="https://tech-query.me/tags/API/"/>
+    
+      <category term="CMS" scheme="https://tech-query.me/tags/CMS/"/>
+    
+      <category term="Node.js" scheme="https://tech-query.me/tags/Node-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安徒生童话：技术人的群聊</title>
+    <link href="https://tech-query.me/community/group-chat-for-techies/"/>
+    <id>https://tech-query.me/community/group-chat-for-techies/</id>
+    <published>2020-03-31T16:00:00.000Z</published>
+    <updated>2024-07-29T19:49:24.182Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;加过&lt;strong&gt;技术群&lt;/strong&gt;的同学想必听过一句话 ——&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;技术人不谈&lt;strong&gt;政治&lt;/strong&gt;~&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;不少&lt;strong&gt;群公告&lt;/strong&gt;还直接明文规定
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Community" scheme="https://tech-query.me/categories/Community/"/>
+    
+    
+      <category term="politics" scheme="https://tech-query.me/tags/politics/"/>
+    
+      <category term="common-sense" scheme="https://tech-query.me/tags/common-sense/"/>
+    
+      <category term="COVID-19" scheme="https://tech-query.me/tags/COVID-19/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Web 文本朗读 60 行代码实现</title>
+    <link href="https://tech-query.me/development/web-text-speech/"/>
+    <id>https://tech-query.me/development/web-text-speech/</id>
+    <published>2020-03-28T07:59:59.000Z</published>
+    <updated>2024-07-29T19:49:24.182Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;国难当头&quot;&gt;&lt;a href=&quot;#国难当头&quot; class=&quot;headerlink&quot; title=&quot;国难当头&quot;&gt;&lt;/a&gt;国难当头&lt;/h2&gt;&lt;p&gt;在&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Development" scheme="https://tech-query.me/categories/Development/"/>
+    
+    
+      <category term="Web" scheme="https://tech-query.me/tags/Web/"/>
+    
+      <category term="TTS" scheme="https://tech-query.me/tags/TTS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PWA 即刻上手</title>
+    <link href="https://tech-query.me/development/pwa-quick-start/"/>
+    <id>https://tech-query.me/development/pwa-quick-start/</id>
+    <published>2019-10-31T14:41:33.000Z</published>
+    <updated>2020-12-30T19:37:18.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;近两年国内前端界很流行&lt;em&gt;小程序&lt;/em&gt;，但大多数人都不知道小程序很多概念是鹅厂“借鉴”自 Google 主导的 &lt;a href=&quot;https://developers.google.cn/web/progressive-web-apps/&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Development" scheme="https://tech-query.me/categories/Development/"/>
+    
+    
+      <category term="Web" scheme="https://tech-query.me/tags/Web/"/>
+    
+      <category term="PWA" scheme="https://tech-query.me/tags/PWA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Web 组件标准实践</title>
+    <link href="https://tech-query.me/programming/web-components-practise/"/>
+    <id>https://tech-query.me/programming/web-components-practise/</id>
+    <published>2019-08-14T14:33:23.000Z</published>
+    <updated>2024-07-29T19:14:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;水歌 —— WebCell 引擎作者&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;水歌其人&quot;&gt;&lt;a href=&quot;#水歌其人&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Programming" scheme="https://tech-query.me/categories/Programming/"/>
+    
+    
+      <category term="Web" scheme="https://tech-query.me/tags/Web/"/>
+    
+      <category term="component" scheme="https://tech-query.me/tags/component/"/>
+    
+      <category term="WebCell" scheme="https://tech-query.me/tags/WebCell/"/>
+    
+      <category term="W3C" scheme="https://tech-query.me/tags/W3C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>结构化简历数据</title>
+    <link href="https://tech-query.me/development/structured-resume-data/"/>
+    <id>https://tech-query.me/development/structured-resume-data/</id>
+    <published>2019-08-14T10:14:58.000Z</published>
+    <updated>2020-07-30T11:20:31.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;参加工作久了，经历公司多了，每次&lt;strong&gt;换工作写简历&lt;/strong&gt;都烦得要死
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Development" scheme="https://tech-query.me/categories/Development/"/>
+    
+    
+      <category term="API" scheme="https://tech-query.me/tags/API/"/>
+    
+      <category term="data" scheme="https://tech-query.me/tags/data/"/>
+    
+      <category term="model" scheme="https://tech-query.me/tags/model/"/>
+    
+      <category term="document" scheme="https://tech-query.me/tags/document/"/>
+    
+      <category term="schema" scheme="https://tech-query.me/tags/schema/"/>
+    
+      <category term="SaaS" scheme="https://tech-query.me/tags/SaaS/"/>
+    
+  </entry>
+  
+</feed>

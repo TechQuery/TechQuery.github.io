@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume of Yao Shi</title>
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+    <style type="text/css">
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800);
+@charset "utf-8";
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+
+body{
+  font-family: 'Open Sans', Arial, Tahoma;
+  font-weight: 400;
+  color: #363636;
+  background: #334960;
+}
+blockquote {
+  font-size: 1em;
+}
+
+.container{
+  margin-top: 80px;
+  margin-bottom: 15px;
+  background: #fff;
+}
+
+#photo-header{
+  margin-top: -75px;
+}
+#photo{
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 5px;
+  background: #334960;
+  display: inline-block;
+}
+#photo img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+#text-header h1{
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+#text-header h1::first-line{
+  font-size: 1.5em;
+  font-weight: 800;
+  line-height: 1.5em;
+}
+#text-header h1 span{
+  color: #334960;
+  opacity: 0.7;
+}
+#text-header h1 sup{
+  opacity: 0.5;
+}
+#text-header:after{
+  width: 100%;
+  height: 3px;
+  border-bottom: 1px solid #ddd;
+  margin-top: 15px;
+  content: '';
+  display: block;
+}
+
+.box{
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+.box h2{
+  color: #227c74;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#awards,
+#education{
+  margin-top: 20px;
+  margin-bottom: 0;
+  position: relative;
+  padding: 1em 0;
+  list-style: none;
+}
+#awards:before,
+#education:before {
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  left: 35px;
+  top: 0;
+  content: ' ';
+  display: block;
+  background: #32475c;
+  background: -moz-linear-gradient(top,  #ffffff 0%, #32475c 7%, #32475c 89%, #ffffff 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(7%,#32475c), color-stop(89%,#32475c), color-stop(100%,#ffffff));
+  background: -webkit-linear-gradient(top,  #ffffff 0%,#32475c 7%,#32475c 89%,#ffffff 100%);
+  background: -o-linear-gradient(top,  #ffffff 0%,#32475c 7%,#32475c 89%,#ffffff 100%);
+  background: -ms-linear-gradient(top,  #ffffff 0%,#32475c 7%,#32475c 89%,#ffffff 100%);
+  background: linear-gradient(to bottom,  #ffffff 0%,#32475c 7%,#32475c 89%,#ffffff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+}
+#awards li,
+#education li{
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  float: left;
+}
+#awards .year,
+#education .year{
+  width: 14%;
+  background: #fff;
+  padding: 10px;
+  font-weight: 700;
+  display: inline-block;
+}
+#awards .description,
+#education .description{
+  width: 83%;
+  display: inline-block;
+  background: #eee;
+  margin-bottom: 10px;
+  position: relative;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+#awards .description:after,
+#education .description:after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 0;
+  left: -16px;
+  height: 0;
+  width: 0;
+  border: solid transparent;
+  border-right-color: #eee;
+  border-width: 8px;
+  pointer-events: none;
+}
+#awards .description h3,
+#education .description h3{
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+#awards .description p,
+#education .description p{
+  margin-top: 5px;
+  padding: 0;
+}
+
+.job{
+  margin-bottom: 15px;
+}
+.job .details {
+  margin-left: 3%;
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #eee;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.job .where{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.job .year{
+  opacity: 0.7;
+}
+.job .profession{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.job .description{
+  line-height: 1.5em;
+}
+.job .highlights{
+  padding: 5px 0;
+  font-weight: bold;
+}
+.job .job-details {
+  padding-left: 5%;
+  width: 100%;
+}
+.publication {
+  margin-bottom: 0;
+}
+.publication .name{
+  font-size: 1em;
+  font-weight: bold;
+}
+.publication .year{
+    opacity: 0.7;
+}
+.publication p{
+  margin: 0;
+  padding-top: 10px;
+}
+
+.contact-item{
+  width: 100%;
+  float: left;
+}
+.contact-item .icon{
+  padding: 10px;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  color: #32475c;
+  background: #eee;
+}
+.contact-item:last-child .icon{
+  border-bottom: none;
+}
+.contact-item .title{
+  width: 80%;
+  width: calc(100% - 55px);
+  font-weight: 700;
+  opacity: 0.9;
+}
+.contact-item .title.only{
+  margin-top: 10px;
+}
+.contact-item .description{
+  width: 80%;
+  width: calc(100% - 55px);
+  color: #334960;
+}
+
+.item-interests,
+.item-skills{
+  height: 30px;
+  color: #334960;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.interest,
+.skill{
+  color: #fff;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  background: #32475c;
+  position: relative;
+  font-size: .85em;
+}
+.skill-level {
+  background-color: #227c74;
+  border-radius: 4px;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: .75em;
+  position: absolute;
+  margin: 1px 10px;
+}
+
+#language-skills .skill{
+  margin: 10px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+    </style>
+    <style type="text/css" media="print">
+    body {
+  font-size: .95em;
+  -webkit-print-color-adjust: exact;
+}
+
+a[href]:after {
+  content: none !important;
+}
+
+#photo{
+  display: none;
+}
+
+.box {
+  margin-bottom: -10px;
+}
+
+blockquote,
+#education,
+#awards,
+.contact-item,
+.publication,
+.skills,
+.interests {
+  page-break-inside: avoid;
+}
+
+.col-sm-5{
+  width: 40%;
+  padding: 0 15px;
+}
+
+.col-sm-7{
+  width: 60%;
+  padding: 0 15px;
+}
+
+.skills .col-sm-offset-1,
+.interests .col-sm-offset-1{
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+
+#education {
+  margin: 0;
+  margin-bottom: -20px;
+}
+#awards:before,
+#education:before {
+  background: none;
+}
+
+#awards .description,
+#education .description,
+.job .details {
+  border: 1px solid #eee;
+}
+.publication,
+.publication .panel-heading,
+.publication .name{
+  margin: 0;
+  padding: 0 5px;
+  border: none;
+}
+.publication .panel-body {
+  padding: 0 10px;
+  margin: 0;
+}
+
+.badge {
+  margin: 0;
+}
+
+.list-group-item{
+  border: none;
+  margin: 0;
+  padding: 5px 15px;
+}
+.list-group-item:after{
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: 0;
+  left: -1px;
+  height: 0;
+  width: 0;
+  border: solid transparent;
+  border-right-color: #999;
+  border-width: 4px;
+  pointer-events: none;
+ }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="photo-header" class="text-center">
+            <!-- PHOTO (AVATAR) -->
+            <div id="photo">
+              <img src="https:&#x2F;&#x2F;tech-query.me&#x2F;community&#x2F;fcc-devtalk-techquery&#x2F;TechQuery-WebCell-cap.jpg" alt="avatar">
+            </div>
+            <div id="text-header" >
+              <h1>Yao Shi<br><span>Programmer</span></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-7">
+          <!-- ABOUT ME -->
+          <div class="box">
+            <h2><i class="fas fa-user ico"></i> About</h2>
+            <p>Web/JavaScript full-stack developer, Open-source author & contributor, Technical community leader.</p>
+          </div>
+          <!-- WORK EXPERIENCE -->
+          <div class="box">
+            <h2><i class= "fas fa-suitcase ico"></i> Work Experience</h2>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">
+                      idea2app
+                    </div>
+                    <div class="address">
+                      <a href="https:&#x2F;&#x2F;idea2.app&#x2F;" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;idea2.app&#x2F;</a>
+                    </div>
+                    <div class="year">August 2020 – Present</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">CEO</div>
+                    <div class="description">
+                      Team founder & Web/JavaScript full-stack engineer
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">
+                      ChengDu 1024 Technology Partnership
+                    </div>
+                    <div class="address">
+                      <a href="https:&#x2F;&#x2F;github.com&#x2F;Creator-1024" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;github.com&#x2F;Creator-1024</a>
+                    </div>
+                    <div class="year">October 2020 – Present</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">General Partner</div>
+                    <div class="description">
+                      
+                      <div class="highlights">Highlights</div>
+                      <ul class="list-group">
+                        <li class="list-group-item">Do many Presentations to promote JavaScript full-stack</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">
+                      ThoughtWorks
+                    </div>
+                    <div class="address">
+                      <a href="https:&#x2F;&#x2F;thoughtworks.com" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;thoughtworks.com</a>
+                    </div>
+                    <div class="year">April 2019 – August 2019</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">UI developer (Senior consultant)</div>
+                    <div class="description">
+                      Senior Web front-end developer
+                      <div class="highlights">Highlights</div>
+                      <ul class="list-group">
+                        <li class="list-group-item">Make a quick speech about Web Components in ThoughtWorks JavaScript community</li>
+                        <li class="list-group-item">Make a quick speech about Puppeteer & Codecept in ThoughtWorks JavaScript community</li>
+                        <li class="list-group-item">Use React + TypeScript in Logistics Web platform of Shell China</li>
+                        <li class="list-group-item">Use MpVue in Logistics WeChat mini-program of Shell China</li>
+                        <li class="list-group-item">Use Vue in DORA (a data platform in ThoughtWorks)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">
+                      tap4fun
+                    </div>
+                    <div class="address">
+                      <a href="https:&#x2F;&#x2F;tap4fun.com" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;tap4fun.com</a>
+                    </div>
+                    <div class="year">March 2018 – December 2018</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">Senior Web front-end engineer</div>
+                    <div class="description">
+                      Front-end Leader of Web Development department
+                      <div class="highlights">Highlights</div>
+                      <ul class="list-group">
+                        <li class="list-group-item">Write a Web Front-end Engineering Specification, and implement it as an Automated Tool-chain</li>
+                        <li class="list-group-item">Write a Web Front-end Recruitment Test, and be responsible for the first round of Front-end interviews across the company</li>
+                        <li class="list-group-item">Build a GitLab + JIRA R & D workflow, and be responsible for its Full Staff Training</li>
+                        <li class="list-group-item">Responsible for the Code Review of Web front-end codes of each R & D project, and make the final check before the Code Merge</li>
+                        <li class="list-group-item">Provide targeted Technical Guidance & Training to Web front-end team, based on technical problems arising in daily R & D work</li>
+                        <li class="list-group-item">Replacing the new architecture of React + Ant Design based on the personal open-source project WebCell (Lightweight Web Component Engine)</li>
+                        <li class="list-group-item">Try to migrate Selenium to a lighter Puppeteer test architecture with the Test leader</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">
+                      Tincere
+                    </div>
+                    <div class="address">
+                      <a href="http:&#x2F;&#x2F;tincere.cn&#x2F;" target= "_blank"><i class="fas fa-globe ico"></i> http:&#x2F;&#x2F;tincere.cn&#x2F;</a>
+                    </div>
+                    <div class="year">November 2015 – March 2018</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">Senior Web front-end engineer</div>
+                    <div class="description">
+                      Technology leader of Web front-end group
+                      <div class="highlights">Highlights</div>
+                      <ul class="list-group">
+                        <li class="list-group-item">Refactor multiple PC and mobile projects based on personal open-source projects EasyWebApp.js and EasyLibs.php</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <!-- AWARDS -->
+          <div class="box">
+            <h2><i class="fas fa-certificate ico"></i> Awards</h2>
+            <ul id="awards" class="clearfix">
+              <li>
+                <div class="year pull-left">July  2023</div>
+                <div class="description pull-right">
+                  <h3>Microsoft</h3>
+                  <p><i class="fas fa-trophy ico"></i> Most Valuable Professional</p>
+                  <p>Developer Technologies</p>
+                </div>
+              </li>
+              <li>
+                <div class="year pull-left">July  2022</div>
+                <div class="description pull-right">
+                  <h3>Microsoft</h3>
+                  <p><i class="fas fa-trophy ico"></i> Most Valuable Professional</p>
+                  <p>Developer Technologies</p>
+                </div>
+              </li>
+              <li>
+                <div class="year pull-left">December  2021</div>
+                <div class="description pull-right">
+                  <h3>freeCodeCamp.org</h3>
+                  <p><i class="fas fa-trophy ico"></i> Top contributor</p>
+                  <p>Annual Award for Online Volunteers & City Community Organizers</p>
+                </div>
+              </li>
+              <li>
+                <div class="year pull-left">July  2021</div>
+                <div class="description pull-right">
+                  <h3>Microsoft</h3>
+                  <p><i class="fas fa-trophy ico"></i> Most Valuable Professional</p>
+                  <p>Developer Technologies</p>
+                </div>
+              </li>
+              <li>
+                <div class="year pull-left">December  2020</div>
+                <div class="description pull-right">
+                  <h3>freeCodeCamp.org</h3>
+                  <p><i class="fas fa-trophy ico"></i> Top contributor</p>
+                  <p>Annual Award for Online Volunteers & City Community Organizers</p>
+                </div>
+              </li>
+              <li>
+                <div class="year pull-left">December  2020</div>
+                <div class="description pull-right">
+                  <h3>KaiYuanShe.cn</h3>
+                  <p><i class="fas fa-trophy ico"></i> China Open Source Pioneer</p>
+                  <p>one of 33 honorees</p>
+                </div>
+              </li>
+              <li>
+                <div class="year pull-left">October  2020</div>
+                <div class="description pull-right">
+                  <h3>Aliyun</h3>
+                  <p><i class="fas fa-trophy ico"></i> Most Valuable Professional</p>
+                  <p>Basic Application</p>
+                </div>
+              </li>
+              <li>
+                <div class="year pull-left">July  2020</div>
+                <div class="description pull-right">
+                  <h3>Microsoft</h3>
+                  <p><i class="fas fa-trophy ico"></i> Most Valuable Professional</p>
+                  <p>Developer Technologies</p>
+                </div>
+              </li>
+              <li>
+                <div class="year pull-left">December  2019</div>
+                <div class="description pull-right">
+                  <h3>freeCodeCamp.org</h3>
+                  <p><i class="fas fa-trophy ico"></i> Top contributor</p>
+                  <p>Annual Award for Online Volunteers & City Community Organizers</p>
+                </div>
+              </li>
+              <li>
+                <div class="year pull-left">November  2019</div>
+                <div class="description pull-right">
+                  <h3>KaiYuanShe.cn</h3>
+                  <p><i class="fas fa-trophy ico"></i> Open Source Star</p>
+                  <p>Annual Award for KaiYuanShe Members</p>
+                </div>
+              </li>
+              <li>
+                <div class="year pull-left">July  2019</div>
+                <div class="description pull-right">
+                  <h3>Microsoft</h3>
+                  <p><i class="fas fa-trophy ico"></i> Most Valuable Professional</p>
+                  <p>Developer Technologies</p>
+                </div>
+              </li>
+              <li>
+                <div class="year pull-left">August  2018</div>
+                <div class="description pull-right">
+                  <h3>Microsoft</h3>
+                  <p><i class="fas fa-trophy ico"></i> Most Valuable Professional</p>
+                  <p>Developer Technologies</p>
+                </div>
+              </li>
+              <li>
+                <div class="year pull-left">June  2018</div>
+                <div class="description pull-right">
+                  <h3>freeCodeCamp.org</h3>
+                  <p><i class="fas fa-trophy ico"></i> Top contributor</p>
+                  <p>Annual Award for Online Volunteers & City Community Organizers</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- VOLUNTEER -->
+          <div class="box">
+            <h2><i class= "fas fa-users ico"></i> Volunteer</h2>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">Open Source Bazaar</div>
+                    <div class="address">
+                      <a href="https:&#x2F;&#x2F;open-source-bazaar.github.io&#x2F;" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;open-source-bazaar.github.io&#x2F;</a>
+                    </div>
+                    <div class="year">October 2020 – Present</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">Founder &amp; Co-creator</div>
+                    <div class="description">
+                      A local Decentralized Open Collaboration Community in Chengdu
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">freeCodeCamp.org</div>
+                    <div class="address">
+                      <a href="https:&#x2F;&#x2F;freecodecamp.org&#x2F;" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;freecodecamp.org&#x2F;</a>
+                    </div>
+                    <div class="year">November 2016 – Present</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">Core organizer</div>
+                    <div class="description">
+                      The world's largest open-source programming learning community
+                      <div class="highlights">Highlights</div>
+                      <ul class="list-group">
+                        <li class="list-group-item">Create and practice Half-monthly Tech-salons in China community</li>
+                        <li class="list-group-item">Make many Lectures at community salons & conferences</li>
+                        <li class="list-group-item">Work as a Coach at many community workshops</li>
+                        <li class="list-group-item">Work as an Organizer at many community salons, workshops & conferences</li>
+                        <li class="list-group-item">Develop new Web-site of ChengDu community based on Hexo and Original open-source utilities</li>
+                        <li class="list-group-item">Create a new Community Operating model based on</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">KaiYuanShe</div>
+                    <div class="address">
+                      <a href="https:&#x2F;&#x2F;kaiyuanshe.cn&#x2F;" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;kaiyuanshe.cn&#x2F;</a>
+                    </div>
+                    <div class="year">October 2018 – Present</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">Executive Committee member</div>
+                    <div class="description">
+                      Largest open-source NGO in China
+                      <div class="highlights">Highlights</div>
+                      <ul class="list-group">
+                        <li class="list-group-item">Develop new Web-site of KaiYuanShe based on Hexo and Original open-source utilities</li>
+                        <li class="list-group-item">Outfield volunteer leader of COSCon 2018</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">JavaScript Chinese Interest Group</div>
+                    <div class="address">
+                      <a href="https:&#x2F;&#x2F;jscig.github.io&#x2F;" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;jscig.github.io&#x2F;</a>
+                    </div>
+                    <div class="year">September 2020 – Present</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">Member &amp; Web&#x2F;JavaScript full-stack engineer</div>
+                    <div class="description">
+                      Committed to providing a platform to strengthen the participation of Chinese JavaScript community in the work on the JavaScript language standard (ECMAScript)
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">HanMeng Culture community</div>
+                    <div class="address">
+                      <a href="https:&#x2F;&#x2F;github.com&#x2F;hanmengwenhua" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;github.com&#x2F;hanmengwenhua</a>
+                    </div>
+                    <div class="year">September 2020 – Present</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">Core Member &amp; Web&#x2F;JavaScript full-stack engineer</div>
+                    <div class="description">
+                      An open community focusing on traditional Chinese culture such as Hanfu and folk music
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">WuHan 2020</div>
+                    <div class="address">
+                      <a href="https:&#x2F;&#x2F;community.wuhan2020.org.cn&#x2F;" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;community.wuhan2020.org.cn&#x2F;</a>
+                    </div>
+                    <div class="year">January 2020 – Present</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">Core Developer</div>
+                    <div class="description">
+                      A Open-source Community focused on COVID-19 Rescue
+                      <div class="highlights">Highlights</div>
+                      <ul class="list-group">
+                        <li class="list-group-item">Design a set of Data Structure</li>
+                        <li class="list-group-item">Lead the development of a full-stack Web application</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">Girls Coding day</div>
+                    <div class="address">
+                      <a href="https:&#x2F;&#x2F;girlscodingday.org&#x2F;" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;girlscodingday.org&#x2F;</a>
+                    </div>
+                    <div class="year">November 2018 – November 2018</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">Coach</div>
+                    <div class="description">
+                      2018 ChengDu workshop
+                      <div class="highlights">Highlights</div>
+                      <ul class="list-group">
+                        <li class="list-group-item">Write a Python install tutorial based on choco, brew & pipenv to make download and install faster</li>
+                        <li class="list-group-item">Make a quick speech about Puppeteer & Codecept</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">SCU FeiYang Club</div>
+                    <div class="address">
+                      <a href="https:&#x2F;&#x2F;fyscu.com&#x2F;" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;fyscu.com&#x2F;</a>
+                    </div>
+                    <div class="year">October 2008 – June 2013</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">Personal computer certified technician</div>
+                    <div class="description">
+                      Top 10 Student society of SiChuan university
+                      <div class="highlights">Highlights</div>
+                      <ul class="list-group">
+                        <li class="list-group-item">Designer of "Digital Equipment Repair Order"</li>
+                        <li class="list-group-item">Product Manager of Digital Equipment Repair System</li>
+                        <li class="list-group-item">Drafter of "Maintenance Technician Training Program"</li>
+                        <li class="list-group-item">Chief Reviewer of "Maintenance Technician Training Course"</li>
+                        <li class="list-group-item">Founding Team member of R & D Department</li>
+                        <li class="list-group-item">Founding Team member of Internet Media Department</li>
+                        <li class="list-group-item">Founder of SCU Wiki</li>
+                        <li class="list-group-item">Developer of "iFeiYang" electronic magazine (HTML 5) framework</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-5">
+          <!-- CONTACT -->
+          <div class="box clearfix">
+            <h2><i class="fas fa-bullseye ico"></i> Contact</h2>
+            <div class="contact-item">
+              <div class="icon pull-left text-center"><span class="fas fa-map-marker fa-fw"></span></div>
+              
+              <div class="title only  pull-right">ChengDu, SiChuan CN</div>
+            </div>
+            <div class="contact-item">
+              <div class="icon pull-left text-center"><span class="fas fa-phone fa-fw"></span></div>
+              <div class="title only pull-right">(86) 19949484787</div>
+            </div>
+            <div class="contact-item">
+              <div class="icon pull-left text-center"><span class="fas fa-envelope fa-fw"></span></div>
+              <div class="title only pull-right"><a href="mailto:shiy2008@gmail.com" target="_blank">shiy2008@gmail.com</a></div>
+            </div>
+            <div class="contact-item">
+              <div class="icon pull-left text-center"><span class="fas fa-globe fa-fw"></span></div>
+              <div class="title only pull-right"><a href="https:&#x2F;&#x2F;tech-query.me&#x2F;" target="_blank">https:&#x2F;&#x2F;tech-query.me&#x2F;</a></div>
+            </div>
+            <div class="contact-item">
+              <div class="icon pull-left text-center"><span class="fab fa-github fa-fw"></span></div>
+              <div class="title pull-right">GitHub</div>
+              <div class="description pull-right"><a href="https:&#x2F;&#x2F;github.com&#x2F;TechQuery" target="_blank">TechQuery</a></div>
+            </div>
+          </div>
+          <!-- EDUCATION -->
+          <div class="box">
+            <h2><i class="fas fa-university ico"></i> Education</h2>
+            <ul id="education" class="clearfix">
+              <li>
+                <div class="year pull-left">2008 2012</div>
+                <div class="description pull-right">
+                  <h3>SiChuan University</h3>
+                  <div class="where"></div>
+                  <div class="address">
+                    <a href="http:&#x2F;&#x2F;www.scu.edu.cn&#x2F;" target= "_blank"><i class="fas fa-globe ico"></i> http:&#x2F;&#x2F;www.scu.edu.cn&#x2F;</a>
+                  </div>
+                  <p><i class= "fas fa-graduation-cap ico"></i> Bachelor</p>
+                  <p>Electronic Information Science &amp; Technology</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- SKILLS -->
+          <div class="box">
+            <h2><i class="fas fa-tasks ico"></i> Skills</h2>
+            <div class="skills clearfix">
+              <div class="item-skills">
+                  Web front-end
+                  <span class="skill-level">Master</span>
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "skill badge">HTML 5+</span>
+                <span class= "skill badge">CSS 3+</span>
+                <span class= "skill badge">ECMAScript 6+</span>
+                <span class= "skill badge">TypeScript</span>
+                <span class= "skill badge">Web Components</span>
+                <span class= "skill badge">PWA</span>
+                <span class= "skill badge">React</span>
+                <span class= "skill badge">Vue</span>
+              </div>
+            </div>
+            <div class="skills clearfix">
+              <div class="item-skills">
+                  Node.JS command-line
+                  <span class="skill-level">Senior</span>
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "skill badge">Module bundler</span>
+                <span class= "skill badge">Project generator</span>
+                <span class= "skill badge">Headless browser</span>
+              </div>
+            </div>
+            <div class="skills clearfix">
+              <div class="item-skills">
+                  Open-source management
+                  <span class="skill-level">Senior</span>
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "skill badge">GitHub</span>
+                <span class= "skill badge">GitLab</span>
+                <span class= "skill badge">Travis CI</span>
+                <span class= "skill badge">Wikipedia</span>
+              </div>
+            </div>
+            <div class="skills clearfix">
+              <div class="item-skills">
+                  Node.JS back-end
+                  <span class="skill-level">Medium</span>
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "skill badge">Koa 2</span>
+                <span class= "skill badge">LeanCloud (BaaS)</span>
+                <span class= "skill badge">Strapi</span>
+              </div>
+            </div>
+            <div class="skills clearfix">
+              <div class="item-skills">
+                  System maintenance
+                  <span class="skill-level">Medium</span>
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "skill badge">Windows PowerShell</span>
+                <span class= "skill badge">Ubuntu Linux</span>
+              </div>
+            </div>
+          </div>
+          <!-- PUBLICATIONS -->
+          <div class="box">
+            <h2><i class="fas fa-book ico"></i> Publications</h2>
+            <div class="publication panel panel-default">
+              <div class="panel-heading">
+                <div class="name panel-title">Web polyfill</div>
+              </div>
+              <div class="panel-body">
+                <div class="publisher"><i class= "fas fa-bookmark ico"></i> idea2app &amp; KaiYuanShe</div>
+                <div class="year">16 March  2022</div>
+                <div class="address">
+                  <a href="https:&#x2F;&#x2F;polyfill.web-cell.dev&#x2F;" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;polyfill.web-cell.dev&#x2F;</a>
+                </div>
+                <p>An automatic CDN service for Web polyfills, which is based on TypeScript, Node.js & JSDelivr.</p>
+              </div>
+            </div>
+            <div class="publication panel panel-default">
+              <div class="panel-heading">
+                <div class="name panel-title">Event Submitter polyfill</div>
+              </div>
+              <div class="panel-body">
+                <div class="publisher"><i class= "fas fa-bookmark ico"></i> idea2app</div>
+                <div class="year">01 August  2021</div>
+                <div class="address">
+                  <a href="https:&#x2F;&#x2F;github.com&#x2F;idea2app&#x2F;event-submitter-polyfill" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;github.com&#x2F;idea2app&#x2F;event-submitter-polyfill</a>
+                </div>
+                <p>A polyfill for submitter property of <form /> Submit Event, which is written in TypeScript.</p>
+              </div>
+            </div>
+            <div class="publication panel panel-default">
+              <div class="panel-heading">
+                <div class="name panel-title">Edkit</div>
+              </div>
+              <div class="panel-body">
+                <div class="publisher"><i class= "fas fa-bookmark ico"></i> idea2app</div>
+                <div class="year">07 April  2021</div>
+                <div class="address">
+                  <a href="https:&#x2F;&#x2F;github.com&#x2F;idea2app&#x2F;Edkit" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;github.com&#x2F;idea2app&#x2F;Edkit</a>
+                </div>
+                <p>Lightweight Rich Text Editor toolkit based on TypeScript</p>
+              </div>
+            </div>
+            <div class="publication panel panel-default">
+              <div class="panel-heading">
+                <div class="name panel-title">JSCIG official Web-site</div>
+              </div>
+              <div class="panel-body">
+                <div class="publisher"><i class= "fas fa-bookmark ico"></i> JSCIG</div>
+                <div class="year">30 September  2020</div>
+                <div class="address">
+                  <a href="https:&#x2F;&#x2F;jscig.github.io&#x2F;" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;jscig.github.io&#x2F;</a>
+                </div>
+                <p>ECMAScript proposal database</p>
+              </div>
+            </div>
+            <div class="publication panel panel-default">
+              <div class="panel-heading">
+                <div class="name panel-title">Array Unique proposal</div>
+              </div>
+              <div class="panel-body">
+                <div class="publisher"><i class= "fas fa-bookmark ico"></i> ECMA TC39</div>
+                <div class="year">01 August  2020</div>
+                <div class="address">
+                  <a href="https:&#x2F;&#x2F;github.com&#x2F;tc39&#x2F;proposal-array-unique" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;github.com&#x2F;tc39&#x2F;proposal-array-unique</a>
+                </div>
+                <p>ECMAScript proposal for Deduplicating method of Array</p>
+              </div>
+            </div>
+            <div class="publication panel panel-default">
+              <div class="panel-heading">
+                <div class="name panel-title">ProfessorTian PWA</div>
+              </div>
+              <div class="panel-body">
+                <div class="publisher"><i class= "fas fa-bookmark ico"></i> ProfessorTian.net</div>
+                <div class="year">24 July  2020</div>
+                <div class="address">
+                  <a href="https:&#x2F;&#x2F;professortian.net&#x2F;" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;professortian.net&#x2F;</a>
+                </div>
+                <p>Application assistant for Chinese colleges</p>
+              </div>
+            </div>
+            <div class="publication panel panel-default">
+              <div class="panel-heading">
+                <div class="name panel-title">Wuhan2020 PWA</div>
+              </div>
+              <div class="panel-body">
+                <div class="publisher"><i class= "fas fa-bookmark ico"></i> KaiYuanShe.cn</div>
+                <div class="year">09 February  2020</div>
+                <div class="address">
+                  <a href="https:&#x2F;&#x2F;kaiyuanshe.cn&#x2F;project&#x2F;wuhan2020-pwa&#x2F;" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;kaiyuanshe.cn&#x2F;project&#x2F;wuhan2020-pwa&#x2F;</a>
+                </div>
+                <p>Wuhan New Coronavirus Epidemic Prevention information platform</p>
+              </div>
+            </div>
+            <div class="publication panel panel-default">
+              <div class="panel-heading">
+                <div class="name panel-title">BootCell</div>
+              </div>
+              <div class="panel-body">
+                <div class="publisher"><i class= "fas fa-bookmark ico"></i> Google Developer Group of ChengDu</div>
+                <div class="year">23 November  2019</div>
+                <div class="address">
+                  <a href="https:&#x2F;&#x2F;bootstrap.web-cell.dev&#x2F;" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;bootstrap.web-cell.dev&#x2F;</a>
+                </div>
+                <p>Web Components UI library based on WebCell v2 & BootStrap v4</p>
+              </div>
+            </div>
+            <div class="publication panel panel-default">
+              <div class="panel-heading">
+                <div class="name panel-title">WebCell</div>
+              </div>
+              <div class="panel-body">
+                <div class="publisher"><i class= "fas fa-bookmark ico"></i> freeCodeCamp ChengDu community</div>
+                <div class="year">10 November  2018</div>
+                <div class="address">
+                  <a href="https:&#x2F;&#x2F;web-cell.dev&#x2F;" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;web-cell.dev&#x2F;</a>
+                </div>
+                <p>Web Components engine based on JSX & TypeScript</p>
+              </div>
+            </div>
+            <div class="publication panel panel-default">
+              <div class="panel-heading">
+                <div class="name panel-title">Node.JS &amp; Headless browser</div>
+              </div>
+              <div class="panel-body">
+                <div class="publisher"><i class= "fas fa-bookmark ico"></i> freeCodeCamp ChongQing community</div>
+                <div class="year">18 August  2018</div>
+                <div class="address">
+                  <a href="https:&#x2F;&#x2F;ppt.baomitu.com&#x2F;d&#x2F;aba3b7a3" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;ppt.baomitu.com&#x2F;d&#x2F;aba3b7a3</a>
+                </div>
+                <p>Open-source solution of Web automated testing</p>
+              </div>
+            </div>
+            <div class="publication panel panel-default">
+              <div class="panel-heading">
+                <div class="name panel-title">EasyWebApp v4</div>
+              </div>
+              <div class="panel-body">
+                <div class="publisher"><i class= "fas fa-bookmark ico"></i> freeCodeCamp ChengDu community</div>
+                <div class="year">19 November  2017</div>
+                <div class="address">
+                  <a href="https:&#x2F;&#x2F;ppt.baomitu.com&#x2F;d&#x2F;34699c9a" target= "_blank"><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;ppt.baomitu.com&#x2F;d&#x2F;34699c9a</a>
+                </div>
+                <p>Declarative MVVM engine based on ECMAScript 5 & jQuery (predecessor of WebCell)</p>
+              </div>
+            </div>
+          </div>
+          <!-- LANGUAGES -->
+          <div class="box">
+            <h2><i class="fas fa-language ico"></i> Languages</h2>
+            <ul class="list-group">
+              <li class=" list-group-item">Chinese<span class="skill badge pull-right">Native speaker</span></li>
+              <li class=" list-group-item">English<span class="skill badge pull-right">Daily conversation</span></li>
+            </ul>
+          </div>
+          <!-- HOBBIES -->
+          <div class="box">
+            <h2><i class="fas fa-heart ico"></i> Interests</h2>
+            <div class="interests clearfix">
+              <div class="item-interests">
+                  Movie
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "interest badge">history</span>
+                <span class= "interest badge">society</span>
+                <span class= "interest badge">action</span>
+                <span class= "interest badge">love</span>
+              </div>
+            </div>
+            <div class="interests clearfix">
+              <div class="item-interests">
+                  Music
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "interest badge">ideal</span>
+                <span class= "interest badge">folk</span>
+                <span class= "interest badge">love</span>
+                <span class= "interest badge">classic</span>
+              </div>
+            </div>
+            <div class="interests clearfix">
+              <div class="item-interests">
+                  Sport
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "interest badge">skiing</span>
+                <span class= "interest badge">badminton</span>
+                <span class= "interest badge">swimming</span>
+                <span class= "interest badge">KongFu</span>
+              </div>
+            </div>
+            <div class="interests clearfix">
+              <div class="item-interests">
+                  HanFu
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "interest badge">Ming</span>
+                <span class= "interest badge">Song</span>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <h2><i class= "fas fa-check-square ico"></i> References</h2>
+            <blockquote>
+              <div>很给力～很可靠～
+FCC成都社区技术担当
+幽默～万事通
+</div>
+              <footer>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;jiangyuzhen" target= "_blank">YuZhen Jiang</a>
+              </footer>
+            </blockquote><br>
+            <blockquote>
+              <div>技術方面還沒見過比他更牛的。（在我工作十多年外加面試過上千位技術的經歷裡）
+有追求、有想法、不妥協，對代碼追求完美，不會放過任何一個技術上的細節。動手能力超強。值得信任的技術擔當
+</div>
+              <footer>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;Akagilnc" target= "_blank">NingChuan Li</a>
+              </footer>
+            </blockquote><br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

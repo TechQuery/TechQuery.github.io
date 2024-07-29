@@ -1,0 +1,527 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>2021 年的 Web 标准进展</title>
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.4.1/css/reveal.min.css">
+        
+        <!-- theme -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            var theme ='black';
+            switch (theme){
+                case 'black':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/black.min.css';
+                    break;
+                case 'beige':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/beige.min.css';
+                    break;
+                case 'blood':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/blood.min.css';
+                    break;
+                case 'league':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/league.min.css';
+                    break;
+                case 'moon':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/moon.min.css';
+                    break;
+                case 'night':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/night.min.css';
+                    break;
+                case 'serif':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/serif.min.css';
+                    break;
+                case 'sky':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/sky.min.css';
+                    break;
+                case 'solarized':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/solarized.min.css';
+                    break;
+                case 'white':
+                    link.href = 'https://cdn.bootcss.com/reveal.js/3.4.1/css/theme/white.min.css';
+                    break;
+                default:
+            }
+            
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.4.1/lib/css/zenburn.min.css">
+        <link href="https://cdn.bootcss.com/reveal.js/3.4.1/css/print/paper.min.css" rel="stylesheet">
+        <!-- Printing and PDF exports -->
+        
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown
+                         data-separator="^\n---\n"
+                         data-separator-vertical="^\n--\n"
+                         data-separator-notes="^Note:">
+                    <script type="text/template">2021 年的 Web 标准进展
+
+
+> Google DevFest 2021 成都站
+
+---
+
+## Web 组件
+
+> [前情提要](/programming/web-components-practise/slide.html)
+
+---
+
+### 服务端渲染
+
+---
+
+#### Template to Shadow DOM
+
+```html
+<host-element>
+  <template shadowroot="open">
+    <slot></slot>
+  </template>
+  <h2>Light content</h2>
+</host-element>
+```
+
+---
+
+```html
+<host-element>
+  #shadow-root (open)
+  <slot>
+    ↳
+    <h2>Light content</h2>
+  </slot>
+</host-element>
+```
+
+---
+
+#### Shadow DOM to Template
+
+```javascript
+const html = element.getInnerHTML({
+  includeShadowRoots: true,
+  closedRoots: [shadowRoot1, shadowRoot2]
+});
+
+console.log(html);
+```
+
+---
+
+#### 组件初始化
+
+```html
+<menu-toggle>
+  <template shadowroot="open">
+    <button>
+      <slot></slot>
+    </button>
+  </template>
+  Open Menu
+</menu-toggle>
+```
+
+---
+
+```javascript
+class MenuToggle extends HTMLElement {
+  constructor() {
+    var button = super().shadowRoot?.firstElementChild;
+
+    if (!button) {
+      const shadow = this.attachShadow({ mode: 'open' });
+      shadow.innerHTML = `<button><slot></slot></button>`;
+      button = shadow.firstChild;
+    }
+    button.addEventListener('click', toggle);
+  }
+}
+customElements.define('menu-toggle', MenuToggle);
+```
+
+---
+
+#### 私有 Shadow DOM
+
+```javascript
+class MenuToggle extends HTMLElement {
+  constructor() {
+    var { shadowRoot } = super().attachInternals();
+
+    if (!shadowRoot) {
+      shadowRoot = this.attachShadow({ mode: 'open' });
+      shadowRoot.innerHTML = `<button><slot></slot></button>`;
+    }
+    shadowRoot.firstChild.addEventListener('click', toggle);
+  }
+}
+customElements.define('menu-toggle', MenuToggle);
+```
+
+---
+
+#### 仅限于解析器 —— 为了安全
+
+```javascript
+const div = document.createElement('div');
+const template = document.createElement('template');
+
+template.setAttribute('shadowroot', 'open'); // 啥也没做
+div.appendChild(template);
+
+console.log(div.shadowRoot); // null
+```
+
+---
+
+```javascript
+const html = `
+    <div>
+      <template shadowroot="open"></template>
+    </div>
+  `;
+const div = document.createElement('div');
+div.innerHTML = html;
+
+console.log(div.shadowRoot); // null
+```
+
+```javascript
+const document = new DOMParser().parseFromString(html, 'text/html', {
+  includeShadowRoots: true
+});
+const { shadowRoot } = document.querySelector('div');
+
+console.log(shadowRoot); // # DocumentFragment
+```
+
+---
+
+#### CSS 渲染
+
+```html
+<nineties-button>
+  <template shadowroot="open">
+    <style>
+      button {
+        color: seagreen;
+      }
+    </style>
+    <link rel="stylesheet" href="/comicsans.css" />
+    <button>
+      <slot></slot>
+    </button>
+  </template>
+  I'm Blue
+</nineties-button>
+```
+
+---
+
+#### Polyfill 补丁
+
+```javascript
+for (const template of document.querySelectorAll('template[shadowroot]')) {
+  const mode = template.getAttribute('shadowroot');
+  const shadowRoot = template.parentNode.attachShadow({ mode });
+
+  shadowRoot.append(template.content);
+  template.remove();
+}
+```
+
+---
+
+#### 数据绑定（难产）
+
+```html
+<template>
+  <section>
+    <h1>{{name}}</h1>
+    Email: <a href="mailto:{{email}}">{{email}}</a>
+  </section>
+</template>
+```
+
+```javascript
+const template = document.currentScript.previousElementSibling;
+
+const tree = template.createInstance({
+  name: 'Ryosuke Niwa',
+  email: 'rniwa@webkit.org'
+});
+document.body.prepend(tree);
+
+tree.update({ name: 'Ryosuke Niwa', email: 'rniwa@apple.com' });
+```
+
+---
+
+## 表单
+
+---
+
+### Event Submitter
+
+https://github.com/idea2app/event-submitter-polyfill
+
+---
+
+#### HTML
+
+```html
+<form>
+  <input name="data" />
+
+  <button type="submit" data-name="first">Fisrt</button>
+  <button type="submit" data-name="second">Second</button>
+</form>
+```
+
+```javascript
+document.querySelector('form')?.addEventListener('submit', event => {
+  event.preventDefault();
+
+  const { name } = event.submitter.dataset,
+    { data } = event.target.elements;
+
+  fetch(`/api/${name}`, { data: data.value });
+});
+```
+
+---
+
+#### React
+
+```typescript
+import React, { FormEvent } from 'react';
+import { render } from 'react-dom';
+
+function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  event.preventDefault();
+
+  const { name } = event.nativeEvent.submitter.dataset,
+    { data } = event.currentTarget.elements;
+
+  fetch(`/api/${name}`, { data: data.value });
+}
+
+render(
+  <form onSubmit={handleSubmit}>
+    <input name="data" />
+
+    <button type="submit" data-name="first">
+      Fisrt
+    </button>
+    <button type="submit" data-name="second">
+      Second
+    </button>
+  </form>,
+  document.body
+);
+```
+
+---
+
+### FormData 事件
+
+```javascript
+const form = document.querySelector('form');
+
+form?.addEventListener('formdata', ({ formData }) => {
+  formData.append('my-input', myInputValue);
+});
+```
+
+> 1. [标准提案作者博文译文](/programming/more-capable-form-controls/)
+> 2. [polyfill 开发进展](https://github.com/webcomponents/polyfills/issues/172)
+
+---
+
+### Web 表单组件
+
+---
+
+#### Element Internals
+
+```typescript
+class MyCounter extends HTMLElement {
+  static formAssociated = true;
+
+  private value_ = 0;
+  private internals_ = this.attachInternals();
+
+  get value() {
+    return this.value_;
+  }
+  set value(v) {
+    this.value_ = v;
+  }
+
+  get form() {
+    return this.internals_.form;
+  }
+  get name() {
+    return this.getAttribute('name');
+  }
+  get type() {
+    return this.localName;
+  }
+  get validity() {
+    return this.internals_.validity;
+  }
+  get validationMessage() {
+    return this.internals_.validationMessage;
+  }
+  get willValidate() {
+    return this.internals_.willValidate;
+  }
+
+  checkValidity() {
+    return this.internals_.checkValidity();
+  }
+  reportValidity() {
+    return this.internals_.reportValidity();
+  }
+}
+customElements.define('my-counter', MyCounter);
+```
+
+---
+
+#### HTML
+
+```html
+<template>
+  <div contenteditable="true"></div>
+</template>
+```
+
+```javascript
+const { content } = document.currentScript.previousElementSibling;
+
+class MyInput extends HTMLInputElement {
+  constructor() {
+    super().attachShadow({ mode: 'open' }).append(content.cloneNode(true));
+  }
+}
+customElements.define('my-input', MyInput, { extends: 'input' });
+```
+
+```html
+<input is="my-input" />
+```
+
+---
+
+#### WebCell
+
+```typescript
+import { component, mixinForm } from 'web-cell';
+
+@component({
+  tagName: 'my-counter',
+  renderTarget: 'shadowRoot'
+})
+export class MyCounter extends mixinForm() {
+  render() {
+    return <div contenteditable="true" />;
+  }
+}
+```
+</script>
+                </section>
+            </div>
+        </div>
+
+        <script src="https://cdn.bootcss.com/reveal.js/3.4.1/lib/js/head.min.js"></script>
+        <script src="https://cdn.bootcss.com/reveal.js/3.4.1/js/reveal.min.js"></script>
+
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
+                // 是否在右下角展示控制条
+                controls: true,
+                // 是否显示演示的进度条
+                progress: true,
+                // 是否显示当前幻灯片的页数编号，也可以使用代码 “slideNumber: 'c/t'” ，表示当前页/总页数。
+                slideNumber: false,
+                // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+                history: false,
+                // 是否启用键盘快捷键来导航
+                keyboard: true,
+                // 是否启用幻灯片的概览模式，可使用 "Esc" 或 "o" 键来切换概览模式
+                overview: true,
+                // 是否将幻灯片垂直居中
+                center: true,
+                // 是否在触屏设备上启用触摸滑动切换
+                touch: true,
+                // 是否循环演示
+                loop: false,
+                // 是否将演示的方向变成 RTL，即从右往左
+                rtl: false,
+                // 是否每次演示的时候，随机幻灯片的顺序
+                shuffle: false,
+                // 全局开启和关闭碎片。
+                fragments: true,
+                // 标识演示文稿是否在嵌入模式中运行，即包含在屏幕的有限部分中的
+                embedded: false,
+                // 标识当问号键被点击的时候是否应该显示一个帮助的覆盖层
+                help: true,
+                // 标识演讲者备注标志是否让所有观看者可见
+                showNotes: false,
+                // 两个幻灯片之间自动切换的时间间隔（毫秒）
+                // 当设置成 0 的时候则禁止自动切换
+                // 该值可以被幻灯片上的 “data-autoslide” 属性覆盖
+                autoSlide: 0,
+                // 当遇到用户输入的时候停止自动切换
+                autoSlideStoppable: true,
+                // 当自动滑动时，使用此方法进行导航。
+                autoSlideMethod: Reveal.navigateNext,
+                // 是否启用通过鼠标滚轮来导航幻灯片
+                mouseWheel: false,
+                // 是否在移动设备上隐藏地址栏
+                hideAddressBar: true,
+                // 是否在一个弹出的 iframe 中打开幻灯片中的链接
+                previewLinks: false,
+                // 切换过渡效果
+                transition: 'none', // none/fade/slide/convex/concave/zoom
+                // 过渡速度
+                transitionSpeed: 'default', // default/fast/slow
+                // 全屏幻灯片背景的过渡效果
+                backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+                // 加载除当前可见的幻灯片之外的幻灯片数量
+                viewDistance: 3,
+                // 视差背景图片
+                parallaxBackgroundImage: '',
+                // e.g. 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'
+                // 视差背景尺寸
+                parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+                // 移动视差背景（水平和垂直）滑动变化的数量, 例如 100
+                // - 除了指定自动计算
+                // - 设置为 0 时，禁止沿轴运动
+                parallaxBackgroundHorizontal: null,
+                parallaxBackgroundVertical: null,
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.4.1/plugin/markdown/marked.js' },
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.4.1/plugin/markdown/markdown.min.js' },
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.4.1/plugin/notes/notes.min.js', async: true },
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.4.1/plugin/highlight/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+</html>
